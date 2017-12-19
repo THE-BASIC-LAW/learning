@@ -1,0 +1,82 @@
+{layout name='example' /}
+<section>
+	<form id="form_data">
+		<fieldset class="fieldsetclass fee-settings">
+			<legend> 收费策略 </legend>
+				<div class="style-input">
+					<span> 意外借出免费时间 :</span>
+					<span>
+						<input type="text" name="free_time" size="4" value="{$fee_settings['free_time']}">
+						<select name="free_unit" class="ui-select-size layui-select">
+							<option value="86400" {$fee_settings['free_unit'] == 86400 ? 'selected' : '';}>天</option>
+							<option value="3600" {$fee_settings['free_unit'] == 3600 ? 'selected' : '';}>小时</option>
+							<option value="60" {$fee_settings['free_unit'] == 60 ? 'selected' : '';}>分钟</option>
+							<option value="1" {$fee_settings['free_unit'] == 1 ? 'selected' : '';}>秒</option>
+						</select>
+					</span>
+				</div>
+			<div class="style-input">
+					<span> 固定收费 :</span>
+					<span>
+						<input type="text" name="fixed_time" size="4" value="{$fee_settings['fixed_time']}">
+						<select name="fixed_unit" class="ui-select-size layui-select">
+							<option value="86400" {$fee_settings['fixed_unit'] == 86400 ? 'selected' : '';}>天</option>
+							<option value="3600" {$fee_settings['fixed_unit'] == 3600 ? 'selected' : '';}>小时</option>
+							<option value="60" {$fee_settings['fixed_unit'] == 60 ? 'selected' : '';}>分钟</option>
+							<option value="1" {$fee_settings['fixed_unit'] == 1 ? 'selected' : '';}>秒</option>
+						</select>
+						<input type="text" name="fixed" size="4" value="{$fee_settings['fixed']}">元
+					</span>
+				</div>
+				<div class="style-input">
+					<span> 超出计费 :</span>
+					<span> 每 <input type="text" name="fee_time" size="10" value="{$fee_settings['fee_time']}">
+					<select name="fee_unit" class="layui-select">
+						<option value="86400" {$fee_settings['fee_unit'] == 86400 ? 'selected' : '';}>天</option>
+						<option value="3600" {$fee_settings['fee_unit'] == 3600 ? 'selected' : '';}>小时</option>
+						<option value="60" {$fee_settings['fee_unit'] == 60 ? 'selected' : '';}>分钟</option>
+						<option value="1" {$fee_settings['fee_unit'] == 1 ? 'selected' : '';}>秒</option>
+					</select>
+					收费 <input type="text" name="fee" size="4" value="{$fee_settings['fee']}"> 元</span>
+				</div>
+				<div class="style-input">
+					<span class="span_last"> 每 <input type="text" name="max_fee_time" size="10" value="{$fee_settings['max_fee_time']}">
+						<select name="max_fee_unit" class="layui-select">
+							<option value="86400" {$fee_settings['max_fee_unit'] == 86400 ? 'selected' : '';}>天</option>
+							<option value="3600" {$fee_settings['max_fee_unit'] == 3600 ? 'selected' : '';}>小时</option>
+							<option value="60" {$fee_settings['max_fee_unit'] == 60 ? 'selected' : '';}>分钟</option>
+							<option value="1" {$fee_settings['max_fee_unit'] == 1 ? 'selected' : '';}>秒</option>
+						</select>
+						最高收费  :
+						<input type="text" name="max_fee" size="6" value="{$fee_settings['max_fee']}"> 元
+					</span>
+				</div>
+				{if $Think.session.cdo.strategy}
+                <div style="margin-top: 20px">
+                    <input class="layui-btn submitbutton" type="button" value="提交">
+                </div>
+				{/if}
+		</fieldset>
+		
+	</form>
+</section>
+<script>
+    layui.use(['layer', 'form'], function(){})
+	$('.submitbutton').click(function(){
+		$.ajax({
+			url: '{$opt}?do=strategy',
+			type: 'post',
+			data: $('#form_data').serialize(),
+			success: function(e) {
+				if (e.code == 0) {
+					layer.msg(e.msg, {icon: 1}, function(){
+						parent.layer.close(parent.layer.getFrameIndex(window.name)); // 关闭本iframe层
+						parent.location.reload(); // 父页面刷新
+					});
+				} else {
+					layer.msg(e.msg, {icon: 2});
+				}
+			},
+		})
+	})
+</script>

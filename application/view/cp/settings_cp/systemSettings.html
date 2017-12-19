@@ -1,0 +1,63 @@
+{layout name='example' /}
+<section>
+	<form id="form_data">
+		<fieldset class="fieldsetclass system-settings">
+			<legend> 配置同步参数  </legend>
+				<ul>
+					<li>
+						<span>域名</span>
+						<input type="text" name="domain" size="20" value="{$system_settings['domain']}">
+					</li>
+					<li>
+						<span>IP地址</span>
+						<input type="text" name="ip" size="20" value="{$system_settings['ip']}">
+					</li>
+					<li>
+						<span>&nbsp;端口号</span>
+						<input type="text" name="port" size="10" value="{$system_settings['port']}">
+					</li>
+					<li>
+						<span>同步间隔时间</span> 
+						<input type="text" name="checkupdatedelay" size="10" value="{$system_settings['checkupdatedelay']}"> 秒
+					</li>
+					<li>
+						<span>心跳时间</span>
+						<input type="text" name="heartbeat" size="10" value="{$system_settings['heartbeat']}"> 秒
+					</li>
+					<li>
+						<span>软件版本号</span>
+						<input type="text" name="soft_ver" size="10" value="{$system_settings['soft_ver']}"> (整数)
+					</li>
+					<li>
+						<span>升级文件名称</span>
+						<input type="text" name="file_name" size="25" value="{$system_settings['file_name']}">
+					</li>
+				</ul>
+		</fieldset>
+		{if $Think.session.cdo.set}
+		<div style="margin-left: 1%;">
+			<input class="layui-btn submitbutton" type="button" value="提交">
+		</div>
+		{/if}
+	</form>
+</section>
+<script>
+    layui.use(['layer', 'form'], function(){})
+	$('.submitbutton').click(function(){
+		$.ajax({
+			url: '{$opt}?do=set',
+			type: 'post',
+			data: $('#form_data').serialize(),
+			success: function(e) {
+				if (e.code == 0) {
+					layer.msg(e.msg, {icon: 1}, function(){
+						parent.layer.close(parent.layer.getFrameIndex(window.name)); // 关闭本iframe层
+						parent.location.reload(); // 父页面刷新
+					});
+				} else {
+					layer.msg(e.msg, {icon: 2});
+				}
+			},
+		})
+	})
+</script>

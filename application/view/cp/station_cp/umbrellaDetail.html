@@ -1,0 +1,44 @@
+<style>
+	td {vertical-align: middle}
+</style>
+<table class="layui-table" width="900px" cellpadding="0" cellspacing="0" style="text-align: center">
+	<tr><th colspan=12 bgcolor="#44b753" align="center" style="text-align:center">可借 ({$umbrellas|count})</th></tr>
+	<tr style="text-align: center">
+		<th width="14%">
+			ID
+		</th>
+		<th width="5%">
+			槽位号
+		</th>
+		<th width="10%">
+			租借状态
+		</th>
+		<th width="10%">
+			同步时间
+		</th>
+
+	</tr>
+	{foreach $umbrellas as $umbrella}
+	<tr class="umbrella-detail-tr" >
+		<td >
+			<p>{$umbrella['id']}</p>
+		</td>
+		<td>
+			{$umbrella['slot']}
+		</td>
+		<td>
+			{if $umbrella['status'] == UMBRELLA_INSIDE}
+			机柜中
+			{else}
+			<span style="color:red">
+			<p>借出后同步</p>
+			{$umbrella['exception_time']}
+			</span>
+			{/if}
+		</td>
+		<td>
+			{$umbrella['sync_time']}
+		</td>
+	</tr>
+	{/foreach}
+</table>

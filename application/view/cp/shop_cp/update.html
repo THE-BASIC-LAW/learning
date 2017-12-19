@@ -1,0 +1,72 @@
+<form class="shop-update-content">
+	{:token()}
+	<ul>
+		<li style="width: 100%;">
+			{include file="common/province_city_area"}
+		</li>
+		<li>
+			<span>商铺名称:</span>
+			<input type="text" id="shop_name" name="name" value="{$shop.name}" required lay-verify="required">
+		</li>
+
+		<li>
+			<span>商铺类型:</span>
+			<div class="layui-input-inline">
+				<select name="type" class="type layui-select">
+					{foreach $shop_types as $shop_type}
+					<option value="{$shop_type['id']}" {$shop_type['id'] == $shop['type'] ? 'selected' : ''}>{$shop_type['type']}</option>
+					{/foreach}
+				</select>
+			</div>
+		</li>
+
+		<li>
+			<span>具体位置:</span>
+			<input type="text" name="locate" id="locate" value="{$shop.locate}" required>
+		</li>
+
+		<li>
+			<span>人均消费:</span>
+			<input type="number" name="cost" id="cost" value="{$shop.cost}" >
+		</li>
+
+		<li>
+			<span>商铺电话:</span>
+			<input type="text" name="phone" id="phone" value="{$shop.phone}" >
+		</li>
+
+		<li style="width: 100%;">
+			<span>营业开始时间:</span>
+			<input type="text" name="stime" id="stime" value="{$shop.stime}" >
+			<span>营业结束时间:</span>
+			<input type="text" name="etime" id="etime" value="{$shop.etime}" >
+		</li>
+		<div style="clear: both"></div>
+		<div class="ui-btn-center">
+			<input type="button" class="layui-btn layui-btn-green submitbutton" value="更新">
+		</div>
+	</ul>
+</form>
+<script>
+layui.use(['layer', 'form'], function(){});
+</script>
+<script>
+$('.submitbutton').click(function(){
+	$.ajax({
+		url: '/{$mod}/{$act}/update?submit=1&shop_id={$shop.id}',
+		method: 'post',
+		data:$('.shop-update-content').serialize(),
+		async:false,
+		success: function(e) {
+			if(e.code == 0) {
+				layer.msg(e.msg, {icon: 1}, function(){
+					parent.layer.close(parent.layer.getFrameIndex(window.name)); // 关闭本iframe层
+					parent.location.reload(); // 父页面刷新
+				});
+			} else {
+				layer.msg(e.msg, {icon: 2});
+			}
+		},
+	})
+})
+</script>

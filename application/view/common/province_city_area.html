@@ -1,0 +1,119 @@
+<div class="layui-form-item">
+    <label class="layui-form-label">省/市/区:</label>
+    <div class="layui-input-inline">
+        <select name="province" id="get-province" class="layui-select">
+            <option value="">请选择省份</option>
+            {if isset($provinces)}
+                {foreach $provinces as $item}
+                <option value="{$item}" {(isset($province) && $item == $province) ? 'selected' : ''}>{$item}</option>
+                {/foreach}
+            {/if}
+        </select>
+    </div>
+    <div class="layui-input-inline">
+        <select name="city" id="get-city" class="layui-select">
+            <option value="">请选择城市</option>
+        </select>
+    </div>
+    <div class="layui-input-inline">
+        <select name="area" id="get-area" class="layui-select">
+            <option value="">请选择区域</option>
+        </select>
+    </div>
+</div>
+<script>
+    $('#get-province').change(function(){
+        $.ajax({
+            type: 'POST',
+            data: {province:$('#get-province').val(), ajax:1},
+            url: '/cp/common/getAreaInfo',
+            success: function(e) {
+                var html = '<option value="">请选择城市</option>';
+                for(var i in e.data) {
+                    html += '<option value="'+e.data[i]+'">' + e.data[i] + '</option>';
+                }
+                $('#get-city').html(html);
+                $('#get-area').html('<option value="">请选择区域</option>');
+            }
+        })
+    });
+
+    $('#get-city').change(function(){
+        $.ajax({
+            type: 'POST',
+            data: {province:$('#get-province').val(), city:$('#get-city').val(), ajax:1},
+            url: '/cp/common/getAreaInfo',
+            success: function(e) {
+                var html = '<option value="">请选择区域</option>';
+                for(var i in e.data) {
+                    html += '<option value="'+e.data[i]+'">' + e.data[i] + '</option>';
+                }
+                $('#get-area').html(html);
+            }
+        })
+    });
+</script>
+
+<script>
+    !function(){
+        // 获取省份
+        $.ajax({
+            type: 'POST',
+            async: false,
+            data: {ajax:2},
+            url: '/cp/common/getAreaInfo',
+            success: function(e) {
+                var html = '<option value="">请选择省份</option>';
+                for(var i in e.data) {
+                    if(e.data[i] == '{$province|default=""}') {
+                        html += '<option value="'+e.data[i]+'" selected>' + e.data[i] + '</option>';
+                    } else {
+                        html += '<option value="'+e.data[i]+'">' + e.data[i] + '</option>';
+                    }
+
+                }
+                $('#get-province').html(html);
+            }
+        });
+
+        if($('#get-province').val()){
+            $.ajax({
+                type: 'POST',
+                async: false,
+                data: {province:$('#get-province').val(), ajax:1},
+                url: '/cp/common/getAreaInfo',
+                success: function(e) {
+                    var html = '<option value="">请选择城市</option>';
+                    for(var i in e.data) {
+                        if(e.data[i] == '{$city|default=""}') {
+                            html += '<option value="'+e.data[i]+'" selected>' + e.data[i] + '</option>';
+                        } else {
+                            html += '<option value="'+e.data[i]+'">' + e.data[i] + '</option>';
+                        }
+
+                    }
+                    $('#get-city').html(html);
+                    $('#get-area').html('<option value="">请选择区域</option>');
+                }
+            })
+        }
+        if(($('#get-city')).val()){
+            $.ajax({
+                type: 'POST',
+                data: {province:$('#get-province').val(), city:$('#get-city').val(), ajax:1},
+                url: '/cp/common/getAreaInfo',
+                success: function(e) {
+                    var html = '<option value="">请选择区域</option>';
+                    for(var i in e.data) {
+                        if(e.data[i] == '{$area|default=""}') {
+                            html += '<option value="'+e.data[i]+'" selected>' + e.data[i] + '</option>';
+                        } else {
+                            html += '<option value="'+e.data[i]+'">' + e.data[i] + '</option>';
+                        }
+                    }
+                    $('#get-area').html(html);
+                }
+            })
+        }
+    }();
+</script>

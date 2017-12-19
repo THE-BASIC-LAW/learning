@@ -1,0 +1,82 @@
+<section id="local-fee-settings">
+<form method="post" id="form_data">
+    <input type="hidden" name="pictext_id" value="{$pictext_id}">
+    <ul>
+		<li>
+			配置名称：<input type="text" name="name" value="{$pictext['name']}" required>
+		</li>
+		<li>
+			<span> 图文标题 </span> :
+			<input type="text" name="title" value="{$pictext['pictext']['title']}">
+		</li>
+		<li>
+			<span> 微信图片链接(图片为正方形) </span> :
+			<input type="text" name="wechat_picurl" value="{$pictext['pictext']['wechat_picurl']}">
+		</li>
+		<li>
+			<span> 支付宝图片链接(图片为长方形) </span> :
+			<input type="text" name="alipay_picurl" value="{$pictext['pictext']['alipay_picurl']}">
+		</li>
+		<li>
+			<span> 跳转链接 </span> :
+			<input type="text" name="url" value="{$pictext['pictext']['url']}">
+		</li>
+		<li>
+			<span> 启用时间 </span> :
+			<input type="text" name="stime"  id="start" class="laydate-icon" value="{$pictext['stime']}">
+		</li>
+		<li>
+			<span> 到期时间 </span> :
+			<input type="text" name="etime"  id="end" class="laydate-icon" value="{$pictext['etime']}">
+		</li>
+	</ul>
+    <div class="ui-btn-center"><button class="layui-btn submit-button">提交</button></div>
+</form>
+</section>
+<script>
+	layui.use('layer', function() {
+            var layer = layui.layer;
+            $('.submit-button').click(function(){
+                $.ajax({
+                    url: '{$opt}?do={$do}',
+                    type: 'post',
+                    data: $('#form_data').serialize(),
+                    success:function(e) {
+                        if (e.code == 0) {
+                            layer.msg(e.msg, {icon: 1}, function(){
+                                parent.layer.close(parent.layer.getFrameIndex(window.name)); // 关闭本iframe层
+                                parent.location.reload(); // 父页面刷新
+                            });
+                        } else {
+                            layer.msg(e.msg, {icon: 2});
+                        }
+                    },
+                });
+                return false;
+            });
+        });
+
+    layui.use('laydate', function() {
+        var laydate = layui.laydate;
+        //选择开始和结束日期
+        var start = laydate.render({
+            elem: '#start',
+            format: 'yyyy/MM/dd HH:mm:ss',
+            max: '2099-06-16 23:59:59', //最大日期
+            istime: true,
+            istoday: false,
+            done: function (value, date, endDate) {
+                end.config.min = start.config.dateTime;//开始日选好后，重置结束日的最小日期
+            }
+        });
+        var end = laydate.render({
+            elem: '#end',
+            format: 'yyyy/MM/dd HH:mm:ss',
+            istime: true,
+            istoday: false,
+            done: function (value, date, endDate) {
+                start.config.max = end.config.dateTime;//结束日选好后，重置开始日的最大日期
+            }
+        });
+    })
+</script>

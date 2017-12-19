@@ -1,0 +1,39 @@
+<div class="shop-stationGoUp">
+        <h4 style="margin: 20px 30px">
+            <span> 新的机器id </span> :
+            <input type="text" name="station_id" id="station_id" class="ui-input-longSize" >
+        </h4>
+        <div style="text-align: center; margin: 20px">
+			<input class="layui-btn" type="button" name="replace" value="确认上机" onclick="goUpShopStation({$shop_station_id})">
+		</div>
+</div>
+
+
+<script type="text/javascript">
+
+function goUpShopStation(shop_station_id, station_id) {
+    if(confirm("确定上机？")) {
+        station_id = document.getElementById('station_id');
+        directive('shopStationGoUp', shop_station_id, station_id.value);
+    }
+}
+
+function directive(opt, shop_station_id, station_id) {
+    var url = '/{$mod}/{$act}/' + opt;
+    $.ajax({
+        url: url,
+        dataType : 'JSON',
+        data: {"shop_station_id" : shop_station_id, "station_id" : station_id},
+    })
+    .done(function(data) {
+        console.log(data);
+        alert(data.errmsg);
+        parent.layer.close(parent.layer.getFrameIndex(window.name)); // 关闭本iframe层
+        parent.location.reload(); // 父页面刷新
+    })
+    .fail(function() {
+        alert('error');
+    });
+}
+
+</script>

@@ -1,0 +1,101 @@
+<div class="layui-form" style="padding: 20px 0 0 70px">
+    <div class="layui-form-item">
+        <label class="layui-form-label">收费策略:</label>
+        <div class="layui-input-inline">
+            <select name="fee_id" class="fee-id">
+                <option value="0">全局配置</option>
+                {foreach $fees as $fee}
+                <option value="{$fee['id']}" {$feeSetting == $fee['id'] ? 'selected' : '';}>{$fee['name']}</option>
+                {/foreach}
+            </select>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">图文配置:</label>
+        <div class="layui-input-inline">
+            <select name="pic_id" class="pic-id">
+                <option value="0">无</option>
+                {foreach $pictexts as $pictext}
+                <option value="{$pictext['id']}" {$picSetting == $pictext['id'] ? 'selected' : '';}>{$pictext['name']}</option>
+                {/foreach}
+            </select>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">名称:</label>
+        <div class="layui-input-inline">
+            <input type="text" name="title" id="title" class="layui-input" value="{$shop_station['title']}">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">地址:</label>
+        <div class="layui-input-inline">
+            <input type="text" name="address" id="address" class="layui-input" value="{$shop_station['address']}">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">摆放位置:</label>
+        <div class="layui-input-inline">
+            <input type="text" name="desc" id="desc" class="layui-input" value="{$shop_station['desc']}">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">归属（负责）人:</label>
+        <div class="layui-input-inline">
+            <select name="seller_id" class="seller-id">
+                <option value="0">无</option>
+                {foreach $all_sellers as $seller}
+                <option value="{$seller['id']}" {$seller_id == $seller['id'] ? 'selected' : '';}>{$seller['name']}</option>
+                {/foreach}
+            </select>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">启用状态:</label>
+        <div class="layui-input-block">
+            <input type="radio" name="status" value="1" title="启用" {$shop_station['status'] ? 'checked' : ''}>
+            <input type="radio" name="status" value="0" title="禁用" {$shop_station['status'] ? '' : 'checked'}>
+        </div>
+    </div>
+</div>
+    <div class="style-btn-center">
+        <input class="layui-btn submitbutton" type="submit" value="更新">
+    </div>
+
+
+<script>
+    layui.use(['layer', 'form'], function(){})
+    $('.submitbutton').click(function(){
+        console.log('clicked this button')
+        $.ajax({
+            url: '/{$mod}/{$act}/{$opt}',
+            type: 'POST',
+            data: {
+                desc:            $("#desc").val(),
+                title:           $("#title").val(),
+                status:          $('input[name="status"]:checked').val(),
+                pic_id:          $(".pic-id").val(),
+                fee_id:          $(".fee-id").val(),
+                address:         $("#address").val(),
+                seller_id:       $('.seller-id').val(),
+                shop_station_id: "{$shop_station_id}",
+            },
+            success: function(e) {
+                if (e.code == 0) {
+                    layer.msg(e.msg, {icon: 1}, function(){
+                        parent.layer.close(parent.layer.getFrameIndex(window.name)); // 关闭本iframe层
+                        parent.location.reload(); // 父页面刷新
+                    });
+                } else {
+                    layer.msg(e.msg, {icon: 2});
+                }
+            },
+        })
+    })
+</script>

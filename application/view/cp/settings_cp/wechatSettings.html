@@ -1,0 +1,115 @@
+{layout name='example' /}
+<section class="wechat-settings">
+	<form name="itemadd" id="itemadd" method="post"
+		action="index.php?mod=cp&act=settings&opt=wechat_settings">
+		<fieldset class="fieldsetclass">
+			<legend> 微信自动回复配置  </legend>
+			<button onclick="addNewRule()" class="layui-btn"> 添加新规则 </button>
+
+			<fieldset class="fieldsetclass">
+				<legend>  首次关注回复规则 (此设置对支付宝、微信均有效果)  </legend>
+				<div class="style-textarea">
+					<span>回复文字 : </span>
+					<textarea name="subscribeMsg" rows="10" cols="50">{$subscribeMsg}</textarea>
+				</div>
+				<h4><input type="submit" name="wechat" class="layui-btn"></h4>
+			</fieldset>
+			
+			<fieldset class="fieldsetclass">
+				<legend>  默认回复规则  </legend>
+				<div class="style-textarea">
+					<span>回复文字 : </span>
+					<textarea name="defaultMsg" rows="10" cols="50">{$defaultMsg}</textarea>
+				</div>
+				<h4><input type="submit" name="wechat" class="layui-btn"></h4>
+			</fieldset>
+			
+					{foreach $keywords as $key => $group}
+			<fieldset class="fieldsetclass">
+				<legend>  规则{$key+1}:  </legend>
+					<div> 规则{$key+1}:
+							<button onclick="addKeyword('{$key}');return false;" class="layui-btn">添加关键词</button>
+							{foreach $group as $num => $keyword}
+							<div class="style-input">
+								关键词  :
+								<input type="text" value="$keyword" id="{$key}-{$num}">
+								<button onclick="editKeyword('{$key}','{$num}');return false;" class="layui-btn layui-btn-normal layui-btn-small">{lang jjsan:edit}</button>
+								<button onclick="deleteKeyword('{$key}','{$num}');return false;" class="layui-btn layui-btn-danger layui-btn-small">{lang jjsan:delete_keyword}</button>
+							</div>
+							{/foreach}
+							<div class="style-textarea">
+								<span>回复文字 : </span>
+								<textarea name="replymsg[]" rows="10" cols="50">{$replyMsg[$key]}</textarea>
+
+							</div>
+					</div>
+					<h4>
+						<input type="submit" name="wechat" class="layui-btn">
+						<button onclick="deleteRule('{$key}')" class="layui-btn layui-btn-danger">删除规则</button>
+					</h4>
+			</fieldset>
+					{/foreach}
+
+
+		</fieldset>
+		<fieldset class="fieldsetclass">
+			<legend> 模板内容配置  </legend>
+
+
+		</fieldset>
+
+		<div class="style-btn">
+			<input class="layui-btn" type="submit" value="提交">
+		</div>
+	</form>
+</section>
+
+<script type="text/javascript">
+function editKeyword(row, num) {
+	var keyword = $(row + '-' + num).value;
+	var url = '{$opt}?func=edit&' + 'row=' + row + '&num=' + num + '&keyword=' + keyword;
+	var x = new Ajax('HTML');
+	x.get(url, function(s, x) {
+		alert(s);
+	});
+
+}
+
+function addKeyword(row) {
+	// var newKeyword = document.createElement('input');
+	// newKeyword.setAttribute('type', 'text');
+	var url = '{$opt}?func=add&' + 'row=' + row;
+	var x = new Ajax('HTML');
+	x.get(url, function(s, x) {
+		// alert(s);
+		window.location.reload();
+	});
+}
+
+function deleteKeyword(row, num) {
+	var url = '{$opt}?func=delete&' + 'row=' + row + '&num=' + num;
+	var x = new Ajax('HTML');
+	x.get(url, function(s, x) {
+		alert(s);
+	});
+	window.location.reload();
+}
+
+function addNewRule() {
+	var url = '{$opt}?func=add_new_rule';
+	var x = new Ajax('HTML');
+	x.get(url, function(s, x) {
+		alert(s);
+	});
+	window.location.reload();
+}
+
+function deleteRule(row) {
+	var url = '{$opt}?func=delete_rule&' + 'row=' + row;
+	var x = new Ajax('HTML');
+	x.get(url, function(s, x) {
+		alert(s);
+	});
+	window.location.reload();
+}
+</script>

@@ -1,0 +1,61 @@
+{layout name='popUp' /}
+<div class="layui-form">
+	    <div class="layui-form-item">
+	        <label class="layui-form-label">登录名</label>
+	        <div class="layui-input-inline">
+	            <input type="text" name="adminname" value="{$adminInfo['adminname']}" id="adminname" required  class="layui-input">
+	        </div>
+	    </div>
+	    <div class="layui-form-item">
+	        <label class="layui-form-label">真实姓名</label>
+	        <div class="layui-input-inline">
+	            <input type="text" name="name" value="{$adminInfo['name']}" id="name" required  class="layui-input">
+	        </div>
+	    </div>
+	    <div class="layui-form-item">
+	        <label class="layui-form-label">邮箱</label>
+	        <div class="layui-input-inline">
+	            <input type="text" name="email" value="{$adminInfo['email']}"  id="email" required  lay-verify="required" class="layui-input">
+	        </div>
+	    </div>
+	    <div class="layui-form-item">
+	        <label class="layui-form-label">公司</label>
+	        <div class="layui-input-inline">
+	            <input type="text" name="company" value="{$adminInfo['company']}" id="company" required  lay-verify="required" class="layui-input">
+	        </div>
+	    </div>
+	        <div class="ui-btn-center">
+	            <button class="layui-btn submit-edit" >立即提交</button>
+	        </div>
+	</div>
+<script>
+    layui.use(['layer', 'form'], function(){
+        var layer = layui.layer;
+        $('.submit-edit').click(function(){
+            $.ajax({
+                url: '{$Request.url}',
+                type: 'POST',
+				dataType: 'json',
+                data: {
+					'do':'{$GLOBALS['do']}',
+                    'aid': {$adminInfo['id']},
+                    'adminname': $('#adminname').val(),
+                    'name': $('#name').val(),
+                    'email': $('#email').val(),
+                    'company': $('#company').val(),
+                },
+                success: function(e) {
+                    if(e.code == 0) {
+                        layer.msg(e.msg, {icon: 1}, function(){
+                            parent.layer.close(parent.layer.getFrameIndex(window.name)); // 关闭本iframe层
+                            parent.location.reload(); // 父页面刷新
+                        });
+                    } else {
+                        layer.msg(e.msg, {icon: 2});
+                    }
+                },
+				//   error:function(data){console.log(data.responseText)}
+            })
+        });
+    });
+</script>

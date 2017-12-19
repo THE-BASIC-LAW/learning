@@ -1,0 +1,85 @@
+<fieldset class="fieldsetclass station-search">
+    <legend>搜索</legend>
+    <form method="get" action="">
+            {include file='common/province_city_area'}
+            <div class="layui-form">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">网络状态:</label>
+                    <div class="layui-input-inline">
+                        <select name="status">
+                             <option value="-1">全部</option>
+                             <option value="1" {$status|default='' == '1'? 'selected' : '';}>在线</option>
+                             <option value="0" {$status|default='' == '0'? 'selected' : '';}>断线</option>
+                        </select>
+                    </div>
+                    <label class="layui-form-label">电池状态:</label>
+                    <div class="layui-input-inline">
+                        <select name="isdamage">
+                        <option value="-1">全部</option>
+                        <option value="0" {$isdamage|default='' == '0' ? 'selected' : '';}>电量满</option>
+                        <option value="1" {$isdamage|default='' == '1' ? 'selected' : '';}>充电中</option>
+                        <option value="2" {$isdamage|default='' == '2' ? 'selected' : '';}>读取不到电量</option>
+                        <option value="3" {$isdamage|default='' == '3' ? 'selected' : '';}>未连接电源</option>
+                        </select>
+                    </div>
+                    <label class="layui-form-label">排序:</label>
+                    <div class="layui-input-inline">
+                        <select name="orderby">
+                        <option value="0">全部</option>
+                        <option value="1" {$orderby|default='' == '1' ? 'selected' : '';}>心跳率</option>
+                        <option value="2" {$orderby|default='' == '2' ? 'selected' : '';}>开机时长</option>
+                        </select>
+                    </div>
+                    <label class="layui-form-label">降序:</label>
+                    <input type="checkbox" name="order_desc" value="1" {$order_desc|default='' == 1? 'checked':'';} />
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">雨伞模组:</label>
+                    <div class="layui-input-inline">
+                        <select name="slotstatus">
+                           <option value="-1">全部</option>
+                           <option value="0" {$slotstatus|default='' == '0'? 'selected' : '';}>正常</option>
+                           <option value="1" {$slotstatus|default='' == '1'? 'selected' : '';}>部分雨伞或模组异常</option>
+                       </select>
+                    </div>
+
+                    <label class="layui-form-label" style="width: 106px;">机器硬件版本:</label>
+                    <div class="layui-input-inline" style="width: 200px;">
+                        <input class="layui-input"　type="text" name="device_ver" value="{$device_ver|default=''}"/>
+                    </div>
+
+                    <label class="layui-form-label" style="width: 106px;">机器软件版本:</label>
+                    <div class="layui-input-inline" style="width: 200px;">
+                        <input class="layui-input"　type="text" name="soft_ver" value="{$soft_ver|default=''}"/>
+                    </div>
+
+                    <label class="layui-form-label" style="width: 106px;">借出后同步雨伞:</label>
+                    <div class="layui-input-inline">
+                        <input type="checkbox" name="umbrella_outside_sync" {$umbrella_outside_sync|default='' ? 'checked' : ''}>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">站点ID:</label>
+                    <div class="layui-input-inline" style="width: 200px;">
+                        <input class="layui-input"　type="text" name="station_id" value="{$station_id|default=''}"/>
+                    </div>
+
+                    <label class="layui-form-label">站点名称:</label>
+                    <div class="layui-input-inline" style="width: 200px;">
+                        <input class="layui-input"　type="text" name="keyword" value="{$keyword|default=''}" id="autocomplete"/>
+                    </div>
+                </div>
+                    <label class="layui-form-label">操作</label>
+                    <div class="layui-input-inline">
+                        <input class="layui-btn" type="submit" value="查询" />
+                    </div>
+                {if $Think.session.cdo['export']}
+                    &nbsp
+                    <div class="layui-input-inline">
+                        <input class="layui-btn layui-btn-danger" type="submit" name="export" value="导出" />
+                    </div>
+                {/if}
+            </div>
+    </form>
+</fieldset>

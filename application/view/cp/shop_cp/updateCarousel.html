@@ -1,0 +1,78 @@
+<section style="width:900px; padding-top: 10px; margin: 30px auto">
+    <form method="post" action="{$action}" enctype="multipart/form-data" id="formdata">
+        <input type="hidden" name="__token__" value="{$Request.token}" id="token"/>
+        <div id="matbox0" class="matlist" style="margin:10px;">
+            {foreach name='imgs' key='matid' item='img'}
+            <div id="matbox0_{$matid}" class="imgbody">
+                <div style="display: inline-block; text-align: center">
+                    <input type="hidden" id="mat0_{$matid}" value="{$img}" class="mats">
+                    <img src="{$img}" alt="{$img}" style="width: 50px; height: 50px; margin:3px;">
+                    <br>
+                    <a href="javascript:;" onclick="delmatfrbox(this)">删除</a>
+                </div>
+            </div>
+            {/foreach}
+    </div>
+    </form>
+    <div id="upload_box" class="matlist" style="padding:5px;border:2px solid #009c4c; margin:10px;">
+        <input type="file" class="file" id="file_0" style="border:0px" required>
+    </div>
+    <div class="ui-btn-center">
+        <input type="button" class="layui-btn layui-btn-small upload_more" value="上传更多">
+    </div>
+    <div class="ui-btn-center">
+        <input type="button" class="layui-btn layui-btn-green update_carousel" value="更新轮播图">
+    </div>
+
+</section>
+<script>
+    layui.use(['layer'], function(){
+        $('.update_carousel').click(function(){
+            var form_data = new FormData();
+            var carousel =  new Array();
+            var mats = $('.mats');
+            for(var i = 0; i < mats.length; i++){
+                id = '#mat0_' + i;
+                carousel[i] = mats[i].value;
+            }
+            form_data.append('mats', carousel);
+            form_data.append('__token__', $('#token').val());
+
+            var num = $('.file').length;
+            for(var i = 0; i < num; i++){
+                id = '#file_' + i;
+                form_data.append('carousels[]',$(id)[0].files[0]);
+            }
+
+            $.ajax({
+                url: "{$action}",
+                type: 'post',
+                data: form_data,
+                contentType: false,
+                processData: false,
+                success: function(e) {
+                    if(e.code == 0) {
+                        layer.msg(e.msg, {icon: 1}, function(){
+                            parent.layer.close(parent.layer.getFrameIndex(window.name)); // 关闭本iframe层
+                            parent.location.reload(); // 父页面刷新
+                        });
+                    } else {
+                        layer.msg(e.msg, {icon: 2});
+                    }
+                },
+                error: function () {
+                    layer.msg('内部错误', {icon: 2}, function(){
+                    });
+                }
+            })
+        })
+
+    })
+
+    $('.upload_more').click(function() {
+        var id = $('.file').length;
+        c = '';
+        c += '<input type="file" class="file" id="file_' + id +'" style="border:0px">';
+        jQuery('#upload_box').append(c);
+    })
+</script>

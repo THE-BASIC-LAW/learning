@@ -1,0 +1,1 @@
+[ 2017-11-30T18:00:36+08:00 ][ error ] SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'ddzh.temp_borrow_success_table.borrow_success_order' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by

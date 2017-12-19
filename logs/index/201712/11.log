@@ -1,0 +1,62 @@
+---------------------------------------------------------------
+[ 2017-12-11T10:07:44+08:00 ] 127.0.0.1 GET /cp/login/index
+[ info ] dlq.ddzh.com/cp/login/index [运行时间：0.626013s][吞吐率：1.60req/s] [内存消耗：663.85kb] [文件加载：72]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.login_cp',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/shop/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'login',
+  'opt' => 'index',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\LoginCp->index[ /var/www/html/ddzh/application/controller/cp/LoginCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/login_cp/index.html [ array (
+  0 => 'mod',
+  1 => 'act',
+  2 => 'opt',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.055213s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.229884s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.014784s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.057906s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.005765s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.019029s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` IS NULL LIMIT 1 [ RunTime:0.001941s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.027756s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` IS NULL [ RunTime:0.007376s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.000828s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.000490s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` IS NULL LIMIT 1 [ RunTime:0.000472s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` IS NULL [ RunTime:0.000492s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:24]
+[ error ] [8]未定义数组索引: login[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [2]array_key_exists() expects parameter 2 to be array, null given[/var/www/html/ddzh/application/lib/Auth.php:200]

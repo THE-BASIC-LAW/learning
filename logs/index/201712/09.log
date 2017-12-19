@@ -1,0 +1,1921 @@
+---------------------------------------------------------------
+[ 2017-12-09T11:06:04+08:00 ] 127.0.0.1 GET /cp/login/index
+[ info ] dlq.ddzh.com/cp/login/index [运行时间：0.475098s][吞吐率：2.10req/s] [内存消耗：652.78kb] [文件加载：71]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.login_cp',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/shop/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127; XDEBUG_SESSION=XDEBUG_ECLIPSE',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'login',
+  'opt' => 'index',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\LoginCp->index[ /var/www/html/ddzh/application/controller/cp/LoginCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/login_cp/index.html [ array (
+  0 => 'mod',
+  1 => 'act',
+  2 => 'opt',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.068322s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.013561s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.010570s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.002532s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.000351s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.001539s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` IS NULL LIMIT 1 [ RunTime:0.000199s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.001673s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` IS NULL [ RunTime:0.000355s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.000351s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.000403s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` IS NULL LIMIT 1 [ RunTime:0.000214s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` IS NULL [ RunTime:0.000208s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:24]
+[ error ] [8]未定义数组索引: login[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [2]array_key_exists() expects parameter 2 to be array, null given[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [0]致命错误: Call to undefined function captcha_src()[/var/www/html/ddzh/runtime/temp/2e329d1edccfac0817f97391de9862da.php:34]
+---------------------------------------------------------------
+[ 2017-12-09T11:08:20+08:00 ] 127.0.0.1 GET /cp/login/index
+[ info ] dlq.ddzh.com/cp/login/index [运行时间：0.053369s][吞吐率：18.74req/s] [内存消耗：643.76kb] [文件加载：69]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.login_cp',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/shop/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127; XDEBUG_SESSION=XDEBUG_ECLIPSE',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'login',
+  'opt' => 'index',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\LoginCp->index[ /var/www/html/ddzh/application/controller/cp/LoginCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/login_cp/index.html [ array (
+  0 => 'mod',
+  1 => 'act',
+  2 => 'opt',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.019900s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.008555s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.000419s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.000576s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.000188s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.009211s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` IS NULL LIMIT 1 [ RunTime:0.000583s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.000868s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` IS NULL [ RunTime:0.000217s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.000218s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.000163s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` IS NULL LIMIT 1 [ RunTime:0.000168s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` IS NULL [ RunTime:0.000101s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:24]
+[ error ] [8]未定义数组索引: login[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [2]array_key_exists() expects parameter 2 to be array, null given[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [0]致命错误: Call to undefined function captcha_src()[/var/www/html/ddzh/runtime/temp/2e329d1edccfac0817f97391de9862da.php:34]
+---------------------------------------------------------------
+[ 2017-12-09T11:09:42+08:00 ] 127.0.0.1 GET /cp/login/index
+[ info ] dlq.ddzh.com/cp/login/index [运行时间：0.077114s][吞吐率：12.97req/s] [内存消耗：643.30kb] [文件加载：69]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.login_cp',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/shop/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127; XDEBUG_SESSION=XDEBUG_ECLIPSE',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'login',
+  'opt' => 'index',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\LoginCp->index[ /var/www/html/ddzh/application/controller/cp/LoginCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/login_cp/index.html [ array (
+  0 => 'mod',
+  1 => 'act',
+  2 => 'opt',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.022480s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.009841s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.000843s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.008648s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.000683s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.010813s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` IS NULL LIMIT 1 [ RunTime:0.000386s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.001292s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` IS NULL [ RunTime:0.000218s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.000200s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.000120s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` IS NULL LIMIT 1 [ RunTime:0.000097s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` IS NULL [ RunTime:0.000072s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:24]
+[ error ] [8]未定义数组索引: login[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [2]array_key_exists() expects parameter 2 to be array, null given[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [0]致命错误: Call to undefined function captcha_src()[/var/www/html/ddzh/runtime/temp/2e329d1edccfac0817f97391de9862da.php:34]
+---------------------------------------------------------------
+[ 2017-12-09T11:09:46+08:00 ] 127.0.0.1 GET /cp/login/index
+[ info ] dlq.ddzh.com/cp/login/index [运行时间：0.050473s][吞吐率：19.81req/s] [内存消耗：643.35kb] [文件加载：69]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.login_cp',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/shop/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127; XDEBUG_SESSION=XDEBUG_ECLIPSE',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'login',
+  'opt' => 'index',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\LoginCp->index[ /var/www/html/ddzh/application/controller/cp/LoginCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/login_cp/index.html [ array (
+  0 => 'mod',
+  1 => 'act',
+  2 => 'opt',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008151s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.001883s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.000599s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.009039s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.000549s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.002213s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` IS NULL LIMIT 1 [ RunTime:0.000556s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.003937s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` IS NULL [ RunTime:0.000636s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.000447s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.000395s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` IS NULL LIMIT 1 [ RunTime:0.000375s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` IS NULL [ RunTime:0.000321s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:24]
+[ error ] [8]未定义数组索引: login[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [2]array_key_exists() expects parameter 2 to be array, null given[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [0]致命错误: Call to undefined function captcha_src()[/var/www/html/ddzh/runtime/temp/2e329d1edccfac0817f97391de9862da.php:34]
+---------------------------------------------------------------
+[ 2017-12-09T11:13:27+08:00 ] 127.0.0.1 GET /cp/login/index
+[ info ] dlq.ddzh.com/cp/login/index [运行时间：0.062165s][吞吐率：16.09req/s] [内存消耗：652.54kb] [文件加载：71]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.loginCp',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/shop/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127; XDEBUG_SESSION=XDEBUG_ECLIPSE',
+)
+[ info ] [ PARAM ] array (
+  'act' => 'login',
+  'opt' => 'index',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\LoginCp->index[ /var/www/html/ddzh/application/controller/cp/LoginCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/login_cp/index.html [ array (
+  0 => 'act',
+  1 => 'opt',
+  2 => 'mod',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000479s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.028393s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.000793s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.004319s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.000551s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.001404s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` IS NULL LIMIT 1 [ RunTime:0.000489s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.001112s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` IS NULL [ RunTime:0.000685s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.000285s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.000262s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` IS NULL LIMIT 1 [ RunTime:0.000200s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` IS NULL [ RunTime:0.000119s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:26]
+[ error ] [8]未定义数组索引: login[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [2]array_key_exists() expects parameter 2 to be array, null given[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [0]致命错误: Call to undefined function img_src()[/var/www/html/ddzh/runtime/temp/2e329d1edccfac0817f97391de9862da.php:34]
+---------------------------------------------------------------
+[ 2017-12-09T11:13:54+08:00 ] 127.0.0.1 GET /cp/login/index
+[ info ] dlq.ddzh.com/cp/login/index [运行时间：0.066730s][吞吐率：14.99req/s] [内存消耗：651.52kb] [文件加载：71]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.loginCp',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/shop/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127; XDEBUG_SESSION=XDEBUG_ECLIPSE',
+)
+[ info ] [ PARAM ] array (
+  'act' => 'login',
+  'opt' => 'index',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\LoginCp->index[ /var/www/html/ddzh/application/controller/cp/LoginCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/login_cp/index.html [ array (
+  0 => 'act',
+  1 => 'opt',
+  2 => 'mod',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.025192s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.011794s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.001490s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.002194s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.000488s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.001110s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` IS NULL LIMIT 1 [ RunTime:0.000314s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.003779s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` IS NULL [ RunTime:0.000348s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.000301s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.000272s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` IS NULL LIMIT 1 [ RunTime:0.000227s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` IS NULL [ RunTime:0.000338s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:26]
+[ error ] [8]未定义数组索引: login[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [2]array_key_exists() expects parameter 2 to be array, null given[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [0]致命错误: Call to undefined function captcha_img()[/var/www/html/ddzh/runtime/temp/2e329d1edccfac0817f97391de9862da.php:34]
+---------------------------------------------------------------
+[ 2017-12-09T11:15:08+08:00 ] 127.0.0.1 GET /cp/login/index
+[ info ] dlq.ddzh.com/cp/login/index [运行时间：0.066555s][吞吐率：15.03req/s] [内存消耗：650.95kb] [文件加载：71]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.loginCp',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/shop/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127; XDEBUG_SESSION=XDEBUG_ECLIPSE',
+)
+[ info ] [ PARAM ] array (
+  'act' => 'login',
+  'opt' => 'index',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\LoginCp->index[ /var/www/html/ddzh/application/controller/cp/LoginCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/login_cp/index.html [ array (
+  0 => 'act',
+  1 => 'opt',
+  2 => 'mod',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000572s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.035155s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.000447s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.005762s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.000692s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.001129s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` IS NULL LIMIT 1 [ RunTime:0.000234s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.000558s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` IS NULL [ RunTime:0.000247s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.010606s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.000316s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` IS NULL LIMIT 1 [ RunTime:0.000346s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` IS NULL [ RunTime:0.000233s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:26]
+[ error ] [8]未定义数组索引: login[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [2]array_key_exists() expects parameter 2 to be array, null given[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [0]致命错误: Call to undefined function captcha_src()[/var/www/html/ddzh/runtime/temp/2e329d1edccfac0817f97391de9862da.php:34]
+---------------------------------------------------------------
+[ 2017-12-09T11:16:22+08:00 ] 127.0.0.1 GET /cp/login/index
+[ info ] dlq.ddzh.com/cp/login/index [运行时间：0.063753s][吞吐率：15.69req/s] [内存消耗：664.55kb] [文件加载：72]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.loginCp',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/shop/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127; XDEBUG_SESSION=XDEBUG_ECLIPSE',
+)
+[ info ] [ PARAM ] array (
+  'act' => 'login',
+  'opt' => 'index',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\LoginCp->index[ /var/www/html/ddzh/application/controller/cp/LoginCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/login_cp/index.html [ array (
+  0 => 'act',
+  1 => 'opt',
+  2 => 'mod',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001308s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.016454s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.000655s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.006890s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.000395s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.000822s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` IS NULL LIMIT 1 [ RunTime:0.000210s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.000490s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` IS NULL [ RunTime:0.000274s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.000265s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.000204s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` IS NULL LIMIT 1 [ RunTime:0.000203s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` IS NULL [ RunTime:0.007304s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:26]
+[ error ] [8]未定义数组索引: login[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [2]array_key_exists() expects parameter 2 to be array, null given[/var/www/html/ddzh/application/lib/Auth.php:200]
+---------------------------------------------------------------
+[ 2017-12-09T11:16:35+08:00 ] 127.0.0.1 POST /cp/login/save
+[ info ] dlq.ddzh.com/cp/login/save [运行时间：0.455076s][吞吐率：2.20req/s] [内存消耗：679.20kb] [文件加载：74]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.loginCp',
+    2 => 'save',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '45',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://dlq.ddzh.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/login/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127; XDEBUG_SESSION=XDEBUG_ECLIPSE',
+)
+[ info ] [ PARAM ] array (
+  'adminname' => 'admin',
+  'password' => '123456',
+  'captcha' => 'rhuvt',
+  'act' => 'login',
+  'opt' => 'save',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\LoginCp->save[ /var/www/html/ddzh/application/controller/cp/LoginCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'adminname',
+  1 => 'password',
+  2 => 'captcha',
+  3 => 'act',
+  4 => 'opt',
+  5 => 'mod',
+  6 => 'code',
+  7 => 'msg',
+  8 => 'data',
+  9 => 'url',
+  10 => 'wait',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000337s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.091388s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.051059s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.001684s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.053953s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.115760s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` IS NULL LIMIT 1 [ RunTime:0.000546s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.007716s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` IS NULL [ RunTime:0.000654s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.000708s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.000357s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` IS NULL LIMIT 1 [ RunTime:0.000337s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` IS NULL [ RunTime:0.000271s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `adminname` = 'admin'  AND `status` = 1 LIMIT 1 [ RunTime:0.079816s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:26]
+[ error ] [8]未定义数组索引: login[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [2]array_key_exists() expects parameter 2 to be array, null given[/var/www/html/ddzh/application/lib/Auth.php:200]
+---------------------------------------------------------------
+[ 2017-12-09T11:16:37+08:00 ] 127.0.0.1 GET /cp/admin/index
+[ info ] dlq.ddzh.com/cp/admin/index [运行时间：0.240702s][吞吐率：4.15req/s] [内存消耗：736.02kb] [文件加载：73]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.adminCp',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/login/save',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127; XDEBUG_SESSION=XDEBUG_ECLIPSE',
+)
+[ info ] [ PARAM ] array (
+  'act' => 'admin',
+  'opt' => 'index',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\AdminCp->index[ /var/www/html/ddzh/application/controller/cp/AdminCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/admin_cp/index.html [ array (
+  0 => 'act',
+  1 => 'opt',
+  2 => 'mod',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.016061s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.011807s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000696s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.016070s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001112s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.007203s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.061792s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.001656s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000524s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000693s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000430s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.008969s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000523s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000517s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:26]
+---------------------------------------------------------------
+[ 2017-12-09T11:16:43+08:00 ] 127.0.0.1 GET /cp/shop/lists
+[ info ] dlq.ddzh.com/cp/shop/lists [运行时间：0.364455s][吞吐率：2.74req/s] [内存消耗：1,082.56kb] [文件加载：78]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.shopCp',
+    2 => 'lists',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127; XDEBUG_SESSION=XDEBUG_ECLIPSE',
+)
+[ info ] [ PARAM ] array (
+  'act' => 'shop',
+  'opt' => 'lists',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\ShopCp->lists[ /var/www/html/ddzh/application/controller/cp/ShopCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/shop_cp/lists.html [ array (
+  0 => 'act',
+  1 => 'opt',
+  2 => 'mod',
+  3 => 'shops',
+  4 => 'admin_id',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000776s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.023820s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001312s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.006302s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000386s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.011353s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.006986s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.001777s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.001223s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000768s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000597s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000626s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000515s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000508s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_shop` [ RunTime:0.003053s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pre_ddzh_shop` LIMIT 1 [ RunTime:0.051909s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_shop` LIMIT 0,10 [ RunTime:0.018205s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_shop_type` [ RunTime:0.005087s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_shop_type` [ RunTime:0.012601s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:26]
+[ error ] [8]未定义变量: access_cities[/var/www/html/ddzh/application/controller/cp/ShopCp.php:32]
+[ error ] [8]未定义变量: access_shops[/var/www/html/ddzh/application/controller/cp/ShopCp.php:32]
+[ error ] [8]未定义变量: provinces[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:83]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:83]
+[ error ] [8]未定义变量: province[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:146]
+[ error ] [8]未定义变量: city[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:166]
+[ error ] [8]未定义变量: area[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:186]
+[ error ] [8]未定义变量: keyword[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:203]
+[ error ] [8]未定义变量: shop[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:204]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [8]未定义变量: page[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:325]
+[ error ] [8]未定义变量: page[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:336]
+---------------------------------------------------------------
+[ 2017-12-09T11:16:45+08:00 ] 127.0.0.1 POST /cp/common/getAreaInfo
+[ info ] dlq.ddzh.com/cp/common/getAreaInfo [运行时间：0.162055s][吞吐率：6.17req/s] [内存消耗：758.98kb] [文件加载：70]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.commonCp',
+    2 => 'getAreaInfo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '6',
+  'origin' => 'http://dlq.ddzh.com',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'referer' => 'http://dlq.ddzh.com/cp/shop/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127; XDEBUG_SESSION=XDEBUG_ECLIPSE',
+)
+[ info ] [ PARAM ] array (
+  'ajax' => '2',
+  'act' => 'common',
+  'opt' => 'getAreaInfo',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\CommonCp->getAreaInfo[ /var/www/html/ddzh/application/controller/cp/CommonCp.php ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000374s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.014430s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.004663s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.013202s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001556s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.000455s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000841s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.000500s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.001128s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001091s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000692s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.001084s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000703s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000557s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000488s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.028033s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.001234s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.053786s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:26]
+[ error ] [8]未定义数组索引: common[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [2]array_key_exists() expects parameter 2 to be array, null given[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [8]未定义数组索引: city[/var/www/html/ddzh/application/controller/cp/CommonCp.php:70]
+[ error ] [8]未定义数组索引: province[/var/www/html/ddzh/application/controller/cp/CommonCp.php:71]
+---------------------------------------------------------------
+[ 2017-12-09T11:16:49+08:00 ] 127.0.0.1 GET /cp/shop/updateLogo?type=shop&page=&shop_id=1
+[ info ] dlq.ddzh.com/cp/shop/updateLogo?type=shop&page=&shop_id=1 [运行时间：0.230815s][吞吐率：4.33req/s] [内存消耗：763.13kb] [文件加载：75]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.shopCp',
+    2 => 'updateLogo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/shop/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127; XDEBUG_SESSION=XDEBUG_ECLIPSE',
+)
+[ info ] [ PARAM ] array (
+  'type' => 'shop',
+  'page' => '',
+  'shop_id' => '1',
+  'act' => 'shop',
+  'opt' => 'updateLogo',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\ShopCp->updateLogo[ /var/www/html/ddzh/application/controller/cp/ShopCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/shop_cp/updateLogo.html [ array (
+  0 => 'type',
+  1 => 'page',
+  2 => 'shop_id',
+  3 => 'act',
+  4 => 'opt',
+  5 => 'mod',
+  6 => 'action',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000461s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.044730s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001255s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.001230s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000441s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.029961s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.113349s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.001591s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000597s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000487s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000380s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000320s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000219s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000226s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:26]
+[ error ] [8]未定义变量: mod[/var/www/html/ddzh/application/controller/cp/ShopCp.php:131]
+---------------------------------------------------------------
+[ 2017-12-09T11:17:23+08:00 ] 127.0.0.1 GET /cp/shop/updateCarousel?page=&shop_id=2
+[ info ] dlq.ddzh.com/cp/shop/updateCarousel?page=&shop_id=2 [运行时间：0.166103s][吞吐率：6.02req/s] [内存消耗：858.16kb] [文件加载：75]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.shopCp',
+    2 => 'updateCarousel',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/shop/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127; XDEBUG_SESSION=XDEBUG_ECLIPSE',
+)
+[ info ] [ PARAM ] array (
+  'page' => '',
+  'shop_id' => '2',
+  'act' => 'shop',
+  'opt' => 'updateCarousel',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\ShopCp->updateCarousel[ /var/www/html/ddzh/application/controller/cp/ShopCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/shop_cp/updateCarousel.html [ array (
+  0 => 'page',
+  1 => 'shop_id',
+  2 => 'act',
+  3 => 'opt',
+  4 => 'mod',
+  5 => 'imgs',
+  6 => 'action',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003666s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.027007s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.021369s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.004228s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.002179s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.002126s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.001091s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.001719s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.001003s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000804s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000466s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000701s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000684s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000767s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_shop` [ RunTime:0.002391s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_shop` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001556s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:26]
+[ error ] [8]未定义变量: submit[/var/www/html/ddzh/application/controller/cp/ShopCp.php:143]
+[ error ] [8]未定义变量: mod[/var/www/html/ddzh/application/controller/cp/ShopCp.php:159]
+---------------------------------------------------------------
+[ 2017-12-09T11:17:29+08:00 ] 127.0.0.1 GET /cp/shop/updateLogo?type=shop&page=&shop_id=2
+[ info ] dlq.ddzh.com/cp/shop/updateLogo?type=shop&page=&shop_id=2 [运行时间：0.075628s][吞吐率：13.22req/s] [内存消耗：753.06kb] [文件加载：73]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.shopCp',
+    2 => 'updateLogo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/shop/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127; XDEBUG_SESSION=XDEBUG_ECLIPSE',
+)
+[ info ] [ PARAM ] array (
+  'type' => 'shop',
+  'page' => '',
+  'shop_id' => '2',
+  'act' => 'shop',
+  'opt' => 'updateLogo',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\ShopCp->updateLogo[ /var/www/html/ddzh/application/controller/cp/ShopCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/shop_cp/updateLogo.html [ array (
+  0 => 'type',
+  1 => 'page',
+  2 => 'shop_id',
+  3 => 'act',
+  4 => 'opt',
+  5 => 'mod',
+  6 => 'action',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000295s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.013181s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.011526s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.003635s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.008945s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.000736s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.014904s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.002991s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.001223s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000545s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000514s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000554s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000804s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000632s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:26]
+[ error ] [8]未定义变量: mod[/var/www/html/ddzh/application/controller/cp/ShopCp.php:131]
+---------------------------------------------------------------
+[ 2017-12-09T11:19:05+08:00 ] 127.0.0.1 GET /cp/shop/updateLogo?type=shop&page=&shop_id=2
+[ info ] dlq.ddzh.com/cp/shop/updateLogo?type=shop&page=&shop_id=2 [运行时间：0.080094s][吞吐率：12.49req/s] [内存消耗：767.60kb] [文件加载：75]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.shop_cp',
+    2 => 'updateLogo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/shop/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127; XDEBUG_SESSION=XDEBUG_ECLIPSE',
+)
+[ info ] [ PARAM ] array (
+  'type' => 'shop',
+  'page' => '',
+  'shop_id' => '2',
+  'mod' => 'cp',
+  'act' => 'shop',
+  'opt' => 'updateLogo',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\ShopCp->updateLogo[ /var/www/html/ddzh/application/controller/cp/ShopCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/shop_cp/updateLogo.html [ array (
+  0 => 'type',
+  1 => 'page',
+  2 => 'shop_id',
+  3 => 'mod',
+  4 => 'act',
+  5 => 'opt',
+  6 => 'action',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001149s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.039172s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000709s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.001401s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000398s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.000645s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000247s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.000438s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000252s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000238s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000168s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000298s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000210s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000222s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:24]
+---------------------------------------------------------------
+[ 2017-12-09T11:20:28+08:00 ] 127.0.0.1 GET /cp/shop/lists
+[ info ] dlq.ddzh.com/cp/shop/lists [运行时间：0.039002s][吞吐率：25.64req/s] [内存消耗：1,019.41kb] [文件加载：78]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.shop_cp',
+    2 => 'lists',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127; XDEBUG_SESSION=XDEBUG_ECLIPSE',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'shop',
+  'opt' => 'lists',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\ShopCp->lists[ /var/www/html/ddzh/application/controller/cp/ShopCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/shop_cp/lists.html [ array (
+  0 => 'mod',
+  1 => 'act',
+  2 => 'opt',
+  3 => 'shops',
+  4 => 'admin_id',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000402s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.000728s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000301s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.011508s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000825s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.000747s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000530s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.000617s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000430s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000185s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000209s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000207s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000175s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000171s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_shop` [ RunTime:0.000410s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pre_ddzh_shop` LIMIT 1 [ RunTime:0.001027s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_shop` LIMIT 0,10 [ RunTime:0.000578s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_shop_type` [ RunTime:0.000746s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_shop_type` [ RunTime:0.000374s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:24]
+[ error ] [8]未定义变量: access_cities[/var/www/html/ddzh/application/controller/cp/ShopCp.php:32]
+[ error ] [8]未定义变量: access_shops[/var/www/html/ddzh/application/controller/cp/ShopCp.php:32]
+[ error ] [8]未定义变量: provinces[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:83]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:83]
+[ error ] [8]未定义变量: province[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:146]
+[ error ] [8]未定义变量: city[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:166]
+[ error ] [8]未定义变量: area[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:186]
+[ error ] [8]未定义变量: keyword[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:203]
+[ error ] [8]未定义变量: shop[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:204]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [8]未定义变量: page[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:325]
+[ error ] [8]未定义变量: page[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:336]
+---------------------------------------------------------------
+[ 2017-12-09T11:20:28+08:00 ] 127.0.0.1 POST /cp/common/getAreaInfo
+[ info ] dlq.ddzh.com/cp/common/getAreaInfo [运行时间：0.039023s][吞吐率：25.63req/s] [内存消耗：758.34kb] [文件加载：70]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.common_cp',
+    2 => 'getAreaInfo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '6',
+  'accept' => '*/*',
+  'origin' => 'http://dlq.ddzh.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://dlq.ddzh.com/cp/shop/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127; XDEBUG_SESSION=XDEBUG_ECLIPSE',
+)
+[ info ] [ PARAM ] array (
+  'ajax' => '2',
+  'mod' => 'cp',
+  'act' => 'common',
+  'opt' => 'getAreaInfo',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\CommonCp->getAreaInfo[ /var/www/html/ddzh/application/controller/cp/CommonCp.php ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000894s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.012686s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.007104s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.001998s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001217s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.001339s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000209s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.000403s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000191s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000266s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000231s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000332s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000226s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000237s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000306s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000244s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000192s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000176s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:24]
+[ error ] [8]未定义数组索引: common[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [2]array_key_exists() expects parameter 2 to be array, null given[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [8]未定义数组索引: city[/var/www/html/ddzh/application/controller/cp/CommonCp.php:70]
+[ error ] [8]未定义数组索引: province[/var/www/html/ddzh/application/controller/cp/CommonCp.php:71]
+---------------------------------------------------------------
+[ 2017-12-09T11:20:29+08:00 ] 127.0.0.1 GET /cp/shop/updateLogo?type=shop&page=&shop_id=3
+[ info ] dlq.ddzh.com/cp/shop/updateLogo?type=shop&page=&shop_id=3 [运行时间：0.064212s][吞吐率：15.57req/s] [内存消耗：766.60kb] [文件加载：75]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.shop_cp',
+    2 => 'updateLogo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/shop/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127; XDEBUG_SESSION=XDEBUG_ECLIPSE',
+)
+[ info ] [ PARAM ] array (
+  'type' => 'shop',
+  'page' => '',
+  'shop_id' => '3',
+  'mod' => 'cp',
+  'act' => 'shop',
+  'opt' => 'updateLogo',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\ShopCp->updateLogo[ /var/www/html/ddzh/application/controller/cp/ShopCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/shop_cp/updateLogo.html [ array (
+  0 => 'type',
+  1 => 'page',
+  2 => 'shop_id',
+  3 => 'mod',
+  4 => 'act',
+  5 => 'opt',
+  6 => 'action',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000794s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.000551s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.042677s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.002841s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001296s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.001884s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000759s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.001051s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000508s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000536s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000425s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000386s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000325s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000586s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:24]
+---------------------------------------------------------------
+[ 2017-12-09T11:21:41+08:00 ] 127.0.0.1 GET /cp/shop/updateLogo?type=shop&page=&shop_id=7
+[ info ] dlq.ddzh.com/cp/shop/updateLogo?type=shop&page=&shop_id=7 [运行时间：0.065764s][吞吐率：15.21req/s] [内存消耗：752.99kb] [文件加载：73]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.shop_cp',
+    2 => 'updateLogo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/shop/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127; XDEBUG_SESSION=XDEBUG_ECLIPSE',
+)
+[ info ] [ PARAM ] array (
+  'type' => 'shop',
+  'page' => '',
+  'shop_id' => '7',
+  'mod' => 'cp',
+  'act' => 'shop',
+  'opt' => 'updateLogo',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\ShopCp->updateLogo[ /var/www/html/ddzh/application/controller/cp/ShopCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/shop_cp/updateLogo.html [ array (
+  0 => 'type',
+  1 => 'page',
+  2 => 'shop_id',
+  3 => 'mod',
+  4 => 'act',
+  5 => 'opt',
+  6 => 'action',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001269s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.000694s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000336s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.000437s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000156s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.000297s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000178s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.000432s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000515s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.003935s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.003146s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.001303s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.004713s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000245s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:24]
+---------------------------------------------------------------
+[ 2017-12-09T11:21:54+08:00 ] 127.0.0.1 POST /cp/shop/updateLogo?type=shop&page=&shop_id=7&submit=1
+[ info ] dlq.ddzh.com/cp/shop/updateLogo?type=shop&page=&shop_id=7&submit=1 [运行时间：0.425842s][吞吐率：2.35req/s] [内存消耗：794.21kb] [文件加载：76]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.shop_cp',
+    2 => 'updateLogo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '19097',
+  'accept' => '*/*',
+  'origin' => 'http://dlq.ddzh.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryElZJFnfPgfmLM0y4',
+  'referer' => 'http://dlq.ddzh.com/cp/shop/updateLogo?type=shop&page=&shop_id=7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127; XDEBUG_SESSION=XDEBUG_ECLIPSE',
+)
+[ info ] [ PARAM ] array (
+  'type' => 'shop',
+  'page' => '',
+  'shop_id' => '7',
+  'submit' => '1',
+  '__token__' => 'dbc806e7c1ed772540b2546bb8ff2ca9',
+  'data_url' => 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAgAElEQVR4XsXdeeztZ13g8e+5S3vv7U5bulHWtpQWEIXKjiiUJegEDXECuIzLaIxxXEYmTszg9s/EzCT+pf+ZqP+NRkeNGiOLgsqqoAKylhaFlrZ0X27vdiavz++8f5ze3pZqNHPuPTnnfJfn+TyffXu+v9XPv/3n18eOHVtOnDgx73379i179uxZjhw5shw9enQ5fvz4snfv3uWcc85ZLr300uWss85abr/99uWuu+5avFy3Wq2Whx56aFmv18vpp52+7Nu/bzl8+PBy3333zbnTTjttOeOMM2Yc4+3fv385cODAzGVO1z744IPLF7/4xeWOO+5YHnjggeWee+6ZT+/7779/AaPxfB45emRZLavlvPPOm3kfPPzgjPOvfRlrvax3b/d7+7V97l87x+O9b4UgkIYIEcMiIR2yIdNiEeLiiy9envCEJyxf+cpXBmGQ43X66afPtd6+GweSIdK9xj506NBy5plnznnzHTx4cO6PERDklltuWb7whS8sX/rSl4bgiNfb/ca89dZb59MYCAJZd99991z3eF4nI989j3as8SLIqQj3b02s1S/9wi+tLRaicCNi4MTbbrttOB4BcDYk42pEgSwEg2hvRDvy0JFByllnnzXXx82I4vfZZ589RDDOMMBqz3LojEOzZtfeeeedQ2hS4o1A5vd2P/iuvPLK5R//8R+Xm2++ee4799xzhxh33X3XjBlxYzDXnDh+Ypf7Hy8xItL/F4L88v/85TUVYjE41mIgFpJwIq6GuIMHDs4xxINk36m0VAXEISZJgqikwxiIRmUZH3KPHT22HDh4YI47hsCIgbDuN7/7vVxvbHAgqnv+4R/+Ya5BtH/6p39abr7l5mXvnr3LAw8+MDD5Pkxy9MgwymNx8amIZF4M4zVMsVFn26rs31oyIv7q5/7Hz61TMxYZ10Puvffeu5x//vljP/yGJACSJNICmUkUwkCG3yTBeUjx3THXRnBczR65h82g6sxtHrD4TpJ8uhdRjIcgCIPImAisN91000gNVYdJEIVUjG158MEdpG7Zh221dioEdwxjjoStv2qbOvfvRYyRTDYEEnC+Bcb1EMJOQKrFW6DrcDMEOo+rIQ2iQiBiDZfu3buLaISEHMhMxZEYcxorZJvL/Y5lL1xvrFRUUnLRRRcNPMZFiBtvvHH5u7/7u+Uzn/nMqDEwQNyjScAuR24M+MlG/d8T6Y9l61Y/+99/dk0KtgmSsXajhaVWIN9viIAwxje11hiuJUW9Ul/uhXg2CTJTZdkmHOm7sb0ww5e//OXln//5n2ceiKfOzOPzggsuGIlyDyZBBJLygQ98YNQYoqZutuE5GRmP5mGdiiAne1+PJX2PhfTHJMjP/LefWeM6XJgUWGjIRwCSANEkpePZCISEoLE1hw4Nwe68487loSM7EpWaIRFXXHHFcuGFF47qo6oYb+cjeobctRANqa7lQCAMQj7xiU/cldDsTQxzww03LJ/85CfHE0sqwfHgAw8O3AiD8BFqVwVt7MRjubunIsbjIci/VM2tfuK//MRICOQhSDYAByJAdgFH5/FAEI6kYs4979zl7LPOHqL47RrIhFT2A5HyfhCNq2os3I8oiDDqZb0eRGefSJaX3+ZiI7wQELKf+cxnLt/wDd8wBHYNIpAqzOP6kG89xTVsYu4xGMDlvHtTtby9bZW3rdpSgR3bs3fPcujgod31Ira1NPY4FST1xFcdg68lOUMQyIQ8C6KPsymQ57iXYxYLqQWLrvU9dQNZCOGFKAy3+yzQvdkK0mgu7ivdbxERH9Jc99SnPnWQb3zHENAnxCEkOF796lcvT3/60x8WP+WxZdDBgTjmKwbKiTFPDgPimKv4iaT97d/+7UinMTBb2oDaBVtM6DgpdU0qGHw0DYJ84hOfWP7qr/5q+chHP7Lc8ZU7Htvre9t/fdsawIABNI5BCO/ik6LsomeTUx95T64zBqRuG3jfvfKiGGjXuBYnQh61ZdHG2uXM9Xpc56uuumqI47jrEQLi2IgnP/nJyxVXXrE85clPmYVjHGMjmvFc6z6vsY+rPcvBQweHYfLQHPeiIfIGR+XeeefEYe4HO6KZd5vIeYU5Kq7x3TjmAHce6v7T9i9Hjxwdd/3Xf/3Xl3e9611D+FPaqR/70R9bl74oDZLujxMAbTKSgNMh1KQQDJE4w6s4w4IL5iICbirwdA+AjUPKqAxI/tCHPjTjtyBEoTrjQIjOFX7KU54yHHrhEy8cJhB7gNGYCM0RgNgi/QOnH5jYJ+cFXGUOEBQ8rs3DK51jzcVp2bTwkQpFKIQAr0+EoEpbh+uKm0jLH/3RHy2/8zu/s9xz7z2P0GCrN//HN09gWEyBOFGWFAAUUAa3gAJCRGgBpU624wPf49pE2TyQlGE1V9LJIAP0pi/ctFxy8SUjAcYwh++XX375stqzGn1MLcSN5cogyzHw+k6a4/Tcc0ToesRM7SCI4xDrHRF9N5d1GLPYBsyQX9w2Ae2ZZy0XXHjBrMe4mJmtI7HZNfeA69Of/vRyw+dvWD74gQ8+QkpWL3/py9fUk0ERhcj6jShPetKThjsy0gV7GWnXZ8AK/EJwebBcWeOYA5DecRIAScd73vOe5W/+5m+GayD22muuXZ72tKcNotgJ3tVll102CwWHFzgwiEXLg2XLxh6cOL7cd++O9LFV3jFAEmwsSIJAYzpOistS+A7pOStlMyIYOOHLJ/isNQcFXtjH1LAxMDi8YBTM8e4/f/fDQgRrWl3+pMvXF15w4QDmIi/cgyg4My53jLjH7a4rmk9Xp7YAXgrGMYBYdNE+YFOHYgfS8c53vnM8qfGO9qwWML3kJS9ZXv7yly/Petazdu1aamGyvkeODEdTURBOTSHw4Yd2JIs0gcUxtionxLky28U2OTDmj8AQt62Gc51btzHgg/NCRYHHvTfedONy65dv3Q2i4cI8HBVEY9/g40Mf/tAjkqKrQwcOTRwCQW6i+01CjLc5Mg8DgcoM52YW5Lk3fQvoEokALluLeDiPCrKAj370o8v73ve+5eOf+PgYvmc84xlDOHEHCb3++uuXl73sZSMtCGtxeXoMrxeigAVHUg9sjTmyEbgWMVzj2pKlvlPFqWPHY6TUTBKTfUWE8nLuhzvSAQcQjTFIq/tGIjdpm3179w1O4TkiU1snlw1W+/bsW59+4PQB/txzzh3EQaQbTVSqgkjjTqrMZxFysQQisiXbtZT0vE9ItijAQOQll1wy6gQxPvjBD44Yl9G1GMgFC8679tprh7t8x6Xmz00uG21sEsI9jlAQAC7BmZigfJt53G/8xgFLOThExunFZc4haMY5FYUw8COfJmWDiNZR2uZkiz2e2BlnLuc94bzl7rvuHgk62dNa7VntWXMJIficc88Z4+Q7YlhQGVlAWDyvh4eDW0sOsgmlvFMlxgCARVuM7wAt8ocINoMrCIlUhbmyT36fdvppk2X2nfR6GQdTlKoBBzjdt+0ap16zgcU65sgZQWjjlTmIQHmdJCDDjDjGKPdGegsT5NBIBqKn1h7hPm0OnLZ/J54x3qlc39VqWU3iKT9d5GkRFlyCMCQgSukLMQIuL7nnmoiXy+gTgXB8Yo3zEMhC/+Iv/mL5/I2fnxQ5IEmhNwQbT+aWYS7+MD9E4Hr2bYzgJgcGWeYvb5W7XZ2kWCJvCgwvetGLhvnSCMVL5fLA6l25oeCRvfnc5z43zOT8sePHHnc0TlpTmYjyCAmJIBZHlEmIlABKMo5qF4ijMAUgasPbb7kpUuN4nIhA6V8cmxsYYXJHfZIQ+n7Kufv3LWccOmP5uq/7uuWlL33pctmTLltuv+325SMf+cjyZ+/4s+X4seOTLvn6r//64UwEZIeSOnNBHPUCSZBcAGjukpZJ4a233bo89znP3c3BIXZ6330IZ5wI6nvZaJ9ips989jPDMP/SzDDmn7qQROxJpYFdCUEQi0AQwFfHtnAEgVjfqSzEoD8Rg7F1LOnI6ym5B9nUDZE2BoNncTiM4T7jzDOW615w3XL/A/cvX7jpCwt79oqXv2LSInT6xz72sQmiOAYYINcSjODw25yQmcdWccv95Zdy2UuCYgTrsYap8Z9+YCefdezobpqkEnO20VgQOTHRarW8813vnDnvvefekeL77r/vcdX2HzdBIFWTwt59e0eNpD4YLmJKRVEnEEwq6P4Q5RoILxdE/FMpFmQsiGMAEUfcITF5/auvX775m795ufrqq8c15f5KoUMqNVc9/g1veMOoKYxg7JKNEOvl+ne/+90z/naitEARIsFvPGvxaS0IZDxzI0gVStdgtCJw6yvBihGoTseovo9//OOjft/3/veNY9HaH82OTPS/b/8ipRLzdO3DJET6IVsA0NxG6sBx9oNE8Hh8DxEmgLw8liHs6afvBknG8aJePvWpTy1//dd/PUZNtvZ1r3vduLoWThW4F7fxsnhLxkEI9fQYgdQgKhc6VxfiEcNviwwpk0U+emQIyYt0nFQYM8cAIUhscQdmAzO3H8MhDDVdctM50oOghx88PFLuOmv71V/91YEjlzebRuWOl3l8p0xuzJe+5KXLn/zJn+wUBTeVydXe1d6pBvgPoaXMi0tMjjPKTeEObidPC8A4BGIAVx3DOHWmOFatnLpyPXcvY1wWAEERyfW+I4SFXnzRxQ9zFowB4ZAIKSSF6oMAXP7JT31yue3W22bxMVQlYcfKImMs64JoUlZMYhzrqf4Dluc+97m7qZy8LXasyH7c1/V6bBy4ETdpK2tAHb/3ve9dPv/5zw9RZCJ+8zd/c3nb29420oVpRqPsWfbstgGVocT9iSwCVPvIOyD6iXOpkGKOjGxRbL8hPv8eMRA+g16JOI4vVW6RxqWzuajmxKXmL6BCYGlySLFY3IloxqpcnBfFZlQoq6gGPhKJONtpjySJE4EgdeW4zlxjM+67bwhczaUyNnjzQkvTgEUO69d+7deWP/iDP5junN/+P789qaJXvepVU0SbwDSCVBfIVuCcspYQASBIKOdjYeWtHLeAssSOZ9Q7XgKz5CKke1FLgCV1+ecQ43uBabkfcJgXXMYtYoYQKgwH8n4q+WaU6XrSDE7EnMLaRsrB7F7Hig2KWXJiqDd4wUiIQTWBHzGkdaxB+scYiHTNNdeMtGRvcwqskxfIRsr6uub611y//OIv/OLynve+Z9ItY0P4xiaDbBMDtrfFV6CBmGojpU9cX7IPUcs1xW2AxLEZ5zgsybIYiKICEaB4oYof1UlKcDzOy86kFsuLUUuuiSjm9NrOViMGyTQXSYK4nBBIdy21h5DnX3D+RPiuL/XTmhGwegs7iEgidXGNaxEiqS9RCR+OIyIpxzSckB//8R9f/vAP/3D5yZ/8yU0mfEOQ3F4AEOeKPuMdHX5wgGMXxChcRFSHfCrNu9R2ETUi4kznAOBVgk/A98D9O015xQ+40ZwxgoVZVK1HiEYNpAKKoiEmWCASpzLsn/3sZ2fRXmUBEJcDUfrHGAiCqWoArMwL/oLLYhr3Q7DfrsPpr33ta4cI8ESCMYwxqxtlf8GNsXiTcGRucMI3PH3nd37n5PN2JWSi9T17ZuDsQWkMbjAi4DqLroWHGmBvTOaY6xNTSOAaGstxokoKcWbRMgKV46rI1ZjN4XgBmYV4mxOhGPMCtry4uirL/pYcHC/r3HNHdUHos5/97F2vKq4WU4C/PoLSPySveOeWL98yLut11103x0hWFVTrMgcmUQI2FrVUMlRq6okX7qTpy+sJHUjsr/zKryy/9Vu/tUMQgcoEPfv2Tu6oICpVlU7PAJbiKLdVg1vubnWGCMt44yzAclkhEYJ8loEtqncN+0W0i12oMhyXHscAuAqXQVbRtPkxTQYXE7jGeePjRmrP3CSFBFGRPC6E9rsegeKJqX2cOL6cc/Y5M5fjAlSEfc5znrNTrdz0oFmLsY1XUJo7n/da9qBysN/evMXv+77v2yGI+KMCEiSaxAAIACBcVoWwgIqa8C7yxaHUTnUFxwFqoQDNNSYRda24x3d2BMeXvDM30aZaELKEIFicK7dWrFNrkfkhvpjCvTiRtJJG1zPCiJINw0xUTeXe+oanpn7P3SPdgmUqzf3GIlEYhApFmJwLDOa89A+GSn2VtS5dEgO5tiYSx8Qwk+01YcYcEopka0RATZxLNH3HIRZRl2EFmOxGzQ04PM+Lqqo32LjUDWQhSPUUtgrhqARqKSmKsOa2OISLGXyCp9imNHytPe7FBBCIOUgvNVJZ17rcS7IgHSGSXLbO+NRMObwyEvR/tgfOqK6KVGXJi92cN+92orOydzbR7y9+6YvL6sBpB9aQi9IGpB4gstoBwAFpcjcDHAJwQPl/lDapV3YkykMQjvJiaL1SDcS0NhtjexWU7fjkq0kq5miUY/Ob1JVTQzxIpKqqY0zl8PDhWQsJ8zuX3X2IZK3mIz2Tz9p0uJRWt5YcgVqcMARJBTfE53myKWwmPBkzVVraqdqJWgizUMkc7orZXLu66MKL1owKIKulu7iFnFwPwKVVvgxWlJw0VC9IDeQqEm+EwN0Wk0eknp66zHjXPyydMMb94M7ekrIGOB0iLr3k0tHvNSb4RJSi6VRttgiHlk2AhOc///mTTb7zrjsnI/CVO74yicKidHBZK3fZ3EXm1o1Q4EU8DOIaDIMxyyI4j+hw617SCMfboUPlZbCBZ/Xsa569Nlh9WJUzDV7zF6TWP5s3Rj0Bsh4ok+dRAZi0mcy9iMqIpppMnh3BnRlFc5e+p97q7jCu7yGoqNlnBhsjeJelpm7uufue3dJAybtq++AS/UsMKjMgOq5GTK/6hhGOVGxXSd1bnb+UDxW2ja88NwSSh6tMkbpNhf3lX/7lJFSt8c1vfvOyetlLXrauf8jivMuA4ixiWO6obouMd1VAnA9I9+X5GBPC/M4Y1pfrnDG7H/JrlkNoNQYpBd+zadvnW1zZBVLhfIYa3GAdFXbfvVN8q6KJIMZmp6QvIlotoCROLWjUx57V8tDhh4aoeYyYzDkpFaobDFIi1G+VRoxDhWnSSNU7Fi7ABxdg/l//+38tf/7uPx9H4y1vecuyuv5V168hsw6OvKVsAYQAojpEKQ5UDwDA5KtXgEIEhKPTLaYsAE5PhUCsuQFWg3SRNU51zjVlA8yTeqpFyPgZZZ+I4h7w3nb7baOCprNWP9f+nXpPMZHaiwJc2sC9CIlhpMZlh3F9FctJm+/fP21Jr3jFKwYvfsuhUVPG8fL54he/eK7JTglYwU5zVD+S5nn7298+8LODmjlWr3vN69a4o97ZukvcWC0hOwBY6o3qARTdyMhLGxT1cgDo94wZQkNuwaN7SqcUIEFgpV3njAWmmg6SYPNiCHYLB5rXdRbknjy3XG5MQhogknMwiN6/f5wUx2rMwHRs2XZWG+djBPDDTVVRGqNkY2kb560Zzri85ud1wVsMnqMAfgQDx+/9398bVzciXv3Mq5fV1VddvYbovIyMD2RAGECKB9wI0TjJ5DU6854sqKwnxOBCnltdK5CGMyBuO+bJFTYPohT7mMsc6Vr3OuflfovSQoRpEKY+4+rxxgMn6fPdWoYwm61wiJF7HzMggvf0bXEoDu0UwyCT+tIxYk2cimIOtsI8GBmXy20hhnWSCkyBiGxotSZrcP53f/d3J/MLLpKIWONloaibLNrbBRYIMIGSCQxskAKhXD4IARCjVispqaFXM47uYWcQGRK8Jg44cXx0OcQ7R+wRsNZOBCjdng9PfQgaLU63R/YHrMbJA9uOS9TPay6Y9s+9e8arMr45vRy3FutGwOrdjrMjxVjlocCFKeotQAzequPWWB9zKX9wGpMKc0zGQutsgfPsjzxydFk977nPW+eOAcR3+pmuhzScbwBcglsLoABvEsRCxNl8efPNcx2d6vd2hlP0XKMbXT7R97GdDC0JxIEC1KSwCp15qBoEIwk+LVpwZw75J9yOkGUZcizAh4AYJunwSe2CE3wI65WDgQCTyzry0BTtXG/XG8cgu1jvlXnhij2tHdXc8ljFQJgRoUouYja4ADfViQEwa6mY1Q9+/w/OHsOCMhfU61vdwY0Qk4+P0hbvPGSZBAEhjBuLaNTYZFn37hkpKC+Wc5AnVInT/LnS2/YHpyGOuruFVLJF3OrzEAhxZZc1TDDmpfpTdRGWzi9xCA7fXWvtqQ9rnPzepr2JCiNlEJvrWiIye1EGGgOUFK250LXjua1Wg6ePffxjO0xxZKf289a3vnV505vetKy+6y3ftbY4yDUR5EOoiVG2PJBWyLPP2enSs6Aa5XAssRW5A4iqQhQE0YXBixkVcPzYcBxue8J5O53hxLUsasFYNewyp1QPpOjxNS4YVQghEoHKVVlUAVheoc/qIoiB+x2r1mKN7vPKYxyJ2GytSHI63w4q96R+SAv7QGplguFAZtw4cEp7IETVRPNTVxjNMczGfZZ9/umf/ull9T3f9T1r1AScm3GK1k4AEiP+sd+QVyTafj/XVItGEItmyEruuc7YOFYzAGRO1fHgzt6Q7MIA/4SdTTO1G1kMohc04jAIhQjBXHGH38aFFMEa+Kky6taiwWfMCmbmLybJ06ruMRH+saPjIncu4gSrTT9ULXxgBvPlrWFm98sMlyGnbXL7EQ1+3APXaimKWjwz66CGV9/73d+7rkpXwks6wc1uUlXjzdSbxfi7zj2oXe255BtAlCcRpdjEYgreCj5rOU2HA9wi3W8BpLM0vAUggLc56VzvSsfKBk976tOGeVxLknIzzeONmF6IM8ywZzWbfFJJueDGJAkYlIrye/Jqq9Ws2zjmAKs1GWeeSrGJuaoXua41GcucVRr95piIzHllQ4jNkyhWP/yff3gerWGgKngFaTiWIYek3FPcQMQARH2pL0Ngyck22pAqXOo+AGRYLXA46ejR4d7SIrmcPol4O6dwvmt1OTLGORqIUyagXl+LIhUFeK2p2nrEQJhU0y6BNqpq6hh7dtSW3rSSghjUOu64846F+naNxgTS7tN1PCWEABciRRBrAheCkCCbZF/wghcsP/ADPzDEwHh5lqsf+eEfmU2fiFGGtKYC+tfg+evbHhDCQAqC0POQ9cyrnjn7/lyPe0gaW2KySp9VCKkJ8xThWizEZdwtsFYkHIn4AHcPOKtm+o4ZEBYcjo+ruuW+1rO7TZCcid1jq2WcD8yQ5IEHY+TqmhssSdPUN44fGzupMTxHwDjGNRb8gQVBa/igZdjEH/qhHxrGoA2sdRjlp37ip9a4AsKK1kuFQzbg3IAABqTXeQ5Fp7WIMqgizac9faf6BjgEQ1T3sSc1wVEtAC7fFCPkeuLw6h2lpmuaG6N54MAgRlKQWrFAUl4NJKIUX0SQjLPzSUm2rGpnaptUxhQFrVRwNii1hxjWMWp/vROAkqBSROaZ4tuxoyM1xuQmf/u3f/uoK4zMkUGDkc4f/ZEfnV24KDgJvCMPLeedu6PP2QKTpbaKbiGk/E09Wwajrogg4lRHruCDgLgBkevrAmhMYP5SJrmpSUscGYLHUdjEFhAh2DI/Di7rm7RN1L2RmrEPDPwGOVUijZFjk3p1/3agWdzi+K4TcOShsUO53ZORPm3/EARxECAb1rkLzr9gnA/EYNDZEkwwTRIXXvBVo043S96ViSSqCFKwyIiGaADwZPJWyoRaWI0EFY9CdPVtKgqRcIkXCcsjqnpYLDBxzJ6vZmrT+3k+uZLt/CI1XqVfXJ8kRhgGmwqBSOd1DFIx1p2Br95dA8fDdkTZt7LZ8FpgOe2hm2emZAtzDtpWZx2kg7ZBBFKhy5+7C57dqiK31yK4Y/R0AZ8bav2sy1BztL1/uBPHlLU0GD1e7qheJpJlcTg3D6PSr3lICr2PERDO/JKBISvkQlwIK+LeVjmQkC3ItsQsqakIUlokjyuON36IbozJIKxWu71aSewQclOrH+9oEzQON4j69+0d1xkRxs5sbCNbyiFCkCJziUqM5NwY9u9+63evIYU0+Cz3Qi9DZoUig0p5XPOsa8blJAm43KTeDBikQ2oEaSMpwuJ+SLcAqqBMaZ6S+6Qc6mSsjFym2JjmgfhUT65ojdXbtiPJyl5sq62ImTvsHAbpnvGwjhzZbQmiVr1SVc417hD2pKcO9ayt7NLAvD4xsZaYg4fV/hY4LIuhvLt6439445rKgIwWD7hqvj71E9k8AwHf8i3fMupKphe3AwzR2hcI8Y6XRCs2qFZOzAuaAJxdYvQ1nlXoqU8L0saNPInbimcQCnFDUG08+fURr8+MeOcnibjxiCCaDelaeLAu+HF92e84/tEe6TSqdfNApFIoManClneVWUxbCubyJ1++rF70jS9aT9h/yy1DEJOgcF5CHYWQbiKFFwAROUimpqiktgoYi3QBwHgmLH4wcVlkgDpXYEgydIGLwiG1xYforkPMiJNayt2s/pDq2DboBYad6zP3F7yuSQLN1xomANxUU4eAp3gg2vZjnsaebBKSSUnpJdoBk3rDrfVhXlKIyVeXXHTJ2uIhSopjRNDTazaPz6C26tESXzBKgrXaZxJf9mI8iU0ODGFwew3TVBBkVn7Nw6mBGkH0uv793//9LtFwvvnLcyVdkGUe75C4zfmpl1ItIXmbKJOG39qTSArhoW1tqZHd/Ney46ZHwJMJezJBKuoZB5yYkv2oWYOqsr4aCHeZ7ODpB9c4F8IAM72tJ46PYc2o5psjBlvBKCVyON2gEO0cQ+h67i2pmwj2gQfGQytFXf9vet3c7sOJpV3ac0EKq6cjhOPmjCh5UcbalpyM/3YOq2tdl9oZI7xxCiotZ9RLeUwxyr+tB7OdTJCxS5vHzRaLGNeYGLrkJzykhnuyw3idV105jRarMw6eMQWqkFQswhWcgOrE8XmGoTT6ky9/8hAD17uH+LW4UuZFnNkVkgfRbESbR3FGCTdcV3Go9lDRfc+/Gs9r89io7Qi8jpOQB6UAXP0AABbTSURBVFmDiM3jmEJ+NqLfxTgFuqU6Un+YB/LHifFYpv2n7WStN57SqQjRsXYRVCqOINkR2oA6NydGgwOaZjsTME9yUOxX/HejwHD2le/ZKWVCXh6HFn07f+g/iKC6ALqd2cyXj+uKkhFOKsVWYvfjFNdwr9uGUJkVR/LkOBoSmxW7nMdpxvR922aApxpHtgOitr+7LxuEAMUrBYbb7mzMCLk5Lo9FjCSENMAjWDBNPVjOU/mYrvgFMaw1TbTzgJ1lz9gQVAoxRdWjv+3BXq9HOlxDQkTkJKH4xMQGT6QtkDi6xliQ6Fw9vDLBucTtQgIs4GoPKo3OpqixgAViMu55aNRK2djsSLFGzFHaPxuUgZ5dt5u21Ly14eqDB6YVqeSn60/1KKWTCTTu/1lnj83wqnmwgBae6hGgNRDOuRykgevggYNr6gkgbph8ymo1kuHTjQBU4GdDdCAi4Atf+MJBsuvaPmYMHIHrp+Pw0KEZ15s98UlspV0gn3TN+JsnyAGQaqsUTG05L50ucO0VorfTHdtE2c43RaRijjLX226vcaYkff/OE/Jmm9rhh4aZptSwb6fU8Fiv2eq8b++knbJlBZvFasUxeXRwkPNQknV1zlnnzPOyqCqJMrZCbRuQPQMXkJBM/7EbFvlN3/RNu9FxNWyLJpIWVByS7oZUiJLHwfET1d92++hrUgJInAIB8zypG24YiUI8iEk1QkoFId/rltkO6kZ9bD3p2u8IUlsSuLILdcGAI3tW4zQcjIRsKo2PZsyDqUZrY29LSGoRAcaT3dRlUqnZsNWZh86ceghORyWIKSCCaAt1jLqi97lruEzhqmgecotJANQDxyy09s5cYL62cSu/As799eMiKDh4W2rPJATQjlEbyqMWVwm0NqPUAnhTWanQXGzjgMe1u8GdPyDg2fU9BdujzfftnQShzka4IC2zMfShnVzZyS/jjTt7xk7/b8jOngRbkuh318SwNSquzj7z7GlyKNpFHFRsz3aUtyiI1h4Jgfxq7wZGJJxsYNdRb3UcVvGrhmxsb+fbl8GI53mAh0FX5Ko/uCplyUrcXNNCgWGORGtp4UXZeXTV8REuDyjnxXoaZ2KJ/fsm+WgO0nKqF3XVpqVc8jy+fht32wnpu+Nw11OVVqftP21de3w+O1GDKABXS09SqCrHUJ89AHyRNUKxFbiWJNSej5ur5Jkj76INpbyo97///ZOi2H4276c/8+khjIqcMTEAVTYOwu23jd9vTq/c3VTTtkHfTnuE7Nzh7dTLGP/1ifEwqdKxRctqik9J5SOkY9lJqbS/0Hg5Gtk1+Am327YuNYzpdpsv9u3dt6YGIHwymMt61MJw2frEFOxrB3KN5BhkQzD1BTltQ0ZIHOyzbcHbuRoxDpsgYp045+iRcYGprw9/+MNDTF5IFcA6NDTEma+mB5LUZtE6IXNxM+IhpXpENiaVksfmd8Y8IhXBp/JyY2uq2yYKYvOs2n1cVjqVmPosSxBB2uaR6z1pK7V+G3bSsQaZXbaeGHpiR5TaJdTGFMTRVwsRuILubO9dqQWfJR+plcnRrFZDOAbb+PbnEVPEcb8YpQcJFKdgENdr2Rf5uw9RECoXejvgS1f7zLsbghw/ttsBnypJnVm7tZQCmsztJjlYzmrSNPv2P0Jl1Q0JJ/BA3edMVELOwSiz4DP33rzl9nYz2ALDqOjT5PURoWJby6pXQ7DH7tHpOGb2lRw8tHzuhs/tdpWbhE4lQbWJcggQBLdTeSQIcM6bj/3hiZFMx9oWjWiCSU0OXsZB8Dr/SquUm9pGtPFbaK5o6i1Oddw6GeztJ1Bv56bmQTGb7QQRaYi+eTSt9dRwl0SWFEWkSgnmNp81lTPLmamEsDr/vPPXlU7d0D68YhHcCnixAaThBDt9cDZK8ywACdkmymsiXWyITTGI1/ZhhhpQRLwUjLEQENFJhHsLPqkL0ikLzMbUUSKCn4fU3HTjdP/tvjZ/rYihzf93zhqyM2WSIdk1kGJ/I7d/nJRNfWPc02UnJSOF4pqMs98QPQ3Sm46VXNhiOszT84XhCg6tcRK5myz5pGo2hn2k6SmXP2U9eacHHxiKh6SiWlzOUDGunqnrGkDI6aN+9QNjmMQnAkMeZCIK9YTQjDIDXo+ucWpS3t6azHCLhdSY3WfBgkQweEajxbFFFkLdbUvH5LY2Fbwi8m0VVnqm4LHI33rFYprgtgtOkyPbu2+8LQSTVgcbPFlPDxygRq2fhNQfLTSQXspJonZlHkqcWhPVW+l5CPKMpz1jCGKwvIX0LOqp+UIKDvU4PtyICLVAIlb5Goiidtp3SHcT93L/kE5aikEKBhHNOcCby/0kAAIuvezS3aShApYUfb3G5qtOo7kAt+uQnLbVzWv3rxps6hPbRr1gLIOfW/ywauAmaWl8xMKEbCfJl0ZSgq0JsOZpTNb+GcQwDzgxEZUNl7QNWBDHOnaN+rXPunaNuiW56iKvEw934wLPEOnRGHkSPKL2eSMQQuIC2VoTVAswFoBwFUBjAPMiCmmjoiywTnFjAB4HU5NsCglhOzLwpKO8m+twec/sPWXAsEmRp4omO6spbtPlnkTlqWWQq70glDUjBpgRJk2R6nNvhSfSMupw4zRYL/gFvR/80AenIdz8EWyk9pqrr1mTDkZlyrWbJ8YZzHEIMukf//EfjxdEFeFAKfka6BARQSCOvmdPciWnR0lx59jO/gseiQUisuidFJqDFJEQb78tCrI1JhsT1020vmklpfpIksVOvWITeGnx2S5aDVJP+rN4J7ut2wXA3RTGxi6Ufyreoo6+8Ru/cSqn1gwubrr7rM+rgh642qoNnxgR3BhKWYG9tAcSboqPVtc9/7o1TisxiKvbXmCAGrlQVpzgDSnqJIr26W/3uw8iM775+gA0FqJbkPkQEbflkVkIdUaKUgfV1TGGhUTsL9/65eWzn/nsMAikIMo0VTPAe/cNbP3VuJB/sqF+hEpLxW1Ktdu5sYLMKpdq39/6hm+dNh5MWF9YtRnrrfrIToSPOnAcIyXepBqDU7WT0H3xC188bq9BUbknHrAL9JvjkoV/+qd/OpPEoYDL4LoP1zuPSyAeASC9rQHGqi2VBPnunoo5rp1+qU3WmYqiwtrXbRG5xrjOeH5XIsAY7BWjy30FX7bgsZ4aum1jkqbteKbvBYl5bPDy+te/fiSlhzxjINdtF8/KLvc3GnsOPfjZUm9SMlIsMHzhdS+cbdG4tRIuTq8tBrfZ/vWOd7xjImsxB6LV45rbV7p+ilybvd7GzOsyNp0LUUkkYHM93V8S06LBVHa5rCmkM+xUFdWG2DwyHmLNbsZxHUROsLf1V9a+ll3ZlZqNusqGlK/bPb/peAfjG9/4xunTLXcXg2HOKpzl8qioHlEotkqFdd30RvjrCLgTR+YfFxgChB5kcOk8+hwSalgwEP3pVSqDqG/X2xNdkzPouDu15xyikLTpfz16dFRQLinVVfzCVQaP6ypmsW1gwXXEP5uUdDze5+lu/32pbdV2KgI2pjin1L/a0Ld927dNbMamlNUtMK2xkIpFlMoPzIBjcFe35OpN3/GmaXJw89iGzdZniOVVsQk1VxOvtiC7XuFKx7v7enaV+3o8U013iOCtFkK6EKRep3lO7v6dP5dnTARo6zSCIS71YHxEtRifFs6+cQbAbNGI1ubT6Ur3h8w2UfaUo0Xjp2hUeLQ/+PVoEhXRwIs5NLhddeVVs8+8Z0OWlC0LgtnqzpR1kLvD5KQYLrwma207AiSGIPqvvYN0PaRQX6SDBFl0KRaDcIt5KV+6eefv1xYYAbREIerjYmJtvN///d/fNexVG6kzL9xFJwuqxCbl2dzn8bLZEsiYlMemYaLeL+PlQPQHYMpEIMZjqbCvRZhTSQ84MBDGsD5xSSkjmgZhrCGvlRSLsbypW8zMFlZnn+0IeTGpmh4u4+Y6Ujx1wHWkZOoEnih9+MHlOc9+znDJ/PGU23b+UhogENU4PV1I0ATpkPwbv/EbE9zlfeHeiFV+jPiTKNdTi5BJYktQgkWAhcuCx2fqFKHc47PMq0hcpgFDmXPc95P+yvTJ6mvbG3s0dUZ10SI62jEo24dANQzW8wVm8Kdefe85w4gytu/7/9P3ryGhghECoLoBU2GQRc0I+2VeTTAphU0XCDH1mvjjvvuGy2snhSATlc/CTR62gjvq5oCw6vnFNKSLPUEQaizdXDcKSaXGQnwbjqoraPq7/76dv1bdu2snMExa5pHFj/zT3Y/WnXgqNQYPcMYOv/KVrxwpwZB+15bb5lL4gUsbV6nxGs2pYjRYfccbv2NNjyEKbsZlxAdBJnl3442DFMaH6DNEEGhxIbFeI2NkUI0FiQgS53JjIdy4ClIZO+oSDBWhqJ8eOhNhesw4hNDFPecKssGF6BKXFta2BvapXcDVI0pRnByf/EsIcDJRqEbeJw1jzYp46kbw0k7jDD38gJdEUMFyc2OPN7WkiUMqgUIIwA0MISUUbaiEfIO0kRM1vWqj9z1XmAiTENIAYQiSxFBFAMqwszuIbLy6/KhA12GEng3SPK4xfkYyeHAiqZPiEQkPkY/u7JJVEx+jvnGJK91yM9tW8Agkn/RH7h/NwHecBEA+OIvmSQp72EN2immqFAp2ub/e8Dt7bp71zGfNDqqynj5RmX6n6+y9hqDLLr1sjDbdX1EKtxkoj8LiIKyerZ5PUoQOWIFUdXH633zUULUQiMNNJEJis5Yi8IDD9b5Xz6i9qJ5hCTzFLrAbF8yIgwhV58oumGcaOfbuPCRm/vb6o/y57q9FkNR3HqbPOt2pfDgrV1b9Hl5oCzDL3WHM1RVPv2IeNZ7oQ3C7n6grXo1Mp83+ENrj8CwqG1PGtyi2rWAkrgSb8REaQQDkXhzBZVQyhsDtKqAxeCtUp/uSEHMV65TQq1SQnmZbcJ0FInq1mrEbEngeHWhfoNr5xg3eNfInEWWbEI/wwqbJfSfCBgvG7HkxCICBMvQ9XQkjlddCjNmG99CR5a67dzYujYRMD9YmcQfgaYo+eGCQRiWweSZAdQQzCI4wiAciUyEQ5oXqxQ6AAAAuxKnUoKgWAmt6yCODQJxSdhQMGMOcbIqxevJdDXKQ4IWhSB1CV0YFIxVWIg/x2ZZaW0u11+PLHSYh0yRx4vis+WvalU0xzLXlAtkN9hNh6lR83vOeN0ExvNSFAtZ2lVUTGaP+khe9ZOIQwG4XqhLxatKKMpDHo6qpwTWlQejNCOITAXU5tiN39mgfPbq85jWvmbkgLvWEUJDXM6u2O0KMW5q/VAqJ6WVMzGENxUF5NpBv3pruSIzfISDV1QZNBBi1pki1pboey77kCud6g43tyzHJ46xJvXamjDtYSLG3kGL1+te+fra09WQEF2pIQ4AR402TgIQdKbj4kosneVfScDjq+M6jJrZbcXBtMQQ1018t0CDR9gWShSvYC8e4smCxOAhxHrdlO5JSeawi4Ppoq6X3+FewtHiwkkiqTIDbA2wao9JrY8zv9U6sQmq2X7s19a2UPrVVzR6M4ibMWBkBURCK+q3rH7NMQe3w4bEfiDEPVnvlK165vv0rt8/f3OjVXsDpaNykG1QKIcfCap4eA7t59ke63aJqm6Fyat3hoeHQHjHrXmoIgnJtAcaW1EHpeDt/fa9QZGGuKb5JhUEwvWxhNTP3SKhcb9IpbYEB69asuzInZbyh1Y7XOG7yia/GKZNN3tid6izZFnOAhVQjCFWV6sKwPaECUcqD+YQba+eyr6695trdwHB7kw7i1C1hIkTqebcWW+q8fYYVdhzvkRIVuyCfcyAYwjVcQTEIX50hs3DeFOmgXio8GQcTWCB1VWm5FlYEcU8Z52otJID35TynAQIqv4IJ/D1KavT2JjOMWDXLheS0RMyaFO3W3TcP0cmDKqZAABpC5E59tZnJ8Zg0TQC3mAlzjpcFIelfE7uwcD/RopoMvP3EaJNAAmNV5wTAHINMUuMeEoVrpV8AjIiITVrcS81UD2FHzFEjgLH6E7DuY2+M6417a6cxLykyrrn6W+2QDwbzWFfxAsT706e43/XW2WM7hiib+OlhamzrCRAhczysvXt2n1hX1A7x2b+yDT2uKak3J9zX1Tj1kAuecMHEIRBekDRtL5tNJwHnfNyV6qjRua1qJfvcm7pyD0BwAa6kKnL92q+924q/Wu3+dZyicYgnEQWNGXYLzo+3qHGxN39PsMcI8trMCS4wcEDaKGQ89yi8VbPJ8+IVbgeRufOlYOpiyX6dXF3MyQhWayAVGKtsdvUm82DI3b0oZ51x1lQM04vbNeS+48QpOtGrDx7eaRpeLfMYVQPPhveN2CfiJCwgarNEDEFbj++DVAaQqijgK7XRFgewuc5CauQGa21DruuxTaRAjHHLzbfsJkXFTTWmYSqqDKLKSiNMf8cKYYpVYlDw9PC17eoheLcbqREh7VLg6lhPtoYLzIBZynE53+ZZmsFaZo9hFM6ziYOThLYLQEj9SYk/gpSuj6vcl/dlUsiEQAvo4WY+ex6W41RMjc9Jo0/SEyEyhm2ouejii2bBrkvVVfQynsVjFl2VCHHXnXcN5yNCnYbO9wAdcyGKa4orzJ06LzO8LRHWGmHSKu7N9U6VIkKelrmdN0/VWnaTYZ/tCKVNEk2DWKSbAOTNFaZvAZD/HmAV+o0Th1djd01qy+TZh7Yh1ANs0W2Y6bF+rk/HkhJvNoAHI5mHIMYOET0KhGqq46N+MwST25IBTncbPw6NgSCddJeyr0o5zQibhwzAU2Vday71VKm5Dng2D3zw5VwMQlWbt8Y6DG1d42XZQVWpsWaFCGOQtnLlCRQZuyfDBiEWt+2Vua7iVnkn6qln2UqPW/iVV1y52xpk0fQpNZNORYSQwThbHMmyWB5bWQFjZeTLX0G8YzGBuTUUiKypsYhs3a7LUwK78YpPzF/vrXOOR5CMP1xsq/ukAEHysMBaAZCUu7f0E2JNkjcJicp19iWKVfQydBEBkl1THgygceqk4Ncnpu/XolOB4oc8GZ8lJtvbnpizNUQYTDU+VOItpW9MBOJZtcG0BB4EQnixBsYgfQiC4N49r6ViVUwYx/sNdmussW83/ljtBILZjI67N9uSix78mAjS4aiUCnXb2Ig8aR9GPdVTG49PA0XBAsXcs9Glq2X+DsZw1+YZtxWuEKRUQps/Ae179kgj3Tzp9Oyzd3uELb6EJPVjnNQpmHoaqsUR+XJol1x8ycCTagQnQ8+djQOry0Skth+IWXKd65xJ3VpPMU6barbjDQSJgZOQPKwQnx02VgnSYjiM5Dhm51jA+ewxzI1rkKLNKonTP7tn9bAuc8gyeQCV8dzmFogxVv1bCJk3kr1It+KQEDyJy7vu2lWXgEbMnspTbJK77bP+YmshKcaow8Vc2TeLZk/Ab74i+7wqMJcG4cDYjJMdKAeWCg75SUbZgGIR49d/VlrJsWK31Jk5vTgXsy26lpaizPYG4tLKrOOjy4JunoUyAdOyno6RMqYZ++wLjiviD8i4Kj3sWgC2qKSscgDpND4kIxIJS10R+Qx9aYlKy+arRGAdqV4EMQ4JmhT83r1zrtJvcVfwub6+gBKw421uyrZJQPajlIh1tNbilaQ9CbSmuuddO25vO6hMAMkWlitJjNw8eaMTO81nJh4u2uy/CPkl6pK2PJGob5yakJOmVCXgzZuaRMgWWJNCRruH66vR8LS40zjNeU4DmwIm93mXkU5VkaSi8hrCwUNSqqtkuFO9GKZ+sZoJcwJiYvNjHOuvtG3NU3/Z7LrNaSrp2S406y7u+n/KgIAeKEhq3gAAAABJRU5ErkJggg==',
+  'mod' => 'cp',
+  'act' => 'shop',
+  'opt' => 'updateLogo',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\ShopCp->updateLogo[ /var/www/html/ddzh/application/controller/cp/ShopCp.php ]
+[ info ] file writing succeed : /var/www/html/ddzh/application/../public/images/upload/logo/rDBR1512789713Tlza.png
+[ info ] file writing host is : http://ts.ddzh.com.cn/images/upload/logo
+[ info ] file writing root_dir is : /var/www/html/ddzh/application/../public/images/upload/logo
+[ info ] the replace result is : rDBR1512789713Tlza.png
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000444s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.000715s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000270s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.000327s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.004992s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.001158s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000601s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.000675s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000432s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000430s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000339s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000432s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000366s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000391s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_shop` [ RunTime:0.000456s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_shop` WHERE  `id` = 7 LIMIT 1 [ RunTime:0.000261s ]
+[ sql ] [ SQL ] UPDATE `pre_ddzh_shop`  SET `logo`='[\"http:\\/\\/ts.ddzh.com.cn\\/images\\/upload\\/logo\\/rDBR1512789713Tlza.png\"]'  WHERE  `id` = 7 [ RunTime:0.196487s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_log` [ RunTime:0.000461s ]
+[ sql ] [ SQL ] INSERT INTO `pre_ddzh_admin_log` (`uid` , `type` , `detail` , `create_time`) VALUES (1 , 20 , '更新商铺logo id: 7' , '2017-12-09 11:21:54') [ RunTime:0.100639s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:24]
+---------------------------------------------------------------
+[ 2017-12-09T11:21:57+08:00 ] 127.0.0.1 GET /cp/shop/lists
+[ info ] dlq.ddzh.com/cp/shop/lists [运行时间：0.073817s][吞吐率：13.55req/s] [内存消耗：941.78kb] [文件加载：76]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.shop_cp',
+    2 => 'lists',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/shop/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127; XDEBUG_SESSION=XDEBUG_ECLIPSE',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'shop',
+  'opt' => 'lists',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\ShopCp->lists[ /var/www/html/ddzh/application/controller/cp/ShopCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/shop_cp/lists.html [ array (
+  0 => 'mod',
+  1 => 'act',
+  2 => 'opt',
+  3 => 'shops',
+  4 => 'admin_id',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.026500s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.000833s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000417s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.000549s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000285s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.000426s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000272s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.000509s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000213s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000240s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000234s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000195s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000177s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000183s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_shop` [ RunTime:0.001058s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pre_ddzh_shop` LIMIT 1 [ RunTime:0.000704s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_shop` LIMIT 0,10 [ RunTime:0.000468s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_shop_type` [ RunTime:0.003133s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_shop_type` [ RunTime:0.001129s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:24]
+[ error ] [8]未定义变量: access_cities[/var/www/html/ddzh/application/controller/cp/ShopCp.php:32]
+[ error ] [8]未定义变量: access_shops[/var/www/html/ddzh/application/controller/cp/ShopCp.php:32]
+[ error ] [8]未定义变量: provinces[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:83]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:83]
+[ error ] [8]未定义变量: province[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:146]
+[ error ] [8]未定义变量: city[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:166]
+[ error ] [8]未定义变量: area[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:186]
+[ error ] [8]未定义变量: keyword[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:203]
+[ error ] [8]未定义变量: shop[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:204]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [8]未定义变量: page[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:325]
+[ error ] [8]未定义变量: page[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:336]
+---------------------------------------------------------------
+[ 2017-12-09T11:21:57+08:00 ] 127.0.0.1 POST /cp/common/getAreaInfo
+[ info ] dlq.ddzh.com/cp/common/getAreaInfo [运行时间：0.033886s][吞吐率：29.51req/s] [内存消耗：758.34kb] [文件加载：70]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.common_cp',
+    2 => 'getAreaInfo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '6',
+  'accept' => '*/*',
+  'origin' => 'http://dlq.ddzh.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://dlq.ddzh.com/cp/shop/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127; XDEBUG_SESSION=XDEBUG_ECLIPSE',
+)
+[ info ] [ PARAM ] array (
+  'ajax' => '2',
+  'mod' => 'cp',
+  'act' => 'common',
+  'opt' => 'getAreaInfo',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\CommonCp->getAreaInfo[ /var/www/html/ddzh/application/controller/cp/CommonCp.php ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000323s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.000924s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.002249s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.007674s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001174s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.001849s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.001072s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.000519s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.005087s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000780s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000290s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000292s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000220s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000233s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000202s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000136s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000143s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000125s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:24]
+[ error ] [8]未定义数组索引: common[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [2]array_key_exists() expects parameter 2 to be array, null given[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [8]未定义数组索引: city[/var/www/html/ddzh/application/controller/cp/CommonCp.php:70]
+[ error ] [8]未定义数组索引: province[/var/www/html/ddzh/application/controller/cp/CommonCp.php:71]
+---------------------------------------------------------------
+[ 2017-12-09T11:23:13+08:00 ] 127.0.0.1 GET /cp/shop/lists
+[ info ] dlq.ddzh.com/cp/shop/lists [运行时间：0.089063s][吞吐率：11.23req/s] [内存消耗：940.67kb] [文件加载：76]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.shop_cp',
+    2 => 'lists',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/shop/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127; XDEBUG_SESSION=XDEBUG_ECLIPSE',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'shop',
+  'opt' => 'lists',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\ShopCp->lists[ /var/www/html/ddzh/application/controller/cp/ShopCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/shop_cp/lists.html [ array (
+  0 => 'mod',
+  1 => 'act',
+  2 => 'opt',
+  3 => 'shops',
+  4 => 'admin_id',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000346s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.055464s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001923s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.001856s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000883s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.001147s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000611s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.000689s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000519s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000486s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000533s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000597s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000495s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000639s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_shop` [ RunTime:0.001717s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pre_ddzh_shop` LIMIT 1 [ RunTime:0.001383s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_shop` LIMIT 0,10 [ RunTime:0.000815s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_shop_type` [ RunTime:0.001575s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_shop_type` [ RunTime:0.000624s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:24]
+[ error ] [8]未定义变量: access_cities[/var/www/html/ddzh/application/controller/cp/ShopCp.php:32]
+[ error ] [8]未定义变量: access_shops[/var/www/html/ddzh/application/controller/cp/ShopCp.php:32]
+[ error ] [8]未定义变量: provinces[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:83]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:83]
+[ error ] [8]未定义变量: province[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:146]
+[ error ] [8]未定义变量: city[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:166]
+[ error ] [8]未定义变量: area[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:186]
+[ error ] [8]未定义变量: keyword[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:203]
+[ error ] [8]未定义变量: shop[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:204]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [2]Invalid argument supplied for foreach()[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:252]
+[ error ] [8]未定义变量: page[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:325]
+[ error ] [8]未定义变量: page[/var/www/html/ddzh/runtime/temp/11241b1ac02d44f9a8dd6300b8b36820.php:336]
+---------------------------------------------------------------
+[ 2017-12-09T11:23:13+08:00 ] 127.0.0.1 POST /cp/common/getAreaInfo
+[ info ] dlq.ddzh.com/cp/common/getAreaInfo [运行时间：0.032577s][吞吐率：30.70req/s] [内存消耗：758.34kb] [文件加载：70]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.common_cp',
+    2 => 'getAreaInfo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '6',
+  'accept' => '*/*',
+  'origin' => 'http://dlq.ddzh.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://dlq.ddzh.com/cp/shop/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127; XDEBUG_SESSION=XDEBUG_ECLIPSE',
+)
+[ info ] [ PARAM ] array (
+  'ajax' => '2',
+  'mod' => 'cp',
+  'act' => 'common',
+  'opt' => 'getAreaInfo',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\CommonCp->getAreaInfo[ /var/www/html/ddzh/application/controller/cp/CommonCp.php ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002101s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.000568s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000225s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.000635s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.006740s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.001442s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.001355s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.001046s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000716s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000814s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000483s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000516s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000251s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000442s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000531s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000454s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000604s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000372s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:24]
+[ error ] [8]未定义数组索引: common[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [2]array_key_exists() expects parameter 2 to be array, null given[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [8]未定义数组索引: city[/var/www/html/ddzh/application/controller/cp/CommonCp.php:70]
+[ error ] [8]未定义数组索引: province[/var/www/html/ddzh/application/controller/cp/CommonCp.php:71]
+---------------------------------------------------------------
+[ 2017-12-09T11:28:19+08:00 ] 127.0.0.1 GET /cp/data/order_analysis
+[ info ] dlq.ddzh.com/cp/data/order_analysis [运行时间：0.304941s][吞吐率：3.28req/s] [内存消耗：1,227.27kb] [文件加载：74]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.data_cp',
+    2 => 'order_analysis',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/shop/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127; XDEBUG_SESSION=XDEBUG_ECLIPSE',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'data',
+  'opt' => 'order_analysis',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\DataCp->order_analysis[ /var/www/html/ddzh/application/controller/cp/DataCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/data_cp/order_analysis.html [ array (
+  0 => 'mod',
+  1 => 'act',
+  2 => 'opt',
+  3 => 'id',
+  4 => 'all_shop_stations',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001441s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.003531s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001355s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.001606s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000932s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.001488s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.012997s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.001651s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000737s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001251s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000619s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000247s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000158s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000113s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_shop_station` [ RunTime:0.041641s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `pre_ddzh_shop_station` [ RunTime:0.073701s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:24]
+[ error ] [8]未定义变量: first_date[/var/www/html/ddzh/runtime/temp/9ab0d9f8ec1d5ea57f8b34942d1f2b88.php:134]
+[ error ] [8]未定义变量: last_date[/var/www/html/ddzh/runtime/temp/9ab0d9f8ec1d5ea57f8b34942d1f2b88.php:134]
+[ error ] [8]未定义变量: record_count[/var/www/html/ddzh/runtime/temp/9ab0d9f8ec1d5ea57f8b34942d1f2b88.php:137]
+---------------------------------------------------------------
+[ 2017-12-09T11:28:20+08:00 ] 127.0.0.1 GET /cp/data/user_data_count
+[ info ] dlq.ddzh.com/cp/data/user_data_count [运行时间：0.101511s][吞吐率：9.85req/s] [内存消耗：730.60kb] [文件加载：72]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.data_cp',
+    2 => 'user_data_count',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/data/order_analysis',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127; XDEBUG_SESSION=XDEBUG_ECLIPSE',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'data',
+  'opt' => 'user_data_count',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000385s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.074998s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000842s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.000804s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.011405s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.001138s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.003284s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.000909s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000406s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000718s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000257s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000258s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000208s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000143s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:24]
+---------------------------------------------------------------
+[ 2017-12-09T11:28:23+08:00 ] 127.0.0.1 GET /cp/data/order_analysis
+[ info ] dlq.ddzh.com/cp/data/order_analysis [运行时间：0.093442s][吞吐率：10.70req/s] [内存消耗：1,106.35kb] [文件加载：72]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.data_cp',
+    2 => 'order_analysis',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/shop/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127; XDEBUG_SESSION=XDEBUG_ECLIPSE',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'data',
+  'opt' => 'order_analysis',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\DataCp->order_analysis[ /var/www/html/ddzh/application/controller/cp/DataCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/data_cp/order_analysis.html [ array (
+  0 => 'mod',
+  1 => 'act',
+  2 => 'opt',
+  3 => 'id',
+  4 => 'all_shop_stations',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001672s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.020042s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.002535s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.009179s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000996s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.001576s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.001333s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.002251s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.001294s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001183s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000834s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000833s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000549s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000647s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_shop_station` [ RunTime:0.002298s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `pre_ddzh_shop_station` [ RunTime:0.009367s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:24]
+[ error ] [8]未定义变量: first_date[/var/www/html/ddzh/runtime/temp/9ab0d9f8ec1d5ea57f8b34942d1f2b88.php:134]
+[ error ] [8]未定义变量: last_date[/var/www/html/ddzh/runtime/temp/9ab0d9f8ec1d5ea57f8b34942d1f2b88.php:134]
+[ error ] [8]未定义变量: record_count[/var/www/html/ddzh/runtime/temp/9ab0d9f8ec1d5ea57f8b34942d1f2b88.php:137]

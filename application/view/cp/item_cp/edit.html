@@ -1,0 +1,45 @@
+{layout name='popUp' /}
+<div class="layui-form item-add">
+    <label>商品名称</label>
+    <div class="style-input">
+        <input type="text" class="layui-input" name="subject" id="item-subject" value="{$menuInfo->subject}" required>
+    </div>
+
+    <label>租赁价格</label>
+    <div class="style-input">
+        <input type="text" class="layui-input" name="price" id="item-price" value="{$menuInfo->price}" required>
+    </div>
+    <label>描述</label>
+    <div class="style-input">
+        <textarea name="desc" class="layui-textarea" id="item-desc">{$menuInfo->desc}</textarea>
+    </div>
+    <div class="ui-btn-center">
+        <button class="layui-btn item-sumbit">更新商品</button>
+    </div>
+</div>
+<script>
+    layui.use(['layer', 'form'], function(){
+        var layer = layui.layer;
+        $('.item-sumbit').click(function(){
+            $.ajax({
+                url:'{$Request.url}',
+                type:'POST',
+                data:{
+                    'subject': $('#item-subject').val(),
+                    'price': $('#item-price').val(),
+                    'desc': $('#item-desc').val()
+                },
+                success:function(e) {
+                    if(e.code == 0) {
+                        layer.msg(e.msg, {icon: 1}, function(){
+                            parent.layer.close(parent.layer.getFrameIndex(window.name)); // 关闭本iframe层
+                            parent.location.reload(); // 父页面刷新
+                        });
+                    } else {
+                        layer.msg(e.msg, {icon: 2});
+                    }
+                },
+            });
+        })
+    })
+</script>

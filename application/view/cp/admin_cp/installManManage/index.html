@@ -1,0 +1,116 @@
+{layout name='example' /}
+{if array_key_exists('add', $Think.session.cdo)}
+<fieldset class="fieldsetclass">
+	<legend>操作</legend>
+	<button class="layui-btn add-install-man"> {$Think.session.cdo['add']} </button>
+</fieldset>
+{/if}
+
+<table class="layui-table">
+	<thead>
+	<tr>
+		<th>UID</th>
+		<th>用户昵称</th>
+		<th>权限状态</th>
+		<th>操作</th>
+	</tr>
+	</thead>
+	{foreach $installInfo as $c}
+	<tr>
+		<td>{$c['id']}</td>
+		<td>{$c['name']}</td>
+		<td>
+			{if $c['status'] == '用户角色'}
+			<span style="color:green;">{$c['status']}</span>
+			{/if}
+			{if $c['status'] == '维护角色'}
+			<span style="color:blue;">{$c['status']}</span>
+			{/if}
+			{if $c['status'] == '待通过'}
+			<span style="color:red;">{$c['status']}</span>
+			{/if}
+		</td>
+		<td>
+			{if $c['status'] == '用户角色'}
+				{if $Think.session.cdo['setInstall']}
+					<button class="layui-btn layui-btn-warm layui-btn-small set-install" data-id="{$c['id']}" >维护</button>
+				{/if}
+			{/if}
+			{if $c['status'] == '维护角色'}
+				{if $Think.session.cdo['setCommon']}
+					<button class="layui-btn layui-btn-normal layui-btn-small set-common" data-id="{$c['id']}">普通</button>
+				{/if}
+			{/if}
+			{if $c['status'] == '待通过'}
+				{if $Think.session.cdo['pass']}
+					<button class="layui-btn layui-btn layui-btn-small pass" data-id="{$c['id']}">通过</button>
+				{/if}
+			{/if}
+			{if $Think.session.cdo['delete']}
+				<button class="layui-btn layui-btn-danger layui-btn-small delete" data-id="{$c['id']}">删除</button>
+			{/if}
+		</td>
+	</tr>
+	{/foreach}
+</table>
+
+<script>
+    layui.use('layer', function(){
+        var layer = layui.layer;
+
+        //　添加按钮
+        $(".add-install-man").click(function(){
+            var id = $(this).data('id');
+            layer.open({
+                type: 2,
+                title: '添加维护人员',
+                maxmin: true,
+                area : ['600px' , '600px'],
+                content: '{$Request.url}?do=add'
+            });
+        });
+
+        // 设置普通用户
+        $('.set-common').click(function(){
+            $.ajax({
+                url: '{$Request.url}?do=setCommon&id='+$(this).data('id'),
+                data: {},
+                success: function(e){
+                    window.location.reload();
+                }
+            })
+        })
+        // 设置维护用户
+        $('.set-install').click(function(){
+            $.ajax({
+                url: '{$Request.url}?do=setInstall&id='+$(this).data('id'),
+                data: {},
+                success: function(e){
+                    window.location.reload();
+                }
+            })
+        });
+        // 删除用户
+        $('.delete').click(function(){
+            $.ajax({
+                url: '{$Request.url}?do=delete&id='+$(this).data('id'),
+                data: {},
+                success: function(e){
+                    window.location.reload();
+                }
+            })
+        });
+
+        // 通过申请
+        $('.pass').click(function(){
+            $.ajax({
+                url: '{$Request.url}?do=pass&id='+$(this).data('id'),
+                data: {},
+                success: function(e){
+                    window.location.reload();
+                }
+            })
+        });
+
+    });
+</script>

@@ -1,0 +1,387 @@
+{layout name='example' /}
+<script src="static/third-party/laydate/laydate.js"></script>
+<fieldset class="fieldsetclass cp-order-list">
+    <legend> 搜索 </legend>
+    <form method="GET" action="">
+        <table class="layui-table order-list-input">
+            <thead>
+            <tr>
+                <th width="25%">借出</th>
+                <th width="25%">归还</th>
+                <th width="30%">其他</th>
+                <th width="20%">精确查询</th>
+            </tr>
+            </thead>
+            <tr>
+                <td>
+                    <span>商铺站点名称:</span>
+                    <input type="text" name="borrow_shop_station_title" value="{$borrow_shop_station_title}" id="borrow_shop_station_title"/>
+                </td>
+                <td>
+                    <span>商铺站点名称:</span>
+                    <input type="text" name="return_shop_station_title" value="{$return_shop_station_title}" id="return_shop_station_title"/>
+                </td>
+                <td class="order_list">
+                    {include file="common/province_city"}
+                </td>
+                <td>
+                    <span>订单号:</span>
+                    <input type="text" name="order_id" value="{$order_id}" style="width: 60%;"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <span>设备ID:</span>
+                    <input type="text" name="borrow_station_id" value="{$borrow_station_id}" id="borrow_station_id"/>
+                </td>
+                <td>
+                    <span>设备ID:</span>
+                    <input type="text" name="return_station_id" value="{$return_station_id}" id="return_station_id"/>
+                </td>
+                <td>
+                    <span>消费情况:</span>
+                    <div class="layui-input-inline">
+                        <select name="usefee_situation" class="layui-select">
+                            <option value="-1">全部</option>
+                            <option value="=0"   {$usefee_situation == '=0' ? 'selected' : ''}>消费金额 = 0</option>
+                            <option value=">0"   {$usefee_situation == '>0' ? 'selected' : ''}>消费金额 > 0</option>
+                            <option value=">=4"  {$usefee_situation == '>=4' ? 'selected' : ''}>消费金额 >= 4</option>
+                            <option value=">=10" {$usefee_situation == '>=10' ? 'selected' : ''}>消费金额 >= 10</option>
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <span>雨伞ID:</span>
+                    <input type="text" name="umbrella_id" value="{$umbrella_id}" style="width: 60%;"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                        <span>订单开始时间:</span>
+                        <input name="borrow_start_time" value="{$borrow_start_time}" class="laydate-icon" id="start"/>
+                </td>
+                <td>
+                        <span>订单开始时间:</span>
+                        <input name="return_start_time" value="{$return_start_time}" class="laydate-icon" id="return_start"/>
+                </td>
+                <td>
+                    <span>状&nbsp;&nbsp;&nbsp;&nbsp;态:</span>
+                    <div class="layui-input-inline">
+                        <select name="status" id="status"  style="margin-bottom: 10px" class="layui-select">
+                            <option value="-1">全部</option>
+                            <option value="{$Think.const.ORDER_LIST_ALL_BORROW}" {$status == $Think.const.ORDER_LIST_ALL_BORROW? 'selected' : ''}>成功借出</option>
+                            <option value="{$Think.const.ORDER_STATUS_TIMEOUT_REFUND}" {$status == $Think.const.ORDER_STATUS_TIMEOUT_REFUND? 'selected' : ''}>网络超时</option>
+                            <option value="{$Think.const.ORDER_STATUS_RENT_NOT_FETCH}" {$status == $Think.const.ORDER_STATUS_RENT_NOT_FETCH? 'selected' : ''}>借出未拿走</option>
+                            <option value="{$Think.const.ORDER_LIST_NOT_RETURN}" {$status == $Think.const.ORDER_LIST_NOT_RETURN? 'selected' : ''}>借出未归还</option>
+                            <option value="{$Think.const.ORDER_LIST_RETURNED}" {$status == $Think.const.ORDER_LIST_RETURNED? 'selected' : ''}>已归还</option>
+                            <option value="{$Think.const.ORDER_LIST_EXCEPTION}" {$status == $Think.const.ORDER_LIST_EXCEPTION? 'selected' : ''}>异常</option>
+                            <option value="{$Think.const.ORDER_LIST_EXCEPTION}" {$status == $Think.const.ORDER_STATUS_LOSS? 'selected' : ''}>遗失</option>
+                        </select>
+                    </div>
+                    <br>
+
+                    <span>具体错误状态:</span>
+                    <div class="layui-input-inline">
+                        <select name="err_status" class="layui-select">
+                            <option value="-1">全部</option>
+                            <option value="{$Think.const.ORDER_STATUS_RETURN_EXCEPTION_MANUALLY_REFUND}" {$err_status == $Think.const.ORDER_STATUS_RETURN_EXCEPTION_MANUALLY_REFUND? 'selected' : ''}>管理员已手动退款</option>
+                            <option value="{$Think.const.ORDER_STATUS_RETURN_MANUALLY}" {$err_status == $Think.const.ORDER_STATUS_RETURN_MANUALLY? 'selected' : ''}>管理员已手动撤销</option>
+                            <option value="{$Think.const.ORDER_STATUS_TIMEOUT_REFUND}" {$err_status == $Think.const.ORDER_STATUS_TIMEOUT_REFUND? 'selected' : ''}>网络超时</option>
+                            <option value="{$Think.const.ORDER_STATUS_RETURN_EXCEPTION_SYS_REFUND}" {$err_status == $Think.const.ORDER_STATUS_RENT_NOT_FETCH_INTERMEDIATE? 'selected' : ''}>借出未拿走(中间态)</option>
+                            <option value="{$Think.const.ORDER_STATUS_RENT_NOT_FETCH}" {$err_status == $Think.const.ORDER_STATUS_RENT_NOT_FETCH? 'selected' : ''}>借出未拿走</option>
+                            <option value="{$Think.const.ORDER_STATUS_TIMEOUT_CANT_RETURN}" {$err_status == $Think.const.ORDER_STATUS_TIMEOUT_CANT_RETURN? 'selected' : ''}>租金已扣完(归还)</option>
+                            <option value="{$Think.const.ORDER_STATUS_TIMEOUT_NOT_RETURN}" {$err_status == $Think.const.ORDER_STATUS_TIMEOUT_NOT_RETURN? 'selected' : ''}>租金已扣完(未归还)</option>
+                            <option value="{$Think.const.ORDER_STATUS_PAID_NOT_ENOUGH_EXCEPTION}" {$err_status == $Think.const.ORDER_STATUS_PAID_NOT_ENOUGH_EXCEPTION? 'selected' : ''}>异常支付</option>
+                            <option value="{$Think.const.ORDER_STATUS_NO_umbrella}" {$err_status == $Think.const.ORDER_STATUS_NO_umbrella? 'selected' : ''}>没有雨伞</option>
+                            <option value="{$Think.const.ORDER_STATUS_MOTOR_ERROR}" {$err_status == $Think.const.ORDER_STATUS_MOTOR_ERROR? 'selected' : ''}>借出故障</option>
+                            <option value="{$Think.const.ORDER_STATUS_SYNC_TIME_FAIL}" {$err_status == $Think.const.ORDER_STATUS_SYNC_TIME_FAIL? 'selected' : ''}>同步时间失败</option>
+                            <option value="{$Think.const.ORDER_STATUS_LAST_ORDER_UNFINISHED}" {$err_status == $Think.const.ORDER_STATUS_LAST_ORDER_UNFINISHED? 'selected' : ''}>上一单未完成</option>
+                            <option value="{$Think.const.ORDER_STATUS_POWER_LOW}" {$err_status == $Think.const.ORDER_STATUS_POWER_LOW? 'selected' : ''}>机器电量不足</option>
+                            <option value="{$Think.const.ORDER_STATUS_NETWORK_NO_RESPONSE}" {$err_status == $Think.const.ORDER_STATUS_NETWORK_NO_RESPONSE? 'selected' : ''}>网络确认无应答</option>
+                            <option value="{$Think.const.ORDER_STATUS_RETURN_EXCEPTION_SYS_REFUND}" {$err_status == $Think.const.ORDER_STATUS_RETURN_EXCEPTION_SYS_REFUND? 'selected' : ''}>归还异常(系统已退款)</option>
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <span>用户id:</span>
+                    <input type="text" name="user_id" value="{$user_id}" style="width: 60%;"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <span>订单结束时间</span>
+                    <input name="borrow_end_time" value="{$borrow_end_time}" class="laydate-icon" id="end"/>
+                </td>
+                <td>
+                    <span>订单结束时间</span>
+                    <input name="return_end_time" value="{$return_end_time}" class="laydate-icon" id="return_end"/>
+                </td>
+                <td>
+                    <span>订单来源:</span>
+                    <div class="layui-input-inline">
+                        <select name="platform" class="layui-select">
+                            <option value="-1" {!$platform ? 'selected': ''}>全部</option>
+                            <option value="{$Think.const.PLATFORM_WX}" {$platform && $platform == $Think.const.PLATFORM_WX ? 'selected' : ''}>微信</option>
+                            <option value="{$Think.const.PLATFORM_ALIPAY}" {$platform && $platform == $Think.const.PLATFORM_ALIPAY ? 'selected' : ''}>支付宝</option>
+                            <option value="{$Think.const.PLATFORM_ZHIMA}" {$platform && $platform == $Think.const.PLATFORM_ZHIMA ? 'selected' : ''}>芝麻信用</option>
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <span>用户OPENID:</span>
+                    <input type="text" name="user_openid" value="{$user_openid}" style="width: 50%;"/>
+                </td>
+            </tr>
+        </table>
+        <div class="order-list-btn">
+            <input class="layui-btn" type="submit" value="查询" />
+        </div>
+    </form>
+</fieldset>
+<section>
+    <table class="layui-table" cellpadding="0" cellspacing="0">
+        <thead>
+            <th>订单号</th>
+            <th>用户ID</th>
+            <th>雨伞ID</th>
+            <th>支付方式</th>
+            <th>订单状态</th>
+            <th>费用</th>
+            <th>订单来源</th>
+            <th>借出商铺站点ID / 名称 / 设备ID / 时间 / 城市</th>
+            <th>归还商铺站点ID /名称 / 设备ID / 时间 / 城市</th>
+            {if $Think.session.cdo.returnDeposit}
+            <th>操作</th>
+            {/if}
+        </thead>
+        <tbody>
+        {foreach $orders as $order}
+        <tr>
+            <td>
+                <a href="javascript:;" class="order-type" data-id="{$order['orderid']}">
+                    {$order['orderid']}
+                </a>
+            </td>
+            <td>
+                <a href="javascript:;" class="order-buyer" data-id="{$order['uid']}">{$order['uid']} </a>
+            </td>
+            <td>
+                {$order['umbrella_id']}
+            </td>
+            <td >
+                {if $order['refundno'] == ORDER_NOT_REFUND}
+                <span>账户内</span>
+                {elseif $order['refundno'] == ORDER_ZHIMA_NOT_REFUND}
+                <span style="color: #009688">信用</span>
+                {else}
+                <span style="color: #44b753">押金</span>
+                {/if}
+            </td>
+
+            <td>
+                {if $order['status'] == ORDER_STATUS_RENT_CONFIRM}
+                <span style="color: #009688">借出</span>
+                {elseif $order['status'] == ORDER_STATUS_RETURN}
+                <span style="color: #44b753">归还</span>
+                {elseif $order['status'] == ORDER_STATUS_WAIT_PAY}
+                <span style="color: orange">未支付</span>
+                {elseif $order['status'] == ORDER_STATUS_TIMEOUT_REFUND}
+                <span style="color: red">网络超时</span>
+                {elseif $order['status'] == ORDER_STATUS_RENT_NOT_FETCH}
+                <span style="color: #1E9FFF">借出未拿走</span>
+                {elseif $order['status'] == ORDER_STATUS_TIMEOUT_CANT_RETURN}
+                <span style="color: #1E9FFF">租金已扣完(归还)</span>
+                {elseif $order['status'] == ORDER_STATUS_TIMEOUT_NOT_RETURN}
+                <span style="color: #1E9FFF">租金已扣完(未归还)</span>
+                {elseif $order['status'] == ORDER_STATUS_PAID}
+                <span style="color: #1E9FFF">已支付但未借出</span>
+                {elseif $order['status'] == ORDER_STATUS_RENT_CONFIRM_FIRST}
+                <span style="color: #1E9FFF">准备借出</span>
+                {elseif $order['status'] == ORDER_STATUS_RETURN_MANUALLY}
+                <span style="color: #1E9FFF">管理员已手动撤销订单</span>
+                {elseif $order['status'] == ORDER_STATUS_RETURN_EXCEPTION_MANUALLY_REFUND}
+                <span style="color: #1E9FFF">管理员已手动退款</span>
+                {elseif $order['status'] == ORDER_STATUS_NO_UMBRELLA}
+                <span style="color: #1E9FFF">站点没有雨伞</span>
+                {elseif $order['status'] == ORDER_STATUS_POWER_LOW}
+                <span style="color: #1E9FFF">机器电池电量不足</span>
+                {elseif $order['status'] == ORDER_STATUS_MOTOR_ERROR}
+                <span style="color: red">借出故障</span>
+                {elseif $order['status'] == ORDER_STATUS_SYNC_TIME_FAIL}
+                <span style="color: red">同步时间失败</span>
+                {elseif $order['status'] == ORDER_STATUS_LAST_ORDER_UNFINISHED}
+                <span style="color: #1E9FFF">上一单未完成</span>
+                {elseif $order['status'] == ORDER_STATUS_NETWORK_NO_RESPONSE}
+                <span style="color: red">网络确认无应答</span>
+                {elseif $order['status'] == ORDER_STATUS_RETURN_EXCEPTION_SYS_REFUND}
+                <span style="color: red">借出后同步,归还异常(系统已退款)</span>
+                {elseif $order['status'] == ORDER_STATUS_RENT_NOT_FETCH_INTERMEDIATE}
+                <span style="color: red">借出未拿走(中间态)</span>
+                {elseif $order['status'] == ORDER_STATUS_LOSS}
+                <span style="color: #cc7a00">用户主动遗失</span>
+                {else}
+                <span>其他</span>
+                {/if}
+            </td>
+            <td>{$order['usefee']}</td>
+            <td>
+                {if $order['platform'] == PLATFORM_WX}
+                <span style="color: #44b753">微信</span>
+                {elseif $order['platform'] == PLATFORM_ALIPAY}
+                <span style="color: #1E9FFF">支付宝</span>
+                {elseif $order['platform'] == PLATFORM_ZHIMA}
+                <span style="color: #009688">芝麻信用</span>
+                {else}
+                未知平台
+                {/if}
+            </td>
+            <td class="order_list_a">
+                <a href="/cp/shop_station/lists?station_id={$order['borrow_station']}">{$order['borrow_shop_station_id']}</a>
+                <br> {$order['borrow_station_name']}
+                <br> <a href="/cp/station/lists?station_id={$order['borrow_station']}">{$order['borrow_station']}</a>
+                <br> {$order['borrow_time']|date = 'Y-m-d H:i:s', ###}
+                <br> {$order['borrow_city']}
+            </td>
+            <td class="order_list_a">
+                {if $order['return_time']}
+                <a href="/cp/shop_station/lists?station_id={$order['return_station']}">{$order['return_shop_station_id']}</a>
+                <br> {$order['return_station_name']}
+                <br> <a href="/cp/station/lists?station_id={$order['return_station']}">{$order['return_station']}</a>
+                <br> {$order['return_time']|date = 'Y-m-d H:i:s', ###}
+                <br> {$order['return_city']}
+                {else}
+                无
+                {/if}
+            </td>
+
+            <td>
+                {if $Think.session.cdo.returnDeposit}
+                <button class="layui-btn layui-btn-normal layui-btn-small return-deposit" data-id="{$order['orderid']}">退押金</button>
+                {/if}
+                {if $Think.session.cdo.lostOrderFinish && in_array($order['status'], [$Think.const.ORDER_STATUS_RENT_CONFIRM, $Think.const.ORDER_STATUS_RENT_CONFIRM_FIRST])}
+                <button class="layui-btn layui-btn-danger layui-btn-small lost-order-finish" data-id="{$order['orderid']}">雨伞遗失处理</button>
+                {/if}
+            </td>
+
+
+        </tr>
+        {/foreach}
+        </tbody>
+    </table>
+</section>
+{$orders->render()}
+<script>
+    layui.use('layer', function(){
+        var layer = layui.layer;
+        //　退押金
+        $(".return-deposit").click(function(){
+            layer.open({
+                type: 2,
+                title: '退押金',
+                maxmin: true,
+                area : ['660px' , '700px'],
+                content: 'returnDeposit?order_id='+$(this).data('id')
+            });
+        });
+
+        //　订单详情
+        $(".order-type").click(function(){
+            layer.open({
+                type: 2,
+                title: '订单详情',
+                maxmin: true,
+                area : ['800px' , '600px'],
+                content: 'orderDetail?order_id='+$(this).data('id')
+            });
+        });
+
+        // 用户详情
+        $(".order-buyer").click(function(){
+            layer.open({
+                type: 2,
+                title: '用户详情',
+                maxmin: true,
+                area : ['800px' , '600px'],
+                content: 'buyerDetail?uid='+$(this).data('id')
+            });
+        });
+
+        // 遗失订单
+        $('.lost-order-finish').click(function(){
+            var _orderid = $(this).data('id');
+            layer.confirm('确定此订单: '+_orderid+' 要遗失处理？', {}, function(){
+                $.ajax({
+                    url: 'lostOrderFinish',
+                    data: {order_id: _orderid},
+                    type: 'POST',
+                    success: function(e){
+                        console.log(e);
+                        if(e.code == 0) {
+                            layer.msg(e.msg, {icon: 1}, function(){
+                                window.location.reload();
+                            });
+                        } else {
+                            layer.msg(e.msg, {icon: 2, time: 3000});
+                        }
+                    }
+                });
+            });
+        });
+    });
+
+    layui.use('laydate', function() {
+        var laydate = layui.laydate;
+        //选择开始和结束日期
+        var start = laydate.render({
+            elem: '#start',
+            format: 'yyyy/MM/dd HH:mm:ss',
+            max: '2099-06-16 23:59:59', //最大日期
+            istime: true,
+            istoday: false,
+            done: function (value, date, endDate) {
+                end.config.min = start.config.dateTime;//开始日选好后，重置结束日的最小日期
+            }
+        });
+        var end = laydate.render({
+            elem: '#end',
+            format: 'yyyy/MM/dd HH:mm:ss',
+            istime: true,
+            istoday: false,
+            done: function (value, date, endDate) {
+                start.config.max = end.config.dateTime;//结束日选好后，重置开始日的最大日期
+            }
+        });
+        //选择开始和结束日期
+        var rstart = laydate.render({
+            elem: '#return_start',
+            format: 'yyyy/MM/dd HH:mm:ss',
+            max: '2099-06-16 23:59:59', //最大日期
+            istime: true,
+            istoday: false,
+            done: function (value, date, endDate) {
+                end.config.min = start.config.dateTime;//开始日选好后，重置结束日的最小日期
+            }
+        });
+        var rend = laydate.render({
+            elem: '#return_end',
+            format: 'yyyy/MM/dd HH:mm:ss',
+            istime: true,
+            istoday: false,
+            done: function (value, date, endDate) {
+                start.config.max = end.config.dateTime;//结束日选好后，重置开始日的最大日期
+            }
+        });
+//        start.max = $('#end').val();
+//        end.min = $('#start').val();
+//        laydate(start);
+//        laydate(end);
+//        rstart.max = $('#r_end').val();
+//        rend.min = $('#r_start').val();
+//        laydate(rstart);
+//        laydate(rend);
+    })
+</script>
+

@@ -1,0 +1,90 @@
+<form class="layui-form" style="margin-top: 20px;" id="formdata">
+	<input type="hidden" name="station_strategy_id" id="station_strategy_id" value="{$station_strategy_id}">
+	<div class="layui-form-item">
+		<label class="layui-form-label">策略名称</label>
+		<div class="layui-input-inline">
+			<input type="text" name="name" value="{$system_settings['name']}" class="layui-input" id="name">
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label">域名</label>
+		<div class="layui-input-inline">
+			<input type="text" name="domain" value="{$system_settings['domain']}" class="layui-input" id="domain">
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label">IP地址</label>
+		<div class="layui-input-inline">
+			<input type="text" name="ip" value="{$system_settings['ip']}" class="layui-input" id="ip">
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label">端口号</label>
+		<div class="layui-input-inline">
+			<input type="number" name="port" min="1024" value="{$system_settings['port']}" class="layui-input" id="port">
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label">同步间隔(秒)</label>
+		<div class="layui-input-inline">
+			<input type="number" min="30" name="checkupdatedelay" value="{$system_settings['checkupdatedelay']}" class="layui-input" id="checkupdatedelay">
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label">心跳时间(秒)</label>
+		<div class="layui-input-inline">
+			<input type="number" min="30" name="heartbeat" value="{$system_settings['heartbeat']}" class="layui-input" id="heartbeat">
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label">软件版本号</label>
+		<div class="layui-input-inline">
+			<input type="number" name="soft_ver" min="0" max="23" value="{$system_settings['soft_ver']}" class="layui-input" id="soft-ver">
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label">升级文件名</label>
+		<div class="layui-input-inline">
+			<input type="text" name="file_name" value="{$system_settings['file_name']}" class="layui-input" id="file-name">
+		</div>
+	</div>
+	<div class="ui-btn-center">
+		<button class="layui-btn submit-button">提交</button>
+	</div>
+</form>
+<script>
+layui.use(['layer', 'form', 'upload'], function(){
+	layui.upload({
+		'url':'/api/common/uploadUpgradeFile',
+		'ext': 'hex',
+		'title': '选择16进制文本',
+		success: function(e){
+			if(e.code == 0){
+				$('#message').html(e.msg);
+			}else{
+				layer.msg(e.msg);
+			}
+		}
+	});
+
+});
+// 添加或者编辑
+$('.submit-button').click(function(){
+    $.ajax({
+        url: '{$opt}?do={$do}',
+        type: 'post',
+        data: $('#formdata').serialize(),
+        success:function(e) {
+            if(e.code == 0) {
+                layer.msg(e.msg, {icon: 1}, function(){
+                    parent.layer.close(parent.layer.getFrameIndex(window.name)); // 关闭本iframe层
+                    parent.location.reload(); // 父页面刷新
+                });
+            } else {
+                layer.msg(e.msg, {icon: 2});
+            }
+        },
+    });
+    return false; //阻止表单跳转。如果需要表单跳转，去掉这段即可。
+});
+</script>

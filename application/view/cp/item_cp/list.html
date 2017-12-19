@@ -1,0 +1,66 @@
+{include file="common/header" /}
+{include file="common/menu" /}
+<div class="page-content">
+    <div class="index-subject">
+        {if array_key_exists('add', $Think.session.cdo)}
+        <fieldset class="fieldsetclass">
+            <legend>操作</legend>
+            <button class="item-update layui-btn" id="add-item"> {$Think.session.cdo['add']} </button>
+        </fieldset>
+        {/if}
+
+        <table class="layui-table">
+            <thead>
+            <tr>
+                <th>商铺ID</th>
+                <th>商品名称</th>
+                <th>租赁价格</th>
+                <th>商品描述</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            {foreach $menu as $c}
+            <tr>
+                <td>{$c['id']}</td>
+                <td>{$c['subject']}</td>
+                <td>{$c['price']}</td>
+                <td>{$c['desc']}</td>
+                <td>
+                    {if $Think.session.cdo['edit']}
+                    <button class="edit-item layui-btn layui-btn-normal layui-btn-mini" data-id="{$c['id']}">{$Think.session.cdo['edit']}</button>
+                    {/if}
+                </td>
+            </tr>
+            {/foreach}
+        </table>
+    </div>
+</div>
+
+<script>
+    layui.use('layer', function(){
+        var layer = layui.layer;
+        //　添加按钮
+        $("#add-item").click(function(){
+            layer.open({
+                type: 2,
+                title: '添加商品',
+                maxmin: true,
+                area : ['800px' , '600px'],
+                content: '{$Request.url}?do=add'
+            });
+        });
+
+        //　编辑按钮
+        $(".edit-item").click(function(){
+            var id = $(this).data('id');
+            layer.open({
+                type: 2,
+                title: '编辑商品',
+                maxmin: true,
+                area : ['800px' , '600px'],
+                content: '{$Request.url}?do=edit&id=' + id
+            });
+        });
+    });
+</script>
+{include file="common/footer" /}

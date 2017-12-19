@@ -1,0 +1,110 @@
+{layout name='example' /}
+
+<form method="GET" action="{$Request.url}">
+	<fieldset class="fieldsetclass">
+		<legend> 全局搜索 </legend>
+			<div class="style-input">
+				<select name="searchType">
+					<option value="openid" {$searchType == 'openid'? 'selected' : ''}>用户	OPENID</option>
+					<option value="nickname" {$searchType == 'nickname'? 'selected' : ''}>用户昵称</option>
+				</select>
+				<input type="text" name="searchValue" size="30"
+				{if isset($searchValue)}
+				value="{$searchValue}"
+				{/if} 
+				style="height: 32px;">
+				{if isset($onlyRefunding)}
+				<label for="request"><input type="checkbox" name="onlyRefunding" id="request" checked>仅显示待退款</label>
+				{else}
+				<label for="request"><input type="checkbox" name="onlyRefunding" id="request">仅显示待退款</label>
+				{/if}
+			</div>
+			<input class="layui-btn" type="submit" value="搜索">
+	</fieldset>
+</form>
+
+<table class="layui-table" width="97%" cellpadding="0" cellspacing="0">
+	<thead>
+		<tr>
+			<th width="10%">
+				昵称
+			</th>
+			<th width="5%">
+				平台
+			</th>
+			<th width="15%">
+				openid
+			</th>
+			<th width="10%">
+				提现申请时间
+			</th>
+			<th width="10%">
+				提现金额
+			</th>
+
+			<th width="10%">
+				已退款金额
+			</th>
+
+			<th width="10%">
+				退款完成时间
+			</th>
+
+			<th width="10%">
+				状态
+			</th>
+
+			<th width="10%">
+				退款来源订单数
+			</th>
+		</tr>
+	</thead>
+	<!--{foreach $refundLists as $order}-->
+	<tr>
+		<td>
+			{$order['nickname']}
+		</td>
+		<td>
+			{$platformArr[$order['platform']]}
+		</td>
+		<td>
+			{$order['openid']}
+		</td>
+		<td>
+			{$order['request_time']}
+		</td>
+		<td >
+			{$order['refund']}
+		</td>
+
+		<td>
+			{$order['refunded']}
+		</td>
+
+		<td>
+			{$order['refund_time']}
+		</td>
+
+		<td>
+			<!--{if $order['status'] == 1}-->
+			待退款
+			<!--{elseif $order['status'] == 2}-->
+			已退款
+			<!--{/if}-->
+		</td>
+
+		<td>
+			<!--{if $order['status'] == 2}-->
+				<!--{if $order['detail_count'] == 0}-->
+				<span>0</span>
+				<!--{else}-->
+			<a href="javascript:;" class="refund_detail">{$order['detail_count']}</a>
+				<!--{/if}-->
+			<!--{else}-->
+			<span>----</span>
+			<!--{/if}-->
+		</td>
+	</tr>
+	<!--{/foreach}-->
+</table>
+{$refundLists->render()}

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" style="width: 100%; height: 100%; overflow-x:hidden; overflow-y:hidden;">
+<head>
+    <meta charset="utf-8">
+    <title>大地走红网点定位系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
+    <link href="/lbs/css/bootstrap.css" rel="stylesheet">
+    <link href="/lbs/css/main.css?v=1" rel="stylesheet">
+    <link href="//api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
+    <link rel="stylesheet" href="/lbs/css/jquery-ui.css">
+    <script src="//api.map.baidu.com/api?v=2.0&ak={$baidu_map_web_ak}" ></script>
+    <script src="//api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+    <script src="//api.map.baidu.com/library/CityList/1.2/src/CityList_min.js"></script>
+    <script src="/lbs/js/jquery.js"></script>
+    <script src="/lbs/js/jquery.pager.js"></script>
+    <script src="/lbs/js/jquery.endless-scroll.js"></script>
+    <script src="/lbs/js/jquery.blockUI.js"></script>
+    <script src="/lbs/js/bootstrap.js"></script>
+    <script src="/lbs/js/common.js"></script>
+    <script src="//cdn.bootcss.com/jquery.devbridge-autocomplete/1.2.27/jquery.autocomplete.js"></script>
+</head>
+<body style="width: 100%; height: 100%; overflow-x:hidden; overflow-y:hidden; background-color:#f3f1ec">
+
+<div id="address-search">
+    <input type="search" id="address" placeholder="输入地区+名称,例如:深圳 龙华">
+    <span class="btn btn-primary search-btn">搜索</span>
+</div>
+
+<div id="mapbox_new" style="position: relative; overflow:hidden;">
+    <div id="arrow_up"
+         style="width: 100%; position: absolute; bottom: 0; display: none; z-index: 1000">
+        <img src="/lbs/img/arrow_up.png" style="vertical-align: bottom" onclick="toggle();" />
+    </div>
+    <div id="map"></div>
+</div>
+
+<div id="main_new" style="display: none;">
+    <div id="arrow_down">
+        <img src="/lbs/img/arrow_down.png" style="vertical-align: top" onclick="toggle();" />
+    </div>
+
+    <!--地址正文-->
+    <div id="listContainer" class="container" style="overflow-y: auto; overflow-x:hidden;">
+        <div id="listWrap">
+            <table class="table table-hover">
+                <tbody id="addLbsStation">
+                <a href="javascript:void(0);" onclick="formToggle();" id="addLbsStationBtn">新增商铺</a>
+                <a href="{$manageUrl}" id="enterSlotMgrPageBtn">进入维护页面</a>
+                </tbody>
+            </table>
+            <div class="listWrap-search">
+                <input type="text" name="shop-name" id="search-name" placeholder="请输入想要搜索的商铺名称">
+                <!--<button onclick="getShopInfo()">搜索</button>-->
+            </div>
+            <table class="table">
+                <tbody id="listBoby">
+                </tbody>
+            </table>
+        </div>
+        <div id="loading_img" style="display:none; width:100%; text-align:center"><img  src="/lbs/img/loading.gif" /></div>
+    </div>
+</div>
+<div class="mask-addStation-bg">
+    <div class="addStation-loading">
+        <img src="/lbs/img/loading.gif"/>
+    </div>
+</div>
+<div class="mask-bg">
+    <div class="bomb">
+        <form action="" method="post" id="addStationForm">
+            <ul>
+                <li>
+                    <span>商铺名称:</span>
+                    <input type="text" name="stationName" placeholder="请输入商铺名称" required/>
+                    <!--<em>必填</em>-->
+                </li>
+                <li>
+                    <span>商铺类型:</span>
+                    <select name="shoptype" id="shop_type">
+                        <option value="">请选择商铺类型</option>
+                    </select>
+                </li>
+                <li>
+                    <span>省/市/区:</span>
+                    <select name="province" id="get-province">
+                        <option value="">请选择省份</option>
+                    </select>
+                    <select name="city" id="get-city">
+                        <option value="">请选择城市</option>
+                    </select>
+                    <select name="area" id="get-area">
+                        <option value="">请选择区域</option>
+                    </select>
+                </li>
+                <li>
+                    <span>具体地址:</span>
+                    <input type="text" name="street" id="street">
+                    <div style="clear: both;"></div>
+                    <!--<em class="heheh">必填</em>-->
+                </li>
+                <li>
+                    <span>摆放位置：</span>
+                    <input type="text" name="stationDesc" placeholder="请输入充电站的具体摆放位置"/>
+                    <!--<em>必填</em>-->
+                </li>
+                <li>
+                    <span>营业时间:</span>
+                    <input type="time" name="stime" id="stime" />&nbsp;--&nbsp;<input type="time" name="etime" id="etime" />
+                </li>
+                <li>
+                    <span>联系电话:</span>
+                    <input type="text" name="phone" id="phone" />
+                </li>
+                <li>
+                    <span>人均消费:</span>
+                    <input type="number" name="cost" style="width: 16%" id="cost" />
+                    <span>元</span>
+                </li>
+                <li class="addStation">
+                    <a href="javascript:;" id="cancel" onclick="formCancel()">取消</a>
+                    <a id="add-shop-location" onclick="addStation('{$id}');" data-lng="" data-lat="">新增</a>
+                </li>
+            </ul>
+        </form>
+    </div>
+</div>
+
+<!--遮罩弹框-->
+<div class="mask-bg-small">
+    <div class="bomb-small">
+        <div>
+            <span>摆放位置:</span>
+            <input type="text" name="desc" placeholder="请输入充电站的具体摆放位置"/>
+        </div>
+        <div class="bomb-small-btn">
+            <button class="cancel">取消</button>
+            <button id="bind_shop";>确定</button>
+        </div>
+    </div>
+</div>
+<div class="mask-status-bg mask-addStation-bg mask-position-bg">
+    <div class="addStation-loading">
+        <img src="/lbs/img/loading.gif"/>
+    </div>
+</div>
+<div class="mask-fail-status" style="display: none">
+    <div class="fail-status-content">
+        <h4></h4>
+        <h4><span>关闭</span></h4>
+    </div>
+</div>
+
+<script>
+    var POI_TYPE = false;
+    var BMAP_AK = '{$baidu_map_web_ak}';
+    var GEOTABLE_ID = '{$geotable_id}';
+</script>
+
+<script src="/lbs/js/main.js?v=1"></script>
+
+<script>
+    keyFilter = ["enable:0"]; // 过滤条件
+</script>
+<script>
+    $(document).ready(function(){
+        $.ajax({
+            url: '/api/common/get_province_info',
+            type: 'POST',
+            success: function(e) {
+                var html = '<option value="">请选择省份</option>';
+                for(var i in e.data) {
+                    html += '<option value="'+e.data[i]+'">' + e.data[i] + '</option>';
+                }
+                $('#get-province').html(html);
+            }
+        });
+
+        $.ajax({
+            url: '/api/common/get_all_shop_type',
+            type: 'POST',
+            success: function(e) {
+                var html = '';
+                for(var i in e.data) {
+                    html += '<option value="'+e.data[i]['id']+'">' + e.data[i]['type'] + '</option>';
+                }
+                $('#shop_type').html(html);
+            }
+        })
+
+        $.ajax({
+            url: '/api/common/get_all_shop_locate',
+            type: 'POST',
+            success: function(e) {
+                autocomplete_title(e.data);
+            }
+        })
+
+        function autocomplete_title(stations_array) {
+            $('#autocomplete').autocomplete({
+                lookup : stations_array,
+                minChars : 0,
+                onSelect: function (suggestion) {
+                    $('#shop_id').val(suggestion.data);
+                    console.log('shop_id:' + suggestion.data + ', title:' + suggestion.value);
+                },
+            });
+
+            $('#autocomplete').on('focus', function (){
+                $(this).autocomplete().onValueChange();
+            });
+        }
+    });
+
+    $('#get-province').change(function(event, p, a) {
+        if (!p) {p = $('#get-province').val();}
+        if (!a) {a = 1;}
+        console.log(p);
+        $.ajax({
+            type: 'POST',
+            async: false,
+            data: {province:p},
+            url: '/api/common/get_city_info',
+            success: function(e) {
+                var html = '<option value="">请选择城市</option>';
+                for(var i in e.data) {
+                    html += '<option value="'+e.data[i]+'">' + e.data[i] + '</option>';
+                }
+                $('#get-city').html(html);
+                $('#get-area').html('<option value="">请选择区域</option>');
+            }
+        })
+    });
+
+    $('#get-city').change(function(event, p, c, a) {
+        if (!p) {p = $('#get-province').val();}
+        if (!c) {c = $('#get-city').val();}
+        if (!a) {a = 1;}
+        console.log(a);
+        if (c == "") {
+            var html = '<option value="">请选择区域</option>';
+            $('#get-area').html(html);
+        } else {
+            $.ajax({
+                type: 'POST',
+                data: {province:p, city:c},
+                async: false,
+                url: '/api/common/get_area_info',
+                success: function(e) {
+                    var html = '<option value="">请选择区域</option>';
+                    for(var i in e.data) {
+                        html += '<option value="'+e.data[i]+'">' + e.data[i] + '</option>';
+                    }
+                    $('#get-area').html(html);
+                }
+            })
+        }
+    });
+
+    $('#addstationform').click(function(){
+        var name = $('input[name=stationName]').val();
+        var type = $('input[name=shoptype]').val();
+        var street = $('input[name=street]').val();
+        var desc = $('input[name=stationDesc]').val();
+        if (name && type && street && desc) {
+            return true;
+        } else {
+            return false;
+        }
+    })
+
+    function getShopInfo() {
+        var shop_name = $('input[name="shop-name"]').val();
+        $.ajax({
+            url: '/api/maintain/query',
+            type: 'POST',
+            data: {type: 'search_shop', 'shop_name': shop_name},
+            success: function(e) {
+                console.log(e);
+                console.log("success");
+                renderDataNew(e);
+            }
+        })
+    }
+
+    $('.search-btn').click(function(){
+        var local = new BMap.LocalSearch(map, {
+            renderOptions:{map: map}
+        });
+        local.search($('#address').val());
+    })
+</script>
+
+</body>
+</html>

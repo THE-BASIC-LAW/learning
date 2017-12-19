@@ -1,0 +1,209 @@
+{layout name='example' /}
+<div class="index-subject">
+		{if array_key_exists('search', $Think.session.cdo)}
+		<fieldset class="fieldsetclass">
+		    <legend>搜索</legend>
+		    <div class="layui-form-item">
+				<form method="post" class="layui-form" action="{$Request.url}">
+					<input type="hidden" name="do" value="search">
+			        <div class="layui-input-inline">
+			            <input type="text" class="layui-input" placeholder="只支持登录名搜索" name="sname"
+						{if isset($sname)}
+						value="{$sname}"
+						{/if}
+						>
+			        </div>
+			        <button class="item-update layui-btn" type="submit" id="user-manage-search">{$Think.session.cdo['search']}</button>
+				</form>
+		    </div>
+		</fieldset>
+		{/if}
+		<table class="layui-table">
+		    <colgroup>
+		        <col width="50">
+		    </colgroup>
+		    <thead>
+		        <tr>
+		            <th>ID</th>
+		            <th>登录名</th>
+		            <th>真实姓名</th>
+		            <th>邮箱</th>
+		            <th>注册日期</th>
+		            <th>公司</th>
+		            <th>角色</th>
+		            <th>状态</th>
+		            <th>操作</th>
+		        </tr>
+		    </thead>
+		    <tbody>
+		        {foreach $userLists as $item}
+		        <tr>
+		            <td>{$item['id']}</td>
+		            <td>{$item['adminname']}</td>
+		            <td>{$item['name']}</td>
+		            <td>{$item['email']}</td>
+		            <td>{$item['create_time']}</td>
+		            <td>{$item['company']}</td>
+		            <td>{$rolesArray[$item['role_id']] ? : '未知角色'}</td>
+		            <td>
+		                {if $item['status'] == ADMIN_USER_STATUS_DELETED}
+						<span style="color: #999;">已删除</span>
+		                {elseif $item['status'] == ADMIN_USER_STATUS_APPLIED}
+						<span style="color: red">申请中</span>
+		                {elseif $item['status'] == ADMIN_USER_STATUS_NORMAL}
+						<span style="color: #5FB878;">正常</span>
+		                {elseif $item['status'] == ADMIN_USER_STATUS_LOCKED}
+						<span style="color: #254AD9;">账户锁定</span>
+		                {elseif $item['status'] == ADMIN_USER_STATUS_REFUSE}
+						<span style="color: #F7B824;">申请被拒绝</span>
+		                {else}
+						<span style="color: #B4B1B1">未知状态</span>
+		                {/if}
+		            </td>
+		            <td>
+		                {if $item['id'] == $admin->adminInfo['id']}
+		                 自身
+		                    {if $item['role_id'] != SUPER_ADMINISTRATOR_ROLE_ID}
+		                    <button class="layui-btn layui-btn-mini layui-btn-normal edit-admin-user" data-id="{$item['id']}">编辑用户</button>
+		                    {/if}
+		                    {if $item['status'] == ADMIN_USER_STATUS_APPLIED && $item['role_id'] != SUPER_ADMINISTRATOR_ROLE_ID}
+		                    {if $Think.session.cdo['pass']}
+		                    <button class="layui-btn layui-btn-mini layui-btn-green" onclick="handleRoleApply(this, 'pass',{$item['id']}, '{$item['name']}')">通过申请</button>
+		                    {/if}
+		                    {if $Think.session.cdo['refuse']}
+		                    <button class="layui-btn layui-btn-warm layui-btn-mini" onclick="handleRoleApply(this, 'refuse', {$item['id']}, '{$item['name']}')">拒绝申请</button>
+		                    {/if}
+		                    {/if}
+		                    {if $item['status'] == ADMIN_USER_STATUS_NORMAL && $item['role_id'] != SUPER_ADMINISTRATOR_ROLE_ID}
+		                    {if $Think.session.cdo['lock']}
+		                    <button class="layui-btn layui-btn-primary layui-btn-mini" onclick="handleRoleApply(this, 'lock', {$item['id']}, '{$item['name']}')">锁定账户</button>
+		                    {/if}
+		                    {/if}
+		                    {if $item['status'] == ADMIN_USER_STATUS_LOCKED && $item['role_id'] != SUPER_ADMINISTRATOR_ROLE_ID}
+		                    {if $Think.session.cdo['unlock']}
+		                        <button class="layui-btn layui-btn-primary  layui-btn-mini" onclick="handleRoleApply(this, 'unlock', {$item['id']}, '{$item['name']}')">解锁账户</button>
+		                    {/if}
+		                    {/if}
+		                    {if $item['status'] != ADMIN_USER_STATUS_DELETED && $item['role_id'] != SUPER_ADMINISTRATOR_ROLE_ID}
+		                    {if $Think.session.cdo['delete']}
+		                    <button class="layui-btn layui-btn-danger layui-btn-mini" onclick="handleRoleApply(this, 'delete', {$item['id']}, '{$item['name']}')">删除账户</button>
+		                    {/if}
+		                    {/if}
+		                    {if $item['status'] == ADMIN_USER_STATUS_DELETED && $item['role_id'] != SUPER_ADMINISTRATOR_ROLE_ID}
+		                    {if $Think.session.cdo['resume']}
+		                    <button class="layui-btn layui-btn-danger layui-btn-mini" onclick="handleRoleApply(this, 'resume', {$item['id']}, '{$item['name']}')">恢复账户</button>
+		                    {/if}
+		                    {/if}
+
+		                {else}
+		                    {if $item['role_id'] != SUPER_ADMINISTRATOR_ROLE_ID  && $item['role_id'] != $admin->adminInfo['role_id']}
+		                    <button class="layui-btn layui-btn-mini layui-btn-normal edit-admin-user" data-id="{$item['id']}">编辑用户</button>
+		                    {/if}
+		                    {if $item['status'] == ADMIN_USER_STATUS_APPLIED && $item['role_id'] != SUPER_ADMINISTRATOR_ROLE_ID && $item['role_id'] != $admin->adminInfo['role_id']}
+		                    {if $Think.session.cdo['pass']}
+		                    <button class="layui-btn layui-btn-mini layui-btn-green" onclick="handleRoleApply(this, 'pass',{$item['id']}, '{$item['name']}')">通过申请</button>
+		                    {/if}
+		                    {if $Think.session.cdo['refuse']}
+		                    <button class="layui-btn layui-btn-warm layui-btn-mini" onclick="handleRoleApply(this, 'refuse', {$item['id']}, '{$item['name']}')">拒绝申请</button>
+		                    {/if}
+		                    {/if}
+		                    {if $item['status'] == ADMIN_USER_STATUS_NORMAL && $item['role_id'] != SUPER_ADMINISTRATOR_ROLE_ID && $item['role_id'] != $admin->adminInfo['role_id']}
+		                    {if $Think.session.cdo['lock']}
+		                    <button class="layui-btn layui-btn-primary layui-btn-mini" onclick="handleRoleApply(this, 'lock', {$item['id']}, '{$item['name']}')">锁定账户</button>
+		                    {/if}
+		                    {/if}
+		                    {if $item['status'] == ADMIN_USER_STATUS_LOCKED && $item['role_id'] != SUPER_ADMINISTRATOR_ROLE_ID && $item['role_id'] != $admin->adminInfo['role_id']}
+		                    {if $Think.session.cdo['unlock']}
+		                    <button class="layui-btn layui-btn-primary layui-btn-mini" onclick="handleRoleApply(this, 'unlock', {$item['id']}, '{$item['name']}')">解锁账户</button>
+		                    {/if}
+		                    {/if}
+		                    {if $item['status'] != ADMIN_USER_STATUS_DELETED && $item['role_id'] != SUPER_ADMINISTRATOR_ROLE_ID && $item['role_id'] != $admin->adminInfo['role_id']}
+		                    {if $Think.session.cdo['delete']}
+		                    <button class="layui-btn layui-btn-danger layui-btn-mini" onclick="handleRoleApply(this, 'delete', {$item['id']}, '{$item['name']}')">删除账户</button>
+		                    {/if}
+		                    {/if}
+		                    {if $item['status'] == ADMIN_USER_STATUS_DELETED && $item['role_id'] != SUPER_ADMINISTRATOR_ROLE_ID && $item['role_id'] != $admin->adminInfo['role_id']}
+		                    {if $Think.session.cdo['resume']}
+		                    <button class="layui-btn layui-btn-danger layui-btn-mini" onclick="handleRoleApply(this, 'resume', {$item['id']}, '{$item['name']}')">恢复账户</button>
+		                    {/if}
+		                    {/if}
+		                {/if}
+		            </td>
+		        </tr>
+		        {/foreach}
+		    </tbody>
+		</table>
+		{$userLists->render()}
+	</div>
+
+<script>
+    function handleRoleApply(t, act, id, name) {
+        var cfm,cfm_btn_1,cfm_btn_2;
+        switch (act) {
+            case 'pass':
+                cfm = '确定要通过'+name+'的注册要求吗？';
+                cfm_btn_1 = '通过申请';
+                break;
+            case 'refuse':
+                cfm = '确定要拒绝'+name+'的注册要求吗？';
+                cfm_btn_1 = '拒绝申请';
+                break;
+            case 'lock':
+                cfm = '确定要锁定'+name+'吗？';
+                cfm_btn_1 = '确认锁定';
+                break;
+            case 'unlock':
+                cfm = '确定解锁'+name+'吗？';
+                cfm_btn_1 = '确认解锁';
+                break;
+            case 'delete':
+                cfm = '确定删除'+name+'吗？';
+                cfm_btn_1 = '确认删除';
+                break;
+            case 'resume':
+                cfm = '确定现在恢复'+name+'为正常用户吗？';
+                cfm_btn_1 = '确认恢复';
+                break;
+        };
+        cfm_btn_2 = '放弃操作';
+
+        layui.use('layer', function(){
+            var layer = layui.layer;
+            layer.confirm(cfm, {
+                btn: [cfm_btn_1,cfm_btn_2]
+            }, function(){
+                $.ajax({
+                    type: 'POST',
+                    data: {aid:id, do:act},
+					dataType: 'json',
+                    url: '{$Request.url}',
+                    success: function(e){
+                        if(e.code == 0) {
+                            layer.msg(e.msg, {icon: 1}, function(){
+                                window.location.reload();
+                            });
+                        } else {
+                            layer.msg(e.msg, {icon: 2});
+                        }
+                    },
+					//   error:function(data){console.log(data.responseText)}
+                });
+            });
+        });
+    }
+
+    layui.use(['layer'], function(){
+        var layer = layui.layer;
+        // 编辑用户
+        $(".edit-admin-user").click(function(){
+            layer.open({
+                type: 2,
+                title: '编辑用户',
+                maxmin: true,
+                area : ['480px' , '380px'],
+                content: '{$Request.url}?do=edit&aid='+$(this).data('id'),
+            });
+        });
+    })
+
+</script>

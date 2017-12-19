@@ -1,0 +1,501 @@
+/* 全局配置 */
+.page-content{
+	height: auto;
+	overflow-y: auto;
+}
+.index-subject {
+	flex: 1;
+	-ms-flex: 1;
+	margin: 20px;
+	padding: 20px;
+	border: 0px;
+	box-shadow: 0 0 6px #999;
+	border-radius: 5px;
+	position: relative;
+	min-width: 640px;
+}
+.do-subject{
+	margin-top: 20px;
+}
+.fieldsetclass {
+	padding: 14px 1%;
+	width: 100%;
+	margin: 0 auto 20px auto;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	min-width: 600px !important;
+	box-sizing: border-box;
+}
+.fieldsetclass legend {
+	color: #666;
+	font-size: 17px;
+	padding: 0 5px;
+}
+.ui-btn-center{
+	text-align: center;
+	margin-top: 30px;
+}
+.layui-table th, .layui-table td{
+	text-align: center;
+}.layui-btn{
+	margin: 3px 0
+}
+
+.style-input:after,.layui-table:after,.ui-province-position:after,.system-settings ul li:after{
+	display: block;
+	clear: both;
+	content: "";
+
+}
+
+.style-input {
+	margin: 10px;
+	font-size: 20px;
+}
+.style-input li{
+	margin: 5px;
+	float: left;
+}
+.style-input span:first-child{
+	display: inline-block;
+	width: 113px;
+	text-align: right;
+}
+.style-input span.span_last{
+	display: inline;
+}
+
+.style-input select{
+	width: 140px;
+}
+.fee-settings input{
+	height: 30px;
+	line-height: 30px;
+}
+
+/*404*/
+.error-img,.no-access-img {
+	text-align: center;
+}
+.no-access-img img{
+	width: 600px;
+}
+
+/* footer */
+.footer .copyright{
+	text-align: center;
+}
+
+/* 登录页面 */
+.login #captcha{
+	height: 62px;
+	width: 85px;
+}
+.new-user-login{
+	text-align: right;
+}
+.new-user-login a{
+	display: inline-block;
+	text-decoration: underline;
+	color: #666;
+}
+.new-user-login a:hover{
+	color: #09935d;
+}
+
+/*后台用户注册*/
+.staff_register{
+	border: 1px #ccc solid;
+	-webkit-box-shadow: 0 0 10px #999;
+	-moz-box-shadow: 0 0 10px #999;
+	box-shadow: 0 0 10px #999;
+	background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    margin: 120px auto 0px;
+    padding: 40px;
+    border-radius: 4px;
+}
+.staff_register h1{
+	font-size: 22px;
+	text-align: center;
+	margin-bottom: 40px;
+	color: #09935d;
+}
+.staff_register label{
+	font-size: 14px;
+}
+.staff_register .register-input {
+    padding: 0 4px;
+	margin-bottom: 20px;
+	font-size: inherit;
+	text-align: center;
+}
+.staff_register .registe-btn{
+	margin-top: 40px;
+	width: 100%;
+}
+.register-goback{
+	margin-top: 10px;
+	text-align: right;
+}
+.register-goback a{
+	text-decoration: underline;
+}
+
+/* 后台首页 */
+.welcome {
+	text-align: center;
+	color: #44b753;
+	width: 60%;
+	min-width: 500px;
+    margin: 50px auto;
+	padding: 68px;
+    border: 1px #bbb solid;
+	-webkit-box-shadow: 0 0 6px #999;
+    border-radius: 4px;
+}
+.welcome h2{
+	font-size: 18px;
+}
+
+/*角色管理*/
+#access_role{
+	font-size: 16px;
+}
+#access_role .fieldsetclass{
+	padding: 14px 2%;
+    width: 90%;
+    margin: 0 auto 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    min-width: 500px !important;
+}
+#access_role label{
+	width: 104px;
+	padding: 9px 4px;
+	font-size: 16px;
+	text-align: right;
+}
+.access li input,.role-add-text input{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	position: relative;
+	top: 2px;
+}
+.access li{
+	margin-left: 20px;
+}
+.access li ul li{
+	margin: 0 0 8px 40px;
+}
+.access li ul li h4{
+	float: left;
+	margin-right: 10px;
+}
+.role-add-text{
+	border-bottom: 1px #009688 dotted;
+	margin-bottom: 10px;
+}
+.role-add-text span{
+	color: #009688;
+	font-size: 16px;
+}
+
+/*修改密码*/
+.modify-password {
+	width: 96%;
+	min-width: 500px;
+	margin: 0 auto;
+	border: 1px #bbb solid;
+	border-radius: 4px;
+	padding: 20px;
+	box-shadow: 0 0 6px #999;
+	-webkit-box-shadow: 0 0 6px #999;
+	-moz-box-shadow: 0 0 6px #999;
+	padding: 40px 0;
+	text-align: center;
+}
+.modify-password ul{
+	width: 280px;
+	margin: 0 auto;
+}
+.modify-password span{
+	font-size: 14px;
+}
+.modify-password ul li{
+	margin-bottom: 26px;
+	position: relative;
+}
+.modify-password ul li input{
+	height: 36px;
+	padding: 0 4px;
+}
+.modify-password ul li label{
+	color: red;
+	position: absolute;
+	right: 45px;
+	top: 45px;
+}
+.modify-password ul li:last-child input{
+	padding: 0 18px;
+}
+.fieldsetclass select,.setting-list select{
+	height: 30px;
+	line-height: 30px;
+	margin: 0 6px;
+}
+/*页码*/
+.index-subject .paging {
+	margin: 20px auto;
+	/*padding: 0 30px;*/
+	float: right;
+}
+.paging {
+	list-style: none;
+	text-align: right;
+	margin: 20px 0;
+}
+.paging li{
+	display: inline-block;
+	font-size: 14px;
+	margin-right:20px;
+}
+.paging a{
+	display:inline-block;
+	text-decoration: underline;
+	color: #666;
+	border:1px #999 solid;
+	padding:2px 8px;
+	text-align:center;
+	line-height:18px;
+	text-decoration:none;
+}
+.paging a:hover{
+	color: #44b753;
+	border:1px #44b753 solid;
+}
+.paging .current a{
+	text-decoration:none;
+	color: #44b753;
+	border:1px #44b753 solid;
+}
+.shop-station-list .layui-form-item h4{
+	float: left;
+	line-height: 32px;
+}
+.shop-station-list .layui-form-label{
+	padding: 9px 2px;
+}
+.shop-station-list .layui-form-label ~ .layui-input-block{
+	margin-left: 0;
+}
+/*站点管理*/
+.unbind-btn{
+	display: inline-block;
+	background-color: red;
+	height: 20px;
+	line-height: 20px;
+	color: white;
+	padding:1px 4px;
+	border-radius: 2px;
+	font-size: 12px;
+}
+.unbind-btn:hover{color: #fff;}
+
+.layui-table th{
+	text-align: center !important;
+}
+
+/*商品列表*/
+.item-add {
+padding: 20px;
+}
+
+/* 权限申请 */
+.layui-form-item .shop-area-apply{
+	width: 80%;
+}
+.shop-area-apply select, .shop-area-apply input{
+	width: 25%;
+	margin-right: 6%;
+}
+
+/*商铺站点*/
+.add-shop li{
+	margin: 10px;
+}
+.add-shop input{
+	height: 30px;
+}
+.add-shop-type .logo{
+	padding-top: 8px;
+}
+.shop-station-list input{
+	height: 30px;
+}
+.heartbeat-list li input{
+	margin: 10px;
+	height: 30px;
+}
+.shop-update-content li input{
+	height: 30px;
+	margin: 10px;
+}
+
+/* 用户列表 */
+.user-list-operate span{
+	font-size: 14px;
+}
+.user-list-operate li input{
+	height: 30px;
+	width: 150px;
+}
+
+/*人工退款*/
+#full_return_menu h4{
+	font-size: 16px;
+	margin: 6px 0;
+}
+.marginbto{
+	margin-bottom:10px;
+	text-align: center;
+}
+.marginbto select{
+	height: 32px;
+}
+.marginbto span{
+	display: inline-block;
+	margin-bottom: 10px;
+}
+.chooseBtn input{
+	width: 16px;
+	height: 16px;
+	position: relative;
+	top: 3px;
+}
+#full_return_menu,#part_return_menu,#money_return_menu {
+	position: relative !important;
+	top: 0 !important;
+	left: 0 !important;
+	border:1px #ccc solid;
+	padding: 10px;
+	text-align: center;
+}
+
+#full_return_menu .submitbutton,#part_return_menu .submitbutton,#money_return_menu .submitbutton{
+	left:138px;
+	margin-top:10px;
+	text-align: center;
+}
+
+#full_return_menu,#part_return_menu{
+	display:none;
+	width: 366px;
+	margin: 24px auto;
+}
+#money_return_menu input{
+	height: 32px;
+}
+#money_return_menu{
+	text-align: center;
+}
+
+/*全局同步策略*/
+.system-settings > select {
+	float: left;
+}
+.system-settings > select ~ h4 input {
+	height: 34px;
+	margin-bottom: 10px;
+}
+.system-settings ul li {
+	width: 50%;
+	float: left;
+}
+.system-settings ul li input {
+	height: 36px;
+	line-height: 36px;
+	margin-bottom: 10px;
+	margin-left: 5px;
+	padding: 0 4px;
+}
+.system-settings ul li span {
+	display: inline-block;
+	width: 86px;
+	text-align: right;
+}
+.settings_strategy {
+	font-size: 12px;
+	border-bottom: 1px solid grey;
+	text-align: left;
+	padding: 5px 0px;
+}
+.strategy {
+	margin: 0 0 10px 2%;
+}
+.strategy a {
+	display: inline-block !important;
+	height: 30px;
+	line-height: 30px;
+	width: 100px;
+	background-color: #f60;
+	color: #fff;
+	border: 0px;
+	border-radius: 2px;
+	text-align: center;
+	margin-right: 20px;
+}
+.strategy-update ul li span{
+	display: inline-block;
+	width: 92px;
+}
+.develop-tools select {
+	height: 32px;
+	line-height: 32px;
+	margin-bottom: 10px;
+}
+.style-table {
+	width: 98%;
+	margin: 0 auto;
+}
+.strategy-update ul li{
+	margin-bottom: 10px;
+}
+.strategy-update ul li input{
+	height: 32px;
+	padding: 0 4px;
+}
+/*局部收费策略*/
+.layui-btn{
+	margin: 3px 0;
+}
+.layui-btn+.layui-btn{
+	margin-left: 0;
+}
+#local-fee-settings{
+	width: 94%;
+	margin: 0 auto;
+}
+#local-fee-settings ul{
+	margin-bottom: 50px;
+}
+#local-fee-settings ul li{
+	margin: 14px 0;
+}
+#local-fee-settings ul li input{
+	height: 32px;
+	padding: 0 4px;
+	margin-left: 4px;
+}
+/*局部同步策略*/
+#add-strategy .layui-form-item h4{
+	line-height: 38px;
+}
+#add-strategy .layui-form-item .layui-form-checkbox{
+	margin: 0;
+}
+/*微信配置*/
+.wechat-settings .fieldsetclass h4{
+	margin-top: 20px;
+}

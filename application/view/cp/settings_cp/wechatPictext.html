@@ -1,0 +1,89 @@
+{layout name='example' /}
+{if $Think.session.cdo.add}
+<fieldset class="fieldsetclass">
+    <legend>操作</legend>
+    <button class="item-update layui-btn add-pictext"> {$Think.session.cdo.add} </button>
+</fieldset>
+{/if}
+<table class="layui-table">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>名称</th>
+        <th>在用商铺</th>
+        <th>生效时间</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    {foreach $pictexts as $pictext}
+    <tr>
+        <td>{$pictext['id']}</td>
+        <td>{$pictext['name']}</td>
+        <td>
+            {if $pictext['shops']}
+                {foreach $pictext['shops'] as $shop}
+                    {$shop['title']}&nbsp&nbsp&nbsp&nbsp&nbsp
+                {/foreach}
+            {else}
+               无
+            {/if}
+        </td>
+        <td>
+            {$pictext['stime'] | date = 'Y-m-d H:i:s', ###}
+            --
+            {$pictext['etime'] | date = 'Y-m-d H:i:s', ###}
+        </td>
+        <td>
+            {if $Think.session.cdo.edit}
+            <button class="layui-btn layui-btn-normal layui-btn-small edit-pictext" data-id="{$pictext['id']}">{$Think.session.cdo.edit}</button>
+            {/if}
+            {if $Think.session.cdo.delete}
+            <button class="layui-btn layui-btn-danger layui-btn-small delete-pictext" data-id="{$pictext['id']}">{$Think.session.cdo.delete}</button>
+            {/if}
+        </td>
+    </tr>
+    {/foreach}
+    </tbody>
+</table>
+<script>
+    layui.use(['layer'],function(){
+            var layer = layui.layer;
+            //　添加按钮
+            $(".add-pictext").click(function(){
+                layer.open({
+                    type: 2,
+                    title: '添加配置',
+                    maxmin: true,
+                    area : ['800px' , '600px'],
+                    content: '{$opt}?do=add',
+                });
+            });
+            //　编辑按钮
+            $(".edit-pictext").click(function(){
+                layer.open({
+                    type: 2,
+                    title: '编辑配置',
+                    maxmin: true,
+                    area : ['800px' , '600px'],
+                    content: '{$opt}?do=edit&pictext_id='+$(this).data('id'),
+                });
+            });
+            // 删除按钮
+            $(".delete-pictext").click(function(){
+                $.ajax({
+                    url: '{$opt}?do=delete&pictext_id='+$(this).data('id'),
+                    data: {},
+                    success: function(e){
+                        if(e.code == 0) {
+                            layer.msg(e.msg, {icon: 1}, function(){
+                                window.location.reload();
+                            });
+                        } else {
+                            layer.msg(e.msg, {icon: 2, time: 3000});
+                        }
+                    }
+                });
+            });
+        });
+</script>

@@ -1,0 +1,86 @@
+<section id="local-fee-settings">
+<form method="post" id="form_data">
+    <input type="hidden" name="fee_strategy_id" value="{$fee_strategy_id}">
+    <ul>
+		<li>
+			名称：<input type="text" name="name" value="{$fee['name']}" required>
+		</li>
+		<li>
+			<span> 意外借出免费时间 </span> :
+			<input type="text" name="free_time" size="10" value="{$fee['fee']['free_time']}">
+			<div class="layui-input-inline">
+				<select name="free_unit" class="ui-select-size layui-select">
+					<option value="86400" {$fee['fee']['free_unit'] == 86400 ? 'selected' : '';}>天</option>
+					<option value="3600" {$fee['fee']['free_unit'] == 3600 ? 'selected' : '';}>小时</option>
+					<option value="60" {$fee['fee']['free_unit'] == 60 ? 'selected' : '';}>分钟</option>
+					<option value="1" {$fee['fee']['free_unit'] == 1 ? 'selected' : '';}>秒</option>
+				</select>
+			</div>
+		</li>
+		<li>
+			<span> 固定收费 </span> :
+			<input type="text" name="fixed_time" id="fixed_time" size="10" value="{$fee['fee']['fixed_time']}">
+			<div class="layui-input-inline">
+				<select name="fixed_unit" id="fixed_unit" class="ui-select-size layui-select">
+					<option value="86400" {$fee['fee']['fixed_unit'] == 86400 ? 'selected' : '';}>天</option>
+					<option value="3600" {$fee['fee']['fixed_unit'] == 3600 ? 'selected' : '';}>小时</option>
+					<option value="60" {$fee['fee']['fixed_unit'] == 60 ? 'selected' : '';}>分钟</option>
+					<option value="1" {$fee['fee']['fixed_unit'] == 1 ? 'selected' : '';}>秒</option>
+				</select>
+			</div>
+			<input type="text" name="fixed" size="10" value="{$fee['fee']['fixed']}">元
+		</li>
+
+		<li>
+			<span> 超出计费 </span> :
+			<span> 每 <input type="text" name="fee_time" size="10" value="{$fee['fee']['fee_time']}">
+			<div class="layui-input-inline">
+				<select name="fee_unit" id="fee_unit" class="ui-select-size layui-select">
+					<option value="86400" {$fee['fee']['fee_unit'] == 86400 ? 'selected' : '';}>天</option>
+					<option value="3600" {$fee['fee']['fee_unit'] == 3600 ? 'selected' : '';}>小时</option>
+					<option value="60" {$fee['fee']['fee_unit'] == 60 ? 'selected' : '';}>分钟</option>
+					<option value="1" {$fee['fee']['fee_unit'] == 1 ? 'selected' : '';}>秒</option>
+				</select>
+			</div>
+			收费 </span><input type="text" name="fee" size="4" value="{$fee['fee']['fee']}"> 元
+		</li>
+		<li>
+			<span> 每<input type="text" name="max_fee_time"  id="max_fee_time" size="10" value="{$fee['fee']['max_fee_time']}">
+				<div class="layui-input-inline">
+					<select name="max_fee_unit" id="max_fee_unit" class="ui-select-size layui-select">
+						<option value="86400" {$fee['fee']['max_fee_unit'] == 86400 ? 'selected' : '';}>天</option>
+						<option value="3600" {$fee['fee']['max_fee_unit'] == 3600 ? 'selected' : '';}>小时</option>
+						<option value="60" {$fee['fee']['max_fee_unit'] == 60 ? 'selected' : '';}>分钟</option>
+						<option value="1" {$fee['fee']['max_fee_unit'] == 1 ? 'selected' : '';}>秒</option>
+					</select>
+				</div>
+			最高收费 </span> :
+			<input type="text" name="max_fee" size="10" value="{$fee['fee']['max_fee']}"> 元
+		</li>
+	</ul>
+    <div class="ui-btn-center"><button class="layui-btn submit-button">提交</button></div>
+</form>
+</section>
+<script>
+	layui.use('layer', function() {
+            var layer = layui.layer;
+            $('.submit-button').click(function(){
+                $.ajax({
+                    url: '{$opt}?do={$do}',
+                    type: 'post',
+                    data: $('#form_data').serialize(),
+                    success:function(e) {
+                        if (e.code == 0) {
+                            layer.msg(e.msg, {icon: 1}, function(){
+                                parent.layer.close(parent.layer.getFrameIndex(window.name)); // 关闭本iframe层
+                                parent.location.reload(); // 父页面刷新
+                            });
+                        } else {
+                            layer.msg(e.msg, {icon: 2});
+                        }
+                    },
+                });
+                return false;
+            });
+        });
+</script>

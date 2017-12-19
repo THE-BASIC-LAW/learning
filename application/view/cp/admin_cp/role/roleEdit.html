@@ -1,0 +1,163 @@
+{layout name='popUp' /}
+<form id="access_role">
+	        <div class="layui-form">
+	            <div class="layui-form-item">
+	                <label class="layui-form-label">角色名称:</label>
+	                <div class="layui-input-inline">
+	                    <input type="text" name="role" required lay-verify="required" placeholder="" autocomplete="on" class="layui-input" value="{$role['role']}">
+	                </div>
+	            </div>
+	            <div class="layui-form-item">
+	                <label class="layui-form-label">全局搜索权限:</label>
+	                <div class="layui-input-block">
+	                    <input type="checkbox" name="global_search" lay-skin="switch" value="1" {$role['global_search'] ? 'checked' : ''}>
+	                </div>
+	            </div>
+	        </div>
+	        <fieldset class="fieldsetclass layui-form-item">
+	            <legend>权限</legend>
+	            <div>
+	                <div class="role-add-text">
+	                    <input type="checkbox" name="select_all" id="role-add-all"/>
+	                    <span>全选</span>
+	                </div>
+	                {foreach $jjsan_nav_tree as $key => $val}
+	                    <ul class="access">
+	                        <li class="first-floor">
+	                            {if in_array($key,$role['access']) }
+	                                <input type="checkbox" value="{$key}" checked = "checked" name="access" lay-filter="check-{$key}" title="{$val['text']}" class="user-name same-input"> {$val['text']}
+	                            {else}
+	                                <input type="checkbox" value="{$key}" name="access" lay-filter="check-{$key}" title="{$val['text']}" class="user-name same-input"> {$val['text']}
+	                            {/if}
+
+									<ul>
+									{foreach $val['sub_nav'] as $key_key => $val_val}
+										<li>
+											{if in_array($key.'/'.$key_key,$role['access']) }
+												<input type="checkbox" value="{$key}/{$key_key}" checked = "checked" name='access[]' title="{$val_val['opt']}" class="second-input same-input">{$val_val['opt']}
+											{else}
+												<input type="checkbox" value="{$key}/{$key_key}" name='access[]' title="{$val_val['opt']}" class="second-input same-input">{$val_val['opt']}
+											{/if}
+											<ul>
+												{if array_key_exists('do', $val_val)}
+												<li>
+													{foreach $val_val['do'] as $kkk => $vvv}
+														{if in_array($key.'/'.$key_key.'/'.$kkk,$role['access']) }
+														<input type="checkbox" checked = "checked" value="{$key}/{$key_key}/{$kkk}" name="access" title="{$vvv}" class="last-input"> {$vvv}
+														&nbsp;&nbsp;
+														{else}
+														<input type="checkbox" value="{$key}/{$key_key}/{$kkk}" name="access" title="{$vvv}" class="last-input"> {$vvv}
+														{/if}
+													{/foreach}
+												</li>
+												{/if}
+											</ul>
+										</li>
+									{/foreach}
+									</ul>
+	                        </li>
+	                    </ul>
+	                    <hr>
+	                {/foreach}
+	            </div>
+
+				<div class="ui-btn-center">
+					  <button class="layui-btn create_role" lay-submit lay-filter="*">更新角色权限</button>
+				</div>
+	        </fieldset>
+	</form>
+
+<script>
+//全选
+$("#role-add-all").click(function(){
+    if(this.checked){
+        $(".access :checkbox").prop("checked", true);
+    }else{
+        $(".access :checkbox").prop("checked", false);
+    }
+});
+
+//部分全选
+$(".user-name").click(function(){
+    var checkAll = $(this).siblings("ul").find(":checkbox");
+    if(this.checked){
+        checkAll.prop("checked",true);
+    }else{
+        checkAll.prop("checked",false);
+    }
+});
+$(".second-input").click(function(){
+    var se = $(this).parents(".first-floor").find(".user-name");
+    var sm = $(this).siblings("ul").find(".last-input");
+    if(this.checked){
+        se.prop("checked",true);
+        sm.prop("checked",true);
+    }else{
+        //se.prop("checked",false);
+        sm.prop("checked",false);
+    }
+});
+$(".last-input").click(function(){
+    var lt = $(this).parent("li").parent("ul").parent("li").find(".same-input");
+    var sall = $(this).parents(".first-floor").find(".user-name");
+    if(this.checked){
+        lt.prop("checked",true);
+        sall.prop("checked",true);
+    }else{
+        //lt.prop("checked",false);
+        //sall.prop("checked",false);
+    }
+});
+
+(function(){
+    layui.use(['layer', 'form', 'upload'], function () {
+
+    })
+})()
+
+layui.use(['layer', 'form', 'upload'], function(){
+    var form = layui.form;
+    form.on('submit(*)', function(data){
+          var role_id = {$role['id']};
+          var role = $("input[name='role']").val();
+          if(!role){
+              layer.msg('角色名未填');
+              return;
+          }
+          var access = [];
+          $("input[type='checkbox']:checked").each(function(){
+              var name = $(this).attr("name");
+              if(name != 'global_search' && name != 'select_all') {
+                  access.push($(this).val());
+              }
+          });
+
+          var global_search = $("input[name='global_search']:checked").val();
+
+          $.ajax({
+              url:'{$Request.url}',
+              data:{
+				  'do': 'edit',
+				  'role':role,
+				  'access':access,
+				  'role_id':role_id,
+				  'global_search': global_search
+			  },
+              type:'post',
+              dataType: 'json',
+              success:function(data) {
+                  if(data.code == 0) {
+                      layer.msg(data.msg, {icon: 1}, function(){
+                          parent.layer.close(parent.layer.getFrameIndex(window.name)); // 关闭本iframe层
+                          parent.location.reload(); // 父页面刷新
+                      });
+                  } else {
+                      layer.msg(data.msg, {icon: 2});
+                  }
+              },
+			//   error:function(data){console.log(data.responseText)}
+          });
+          return false; //阻止表单跳转。如果需要表单跳转，去掉这段即可。
+    });
+  });
+</script>

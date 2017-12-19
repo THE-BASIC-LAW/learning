@@ -1,0 +1,117 @@
+{layout name='example' /}
+<script src="/js/jquery.bxslider.min.js"></script>
+<script src="//cdn.bootcss.com/jquery.devbridge-autocomplete/1.2.27/jquery.autocomplete.js"></script>
+<link href="/css/jquery.bxslider.css" rel="stylesheet" type="text/css"/>
+<fieldset class="fieldsetclass shop-station-list">
+    <legend> 查询 </legend>
+    <form method="GET" action="/{$mod}/{$act}/{$opt}">
+        {include file="common/province_city_area"}
+        <div class="layui-form-item">
+            <label class="layui-form-label">商铺名称：</label>
+            <div class="layui-input-inline">
+                <input type="text" name="keyword" value="{$keyword|default=''}" id="autocomplete" class="ui-input-longSize layui-input"/>
+                <input type="hidden" name="shop" id="shop" value="{$shop|default=''}">
+            </div>
+        </div>
+        <div>
+            <button class="layui-btn">查询</button>
+        </div>
+    </form>
+</fieldset>
+<section>
+    <table class="layui-table" cellpadding="0" cellspacing="0">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>名称</th>
+            <th>类型</th>
+            <th>省份</th>
+            <th>城市</th>
+            <th>区域</th>
+            <th>详细地址</th>
+            <th>联系电话</th>
+            <th>营业时间</th>
+            <th>人均消费</th>
+            <th>logo</th>
+            <th width="12%">轮播图</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        {foreach $shops as $shop}
+        <tr>
+            <td>{$shop.id}</td>
+            <td>{$shop.name}</td>
+            <td>{$shop.shoptype}</td>
+            <td>{$shop.province}</td>
+            <td>{$shop.city}</td>
+            <td>{$shop.area}</td>
+            <td>{$shop.locate}</td>
+            <td>{$shop.phone}</td>
+            <td>{$shop.stime} -- {$shop.etime}</td>
+            <td>{$shop.cost}</td>
+            <td>
+                <img src="{$shop.logo.0}" style="max-width: 100px;" height="100px" onerror="this.src='/images/fail-logo.png'">
+                {if $shop.default}
+                <span class="default_logo">(默认logo)</span>
+                {/if}
+            </td>
+            <td style="position:relative; max-width:200px;">
+                <ul class="bxslider">
+                    {foreach $shop.carousel as $carousel_img_url}
+                    <li><img src="{$carousel_img_url}" height="80px" onerror="this.src='/images/fail.jpg'"/></li>
+                    {/foreach}
+                </ul>
+            </td>
+            <td>
+                {if $Think.session.cdo.editShopType}
+                <button class="layui-btn layui-btn-mini layui-btn-normal update-shop" data-id="{$shop.id}">编辑</button>
+                {/if}
+                {if $Think.session.cdo.updateShopPicture}
+                <a href="javascript:;" data-id="{$shop.id}" class="layui-btn layui-btn-mini layui-btn-green update-logo">更新logo</a>
+                <a href="javascript:;" data-id="{$shop.id}" class="layui-btn layui-btn-mini layui-btn-green update-carousel">更新轮播图</a>
+                {/if}
+            </td>
+        </tr>
+        {/foreach}
+        </tbody>
+    </table>
+    {$shops->render()}
+</section>
+<script>
+    layui.use(['layer', 'form'], function() {
+        var layer = layui.layer;
+        //　更新商铺
+        $(".update-shop").click(function() {
+            layer.open({
+                type: 2,
+                title: '更新商铺',
+                maxmin: true,
+                area : ['800px' , '500px'],
+                content: "/{$mod}/{$act}/update?shop_id=" + $(this).data('id'),
+            });
+        });
+
+        // 更新Logo
+        $(".update-logo").click(function() {
+            layer.open({
+                type: 2,
+                title: '更新Logo',
+                maxmin: true,
+                area : ['640px' , '500px'],
+                content: "/{$mod}/{$act}/updateLogo?type=shop&page={$page|default=1}&shop_id=" + $(this).data('id')
+            });
+        });
+
+        // 更新轮播图
+        $(".update-carousel").click(function() {
+            layer.open({
+                type: 2,
+                title: '更新轮播图',
+                maxmin: true,
+                area : ['1000px' , '500px'],
+                content: "/{$mod}/{$act}/updateCarousel?page={$page|default=1}&shop_id=" + $(this).data('id')
+            });
+        });
+    });
+</script>

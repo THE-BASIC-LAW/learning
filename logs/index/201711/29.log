@@ -1,0 +1,1025 @@
+---------------------------------------------------------------
+[ 2017-11-29T17:45:17+08:00 ] 127.0.0.1 POST /cp/station/heartbeatLog
+[ info ] dlq.ddzh.com/cp/station/heartbeatLog [运行时间：0.032149s][吞吐率：31.11req/s] [内存消耗：760.47kb] [文件加载：71]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.station_cp',
+    2 => 'heartbeatLog',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '29',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://dlq.ddzh.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/station/heartbeatLog',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2',
+)
+[ info ] [ PARAM ] array (
+  'sdate' => '',
+  'edate' => '',
+  'station_id' => '1111',
+  'mod' => 'cp',
+  'act' => 'station',
+  'opt' => 'heartbeatLog',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\StationCp->heartbeatLog[ /var/www/html/ddzh/application/controller/cp/StationCp.php ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000339s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.000617s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000192s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.000241s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000136s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.000230s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000112s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.000335s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000218s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000405s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000164s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000190s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000143s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000165s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_station_heartbeat_log` [ RunTime:0.009774s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:25]
+[ error ] [8]未定义变量: begin_time[/var/www/html/ddzh/application/controller/cp/StationCp.php:231]
+[ error ] [8]未定义变量: shop_station_id[/var/www/html/ddzh/application/controller/cp/StationCp.php:233]
+[ error ] [8]未定义数组下标: 0[/var/www/html/ddzh/thinkphp/library/think/db/Builder.php:307]
+[ error ] [0]查询表达式错误:[/var/www/html/ddzh/thinkphp/library/think/db/Builder.php:331]
+---------------------------------------------------------------
+[ 2017-11-29T17:45:59+08:00 ] 127.0.0.1 POST /cp/station/heartbeatLog
+[ info ] dlq.ddzh.com/cp/station/heartbeatLog [运行时间：0.016368s][吞吐率：61.09req/s] [内存消耗：774.30kb] [文件加载：69]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.station_cp',
+    2 => 'heartbeatLog',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '29',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://dlq.ddzh.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/station/heartbeatLog',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2',
+)
+[ info ] [ PARAM ] array (
+  'sdate' => '',
+  'edate' => '',
+  'station_id' => '1111',
+  'mod' => 'cp',
+  'act' => 'station',
+  'opt' => 'heartbeatLog',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\StationCp->heartbeatLog[ /var/www/html/ddzh/application/controller/cp/StationCp.php ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000564s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.000958s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000463s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.000681s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000473s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.000699s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000475s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.000842s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000470s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000446s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000304s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000379s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000273s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000274s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_station_heartbeat_log` [ RunTime:0.001230s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:25]
+[ error ] [8]未定义变量: begin_time[/var/www/html/ddzh/application/controller/cp/StationCp.php:231]
+[ error ] [8]未定义变量: shop_station_id[/var/www/html/ddzh/application/controller/cp/StationCp.php:233]
+---------------------------------------------------------------
+[ 2017-11-29T17:52:38+08:00 ] 127.0.0.1 POST /cp/station/heartbeatLog
+[ info ] dlq.ddzh.com/cp/station/heartbeatLog [运行时间：0.012819s][吞吐率：78.01req/s] [内存消耗：773.62kb] [文件加载：69]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.station_cp',
+    2 => 'heartbeatLog',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '29',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://dlq.ddzh.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/station/heartbeatLog',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2',
+)
+[ info ] [ PARAM ] array (
+  'sdate' => '',
+  'edate' => '',
+  'station_id' => '1111',
+  'mod' => 'cp',
+  'act' => 'station',
+  'opt' => 'heartbeatLog',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\StationCp->heartbeatLog[ /var/www/html/ddzh/application/controller/cp/StationCp.php ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000314s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.000510s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000163s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.000458s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000446s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.000409s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000285s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.000430s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000309s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000326s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000122s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000293s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000212s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000186s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_station_heartbeat_log` [ RunTime:0.000828s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:25]
+[ error ] [8]未定义变量: begin_time[/var/www/html/ddzh/application/controller/cp/StationCp.php:231]
+---------------------------------------------------------------
+[ 2017-11-29T17:53:18+08:00 ] 127.0.0.1 POST /cp/station/heartbeatLog
+[ info ] dlq.ddzh.com/cp/station/heartbeatLog [运行时间：0.018156s][吞吐率：55.08req/s] [内存消耗：773.02kb] [文件加载：69]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.station_cp',
+    2 => 'heartbeatLog',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '29',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://dlq.ddzh.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/station/heartbeatLog',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2',
+)
+[ info ] [ PARAM ] array (
+  'sdate' => '',
+  'edate' => '',
+  'station_id' => '1111',
+  'mod' => 'cp',
+  'act' => 'station',
+  'opt' => 'heartbeatLog',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\StationCp->heartbeatLog[ /var/www/html/ddzh/application/controller/cp/StationCp.php ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000803s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.001256s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000287s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.000429s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000192s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.000518s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000427s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.000889s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000236s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000615s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000310s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000282s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000252s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000273s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_station_heartbeat_log` [ RunTime:0.001464s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:25]
+[ error ] [8]未定义变量: begin_time[/var/www/html/ddzh/application/controller/cp/StationCp.php:231]
+---------------------------------------------------------------
+[ 2017-11-29T17:53:45+08:00 ] 127.0.0.1 POST /cp/station/heartbeatLog
+[ info ] dlq.ddzh.com/cp/station/heartbeatLog [运行时间：0.012460s][吞吐率：80.26req/s] [内存消耗：773.02kb] [文件加载：69]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.station_cp',
+    2 => 'heartbeatLog',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '29',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://dlq.ddzh.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/station/heartbeatLog',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2',
+)
+[ info ] [ PARAM ] array (
+  'sdate' => '',
+  'edate' => '',
+  'station_id' => '1111',
+  'mod' => 'cp',
+  'act' => 'station',
+  'opt' => 'heartbeatLog',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\StationCp->heartbeatLog[ /var/www/html/ddzh/application/controller/cp/StationCp.php ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000434s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.000564s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000212s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.000288s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000276s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.000314s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000407s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.000666s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000388s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000593s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000473s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000261s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000170s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000173s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_station_heartbeat_log` [ RunTime:0.001161s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:25]
+[ error ] [8]未定义变量: begin_time[/var/www/html/ddzh/application/controller/cp/StationCp.php:231]
+---------------------------------------------------------------
+[ 2017-11-29T17:53:56+08:00 ] 127.0.0.1 POST /cp/station/heartbeatLog
+[ info ] dlq.ddzh.com/cp/station/heartbeatLog [运行时间：0.014946s][吞吐率：66.91req/s] [内存消耗：709.30kb] [文件加载：69]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.station_cp',
+    2 => 'heartbeatLog',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '29',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://dlq.ddzh.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/station/heartbeatLog',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2',
+)
+[ info ] [ PARAM ] array (
+  'sdate' => '',
+  'edate' => '',
+  'station_id' => '1111',
+  'mod' => 'cp',
+  'act' => 'station',
+  'opt' => 'heartbeatLog',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\StationCp->heartbeatLog[ /var/www/html/ddzh/application/controller/cp/StationCp.php ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000333s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.000600s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000785s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.000952s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000493s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.000678s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000504s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.000665s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000372s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000387s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000205s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000220s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000184s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000232s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_station_heartbeat_log` [ RunTime:0.000926s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:25]
+---------------------------------------------------------------
+[ 2017-11-29T17:54:15+08:00 ] 127.0.0.1 POST /cp/station/heartbeatLog
+[ info ] dlq.ddzh.com/cp/station/heartbeatLog [运行时间：0.013471s][吞吐率：74.23req/s] [内存消耗：772.80kb] [文件加载：69]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.station_cp',
+    2 => 'heartbeatLog',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '29',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://dlq.ddzh.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/station/heartbeatLog',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2',
+)
+[ info ] [ PARAM ] array (
+  'sdate' => '',
+  'edate' => '',
+  'station_id' => '1111',
+  'mod' => 'cp',
+  'act' => 'station',
+  'opt' => 'heartbeatLog',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\StationCp->heartbeatLog[ /var/www/html/ddzh/application/controller/cp/StationCp.php ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000352s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.000525s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000260s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.000416s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000281s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.000409s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000423s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.001193s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000326s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000549s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000193s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000179s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000206s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000226s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_station_heartbeat_log` [ RunTime:0.001074s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:25]
+---------------------------------------------------------------
+[ 2017-11-29T18:02:26+08:00 ] 127.0.0.1 POST /cp/station/heartbeatLog
+[ info ] dlq.ddzh.com/cp/station/heartbeatLog [运行时间：0.012969s][吞吐率：77.11req/s] [内存消耗：772.80kb] [文件加载：69]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.station_cp',
+    2 => 'heartbeatLog',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '29',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://dlq.ddzh.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/station/heartbeatLog',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2',
+)
+[ info ] [ PARAM ] array (
+  'sdate' => '',
+  'edate' => '',
+  'station_id' => '1111',
+  'mod' => 'cp',
+  'act' => 'station',
+  'opt' => 'heartbeatLog',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\StationCp->heartbeatLog[ /var/www/html/ddzh/application/controller/cp/StationCp.php ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000328s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.000560s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000224s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.000340s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000181s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.000376s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000258s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.000594s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000469s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000497s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000313s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000344s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000306s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000199s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_station_heartbeat_log` [ RunTime:0.001205s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:25]
+---------------------------------------------------------------
+[ 2017-11-29T18:02:35+08:00 ] 127.0.0.1 POST /cp/station/heartbeatLog
+[ info ] dlq.ddzh.com/cp/station/heartbeatLog [运行时间：0.010453s][吞吐率：95.67req/s] [内存消耗：772.80kb] [文件加载：69]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.station_cp',
+    2 => 'heartbeatLog',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '29',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://dlq.ddzh.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/station/heartbeatLog',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2',
+)
+[ info ] [ PARAM ] array (
+  'sdate' => '',
+  'edate' => '',
+  'station_id' => '1111',
+  'mod' => 'cp',
+  'act' => 'station',
+  'opt' => 'heartbeatLog',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\StationCp->heartbeatLog[ /var/www/html/ddzh/application/controller/cp/StationCp.php ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000386s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.000615s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000235s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.000255s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000104s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.000318s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000149s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.000297s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000151s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000499s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000347s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000230s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000128s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000180s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_station_heartbeat_log` [ RunTime:0.000805s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:25]
+---------------------------------------------------------------
+[ 2017-11-29T18:02:43+08:00 ] 127.0.0.1 POST /cp/station/heartbeatLog
+[ info ] dlq.ddzh.com/cp/station/heartbeatLog [运行时间：0.013109s][吞吐率：76.28req/s] [内存消耗：772.80kb] [文件加载：69]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.station_cp',
+    2 => 'heartbeatLog',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '29',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://dlq.ddzh.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/station/heartbeatLog',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2',
+)
+[ info ] [ PARAM ] array (
+  'sdate' => '',
+  'edate' => '',
+  'station_id' => '1111',
+  'mod' => 'cp',
+  'act' => 'station',
+  'opt' => 'heartbeatLog',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\StationCp->heartbeatLog[ /var/www/html/ddzh/application/controller/cp/StationCp.php ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000335s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.000547s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000267s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.000279s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000314s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.000512s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000287s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.000316s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000136s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001045s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000263s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000233s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000323s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000341s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_station_heartbeat_log` [ RunTime:0.001126s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:25]
+---------------------------------------------------------------
+[ 2017-11-29T18:05:20+08:00 ] 127.0.0.1 POST /cp/station/heartbeatLog
+[ info ] dlq.ddzh.com/cp/station/heartbeatLog [运行时间：0.017210s][吞吐率：58.11req/s] [内存消耗：773.96kb] [文件加载：69]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.station_cp',
+    2 => 'heartbeatLog',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '29',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://dlq.ddzh.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/station/heartbeatLog',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2',
+)
+[ info ] [ PARAM ] array (
+  'sdate' => '',
+  'edate' => '',
+  'station_id' => '1111',
+  'mod' => 'cp',
+  'act' => 'station',
+  'opt' => 'heartbeatLog',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\StationCp->heartbeatLog[ /var/www/html/ddzh/application/controller/cp/StationCp.php ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000475s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.000833s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000380s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.000544s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000250s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.000641s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000830s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.000831s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000562s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001011s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000511s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000384s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000251s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000292s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_station_heartbeat_log` [ RunTime:0.000854s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:25]
+[ error ] [8]未定义数组下标: 1[/var/www/html/ddzh/thinkphp/library/think/db/Builder.php:307]
+---------------------------------------------------------------
+[ 2017-11-29T18:06:52+08:00 ] 127.0.0.1 POST /cp/station/heartbeatLog
+[ info ] dlq.ddzh.com/cp/station/heartbeatLog [运行时间：0.011262s][吞吐率：88.79req/s] [内存消耗：709.37kb] [文件加载：69]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.station_cp',
+    2 => 'heartbeatLog',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '29',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://dlq.ddzh.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/station/heartbeatLog',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2',
+)
+[ info ] [ PARAM ] array (
+  'sdate' => '',
+  'edate' => '',
+  'station_id' => '1111',
+  'mod' => 'cp',
+  'act' => 'station',
+  'opt' => 'heartbeatLog',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\StationCp->heartbeatLog[ /var/www/html/ddzh/application/controller/cp/StationCp.php ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000356s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.000592s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000206s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.000269s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000192s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.000253s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000112s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.000215s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000110s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000503s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000273s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000314s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000183s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000513s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_station_heartbeat_log` [ RunTime:0.001096s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:25]
+[ error ] [8]未定义数组下标: 1[/var/www/html/ddzh/thinkphp/library/think/db/Builder.php:307]
+---------------------------------------------------------------
+[ 2017-11-29T18:07:04+08:00 ] 127.0.0.1 POST /cp/station/heartbeatLog
+[ info ] dlq.ddzh.com/cp/station/heartbeatLog [运行时间：0.012835s][吞吐率：77.91req/s] [内存消耗：773.96kb] [文件加载：69]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.station_cp',
+    2 => 'heartbeatLog',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '29',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://dlq.ddzh.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/station/heartbeatLog',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2',
+)
+[ info ] [ PARAM ] array (
+  'sdate' => '',
+  'edate' => '',
+  'station_id' => '1111',
+  'mod' => 'cp',
+  'act' => 'station',
+  'opt' => 'heartbeatLog',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\StationCp->heartbeatLog[ /var/www/html/ddzh/application/controller/cp/StationCp.php ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000466s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.000729s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000264s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.000313s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000216s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.000313s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000250s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.000536s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000313s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000359s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000213s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000339s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000243s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000243s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_station_heartbeat_log` [ RunTime:0.001443s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:25]
+[ error ] [8]未定义数组下标: 1[/var/www/html/ddzh/thinkphp/library/think/db/Builder.php:307]
+---------------------------------------------------------------
+[ 2017-11-29T18:07:21+08:00 ] 127.0.0.1 POST /cp/station/heartbeatLog
+[ info ] dlq.ddzh.com/cp/station/heartbeatLog [运行时间：0.012106s][吞吐率：82.60req/s] [内存消耗：773.96kb] [文件加载：69]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.station_cp',
+    2 => 'heartbeatLog',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '29',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://dlq.ddzh.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/station/heartbeatLog',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2',
+)
+[ info ] [ PARAM ] array (
+  'sdate' => '',
+  'edate' => '',
+  'station_id' => '1111',
+  'mod' => 'cp',
+  'act' => 'station',
+  'opt' => 'heartbeatLog',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\StationCp->heartbeatLog[ /var/www/html/ddzh/application/controller/cp/StationCp.php ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000350s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.000671s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000231s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.000386s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000161s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.000307s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000168s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.000519s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000263s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000350s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000210s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000253s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000159s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000381s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_station_heartbeat_log` [ RunTime:0.001338s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:25]
+[ error ] [8]未定义数组下标: 1[/var/www/html/ddzh/thinkphp/library/think/db/Builder.php:307]
+---------------------------------------------------------------
+[ 2017-11-29T18:08:28+08:00 ] 127.0.0.1 POST /cp/station/heartbeatLog
+[ info ] dlq.ddzh.com/cp/station/heartbeatLog [运行时间：0.040609s][吞吐率：24.63req/s] [内存消耗：718.36kb] [文件加载：73]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.station_cp',
+    2 => 'heartbeatLog',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '29',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://dlq.ddzh.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/station/heartbeatLog',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2',
+)
+[ info ] [ PARAM ] array (
+  'sdate' => '',
+  'edate' => '',
+  'station_id' => '1111',
+  'mod' => 'cp',
+  'act' => 'station',
+  'opt' => 'heartbeatLog',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\StationCp->heartbeatLog[ /var/www/html/ddzh/application/controller/cp/StationCp.php ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000302s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.000593s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000227s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.000306s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000157s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.000230s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000133s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.000262s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000148s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000710s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000422s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000346s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000417s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000446s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_station_heartbeat_log` [ RunTime:0.001390s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:25]
+[ error ] [8]未定义数组下标: 1[/var/www/html/ddzh/thinkphp/library/think/db/Builder.php:307]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'shop_station_id' in 'where clause'[/var/www/html/ddzh/thinkphp/library/think/db/Connection.php:388]
+---------------------------------------------------------------
+[ 2017-11-29T18:08:43+08:00 ] 127.0.0.1 POST /cp/station/heartbeatLog
+[ info ] dlq.ddzh.com/cp/station/heartbeatLog [运行时间：0.018399s][吞吐率：54.35req/s] [内存消耗：718.36kb] [文件加载：73]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.station_cp',
+    2 => 'heartbeatLog',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '29',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://dlq.ddzh.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/station/heartbeatLog',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2',
+)
+[ info ] [ PARAM ] array (
+  'sdate' => '',
+  'edate' => '',
+  'station_id' => '1111',
+  'mod' => 'cp',
+  'act' => 'station',
+  'opt' => 'heartbeatLog',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\StationCp->heartbeatLog[ /var/www/html/ddzh/application/controller/cp/StationCp.php ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000356s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin` [ RunTime:0.000602s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000183s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_role` [ RunTime:0.000262s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000148s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_city` [ RunTime:0.000224s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000137s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_admin_shop` [ RunTime:0.000274s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000153s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000416s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000526s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_city` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000438s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin_shop` WHERE  `admin_id` = 1 [ RunTime:0.000319s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001174s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_station_heartbeat_log` [ RunTime:0.001701s ]
+[ error ] [8]未定义数组索引: do[/var/www/html/ddzh/application/controller/Cp.php:25]
+[ error ] [8]未定义数组下标: 1[/var/www/html/ddzh/thinkphp/library/think/db/Builder.php:307]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'shop_station_id' in 'where clause'[/var/www/html/ddzh/thinkphp/library/think/db/Connection.php:388]

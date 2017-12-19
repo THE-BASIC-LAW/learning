@@ -1,0 +1,99 @@
+---------------------------------------------------------------
+[ 2017-12-15T11:14:52+08:00 ] 127.0.0.1 POST /sync
+[ info ] dlq.ddzh.com/sync [运行时间：0.067568s][吞吐率：14.80req/s] [内存消耗：708.21kb] [文件加载：67]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'Sync',
+    2 => 'dispatch',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '54bfdc79-0f01-463f-918e-3201782e1db1',
+  'content-type' => 'text/plain',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'dlq.ddzh.com',
+  'cookie' => 'PHPSESSID=6j7hj90ptdklu5sdue6jsa6kk4',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '151',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\controller\Sync->dispatch[ /var/www/html/ddzh/application/controller/Sync.php ]
+[ info ] get post data : {"data":{"ACT":"return_back","ID":"A8FF0C51EB","TIME":"1513307553","SLOT":"13","BACKSTA":"0","STATIONID":"1006","CHKSUM":"8d59617a"},"stationid":1006}
+
+---------------------------------------------------------------
+[ 2017-12-15T11:15:21+08:00 ] 127.0.0.1 POST /sync
+[ info ] dlq.ddzh.com/sync [运行时间：0.028010s][吞吐率：35.70req/s] [内存消耗：708.14kb] [文件加载：67]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'Sync',
+    2 => 'dispatch',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '836d5838-1ea3-47ac-962c-d4156109457b',
+  'content-type' => 'text/plain',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'dlq.ddzh.com',
+  'cookie' => 'PHPSESSID=6j7hj90ptdklu5sdue6jsa6kk4',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '151',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\controller\Sync->dispatch[ /var/www/html/ddzh/application/controller/Sync.php ]
+[ info ] get post data : {"data":{"ACT":"return_back","ID":"A8FF0C51EB","TIME":"1513307553","SLOT":"13","BACKSTA":"0","STATIONID":"1006","CHKSUM":"8d59617a"},"stationid":1006}
+
+---------------------------------------------------------------
+[ 2017-12-15T11:15:48+08:00 ] 127.0.0.1 POST /sync
+[ info ] dlq.ddzh.com/sync [运行时间：0.074404s][吞吐率：13.44req/s] [内存消耗：708.14kb] [文件加载：67]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'Sync',
+    2 => 'dispatch',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '48745d0c-3a1d-49e9-b5d5-e6f60bfc2dd3',
+  'content-type' => 'text/plain',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'dlq.ddzh.com',
+  'cookie' => 'PHPSESSID=6j7hj90ptdklu5sdue6jsa6kk4',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '151',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\controller\Sync->dispatch[ /var/www/html/ddzh/application/controller/Sync.php ]
+[ info ] get post data : {"data":{"ACT":"return_back","ID":"A8FF0C51EB","TIME":"1513307553","SLOT":"13","BACKSTA":"0","STATIONID":"1006","CHKSUM":"8d59617a"},"stationid":1006}
+

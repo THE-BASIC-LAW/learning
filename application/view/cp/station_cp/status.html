@@ -1,0 +1,36 @@
+<style type="text/css">
+.matlist .imgbody {
+	width: 55px;
+}
+</style>
+
+<table class="layui-table" width="600px" cellpadding="0" cellspacing="0" style="text-align:center">
+    <tr>
+        <th>异常断电</th>
+        <th>RFID</th>
+        <th>左通道</th>
+        <th>右通道</th>
+    </tr>
+    <tr>
+        <!--{loop range(0,3) $s}-->
+        <!--{if $status[$s] == 0}-->
+        <td>正常</td>
+        <!--{elseif $status[$s] == 1 && ($s == 2 || $s == 3)}-->
+        <td style="color:red">堵住</td>
+        <!--{elseif $status[$s] == 2 && ($s == 2 || $s == 3)}-->
+        <td style="color:red">锁住</td>
+        <!--{elseif $status[$s] == 3 && ($s == 2 || $s == 3)}-->
+        <td style="color:red">断线</td>
+        <!--{elseif $status[$s] == 4 && ($s == 2 || $s == 3)}-->
+        <td style="color:red">死角</td>
+        <!--{elseif $status[$s] == 1}-->
+        <td style="color:red">故障</td>
+        <!--{else}-->
+        <td style="color:red">锁住</td>
+        <!--{/if}-->
+        <!--{/loop}-->
+    </tr>
+</table>
+
+<a href="index.php?mod=cp&act=station&opt=channel_sensor&sid={$_GET['sid']}" onclick="showWindow('channel-sensor', this.href);">通道传感器</a>
+

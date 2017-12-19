@@ -1,0 +1,55 @@
+{layout name='example' /}
+<fieldset class="fieldsetclass shop-station-list">
+    <legend> 查询 </legend>
+    <form method="GET" action="">
+        <div class="layui-form-item">
+            <h4>商铺类型名称：</h4>
+            <div class="layui-input-inline">
+                <input type="text" name="keyword" value="{$keyword|default=''}" id="autocomplete" class="ui-input-longSize"/>
+                <input type="hidden" name="shop" id="shop" value="{$shop|default=''}">
+            </div>
+        </div>
+        <div>
+            <button class="layui-btn">查询</button>
+        </div>
+    </form>
+</fieldset>
+<div class="add-shop-type">
+    <table class="layui-table" cellpadding="0" cellspacing="0">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>名称</th>
+            <th>logo</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        {foreach $shop_types as $item}
+        <tr>
+            <td>{$item['id']}</td>
+            <td>{$item['type']}</td>
+            <td><img src="{$item['logo'][0]}" style="max-width: 100px;" height="80px" onerror="this.src='/images/fail-logo.jpg'"></td>
+            <td><a href="javascript:;" data-id="{$item['id']}" class="layui-btn layui-btn-mini layui-btn-green update-logo">更新logo</a></td>
+        </tr>
+        {/foreach}
+        </tbody>
+    </table>
+    {$shop_types->render()}
+</div>
+<script>
+    layui.use(['layer'], function(){
+        var layer = layui.layer;
+    });
+
+    // 更新Logo
+    $(".update-logo").click(function() {
+        layer.open({
+            type: 2,
+            title: '更新Logo',
+            maxmin: true,
+            area : ['640px' , '500px'],
+            content: "/cp/shop/updateLogo?type=shop_type&page={$page|default=1}&id=" + $(this).data('id')
+        });
+    });
+</script>

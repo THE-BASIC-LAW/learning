@@ -1,0 +1,26 @@
+<!-- 左侧菜单开始 -->
+<div class="left-nav">
+ <div id="side-nav">
+   <ul id="nav">
+		{foreach $Think.session.nav_tree as $k => $v}
+		<li {if $k == $act} class="open" {/if}>
+		   <a href="javascript:;">
+			   <cite>{$v['text']}</cite>
+			   <i class="iconfont nav_right">&#xe697;</i>
+		   </a>
+		   <ul class="sub-menu" {if $k == $act} style="display:block;" {/if}>
+			   {foreach $v['sub_nav'] as $key => $value}
+			   <li>
+				   <a href="/cp/{$k}/{$key}">
+					   <i class="iconfont">&#xe6a7;</i>
+					   <cite>{$value['opt']}</cite>
+				   </a>
+			   </li >
+			   {/foreach}
+		   </ul>
+		</li>
+		{/foreach}
+   </ul>
+ </div>
+</div>
+<!-- 左侧菜单结束 -->

@@ -1,0 +1,125 @@
+{layout name='example' /}
+<section>
+	<form method="post" action="/{$mod}/{$act}/{$opt}?submit=1" enctype="multipart/form-data">
+		{:token()}
+		<fieldset class="fieldsetclass">
+			<legend>添加商铺</legend>
+			<ul class="add-shop">
+				<li>
+					<span>商铺名称:</span>
+					<input type="text" name="name" required>
+				</li>
+				<li>
+					<span>省份/城市/区域:</span>
+					<div class="layui-input-inline">
+						<select name="province" id="get-province" class="layui-select" required>
+							<option value="">请选择省份</option>
+							{foreach $provinces as $item}
+							<option value="{$item}">{$item}</option>
+							{/foreach}
+						</select>
+					</div>
+					<div class="layui-input-inline">
+						<select name="city" id="get-city" class="layui-select" required>
+							<option value="">请选择城市</option>
+						</select>
+					</div>
+					<div class="layui-input-inline">
+						<select name="area" id="get-area" class="layui-select" required>
+							<option value="">请选择区域</option>
+						</select>
+					</div>
+				</li>
+
+				<li>
+					<span>商铺类型:</span>
+					<div class="layui-input-inline">
+						<select name="type" class="layui-select">
+							{foreach $shop_types as $item}
+							<option value="{$item['id']}">{$item['type']}</option>
+							{/foreach}
+						</select>
+					</div>
+				</li>
+
+				<li>
+					<span>具体位置:</span>
+					<input type="text" name="locate" required>
+				</li>
+
+				<li>
+					<span>人均消费:</span>
+					<input type="number" name="cost" required value="0">
+				</li>
+
+				<li>
+					<span>商铺电话:</span>
+					<input type="text" name="phone" required>
+				</li>
+
+				<li>
+					<span>营业开始时间</span>
+					<input type="time" name="stime" required>
+					<span>营业结束时间</span>
+					<input type="time" name="etime" required>
+				</li>
+			</ul>
+		</fieldset>
+
+	<fieldset class="fieldsetclass">
+		<legend>商铺图标</legend>
+		<div class="shop-logo">
+			<input type="file" name="logo" class="logo" style="border:0px" >
+		</div>
+	</fieldset>
+	<fieldset class="fieldsetclass">
+		<legend>商铺轮播图</legend>
+		<div class="shop-carousel" id="upload_box">
+			<input type="file" class="carousel" name="carousels[]" id="carousel_0" style="border:0px" >
+			<input type="button" class="layui-btn layui-btn-small upload_more" value="上传更多">
+		</div>
+	</fieldset>
+	<div class="style-btn">
+		<input class="layui-btn add_shop" type="submit" value="添　加">
+	</div>
+	</form>
+</section>
+<script>
+$('#get-province').change(function(){
+	$.ajax({
+		type: 'post',
+		data: {province:$('#get-province').val(), ajax:1},
+        url: '/cp/common/getAreaInfo',
+		success: function(e) {
+			var html = '<option value="">请选择城市</option>';
+			for(var i in e.data) {
+				html += '<option value="'+e.data[i]+'">' + e.data[i] + '</option>';
+			}
+			$('#get-city').html(html);
+			$('#get-area').html('<option value="">请选择区域</option>');
+		}
+	})
+});
+
+$('#get-city').change(function(){
+	$.ajax({
+		type: 'post',
+		data: {province:$('#get-province').val(), city:$('#get-city').val(), ajax:1},
+        url: '/cp/common/getAreaInfo',
+		success: function(e) {
+			var html = '<option value="">请选择区域</option>';
+			for(var i in e.data) {
+				html += '<option value="'+e.data[i]+'">' + e.data[i] + '</option>';
+			}
+			$('#get-area').html(html);
+		}
+	})
+});
+
+$('.upload_more').click(function() {
+    var id = $('.carousel').length;
+    c = '';
+    c += '<input type="file" name="carousels[]" class="carousel" id="carousel_' + id +'" style="border:0px">';
+    $('.upload_more').before(c);
+})
+</script>

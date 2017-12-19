@@ -1,0 +1,216 @@
+---------------------------------------------------------------
+[ 2017-12-14T09:59:32+08:00 ] 127.0.0.1 POST /sync
+[ info ] dlq.ddzh.com/sync [运行时间：2.224365s][吞吐率：0.45req/s] [内存消耗：960.38kb] [文件加载：73]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'Sync',
+    2 => 'dispatch',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '3eb5ef1c-adc2-4277-b899-7390618ed331',
+  'content-type' => 'text/plain',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'dlq.ddzh.com',
+  'cookie' => 'PHPSESSID=6j7hj90ptdklu5sdue6jsa6kk4',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '169',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\controller\Sync->dispatch[ /var/www/html/ddzh/application/controller/Sync.php ]
+[ info ] get post data :  {"data":{"ACT":"rent_confirm","STATUS":"0","ORDERID":"DDZH-20171214-095337-79030","ID":"A8FFCB15B8","STATIONID":"1634","SLOT":"4","CHKSUM":"07611523"},"stationid":1634}
+[ info ] umbrella rent confirm
+[ info ] order_id: DDZH-20171214-095337-79030
+[ error ] [8]未定义数组索引: slot[/var/www/html/ddzh/application/model/Tradelog.php:38]
+[ error ] order_id DDZH-20171214-095337-79030 has an exception status 
+---------------------------------------------------------------
+[ 2017-12-14T10:56:23+08:00 ] 127.0.0.1 POST /sync
+[ info ] dlq.ddzh.com/sync [运行时间：1.158580s][吞吐率：0.86req/s] [内存消耗：756.22kb] [文件加载：73]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'Sync',
+    2 => 'dispatch',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'a74e9a33-29f7-43f9-acc3-adcf6ee8d96e',
+  'content-type' => 'text/plain',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'dlq.ddzh.com',
+  'cookie' => 'PHPSESSID=6j7hj90ptdklu5sdue6jsa6kk4',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '169',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\controller\Sync->dispatch[ /var/www/html/ddzh/application/controller/Sync.php ]
+[ info ] get post data :  {"data":{"ACT":"rent_confirm","STATUS":"0","ORDERID":"DDZH-20171214-095337-79030","ID":"A8FFCB15B8","STATIONID":"1634","SLOT":"4","CHKSUM":"07611523"},"stationid":1634}
+[ info ] umbrella rent confirm
+[ info ] order_id: DDZH-20171214-095337-79030
+[ error ] [8]未定义数组索引: slot[/var/www/html/ddzh/application/model/Tradelog.php:38]
+[ error ] order_id DDZH-20171214-095337-79030 has an exception status 
+---------------------------------------------------------------
+[ 2017-12-14T14:35:20+08:00 ] 127.0.0.1 POST /sync
+[ info ] dlq.ddzh.com/sync [运行时间：0.353053s][吞吐率：2.83req/s] [内存消耗：755.20kb] [文件加载：73]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'Sync',
+    2 => 'dispatch',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '2813b264-f0d4-404b-9fb5-4ed9259e22d9',
+  'content-type' => 'text/plain',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'dlq.ddzh.com',
+  'cookie' => 'PHPSESSID=6j7hj90ptdklu5sdue6jsa6kk4',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '169',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\controller\Sync->dispatch[ /var/www/html/ddzh/application/controller/Sync.php ]
+[ info ] get post data : {"data":{"ACT":"rent_confirm","STATUS":"9","ORDERID":"DDZH-20171214-142137-75413","ID":"A8FFCB15B8","STATIONID":"1634","SLOT":"4","CHKSUM":"33c27b17"},"stationid":1634}
+
+[ info ] umbrella rent confirm
+[ info ] order_id: DDZH-20171214-142137-75413
+[ error ] [8]未定义数组索引: slot[/var/www/html/ddzh/application/model/Tradelog.php:37]
+---------------------------------------------------------------
+[ 2017-12-14T14:36:13+08:00 ] 127.0.0.1 POST /sync
+[ info ] dlq.ddzh.com/sync [运行时间：0.149470s][吞吐率：6.69req/s] [内存消耗：771.13kb] [文件加载：73]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'Sync',
+    2 => 'dispatch',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '1413a937-53dd-4860-ada6-7015cba4f59d',
+  'content-type' => 'text/plain',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'dlq.ddzh.com',
+  'cookie' => 'PHPSESSID=6j7hj90ptdklu5sdue6jsa6kk4',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '169',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\controller\Sync->dispatch[ /var/www/html/ddzh/application/controller/Sync.php ]
+[ info ] get post data : {"data":{"ACT":"rent_confirm","STATUS":"9","ORDERID":"DDZH-20171214-142137-75413","ID":"A8FFCB15B8","STATIONID":"1634","SLOT":"4","CHKSUM":"33c27b17"},"stationid":1634}
+
+[ info ] umbrella rent confirm
+[ info ] order_id: DDZH-20171214-142137-75413
+[ error ] [8]未定义数组索引: slot[/var/www/html/ddzh/application/model/Tradelog.php:37]
+---------------------------------------------------------------
+[ 2017-12-14T14:37:45+08:00 ] 127.0.0.1 POST /sync
+[ info ] dlq.ddzh.com/sync [运行时间：0.094271s][吞吐率：10.61req/s] [内存消耗：745.91kb] [文件加载：74]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'Sync',
+    2 => 'dispatch',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '704cfdcc-694d-4706-96c5-88dcbe316586',
+  'content-type' => 'text/plain',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'dlq.ddzh.com',
+  'cookie' => 'PHPSESSID=6j7hj90ptdklu5sdue6jsa6kk4',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '169',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\controller\Sync->dispatch[ /var/www/html/ddzh/application/controller/Sync.php ]
+[ info ] get post data : {"data":{"ACT":"rent_confirm","STATUS":"9","ORDERID":"DDZH-20171214-142137-75413","ID":"A8FFCB15B8","STATIONID":"1634","SLOT":"4","CHKSUM":"33c27b17"},"stationid":1634}
+
+[ info ] umbrella rent confirm
+[ info ] order_id: DDZH-20171214-142137-75413
+[ error ] [8]未定义数组索引: slot[/var/www/html/ddzh/application/model/Tradelog.php:37]
+[ error ] [0]致命错误: Call to a member function get() on null[/var/www/html/ddzh/application/model/Tradelog.php:204]
+---------------------------------------------------------------
+[ 2017-12-14T14:54:06+08:00 ] 127.0.0.1 POST /sync
+[ info ] dlq.ddzh.com/sync [运行时间：0.145936s][吞吐率：6.85req/s] [内存消耗：767.85kb] [文件加载：70]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'Sync',
+    2 => 'dispatch',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '8604f091-4ca1-4ced-9d07-fae02328dcf4',
+  'content-type' => 'text/plain',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'dlq.ddzh.com',
+  'cookie' => 'PHPSESSID=6j7hj90ptdklu5sdue6jsa6kk4',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '169',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\controller\Sync->dispatch[ /var/www/html/ddzh/application/controller/Sync.php ]
+[ info ] get post data : {"data":{"ACT":"rent_confirm","STATUS":"9","ORDERID":"DDZH-20171214-142137-75413","ID":"A8FFCB15B8","STATIONID":"1634","SLOT":"4","CHKSUM":"33c27b17"},"stationid":1634}
+
+[ info ] umbrella rent confirm
+[ info ] order_id: DDZH-20171214-142137-75413

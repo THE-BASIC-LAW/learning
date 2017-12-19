@@ -1,0 +1,46 @@
+<style>
+	li{margin: 20px 30px}
+</style>
+<ul class="shop-stationReplace">
+	<li>
+		<span> 新的机器id </span> :
+		<input type="text" name="station_id" id="station_id" class="ui-input-longSize">
+	</li>
+	<li>
+		<span> 站点名称 </span> :{$shop_station['title']}
+	</li>
+	<li>
+		<span> 目前绑定的机器id </span> :{$shop_station['station_id']}
+	</li>
+	<li class="ui-btn-center">
+		<input type="button" name="replace" value="确认更换" onclick="replaceShopStation({$shop_station_id})" class="layui-btn">
+	</li>
+</ul>
+
+<script>
+    function replaceShopStation(shop_station_id) {
+		station_id = document.getElementById('station_id');
+		if(confirm("确定换机？")) {
+            directive('shopStationReplace', shop_station_id, station_id.value);
+        }
+    }
+
+    function directive(opt, shop_station_id, station_id) {
+        var url = '/{$mod}/{$act}/' + opt;
+        $.ajax({
+            url: url,
+            dataType : 'JSON',
+            data: {"shop_station_id" : shop_station_id, "station_id" : station_id},
+        })
+		.done(function(data) {
+			console.log(data);
+			alert(data.errmsg);
+			parent.layer.close(parent.layer.getFrameIndex(window.name)); // 关闭本iframe层
+			parent.location.reload(); // 父页面刷新
+		})
+		.fail(function() {
+			console.log("error");
+		});
+    }
+
+</script>

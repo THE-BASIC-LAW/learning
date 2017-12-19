@@ -1,0 +1,70 @@
+<div class="login-bg" style="width:100%;height:100%;position:absolute;">
+	<div class="layui-container">
+	  <div class="layui-row">
+	    <div class="layui-col-md6 layui-col-md-offset3">
+			<div class="staff_register">
+	  	  		<h1>内部注册</h1>
+	  	  		<form class="layui-form" action="" method="post" id="staff_register-list">
+					<label class="layui-form-label">登 录 名 :</label>
+				    <div class="layui-input-block register-input">
+				      <input  id="adminname" type="text" name="adminname" required  lay-verify="required" placeholder="不少于6个字符(支持英文、数字、下划线)" autocomplete="off" class="layui-input">
+				    </div>
+
+					<label class="layui-form-label">密　　码:</label>
+				    <div class="layui-input-block register-input">
+				      <input  id="staff-password" type="password" name="password" required  lay-verify="required" placeholder="不少于6个字符(支持英文、数字、下划线)" autocomplete="off" class="layui-input">
+				    </div>
+
+					<label class="layui-form-label">确认密码:</label>
+				    <div class="layui-input-block register-input">
+				      <input type="password" name="repassword" required  lay-verify="required" placeholder="请输入与上述相同的密码" autocomplete="off" class="layui-input">
+				    </div>
+
+					<label class="layui-form-label">邮箱地址:</label>
+				    <div class="layui-input-block register-input">
+				      <input type="text" name="email" required  lay-verify="required" placeholder="例如:xxxxxxxx@xxxx.com" autocomplete="off" class="layui-input">
+				    </div>
+
+					<label class="layui-form-label">姓　　名:</label>
+				    <div class="layui-input-block register-input">
+				      <input type="text" name="name" required  lay-verify="required" placeholder="请填写真实姓名" autocomplete="off" class="layui-input">
+				    </div>
+
+					<label class="layui-form-label">申请权限:</label>
+				    <div class="layui-input-block register-input">
+				      <select name="auth_id" id="auth-id" validate="required:true" min="1" lay-verify="required">
+						<option value="0" style="display: none">请选择权限</option>
+  						{volist name='roles' id='item'}
+  						<option value="{$item.id}">{$item.role}</option>
+  						{/volist}
+				      </select>
+				    </div>
+
+					<label class="layui-form-label">所属公司:</label>
+				    <div class="layui-input-block register-input">
+				      <select name="company" id="company"lay-verify="required">
+							<option value="0">请选择公司</option>
+	  						{volist name='companyArray' id='v'}
+	  						<option value="{$v}">{$v}</option>
+	  						{/volist}
+	  						<option value="1">其他</option>
+	  					</select>
+				    </div>
+
+					<label class="layui-form-label">验 证 码:</label>
+					<div class="layui-input-block">
+						<input class="layui-input" id="captcha" name="captcha" type="text" placeholder="验证码" required  lay-verify="required">
+						<br />
+					  	<img src="{:captcha_src()}" alt="captcha"  onclick="this.src='/captcha'" />
+					</div>
+
+					<input class="layui-btn layui-btn-radius layui-btn-danger registe-btn" type="submit" value="注册" id="registe-btn">
+
+	  	  		</form>
+	  	  		<div class="register-goback"><a href="/cp/login/index">返回登录页</a></div>
+	  	  	</div>
+	    </div>
+	  </div>
+  	</div>
+</div>
+{include file="common/footer" /}

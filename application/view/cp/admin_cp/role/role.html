@@ -1,0 +1,57 @@
+{layout name='example' /}
+{if array_key_exists('add', $Think.session.cdo)}
+<fieldset class="fieldsetclass">
+   	<legend>操作</legend>
+        <button class="item-update layui-btn" id="add_role"> {$Think.session.cdo['add']} </button>
+</fieldset>
+{/if}
+
+<table class="layui-table">
+    <thead>
+    	<tr>
+    			<th>ID</th>
+    			<th>角色</th>
+    			<th>操作</th>
+    	</tr>
+    </thead>
+	<!--{foreach $roles as $c}-->
+	<tr>
+		<td>{$c['id']}</td>
+		<td>{$c['role']}</td>
+		<td>
+			<!--{if $Think.session.cdo['edit']}-->
+            <button class="edit_role layui-btn layui-btn-normal layui-btn-mini" data-id="{$c['id']}">{$Think.session.cdo['edit']}</button>
+			<!--{/if}-->
+		</td>
+	</tr>
+	<!--{/foreach}-->
+</table>
+{$roles->render()}
+
+<script>
+	layui.use('layer', function(){
+  		var layer = layui.layer;
+        //　添加按钮
+        $("#add_role").click(function(){
+			layer.open({
+                type: 2,
+				title: '添加角色',
+				maxmin: true,
+				area : ['800px' , '600px'],
+				content: '/cp/admin/role?do=add'
+			});
+		});
+
+        //　编辑按钮
+        $(".edit_role").click(function(){
+            var id = $(this).data('id');
+            layer.open({
+                type: 2,
+                title: '编辑角色',
+                maxmin: true,
+                area : ['800px' , '600px'],
+                content: '/cp/admin/role?do=edit&role_id=' + id
+            });
+        });
+	});
+</script>

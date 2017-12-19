@@ -1,0 +1,27 @@
+	<ul>
+		<li>
+			<strong>账户余额</strong>: {$user['usablemoney']}
+		</li>
+		<li>
+			<strong>押金</strong>: {$user['deposit']}
+		</li>
+		<li>
+			<strong>申请提现</strong>: {$user['refund']}
+		</li>
+		<li>
+			<strong>用户平台</strong>:
+			{if $user['platform'] == PLATFORM_WX}
+			微信
+			{elseif $user['platform'] == PLATFORM_ALIPAY /}
+			支付宝
+			{else /}
+			未知平台
+			{/if}
+		</li>
+		<li>
+			<strong>openid</strong>: {$user['openid']}
+		</li>
+		<li>
+			<strong>用户头像</strong>: <img src="{$user['headimg']}" width="50px" height="50px" onerror="this.src='/images/default.png'"/>
+		</li>
+	</ul>

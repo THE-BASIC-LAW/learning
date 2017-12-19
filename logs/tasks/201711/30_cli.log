@@ -1,0 +1,7 @@
+[ 2017-11-30T18:00:36+08:00 ][ info ] [ LOG ] INIT File
+[ 2017-11-30T18:00:36+08:00 ][ info ] [ DB ] INIT mysql
+[ 2017-11-30T18:00:36+08:00 ][ info ] begin init mysql...
+[ 2017-11-30T18:00:36+08:00 ][ info ] [ DB ] INIT mysql
+[ 2017-11-30T18:00:36+08:00 ][ info ] init mysql success
+[ 2017-11-30T18:00:36+08:00 ][ log ] order analysis begin..
+[ 2017-11-30T18:00:36+08:00 ][ log ] order analysis end..

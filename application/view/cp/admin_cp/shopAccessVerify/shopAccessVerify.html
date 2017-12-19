@@ -1,0 +1,114 @@
+{layout name='example' /}
+<table class="layui-table">
+    <thead>
+    	<tr>
+            <th>
+                <input type="checkbox" class="select-all-ids ui-input-size">
+                申请编号
+            </th>
+            <th>申请人姓名</th>
+			<th>公司</th>
+			<th>角色</th>
+			<th>申请商铺</th>
+			<th>商铺地址</th>
+			<th>状态</th>
+			<th>操作</th>
+    	</tr>
+    </thead>
+	{foreach $adminShops as $as}
+    	<tr>
+            <td>
+                <input type="checkbox" name="id" value="{$as['id']}"
+                {if !$as['status'] && $Think.session.cdo['pass']}
+                    class="shop-id ui-input-size"
+                  {else}
+                  class="ui-input-size"
+                {/if}
+                >
+                {$as['id']}
+            </td>
+            <td>{$as['name']}</td>
+            <td>{$as['company']}</td>
+            <td>{$as['role']}</td>
+            <td>{$as['shop_name']}</td>
+            <td>{$as['shop_address']}</td>
+            <td>{$as['status_text']}</td>
+            <td>
+                {if !$as['status'] && $Think.session.cdo['pass']}
+            		<button class="layui-btn layui-btn-green layui-btn-mini shop_pass" data-id="{$as['id']}">{$Think.session.cdo['pass']}</button>
+                {/if}
+            </td>
+    	</tr>
+	{/foreach}
+</table>
+{$adminShops->render()}
+<div>
+	<button class="layui-btn one-key-apply float-left" style="margin:10px 0 0 1% ;">批量审核通过</button>
+</div>
+
+<script>
+    layui.use('layer', function() {
+        var layer = layui.layer;
+    })
+</script>
+<script>
+    $('.select-all-ids').click(function(){
+        if(this.checked){
+            $('.shop-id').prop("checked", true);
+        }else{
+            $('.shop-id').prop("checked", false);
+        }
+    })
+
+    $('.shop_pass').click(function () {
+        var id = $(this).data('id');
+        // console.log(id);
+        $.ajax({
+            type: 'POST',
+            data: {
+				'adminShopId':id,
+				'do':'pass'
+			},
+			dataType:'json',
+            url: '{$Request.url}',
+            success: function (e) {
+                if (e.code == 0) {
+                    layer.msg(e.msg, {icon: 1}, function () {
+                        window.location.reload();
+                    });
+                } else {
+                    layer.msg(e.msg, {icon: 2});
+                }
+            }
+        });
+        return false;
+    });
+
+    $('.one-key-apply').click(function(){
+        var ids = [];
+        $(".shop-id:checked").each(function(){
+            ids.push($(this).val());
+        });
+        // console.log(ids);
+        if(ids) {
+            var url = '{$Request.url}';
+            $.ajax({
+                type: 'POST',
+				dataType:'json',
+                data: {'adminShopId': ids, 'do': 'pass'},
+                url: url,
+                success: function (e) {
+					console.log(e);
+                    if (e.code == 0) {
+                        layer.msg(e.msg, {icon: 1}, function () {
+                            window.location.reload();
+                        });
+                    } else {
+                        layer.msg(e.msg, {icon: 2});
+                    }
+                },
+				// error:function(data){console.log(data.responseText)}
+            });
+        }
+    })
+</script>

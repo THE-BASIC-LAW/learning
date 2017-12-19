@@ -1,0 +1,95 @@
+<script src="/static/third-party/layui/layui.js"></script>
+<section class="heartbeat-list">
+	<form method="post" action="index.php?mod=cp&act=station&opt=heartbeat_log" id="form_data">
+		<fieldset class="fieldsetclass">	
+			<legend>心跳日志查询</legend>	
+			<ul class="style-input">
+				<li>
+					<span> 开始时间: </span>
+					<input name="sdate" value="{$_GET['sdate']}" class="laydate-icon" id="start"/>
+				</li>
+				<li>
+					<span> 结束时间: </span>
+					<input name="edate" value="{$_GET['edate']}" class="laydate-icon" id="end"/>
+				</li>
+				<li>
+					<span>站点id:</span>
+					<input type="text" name="station_id" value="{$_GET['station_id']}" class="ui-input-longSize" id="station_id"/>
+				</li>
+			</ul>
+			<div class="clear"></div>
+			<div>
+				<input type="submit" value="查询" class="layui-btn">
+				<input type="submit" value="导出离线记录" class="layui-btn" id="export">
+			</div>
+		</fieldset>
+	</form>
+	<div class="data-statistics"><h3>总记录数: <em>{$num}</em></h3></div>
+	{if $heartbeat_log|count}
+	<table class="log-table-width layui-table" cellpadding="0" cellspacing="0">
+		<thead>
+			<tr>
+				<th width="8%"> 心跳时间 </th>
+			</tr>
+		</thead>
+		<tbody>
+			{foreach $heartbeat_log as $log}
+			<tr>
+				<td> {$log['created_at']|date="Y-m-d H:i:s", ###} </td>
+			</tr>
+			{/foreach}
+		</tbody>
+	</table>
+	{else}
+		<p style="text-align: center; font-size: 16px; margin-top: 50px;">无记录</p>
+	{/if}
+
+		<p> {$pagehtm} </p>
+</section>
+<script>
+layui.use(['layer'], function() {
+    var layer = layui.layer;
+	$('#export').click(function(){
+		if('{$offline_count}' == 0){
+			layer.msg('机器在该时段内未离线', {icon: 1, time: 3000});
+			return false;
+		} else {
+			stime = $('#start').val();
+			etime = $('#end').val();
+			station_id = $('#station_id').val();
+			window.open('/index.php?mod=cp&act=station&opt=heartbeat_log&export=1&sdate='+stime + '&edate=' + etime +'&station_id=' + station_id)
+        }
+	})
+})
+
+jQuery(document).ready(function(){
+	//选择开始和结束日期
+	var start = {
+		elem: '#start',
+		format: 'YYYY/MM/DD hh:mm:ss',
+		max: '2099-06-16 23:59:59', //最大日期
+		istime: true,
+		istoday: false,
+		choose: function(datas){
+			 end.min = datas; //开始日选好后，重置结束日的最小日期
+			 end.start = datas //将结束日的初始值设定为开始日
+		}
+	};
+    var end = {
+        elem: '#end',
+        format: 'YYYY/MM/DD hh:mm:ss',
+        max: '2099-06-16 23:59:59',
+        istime: true,
+        istoday: false,
+        choose: function(datas){
+            start.max = datas; //结束日选好后，重置开始日的最大日期
+            start.start = datas //将开始日的初始值设定为结束日
+        }
+    };
+    start.max = $('#end').val();
+    end.min = $('#start').val();
+    laydate(start);
+    laydate(end);
+})
+
+</script>

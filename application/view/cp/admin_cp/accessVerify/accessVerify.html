@@ -1,0 +1,87 @@
+{layout name='example' /}
+<table class="layui-table access-verify">
+    <thead>
+    	<tr>
+    			<th>申请编号</th>
+    			<th>申请人姓名</th>
+    			<th>公司</th>
+    			<th>角色</th>
+				<th>申请城市</th>
+				<th>申请日期</th>
+				<th>状态</th>
+    			<th>操作</th>
+    	</tr>
+    </thead>
+	<!--{foreach $info as $item}-->
+	<tr>
+		<td><em>{$item['id']}</em></td>
+		<td><em>{$item['name']}</em></td>
+		<td><em>{$item['company']}</em></td>
+		<td width="12%"><em>{$item['role']}</em></td>
+		<td>
+			<select class="accessCityVerify">
+				<option id="name">申请城市</option>
+				{foreach $item['city'] as $k => $v}
+				<option disabled></option>
+				<option disabled>---------{$k}---------</option>
+				{foreach $v as $vv}
+				<option disabled>{$vv}</option>
+				{/foreach}
+				{/foreach}
+			</select>
+		</td>
+		<td width="12%"><em>{$item['create_time']}</em></td>
+		<td>
+			<!--{if $item['status'] == ADMIN_CITY_STATUS_APPLIED}-->
+			<em style="color: red;">申请中</em>
+			<!--{elseif $item['status'] == ADMIN_CITY_STATUS_NORMAL}-->
+			<em style="color: #44b753;">通过</em>
+			<!--{/if}-->
+		</td>
+		<td>
+			<!--{if $item['status'] == ADMIN_CITY_STATUS_APPLIED}-->
+				<!-- {if array_key_exists('pass', $Think.session.cdo)} -->
+				<button class="edit_role layui-btn layui-btn-normal layui-btn-mini" data-id="{$item['id']}" onclick="handleCityApply(this, 'pass', {$item['admin_id']}, '{$item['name']}')">{$Think.session.cdo['pass']}</button>
+				<!--{/if}-->
+			<!--{/if}-->
+		</td>
+	</tr>
+	<!--{/foreach}-->
+</table>
+{$info->render()}
+
+<script>
+    function handleCityApply(t, act, id, name) {
+        var cfm,cfm_btn_1,cfm_btn_2;
+        switch (act) {
+            case 'pass':
+                cfm = '确定要通过'+name+'的城市权限请求吗？';
+                cfm_btn_1 = '通过申请';
+                break;
+        };
+        cfm_btn_2 = '放弃操作';
+
+        layui.use('layer', function(){
+            var layer = layui.layer;
+            layer.confirm(cfm, {
+                btn: [cfm_btn_1,cfm_btn_2]
+            }, function(){
+                $.ajax({
+                    type: 'POST',
+                    data: {'aid':id, 'do':act},
+                    url: '{$Request.url}',
+					dataType: 'json',
+                    success: function(e){
+                        if(e.code == 0) {
+                            layer.msg(e.msg, {icon: 1}, function(){
+                                window.location.reload();
+                            });
+                        } else {
+                            layer.msg(e.msg, {icon: 2});
+                        }
+                    }
+                });
+            });
+        });
+	}
+</script>

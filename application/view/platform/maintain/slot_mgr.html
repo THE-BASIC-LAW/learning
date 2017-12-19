@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0,user-scalable=0"/>
+    <meta name="format-detection" content="telephone=no" />
+    <title>{$Think.DEFAULT_TITLE}</title>
+    <link rel="stylesheet" href="/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="/css/maintain.css?v={:time()}" type="text/css">
+    <link rel="stylesheet" href="/css/jquery-ui.css">
+    <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/js/jquery.blockUI.js"></script>
+</head>
+<body>
+<style>
+    body{background: #eee;}
+    .tip_msg{
+        padding-top: 8px;
+        padding-bottom: 8px;
+        font-size:16px;
+        color:#777;
+    }
+</style>
+<section class="slot-mgr">
+    <div class="choose-slot">
+        <span>选择槽位:</span>
+        <select name="slot" id="slot" multiple>
+            {foreach name="slotsStatus" key="k" item="v"}
+            <option value="{$k+1}">{$k+1}</option>
+            {/foreach}
+        </select>
+    </div>
+    <div class="choose-slot">
+        <span>信号强度：{$stationInfo['rssi']}</span>
+        <span>可还：{$stationInfo['empty']}</span>
+        <span>可借：{$stationInfo['usable']}</span>
+    </div>
+    <ul>
+        <li>
+            <input type="button" class="fullbutton" value="解锁槽位" onclick="slotAction('unlock', '解锁槽位');" {if condition="!$isStationOnline"}disabled="disabled"{/if}/>
+        </li>
+        <li>
+            <input type="button" class="fullbutton" value="锁住槽位" onclick="slotAction('lock', '锁住槽位');" {if condition="!$isStationOnline"}disabled="disabled"{/if}/>
+        </li>
+        <li>
+            <input type="button" class="fullbutton" value="人工借出" onclick="slotAction('manuallyLent', '人工借出');" {if condition="!$isStationOnline"}disabled="disabled"{/if}/>
+        </li>
+    </ul>
+</section>
+<div class="slot-mgr-footer">
+    <!--{if $isStationOnline}-->
+    <h4>温馨提示：</h4>
+    <h4>1.人工借出需要耗时10秒钟左右，请耐心等待。</h4>
+    <h4>2.多槽位操作需较长时间，点击槽位操作后可直接关闭本页面。</h4>
+    <!--{else}-->
+    <div style="color:red;">当前站点离线状态，所有操作均不会有响应。</div>
+    <!--{/if}-->
+</div>
+<div style="display:none">
+    <img id="loading_img" src="/images/loading.gif" style="display:none" />
+</div>
+<script>
+    function slotAction(type, desc) {
+        var slot = $('#slot').val();
+        console.log(this);
+        $.blockUI({
+            message: $("#loading_img"),
+            css:{'background':'transparent', "border":'none'}
+        });
+        $.ajax({
+            url:'{$Request.url}',
+            type:'POST',
+            data: {
+                'type': type,
+                'slot': slot,
+            },
+            success:function(e) {
+                if (e.code == 0) {
+                    alert(desc+":命令发送成功");
+                } else {
+                    alert(e.msg);
+                }
+            },
+            error:function(e) {
+                alert("服务器异常，请稍后再试");
+            },
+            complete:function(e) {
+                $.unblockUI();
+            }
+        });
+    }
+</script>
+</body></html>

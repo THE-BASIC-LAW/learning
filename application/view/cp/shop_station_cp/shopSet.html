@@ -1,0 +1,26 @@
+<table class="layui-table">
+	<tr>
+		<th>ID</th>
+		<th>商铺名称</th>
+		<th>商铺地址</th>
+		<th>选定</th>
+	</tr>
+{foreach $shops as $shop}
+	<tr>
+		<td>{$shop['id']}</td>
+		<td>{$shop['name']}</td>
+		<td>{$shop['locate']}</td>
+		<td><a class="layui-btn layui-btn-normal layui-btn-small choose-shop" href="\{$mod}\{$act}\ajaxShopSet?shop_station_id={$shop_station_id}&shop_id={$shop['id']}&page={$page|default=1}">选择</a></td>
+	</tr>
+{/foreach}
+</table>
+<p> {$pagehtm} </p>
+<script>
+	layui.use('layer', function(){
+            $('.choose-shop').click(function(){
+                parent.layer.close(parent.layer.getFrameIndex(window.name)); // 关闭本iframe层
+                parent.location.reload(); // 父页面刷新
+			});
+            return false;
+        });
+</script>

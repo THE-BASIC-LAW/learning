@@ -1,0 +1,38 @@
+<div class="layui-form">
+	<div class="layui-form-item" style="padding: 20px 100px">
+		<label class="layui-form-label">同步策略:</label>
+		<div class="layui-input-inline">
+			<select name="strategy_id" class="strategy-id">
+				<option value="0">全局配置</option>
+				{foreach $settings as $setting}
+				<option value="{$setting['id']}" {$station_setting_id == $setting['id'] ? 'selected':'';}>{$setting['name']}</option>
+				{/foreach}
+			</select>
+		</div>
+	</div>
+	<div class="ui-btn-center" style="margin-top: 160px;">
+		<input class="layui-btn submit" type="submit" value="更新">
+	</div>
+</div>
+<script>
+	layui.use(['layer', 'form'], function(){})
+</script>
+<script>
+$('.submit').click(function(){
+	$.ajax({
+		url: '/{$mod}/{$act}/{$opt}',
+		type: 'POST',
+		data: {station_id: '{$station_id}', strategy_id: $(".strategy-id").val()},
+		success: function(e) {
+            if(e.code == 0) {
+                layer.msg(e.msg, {icon: 1}, function(){
+                    parent.layer.close(parent.layer.getFrameIndex(window.name)); // 关闭本iframe层
+                    parent.location.reload(); // 父页面刷新
+                });
+            } else {
+                layer.msg(e.msg, {icon: 2});
+            }
+		},
+	})
+})
+</script>

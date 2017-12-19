@@ -1,0 +1,479 @@
+---------------------------------------------------------------
+[ 2017-12-11T11:49:11+08:00 ] 127.0.0.1 POST /sync
+[ info ] dlq.ddzh.com/sync [运行时间：0.935409s][吞吐率：1.07req/s] [内存消耗：728.40kb] [文件加载：74]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'Sync',
+    2 => 'dispatch',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '32229795-fffb-4cb4-a06b-af5d1e2c9068',
+  'content-type' => 'text/plain',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'dlq.ddzh.com',
+  'cookie' => 'PHPSESSID=6j7hj90ptdklu5sdue6jsa6kk4',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '167',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\controller\Sync->dispatch[ /var/www/html/ddzh/application/controller/Sync.php ]
+[ info ] get post data : {"data":{"ACT":"upgrade_request","FILE_NAME":"DDZH_M26_2017_1116_Ver3.hex","INDEX":"A500","BYTE_NUMBER":"100","STATIONID":"1634","CHKSUM":"b90555ca"},"stationid":1634}
+[ info ] handle upgrade request
+[ info ] station id 1634 upgrade content success, index: A500 , byte number: 100 , content: 3930343230314431433230343136453035383435303144313034323239350d0a3a3130334142303030313245303346344131343332393034323031443134303232304345303343344143440d0a3a3130334143303030323833323930343230314431304134363036453033393441334333323930343246460d0a3a3130334144303030303144313141343630304530373234363043454130323043424346313030304635430d0a3a3130334145303030374344303032363844323433353230373738443430323638393230363033443438440d0a3a3130334146303030303236383232463030343032303236303243344132303638393034323246443930410d
+[ sql ] [ DB ] CONNECT:[ UseTime:0.040677s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_station` [ RunTime:0.210256s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_station` WHERE  `id` = 1634 LIMIT 1 [ RunTime:0.209406s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_shop_station` [ RunTime:0.084899s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_shop_station` WHERE  `station_id` = 1634 LIMIT 1 [ RunTime:0.063593s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_shop` [ RunTime:0.026720s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_shop` WHERE  `id` = 1095 LIMIT 1 [ RunTime:0.054411s ]
+[ error ] [8]未定义数组索引: TIME[/var/www/html/ddzh/application/controller/Sync.php:93]
+---------------------------------------------------------------
+[ 2017-12-11T11:52:15+08:00 ] 127.0.0.1 POST /sync
+[ info ] dlq.ddzh.com/sync [运行时间：0.329739s][吞吐率：3.03req/s] [内存消耗：727.09kb] [文件加载：74]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'Sync',
+    2 => 'dispatch',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '6f5d71a5-2282-416a-aefc-f55d03c584c7',
+  'content-type' => 'text/plain',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'dlq.ddzh.com',
+  'cookie' => 'PHPSESSID=6j7hj90ptdklu5sdue6jsa6kk4',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '167',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\controller\Sync->dispatch[ /var/www/html/ddzh/application/controller/Sync.php ]
+[ info ] get post data : {"data":{"ACT":"upgrade_request","FILE_NAME":"DDZH_M26_2017_1116_Ver3.hex","INDEX":"A500","BYTE_NUMBER":"100","STATIONID":"1634","CHKSUM":"b90555ca"},"stationid":1634}
+[ info ] handle upgrade request
+[ info ] station id 1634 upgrade content success, index: A500 , byte number: 100 , content: 904201D1C20416E0584501D1042295
+:103AB00012E03F4A1432904201D140220CE03C4ACD
+:103AC0002832904201D10A4606E0394A3C329042FF
+:103AD00001D11A4600E072460CEA020CBCF1000F5C
+:103AE0007CD00268D243520778D40268920603D48D
+:103AF000026822F0040202602C4A206890422FD90A
+[ sql ] [ DB ] CONNECT:[ UseTime:0.017986s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_station` [ RunTime:0.159193s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_station` WHERE  `id` = 1634 LIMIT 1 [ RunTime:0.051045s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_shop_station` [ RunTime:0.011843s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_shop_station` WHERE  `station_id` = 1634 LIMIT 1 [ RunTime:0.001077s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_shop` [ RunTime:0.073656s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_shop` WHERE  `id` = 1095 LIMIT 1 [ RunTime:0.000874s ]
+[ error ] [8]未定义数组索引: TIME[/var/www/html/ddzh/application/controller/Sync.php:93]
+---------------------------------------------------------------
+[ 2017-12-11T18:16:15+08:00 ] 127.0.0.1 POST /sync
+[ info ] dlq.ddzh.com/sync [运行时间：3.240926s][吞吐率：0.31req/s] [内存消耗：703.30kb] [文件加载：77]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'Sync',
+    2 => 'dispatch',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '875265e0-97ef-4880-a13c-033ed4aafbcf',
+  'content-type' => 'text/plain',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'dlq.ddzh.com',
+  'cookie' => 'PHPSESSID=6j7hj90ptdklu5sdue6jsa6kk4',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '422',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\controller\Sync->dispatch[ /var/www/html/ddzh/application/controller/Sync.php ]
+[ info ] get post data : {"data":{"ACT":"sync_umbrella","LASTTIME":"1512617248","STATIONID":"1634","USABLE_UMBRELLA":"4","EMPTY_SLOT_COUNT":"12","UM04":"A8FFCB15B800","UM05":"A8FFCBDA3000","UM06":"A8FFCBDAFF00","UM07":"A8FFCBDA6900","UM08":"000000000000","UM09":"000000000000","UM10":"000000000000","UM11":"000000000000","UM12":"000000000000","UM13":"000000000000","UM14":"000000000000","UM15":"000000000000","CHKSUM":"8bcfcfd3"},"stationid":1634}
+[ info ] handle sync umbrella
+[ info ] sync umbrella station_id: 1634
+[ info ] [ CACHE ] INIT File
+[ info ] umbrellas sync success, station id: 1634
+[ sql ] [ DB ] CONNECT:[ UseTime:0.440622s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_station` [ RunTime:0.495218s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_station` WHERE  `id` = 1634 LIMIT 1 [ RunTime:0.128016s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_shop_station` [ RunTime:0.110590s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_shop_station` WHERE  `station_id` = 1634 LIMIT 1 [ RunTime:0.057350s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_shop` [ RunTime:0.059263s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_shop` WHERE  `id` = 1095 LIMIT 1 [ RunTime:0.031753s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_umbrella` [ RunTime:0.061767s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_umbrella` WHERE  `id` = 'A8FFCB15B8' LIMIT 1 [ RunTime:0.336305s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_umbrella` WHERE  `id` = 'A8FFCB15B8' LIMIT 1 [ RunTime:0.007881s ]
+[ sql ] [ SQL ] UPDATE `pre_ddzh_umbrella`  SET `sync_time`=1512987374  WHERE  `id` = 'A8FFCB15B8' [ RunTime:0.290211s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_umbrella` WHERE  `id` = 'A8FFCBDA30' LIMIT 1 [ RunTime:0.024121s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_umbrella` WHERE  `id` = 'A8FFCBDA30' LIMIT 1 [ RunTime:0.000261s ]
+[ sql ] [ SQL ] UPDATE `pre_ddzh_umbrella`  SET `sync_time`=1512987374  WHERE  `id` = 'A8FFCBDA30' [ RunTime:0.090387s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_umbrella` WHERE  `id` = 'A8FFCBDAFF' LIMIT 1 [ RunTime:0.029222s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_umbrella` WHERE  `id` = 'A8FFCBDAFF' LIMIT 1 [ RunTime:0.000303s ]
+[ sql ] [ SQL ] UPDATE `pre_ddzh_umbrella`  SET `sync_time`=1512987374  WHERE  `id` = 'A8FFCBDAFF' [ RunTime:0.067804s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_umbrella` WHERE  `id` = 'A8FFCBDA69' LIMIT 1 [ RunTime:0.000828s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_umbrella` WHERE  `id` = 'A8FFCBDA69' LIMIT 1 [ RunTime:0.029094s ]
+[ sql ] [ SQL ] UPDATE `pre_ddzh_umbrella`  SET `sync_time`=1512987374  WHERE  `id` = 'A8FFCBDA69' [ RunTime:0.084799s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_station_slot_log` [ RunTime:0.189029s ]
+[ sql ] [ SQL ] DELETE FROM `pre_ddzh_station_slot_log`    WHERE  `station_id` = 1634  AND `slot` IN (1,2,3,4) [ RunTime:0.098145s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_station` WHERE  `id` = 1634 LIMIT 1 [ RunTime:0.006790s ]
+[ sql ] [ SQL ] UPDATE `pre_ddzh_station`  SET `sync_time`=1512987373  WHERE  `id` = 1634 [ RunTime:0.112722s ]
+[ error ] [8]未定义数组索引: TIME[/var/www/html/ddzh/application/controller/Sync.php:93]
+---------------------------------------------------------------
+[ 2017-12-11T18:17:21+08:00 ] 127.0.0.1 POST /sync
+[ info ] dlq.ddzh.com/sync [运行时间：0.646423s][吞吐率：1.55req/s] [内存消耗：707.17kb] [文件加载：77]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'Sync',
+    2 => 'dispatch',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '7d16a454-dcba-41fb-a6b1-12f2aaca5d77',
+  'content-type' => 'text/plain',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'dlq.ddzh.com',
+  'cookie' => 'PHPSESSID=6j7hj90ptdklu5sdue6jsa6kk4',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '422',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\controller\Sync->dispatch[ /var/www/html/ddzh/application/controller/Sync.php ]
+[ info ] get post data : {"data":{"ACT":"sync_umbrella","LASTTIME":"1512617248","STATIONID":"1634","USABLE_UMBRELLA":"4","EMPTY_SLOT_COUNT":"12","UM04":"A8FFCB15B800","UM05":"A8FFCBDA3000","UM06":"A8FFCBDAFF00","UM07":"A8FFCBDA6900","UM08":"000000000000","UM09":"000000000000","UM10":"000000000000","UM11":"000000000000","UM12":"000000000000","UM13":"000000000000","UM14":"000000000000","UM15":"000000000000","CHKSUM":"8bcfcfd3"},"stationid":1634}
+[ info ] handle sync umbrella
+[ info ] sync umbrella station_id: 1634
+[ info ] [ CACHE ] INIT File
+[ info ] umbrellas sync success, station id: 1634
+[ sql ] [ DB ] CONNECT:[ UseTime:0.039893s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_station` [ RunTime:0.071214s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_station` WHERE  `id` = 1634 LIMIT 1 [ RunTime:0.026174s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_shop_station` [ RunTime:0.027548s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_shop_station` WHERE  `station_id` = 1634 LIMIT 1 [ RunTime:0.001072s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_shop` [ RunTime:0.036838s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_shop` WHERE  `id` = 1095 LIMIT 1 [ RunTime:0.000286s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_umbrella` [ RunTime:0.045075s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_umbrella` WHERE  `id` = 'A8FFCB15B8' LIMIT 1 [ RunTime:0.022164s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_umbrella` WHERE  `id` = 'A8FFCB15B8' LIMIT 1 [ RunTime:0.000290s ]
+[ sql ] [ SQL ] UPDATE `pre_ddzh_umbrella`  SET `sync_time`=1512987440  WHERE  `id` = 'A8FFCB15B8' [ RunTime:0.080248s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_umbrella` WHERE  `id` = 'A8FFCBDA30' LIMIT 1 [ RunTime:0.000297s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_umbrella` WHERE  `id` = 'A8FFCBDA30' LIMIT 1 [ RunTime:0.000159s ]
+[ sql ] [ SQL ] UPDATE `pre_ddzh_umbrella`  SET `sync_time`=1512987440  WHERE  `id` = 'A8FFCBDA30' [ RunTime:0.025532s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_umbrella` WHERE  `id` = 'A8FFCBDAFF' LIMIT 1 [ RunTime:0.000342s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_umbrella` WHERE  `id` = 'A8FFCBDAFF' LIMIT 1 [ RunTime:0.000308s ]
+[ sql ] [ SQL ] UPDATE `pre_ddzh_umbrella`  SET `sync_time`=1512987440  WHERE  `id` = 'A8FFCBDAFF' [ RunTime:0.075147s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_umbrella` WHERE  `id` = 'A8FFCBDA69' LIMIT 1 [ RunTime:0.000333s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_umbrella` WHERE  `id` = 'A8FFCBDA69' LIMIT 1 [ RunTime:0.000253s ]
+[ sql ] [ SQL ] UPDATE `pre_ddzh_umbrella`  SET `sync_time`=1512987441  WHERE  `id` = 'A8FFCBDA69' [ RunTime:0.025293s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_station_slot_log` [ RunTime:0.026797s ]
+[ sql ] [ SQL ] DELETE FROM `pre_ddzh_station_slot_log`    WHERE  `station_id` = 1634  AND `slot` IN (1,2,3,4) [ RunTime:0.032881s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_station` WHERE  `id` = 1634 LIMIT 1 [ RunTime:0.000370s ]
+[ sql ] [ SQL ] UPDATE `pre_ddzh_station`  SET `sync_time`=1512987440  WHERE  `id` = 1634 [ RunTime:0.082286s ]
+[ error ] [8]未定义数组索引: TIME[/var/www/html/ddzh/application/controller/Sync.php:93]
+[ error ] [8]未定义变量: terminal_time[/var/www/html/ddzh/application/controller/Sync.php:94]
+---------------------------------------------------------------
+[ 2017-12-11T18:18:29+08:00 ] 127.0.0.1 POST /sync
+[ info ] dlq.ddzh.com/sync [运行时间：0.663282s][吞吐率：1.51req/s] [内存消耗：702.95kb] [文件加载：77]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'Sync',
+    2 => 'dispatch',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'a0841939-ba03-414a-9f37-27a803439feb',
+  'content-type' => 'text/plain',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'dlq.ddzh.com',
+  'cookie' => 'PHPSESSID=6j7hj90ptdklu5sdue6jsa6kk4',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '422',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\controller\Sync->dispatch[ /var/www/html/ddzh/application/controller/Sync.php ]
+[ info ] get post data : {"data":{"ACT":"sync_umbrella","LASTTIME":"1512617248","STATIONID":"1634","USABLE_UMBRELLA":"4","EMPTY_SLOT_COUNT":"12","UM04":"A8FFCB15B800","UM05":"A8FFCBDA3000","UM06":"A8FFCBDAFF00","UM07":"A8FFCBDA6900","UM08":"000000000000","UM09":"000000000000","UM10":"000000000000","UM11":"000000000000","UM12":"000000000000","UM13":"000000000000","UM14":"000000000000","UM15":"000000000000","CHKSUM":"8bcfcfd3"},"stationid":1634}
+[ info ] handle sync umbrella
+[ info ] sync umbrella station_id: 1634
+[ info ] [ CACHE ] INIT File
+[ info ] umbrellas sync success, station id: 1634
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011888s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_station` [ RunTime:0.091328s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_station` WHERE  `id` = 1634 LIMIT 1 [ RunTime:0.006564s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_shop_station` [ RunTime:0.039300s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_shop_station` WHERE  `station_id` = 1634 LIMIT 1 [ RunTime:0.026032s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_shop` [ RunTime:0.017990s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_shop` WHERE  `id` = 1095 LIMIT 1 [ RunTime:0.000471s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_umbrella` [ RunTime:0.026653s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_umbrella` WHERE  `id` = 'A8FFCB15B8' LIMIT 1 [ RunTime:0.000835s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_umbrella` WHERE  `id` = 'A8FFCB15B8' LIMIT 1 [ RunTime:0.000187s ]
+[ sql ] [ SQL ] UPDATE `pre_ddzh_umbrella`  SET `sync_time`=1512987509  WHERE  `id` = 'A8FFCB15B8' [ RunTime:0.110228s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_umbrella` WHERE  `id` = 'A8FFCBDA30' LIMIT 1 [ RunTime:0.000300s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_umbrella` WHERE  `id` = 'A8FFCBDA30' LIMIT 1 [ RunTime:0.000206s ]
+[ sql ] [ SQL ] UPDATE `pre_ddzh_umbrella`  SET `sync_time`=1512987509  WHERE  `id` = 'A8FFCBDA30' [ RunTime:0.084047s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_umbrella` WHERE  `id` = 'A8FFCBDAFF' LIMIT 1 [ RunTime:0.000847s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_umbrella` WHERE  `id` = 'A8FFCBDAFF' LIMIT 1 [ RunTime:0.000222s ]
+[ sql ] [ SQL ] UPDATE `pre_ddzh_umbrella`  SET `sync_time`=1512987509  WHERE  `id` = 'A8FFCBDAFF' [ RunTime:0.024137s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_umbrella` WHERE  `id` = 'A8FFCBDA69' LIMIT 1 [ RunTime:0.023900s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_umbrella` WHERE  `id` = 'A8FFCBDA69' LIMIT 1 [ RunTime:0.000246s ]
+[ sql ] [ SQL ] UPDATE `pre_ddzh_umbrella`  SET `sync_time`=1512987509  WHERE  `id` = 'A8FFCBDA69' [ RunTime:0.043390s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_station_slot_log` [ RunTime:0.079563s ]
+[ sql ] [ SQL ] DELETE FROM `pre_ddzh_station_slot_log`    WHERE  `station_id` = 1634  AND `slot` IN (1,2,3,4) [ RunTime:0.000691s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_station` WHERE  `id` = 1634 LIMIT 1 [ RunTime:0.004984s ]
+[ sql ] [ SQL ] UPDATE `pre_ddzh_station`  SET `sync_time`=1512987509  WHERE  `id` = 1634 [ RunTime:0.057036s ]
+[ error ] [8]未定义数组索引: TIME[/var/www/html/ddzh/application/controller/Sync.php:93]
+---------------------------------------------------------------
+[ 2017-12-11T18:19:13+08:00 ] 127.0.0.1 POST /sync
+[ info ] dlq.ddzh.com/sync [运行时间：0.979445s][吞吐率：1.02req/s] [内存消耗：700.93kb] [文件加载：74]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'Sync',
+    2 => 'dispatch',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '7e4225fd-d392-4b97-81e3-7ca4b425128b',
+  'content-type' => 'text/plain',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'dlq.ddzh.com',
+  'cookie' => 'PHPSESSID=6j7hj90ptdklu5sdue6jsa6kk4',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '422',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\controller\Sync->dispatch[ /var/www/html/ddzh/application/controller/Sync.php ]
+[ info ] get post data : {"data":{"ACT":"sync_umbrella","LASTTIME":"1512617248","STATIONID":"1634","USABLE_UMBRELLA":"4","EMPTY_SLOT_COUNT":"12","UM04":"A8FFCB15B800","UM05":"A8FFCBDA3000","UM06":"A8FFCBDAFF00","UM07":"A8FFCBDA6900","UM08":"000000000000","UM09":"000000000000","UM10":"000000000000","UM11":"000000000000","UM12":"000000000000","UM13":"000000000000","UM14":"000000000000","UM15":"000000000000","CHKSUM":"8bcfcfd3"},"stationid":1634}
+[ info ] handle sync umbrella
+[ info ] sync umbrella station_id: 1634
+[ info ] [ CACHE ] INIT File
+[ info ] umbrellas sync success, station id: 1634
+[ sql ] [ DB ] CONNECT:[ UseTime:0.026938s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_station` [ RunTime:0.089402s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_station` WHERE  `id` = 1634 LIMIT 1 [ RunTime:0.007062s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_shop_station` [ RunTime:0.018205s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_shop_station` WHERE  `station_id` = 1634 LIMIT 1 [ RunTime:0.005109s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_shop` [ RunTime:0.017737s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_shop` WHERE  `id` = 1095 LIMIT 1 [ RunTime:0.010184s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_umbrella` [ RunTime:0.040641s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_umbrella` WHERE  `id` = 'A8FFCB15B8' LIMIT 1 [ RunTime:0.003899s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_umbrella` WHERE  `id` = 'A8FFCB15B8' LIMIT 1 [ RunTime:0.010792s ]
+[ sql ] [ SQL ] UPDATE `pre_ddzh_umbrella`  SET `sync_time`=1512987552  WHERE  `id` = 'A8FFCB15B8' [ RunTime:0.073029s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_umbrella` WHERE  `id` = 'A8FFCBDA30' LIMIT 1 [ RunTime:0.000626s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_umbrella` WHERE  `id` = 'A8FFCBDA30' LIMIT 1 [ RunTime:0.000325s ]
+[ sql ] [ SQL ] UPDATE `pre_ddzh_umbrella`  SET `sync_time`=1512987552  WHERE  `id` = 'A8FFCBDA30' [ RunTime:0.245636s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_umbrella` WHERE  `id` = 'A8FFCBDAFF' LIMIT 1 [ RunTime:0.000320s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_umbrella` WHERE  `id` = 'A8FFCBDAFF' LIMIT 1 [ RunTime:0.000201s ]
+[ sql ] [ SQL ] UPDATE `pre_ddzh_umbrella`  SET `sync_time`=1512987552  WHERE  `id` = 'A8FFCBDAFF' [ RunTime:0.073538s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_umbrella` WHERE  `id` = 'A8FFCBDA69' LIMIT 1 [ RunTime:0.000335s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_umbrella` WHERE  `id` = 'A8FFCBDA69' LIMIT 1 [ RunTime:0.026687s ]
+[ sql ] [ SQL ] UPDATE `pre_ddzh_umbrella`  SET `sync_time`=1512987553  WHERE  `id` = 'A8FFCBDA69' [ RunTime:0.055331s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_station_slot_log` [ RunTime:0.123616s ]
+[ sql ] [ SQL ] DELETE FROM `pre_ddzh_station_slot_log`    WHERE  `station_id` = 1634  AND `slot` IN (1,2,3,4) [ RunTime:0.011120s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_station` WHERE  `id` = 1634 LIMIT 1 [ RunTime:0.000870s ]
+[ sql ] [ SQL ] UPDATE `pre_ddzh_station`  SET `sync_time`=1512987552  WHERE  `id` = 1634 [ RunTime:0.129627s ]
+---------------------------------------------------------------
+[ 2017-12-11T18:21:02+08:00 ] 127.0.0.1 POST /sync
+[ info ] dlq.ddzh.com/sync [运行时间：0.354026s][吞吐率：2.82req/s] [内存消耗：692.30kb] [文件加载：77]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'Sync',
+    2 => 'dispatch',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'e29ace85-40b7-47ce-b338-5672d6de3eae',
+  'content-type' => 'text/plain',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'dlq.ddzh.com',
+  'cookie' => 'PHPSESSID=6j7hj90ptdklu5sdue6jsa6kk4',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '247',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\controller\Sync->dispatch[ /var/www/html/ddzh/application/controller/Sync.php ]
+[ info ] get post data : {"data":{"ACT":"sync_umbrella","LASTTIME":"1512980826","STATIONID":"1634","USABLE_UMBRELLA":"4","EMPTY_SLOT_COUNT":"12","UM16":"000000000000","UM17":"000000000000","UM18":"000000000000","UM19":"000000000000","CHKSUM":"1057d403"},"stationid":1634}
+
+[ info ] handle sync umbrella
+[ info ] sync umbrella station_id: 1634
+[ info ] [ CACHE ] INIT File
+[ info ] umbrellas sync success, station id: 1634
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013491s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_station` [ RunTime:0.076011s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_station` WHERE  `id` = 1634 LIMIT 1 [ RunTime:0.016913s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_shop_station` [ RunTime:0.119235s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_shop_station` WHERE  `station_id` = 1634 LIMIT 1 [ RunTime:0.001095s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_shop` [ RunTime:0.023395s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_shop` WHERE  `id` = 1095 LIMIT 1 [ RunTime:0.011293s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_station_slot_log` [ RunTime:0.010114s ]
+[ sql ] [ SQL ] DELETE FROM `pre_ddzh_station_slot_log`    WHERE  `station_id` = 1634  AND `slot` IN (0) [ RunTime:0.008800s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_station` WHERE  `id` = 1634 LIMIT 1 [ RunTime:0.000356s ]
+[ sql ] [ SQL ] UPDATE `pre_ddzh_station`  SET `sync_time`=1512987662  WHERE  `id` = 1634 [ RunTime:0.068137s ]
+[ error ] [8]未定义变量: need_clean_log_slots[/var/www/html/ddzh/application/model/Station.php:240]
+---------------------------------------------------------------
+[ 2017-12-11T18:21:25+08:00 ] 127.0.0.1 POST /sync
+[ info ] dlq.ddzh.com/sync [运行时间：0.355403s][吞吐率：2.81req/s] [内存消耗：692.80kb] [文件加载：77]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'Sync',
+    2 => 'dispatch',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '66be89c4-c866-487b-951c-c07e647a14fd',
+  'content-type' => 'text/plain',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'dlq.ddzh.com',
+  'cookie' => 'PHPSESSID=6j7hj90ptdklu5sdue6jsa6kk4',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '247',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\controller\Sync->dispatch[ /var/www/html/ddzh/application/controller/Sync.php ]
+[ info ] get post data : {"data":{"ACT":"sync_umbrella","LASTTIME":"1512980826","STATIONID":"1634","USABLE_UMBRELLA":"4","EMPTY_SLOT_COUNT":"12","UM16":"000000000000","UM17":"000000000000","UM18":"000000000000","UM19":"000000000000","CHKSUM":"1057d403"},"stationid":1634}
+
+[ info ] handle sync umbrella
+[ info ] sync umbrella station_id: 1634
+[ info ] [ CACHE ] INIT File
+[ info ] umbrellas sync success, station id: 1634
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006974s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_station` [ RunTime:0.056922s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_station` WHERE  `id` = 1634 LIMIT 1 [ RunTime:0.018935s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_shop_station` [ RunTime:0.032619s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_shop_station` WHERE  `station_id` = 1634 LIMIT 1 [ RunTime:0.015876s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_shop` [ RunTime:0.019804s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_shop` WHERE  `id` = 1095 LIMIT 1 [ RunTime:0.000376s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_station_slot_log` [ RunTime:0.083452s ]
+[ sql ] [ SQL ] DELETE FROM `pre_ddzh_station_slot_log`    WHERE  `station_id` = 1634  AND `slot` IN (0) [ RunTime:0.016944s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_station` WHERE  `id` = 1634 LIMIT 1 [ RunTime:0.000385s ]
+[ sql ] [ SQL ] UPDATE `pre_ddzh_station`  SET `sync_time`=1512987685  WHERE  `id` = 1634 [ RunTime:0.090855s ]
+[ error ] [8]未定义变量: need_clean_log_slots[/var/www/html/ddzh/application/model/Station.php:240]
+---------------------------------------------------------------
+[ 2017-12-11T18:22:59+08:00 ] 127.0.0.1 POST /sync
+[ info ] dlq.ddzh.com/sync [运行时间：0.346910s][吞吐率：2.88req/s] [内存消耗：690.05kb] [文件加载：74]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'Sync',
+    2 => 'dispatch',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '4d5c30bc-bca3-4934-b41c-c1d08f0b3619',
+  'content-type' => 'text/plain',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'accept' => '*/*',
+  'host' => 'dlq.ddzh.com',
+  'cookie' => 'PHPSESSID=6j7hj90ptdklu5sdue6jsa6kk4',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '247',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\controller\Sync->dispatch[ /var/www/html/ddzh/application/controller/Sync.php ]
+[ info ] get post data : {"data":{"ACT":"sync_umbrella","LASTTIME":"1512980826","STATIONID":"1634","USABLE_UMBRELLA":"4","EMPTY_SLOT_COUNT":"12","UM16":"000000000000","UM17":"000000000000","UM18":"000000000000","UM19":"000000000000","CHKSUM":"1057d403"},"stationid":1634}
+
+[ info ] handle sync umbrella
+[ info ] sync umbrella station_id: 1634
+[ info ] [ CACHE ] INIT File
+[ info ] umbrellas sync success, station id: 1634
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012706s ] mysql:host=localhost;port=3306;dbname=ddzh;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_station` [ RunTime:0.040652s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_station` WHERE  `id` = 1634 LIMIT 1 [ RunTime:0.014812s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_shop_station` [ RunTime:0.018979s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_shop_station` WHERE  `station_id` = 1634 LIMIT 1 [ RunTime:0.001131s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_shop` [ RunTime:0.012509s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_shop` WHERE  `id` = 1095 LIMIT 1 [ RunTime:0.000320s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pre_ddzh_station_slot_log` [ RunTime:0.075109s ]
+[ sql ] [ SQL ] DELETE FROM `pre_ddzh_station_slot_log`    WHERE  `station_id` = 1634  AND `slot` IN ('') [ RunTime:0.000368s ]
+[ sql ] [ SQL ] SELECT * FROM `pre_ddzh_station` WHERE  `id` = 1634 LIMIT 1 [ RunTime:0.000402s ]
+[ sql ] [ SQL ] UPDATE `pre_ddzh_station`  SET `sync_time`=1512987779  WHERE  `id` = 1634 [ RunTime:0.163550s ]

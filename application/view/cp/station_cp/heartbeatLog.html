@@ -1,0 +1,87 @@
+{layout name='example' /}
+<section class="heartbeat-list">
+	<form method="post" action="/{$mod}/{$act}/{$opt}" id="form_data">
+		<fieldset class="fieldsetclass">	
+			<legend>心跳日志查询</legend>	
+			<ul class="style-input">
+				<li>
+					<span> 开始时间: </span>
+					<input name="sdate" value="{$sdate|default=''}" class="laydate-icon" id="start"/>
+				</li>
+				<li>
+					<span> 结束时间: </span>
+					<input name="edate" value="{$edate|default=''}" class="laydate-icon" id="end"/>
+				</li>
+				<li>
+					<span>站点id:</span>
+					<input type="text" name="station_id" value="{$station_id|default=''}" class="ui-input-longSize" id="station_id"/>
+				</li>
+			</ul>
+			<div class="clear"></div>
+			<div>
+				<input type="submit" value="查询" class="layui-btn">
+				<input type="submit" value="导出离线记录" class="layui-btn" id="export">
+			</div>
+		</fieldset>
+	</form>
+	{if isset($heartbeat_log) && count($heartbeat_log)}
+	<table class="log-table-width layui-table" cellpadding="0" cellspacing="0">
+		<thead>
+			<tr>
+				<th width="8%"> 心跳时间 </th>
+			</tr>
+		</thead>
+		<tbody>
+			{foreach $heartbeat_log as $log}
+			<tr>
+				<td> {$log['created_at']|date="Y-m-d H:i:s", ###} </td>
+			</tr>
+			{/foreach}
+		</tbody>
+	</table>
+	{$heartbeat_log->render()}
+	{else /}
+		<p style="text-align: center; font-size: 16px; margin-top: 50px;">无记录</p>
+	{/if}
+</section>
+<script>
+layui.use(['layer'], function() {
+    var layer = layui.layer;
+	$('#export').click(function(){
+		if("{$offline_count|default=''}" == 0){
+			layer.msg('机器在该时段内未离线', {icon: 1, time: 3000});
+			return false;
+		} else {
+			stime = $('#start').val();
+			etime = $('#end').val();
+			station_id = $('#station_id').val();
+			window.open('/cp/station/heartbeatLog?export=1&sdate='+stime + '&edate=' + etime +'&station_id=' + station_id)
+        }
+	})
+})
+
+layui.use('laydate', function() {
+    var laydate = layui.laydate;
+    //选择开始和结束日期
+    var start = laydate.render({
+        elem: '#start',
+        format: 'yyyy/MM/dd HH:mm:ss',
+        max: '2099-06-16 23:59:59', //最大日期
+        istime: true,
+        istoday: false,
+        done: function () {
+            end.config.min = start.config.dateTime;//开始日选好后，重置结束日的最小日期
+        }
+    });
+    var end = laydate.render({
+        elem: '#end',
+        format: 'yyyy/MM/dd HH:mm:ss',
+        istime: true,
+        istoday: false,
+        done: function () {
+            start.config.max = end.config.dateTime;//结束日选好后，重置开始日的最大日期
+        }
+    });
+})
+
+</script>

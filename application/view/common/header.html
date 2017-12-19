@@ -1,0 +1,22 @@
+<!-- 顶部开始 -->
+<div class="container">
+	<div class="logo"><a href="./index">大地走红-后台管理系统</a></div>
+	<div class="left_open">
+		<i title="展开左侧栏" class="iconfont">&#xe699;</i>
+	</div>
+	<ul class="layui-nav right" lay-filter="">
+	  <li class="layui-nav-item">
+		<a href="javascript:;">欢迎您， {$Think.session.adminInfo.name} ( {$Think.session.adminInfo.role_name} )</a>
+		<dl class="layui-nav-child"> <!-- 二级菜单 -->
+		  <dd>
+			  <form action="/cp/login/destroy" id="logout" method="post">
+				  <input type="hidden" name="__token__" value="{$Request.token}" />
+				  <a href="javascript:document:logout.submit();">退出</a>
+			  </form>
+		  </dd>
+		</dl>
+	  </li>
+	</ul>
+
+</div>
+<!-- 顶部结束 -->

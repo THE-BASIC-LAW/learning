@@ -1,0 +1,3368 @@
+---------------------------------------------------------------
+[ 2017-12-15T10:43:10+08:00 ] 127.0.0.1 GET /cp/login/index
+[ info ] dlq.ddzh.com/cp/login/index [运行时间：0.123404s][吞吐率：8.10req/s] [内存消耗：661.14kb] [文件加载：71]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.login_cp',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'login',
+  'opt' => 'index',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\LoginCp->index[ /var/www/html/ddzh/application/controller/cp/LoginCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/login_cp/index.html [ array (
+  0 => 'mod',
+  1 => 'act',
+  2 => 'opt',
+) ]
+[ error ] [8]未定义数组索引: login[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [2]array_key_exists() expects parameter 2 to be array, null given[/var/www/html/ddzh/application/lib/Auth.php:200]
+---------------------------------------------------------------
+[ 2017-12-15T10:43:18+08:00 ] 127.0.0.1 POST /cp/login/save
+[ info ] dlq.ddzh.com/cp/login/save [运行时间：0.190283s][吞吐率：5.26req/s] [内存消耗：676.82kb] [文件加载：74]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.login_cp',
+    2 => 'save',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '45',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://dlq.ddzh.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/login/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'adminname' => 'admin',
+  'password' => '123456',
+  'captcha' => 'faruc',
+  'mod' => 'cp',
+  'act' => 'login',
+  'opt' => 'save',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\LoginCp->save[ /var/www/html/ddzh/application/controller/cp/LoginCp.php ]
+[ error ] [8]未定义数组索引: login[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [2]array_key_exists() expects parameter 2 to be array, null given[/var/www/html/ddzh/application/lib/Auth.php:200]
+---------------------------------------------------------------
+[ 2017-12-15T10:43:18+08:00 ] 127.0.0.1 GET /cp/admin/index
+[ info ] dlq.ddzh.com/cp/admin/index [运行时间：0.242172s][吞吐率：4.13req/s] [内存消耗：731.79kb] [文件加载：69]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.admin_cp',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/login/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'admin',
+  'opt' => 'index',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\AdminCp->index[ /var/www/html/ddzh/application/controller/cp/AdminCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/admin_cp/index.html [ array (
+  0 => 'mod',
+  1 => 'act',
+  2 => 'opt',
+) ]
+---------------------------------------------------------------
+[ 2017-12-15T10:43:25+08:00 ] 127.0.0.1 GET /cp/station/lists
+[ info ] dlq.ddzh.com/cp/station/lists [运行时间：1.231941s][吞吐率：0.81req/s] [内存消耗：1,108.03kb] [文件加载：82]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.station_cp',
+    2 => 'lists',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'station',
+  'opt' => 'lists',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\StationCp->lists[ /var/www/html/ddzh/application/controller/cp/StationCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/station_cp/lists.html [ array (
+  0 => 'mod',
+  1 => 'act',
+  2 => 'opt',
+  3 => 'stations',
+  4 => 'provinces',
+) ]
+---------------------------------------------------------------
+[ 2017-12-15T10:43:25+08:00 ] 127.0.0.1 POST /cp/common/getAreaInfo
+[ info ] dlq.ddzh.com/cp/common/getAreaInfo [运行时间：0.149145s][吞吐率：6.70req/s] [内存消耗：754.86kb] [文件加载：69]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.common_cp',
+    2 => 'getAreaInfo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '6',
+  'accept' => '*/*',
+  'origin' => 'http://dlq.ddzh.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://dlq.ddzh.com/cp/station/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'ajax' => '2',
+  'mod' => 'cp',
+  'act' => 'common',
+  'opt' => 'getAreaInfo',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\CommonCp->getAreaInfo[ /var/www/html/ddzh/application/controller/cp/CommonCp.php ]
+[ error ] [8]未定义数组索引: common[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [2]array_key_exists() expects parameter 2 to be array, null given[/var/www/html/ddzh/application/lib/Auth.php:200]
+---------------------------------------------------------------
+[ 2017-12-15T10:43:27+08:00 ] 127.0.0.1 GET /cp/station/umbrellaDetail?station_id=1001
+[ info ] dlq.ddzh.com/cp/station/umbrellaDetail?station_id=1001 [运行时间：0.214211s][吞吐率：4.67req/s] [内存消耗：817.45kb] [文件加载：75]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.station_cp',
+    2 => 'umbrellaDetail',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/station/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'station_id' => '1001',
+  'mod' => 'cp',
+  'act' => 'station',
+  'opt' => 'umbrellaDetail',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\StationCp->umbrellaDetail[ /var/www/html/ddzh/application/controller/cp/StationCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/station_cp/umbrellaDetail.html [ array (
+  0 => 'station_id',
+  1 => 'mod',
+  2 => 'act',
+  3 => 'opt',
+  4 => 'umbrellas',
+) ]
+---------------------------------------------------------------
+[ 2017-12-15T10:43:36+08:00 ] 127.0.0.1 GET /cp/station/lists?do=slotAction&station_id=1001
+[ info ] dlq.ddzh.com/cp/station/lists?do=slotAction&station_id=1001 [运行时间：0.222204s][吞吐率：4.50req/s] [内存消耗：843.52kb] [文件加载：77]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.station_cp',
+    2 => 'lists',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/station/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'do' => 'slotAction',
+  'station_id' => '1001',
+  'mod' => 'cp',
+  'act' => 'station',
+  'opt' => 'lists',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\StationCp->lists[ /var/www/html/ddzh/application/controller/cp/StationCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/station_cp/slotAction.html [ array (
+  0 => 'do',
+  1 => 'station_id',
+  2 => 'mod',
+  3 => 'act',
+  4 => 'opt',
+  5 => 'slotscount',
+  6 => 'slot_status',
+) ]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+---------------------------------------------------------------
+[ 2017-12-15T10:46:08+08:00 ] 127.0.0.1 GET /cp/station/lists
+[ info ] dlq.ddzh.com/cp/station/lists [运行时间：0.442688s][吞吐率：2.26req/s] [内存消耗：984.28kb] [文件加载：80]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.station_cp',
+    2 => 'lists',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'station',
+  'opt' => 'lists',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\StationCp->lists[ /var/www/html/ddzh/application/controller/cp/StationCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/station_cp/lists.html [ array (
+  0 => 'mod',
+  1 => 'act',
+  2 => 'opt',
+  3 => 'stations',
+  4 => 'provinces',
+) ]
+---------------------------------------------------------------
+[ 2017-12-15T10:46:08+08:00 ] 127.0.0.1 POST /cp/common/getAreaInfo
+[ info ] dlq.ddzh.com/cp/common/getAreaInfo [运行时间：0.065058s][吞吐率：15.37req/s] [内存消耗：753.69kb] [文件加载：69]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.common_cp',
+    2 => 'getAreaInfo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '6',
+  'accept' => '*/*',
+  'origin' => 'http://dlq.ddzh.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://dlq.ddzh.com/cp/station/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'ajax' => '2',
+  'mod' => 'cp',
+  'act' => 'common',
+  'opt' => 'getAreaInfo',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\CommonCp->getAreaInfo[ /var/www/html/ddzh/application/controller/cp/CommonCp.php ]
+[ error ] [8]未定义数组索引: common[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [2]array_key_exists() expects parameter 2 to be array, null given[/var/www/html/ddzh/application/lib/Auth.php:200]
+---------------------------------------------------------------
+[ 2017-12-15T10:46:10+08:00 ] 127.0.0.1 GET /cp/station/lists?do=slotAction&station_id=1006
+[ info ] dlq.ddzh.com/cp/station/lists?do=slotAction&station_id=1006 [运行时间：0.098399s][吞吐率：10.16req/s] [内存消耗：813.07kb] [文件加载：75]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.station_cp',
+    2 => 'lists',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/station/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'do' => 'slotAction',
+  'station_id' => '1006',
+  'mod' => 'cp',
+  'act' => 'station',
+  'opt' => 'lists',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\StationCp->lists[ /var/www/html/ddzh/application/controller/cp/StationCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/station_cp/slotAction.html [ array (
+  0 => 'do',
+  1 => 'station_id',
+  2 => 'mod',
+  3 => 'act',
+  4 => 'opt',
+  5 => 'slotscount',
+  6 => 'slot_status',
+  7 => 'last_sync_time',
+) ]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+---------------------------------------------------------------
+[ 2017-12-15T10:48:08+08:00 ] 127.0.0.1 GET /cp/station/lists
+[ info ] dlq.ddzh.com/cp/station/lists [运行时间：0.374572s][吞吐率：2.67req/s] [内存消耗：984.17kb] [文件加载：80]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.station_cp',
+    2 => 'lists',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'station',
+  'opt' => 'lists',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\StationCp->lists[ /var/www/html/ddzh/application/controller/cp/StationCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/station_cp/lists.html [ array (
+  0 => 'mod',
+  1 => 'act',
+  2 => 'opt',
+  3 => 'stations',
+  4 => 'provinces',
+) ]
+---------------------------------------------------------------
+[ 2017-12-15T10:48:09+08:00 ] 127.0.0.1 POST /cp/common/getAreaInfo
+[ info ] dlq.ddzh.com/cp/common/getAreaInfo [运行时间：0.052211s][吞吐率：19.15req/s] [内存消耗：753.69kb] [文件加载：69]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.common_cp',
+    2 => 'getAreaInfo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '6',
+  'accept' => '*/*',
+  'origin' => 'http://dlq.ddzh.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://dlq.ddzh.com/cp/station/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'ajax' => '2',
+  'mod' => 'cp',
+  'act' => 'common',
+  'opt' => 'getAreaInfo',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\CommonCp->getAreaInfo[ /var/www/html/ddzh/application/controller/cp/CommonCp.php ]
+[ error ] [8]未定义数组索引: common[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [2]array_key_exists() expects parameter 2 to be array, null given[/var/www/html/ddzh/application/lib/Auth.php:200]
+---------------------------------------------------------------
+[ 2017-12-15T10:48:10+08:00 ] 127.0.0.1 GET /cp/station/lists?do=slotAction&station_id=1006
+[ info ] dlq.ddzh.com/cp/station/lists?do=slotAction&station_id=1006 [运行时间：0.107652s][吞吐率：9.29req/s] [内存消耗：827.98kb] [文件加载：75]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.station_cp',
+    2 => 'lists',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/station/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'do' => 'slotAction',
+  'station_id' => '1006',
+  'mod' => 'cp',
+  'act' => 'station',
+  'opt' => 'lists',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\StationCp->lists[ /var/www/html/ddzh/application/controller/cp/StationCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/station_cp/slotAction.html [ array (
+  0 => 'do',
+  1 => 'station_id',
+  2 => 'mod',
+  3 => 'act',
+  4 => 'opt',
+  5 => 'slotscount',
+  6 => 'slot_status',
+  7 => 'last_sync_time',
+) ]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+---------------------------------------------------------------
+[ 2017-12-15T10:48:31+08:00 ] 127.0.0.1 GET /cp/station/lists
+[ info ] dlq.ddzh.com/cp/station/lists [运行时间：0.242153s][吞吐率：4.13req/s] [内存消耗：984.17kb] [文件加载：80]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.station_cp',
+    2 => 'lists',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'station',
+  'opt' => 'lists',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\StationCp->lists[ /var/www/html/ddzh/application/controller/cp/StationCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/station_cp/lists.html [ array (
+  0 => 'mod',
+  1 => 'act',
+  2 => 'opt',
+  3 => 'stations',
+  4 => 'provinces',
+) ]
+---------------------------------------------------------------
+[ 2017-12-15T10:48:31+08:00 ] 127.0.0.1 POST /cp/common/getAreaInfo
+[ info ] dlq.ddzh.com/cp/common/getAreaInfo [运行时间：0.036094s][吞吐率：27.71req/s] [内存消耗：753.69kb] [文件加载：69]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.common_cp',
+    2 => 'getAreaInfo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '6',
+  'accept' => '*/*',
+  'origin' => 'http://dlq.ddzh.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://dlq.ddzh.com/cp/station/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'ajax' => '2',
+  'mod' => 'cp',
+  'act' => 'common',
+  'opt' => 'getAreaInfo',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\CommonCp->getAreaInfo[ /var/www/html/ddzh/application/controller/cp/CommonCp.php ]
+[ error ] [8]未定义数组索引: common[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [2]array_key_exists() expects parameter 2 to be array, null given[/var/www/html/ddzh/application/lib/Auth.php:200]
+---------------------------------------------------------------
+[ 2017-12-15T10:48:35+08:00 ] 127.0.0.1 GET /cp/station/lists?do=slotAction&station_id=1006
+[ info ] dlq.ddzh.com/cp/station/lists?do=slotAction&station_id=1006 [运行时间：0.054076s][吞吐率：18.49req/s] [内存消耗：827.98kb] [文件加载：75]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.station_cp',
+    2 => 'lists',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/station/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'do' => 'slotAction',
+  'station_id' => '1006',
+  'mod' => 'cp',
+  'act' => 'station',
+  'opt' => 'lists',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\StationCp->lists[ /var/www/html/ddzh/application/controller/cp/StationCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/station_cp/slotAction.html [ array (
+  0 => 'do',
+  1 => 'station_id',
+  2 => 'mod',
+  3 => 'act',
+  4 => 'opt',
+  5 => 'slotscount',
+  6 => 'slot_status',
+  7 => 'last_sync_time',
+) ]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+---------------------------------------------------------------
+[ 2017-12-15T10:49:10+08:00 ] 127.0.0.1 GET /cp/station/lists
+[ info ] dlq.ddzh.com/cp/station/lists [运行时间：0.244711s][吞吐率：4.09req/s] [内存消耗：1,070.38kb] [文件加载：80]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.station_cp',
+    2 => 'lists',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'station',
+  'opt' => 'lists',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\StationCp->lists[ /var/www/html/ddzh/application/controller/cp/StationCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/station_cp/lists.html [ array (
+  0 => 'mod',
+  1 => 'act',
+  2 => 'opt',
+  3 => 'stations',
+  4 => 'provinces',
+) ]
+---------------------------------------------------------------
+[ 2017-12-15T10:49:10+08:00 ] 127.0.0.1 POST /cp/common/getAreaInfo
+[ info ] dlq.ddzh.com/cp/common/getAreaInfo [运行时间：0.038295s][吞吐率：26.11req/s] [内存消耗：753.69kb] [文件加载：69]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.common_cp',
+    2 => 'getAreaInfo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '6',
+  'accept' => '*/*',
+  'origin' => 'http://dlq.ddzh.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://dlq.ddzh.com/cp/station/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'ajax' => '2',
+  'mod' => 'cp',
+  'act' => 'common',
+  'opt' => 'getAreaInfo',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\CommonCp->getAreaInfo[ /var/www/html/ddzh/application/controller/cp/CommonCp.php ]
+[ error ] [8]未定义数组索引: common[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [2]array_key_exists() expects parameter 2 to be array, null given[/var/www/html/ddzh/application/lib/Auth.php:200]
+---------------------------------------------------------------
+[ 2017-12-15T10:49:13+08:00 ] 127.0.0.1 GET /cp/station/lists?do=slotAction&station_id=1006
+[ info ] dlq.ddzh.com/cp/station/lists?do=slotAction&station_id=1006 [运行时间：0.075106s][吞吐率：13.31req/s] [内存消耗：829.05kb] [文件加载：75]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.station_cp',
+    2 => 'lists',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/station/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'do' => 'slotAction',
+  'station_id' => '1006',
+  'mod' => 'cp',
+  'act' => 'station',
+  'opt' => 'lists',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\StationCp->lists[ /var/www/html/ddzh/application/controller/cp/StationCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/station_cp/slotAction.html [ array (
+  0 => 'do',
+  1 => 'station_id',
+  2 => 'mod',
+  3 => 'act',
+  4 => 'opt',
+  5 => 'slotscount',
+  6 => 'slot_status',
+  7 => 'last_sync_time',
+) ]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+---------------------------------------------------------------
+[ 2017-12-15T10:49:39+08:00 ] 127.0.0.1 GET /cp/station/lists
+[ info ] dlq.ddzh.com/cp/station/lists [运行时间：0.134376s][吞吐率：7.44req/s] [内存消耗：984.17kb] [文件加载：80]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.station_cp',
+    2 => 'lists',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'station',
+  'opt' => 'lists',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\StationCp->lists[ /var/www/html/ddzh/application/controller/cp/StationCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/station_cp/lists.html [ array (
+  0 => 'mod',
+  1 => 'act',
+  2 => 'opt',
+  3 => 'stations',
+  4 => 'provinces',
+) ]
+---------------------------------------------------------------
+[ 2017-12-15T10:49:39+08:00 ] 127.0.0.1 POST /cp/common/getAreaInfo
+[ info ] dlq.ddzh.com/cp/common/getAreaInfo [运行时间：0.055919s][吞吐率：17.88req/s] [内存消耗：753.69kb] [文件加载：69]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.common_cp',
+    2 => 'getAreaInfo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '6',
+  'accept' => '*/*',
+  'origin' => 'http://dlq.ddzh.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://dlq.ddzh.com/cp/station/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'ajax' => '2',
+  'mod' => 'cp',
+  'act' => 'common',
+  'opt' => 'getAreaInfo',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\CommonCp->getAreaInfo[ /var/www/html/ddzh/application/controller/cp/CommonCp.php ]
+[ error ] [8]未定义数组索引: common[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [2]array_key_exists() expects parameter 2 to be array, null given[/var/www/html/ddzh/application/lib/Auth.php:200]
+---------------------------------------------------------------
+[ 2017-12-15T10:49:41+08:00 ] 127.0.0.1 GET /cp/station/lists?do=slotAction&station_id=1006
+[ info ] dlq.ddzh.com/cp/station/lists?do=slotAction&station_id=1006 [运行时间：0.078342s][吞吐率：12.76req/s] [内存消耗：811.98kb] [文件加载：75]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.station_cp',
+    2 => 'lists',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/station/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'do' => 'slotAction',
+  'station_id' => '1006',
+  'mod' => 'cp',
+  'act' => 'station',
+  'opt' => 'lists',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\StationCp->lists[ /var/www/html/ddzh/application/controller/cp/StationCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/station_cp/slotAction.html [ array (
+  0 => 'do',
+  1 => 'station_id',
+  2 => 'mod',
+  3 => 'act',
+  4 => 'opt',
+  5 => 'slotscount',
+  6 => 'slot_status',
+  7 => 'last_sync_time',
+) ]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+[ error ] [8]未定义变量: lastSyncTime[/var/www/html/ddzh/runtime/temp/b1f2fb5e9940f8e1e671e1769d74034f.php:67]
+---------------------------------------------------------------
+[ 2017-12-15T10:50:51+08:00 ] 127.0.0.1 GET /cp/station/lists
+[ info ] dlq.ddzh.com/cp/station/lists [运行时间：0.376975s][吞吐率：2.65req/s] [内存消耗：984.17kb] [文件加载：80]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.station_cp',
+    2 => 'lists',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'station',
+  'opt' => 'lists',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\StationCp->lists[ /var/www/html/ddzh/application/controller/cp/StationCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/station_cp/lists.html [ array (
+  0 => 'mod',
+  1 => 'act',
+  2 => 'opt',
+  3 => 'stations',
+  4 => 'provinces',
+) ]
+---------------------------------------------------------------
+[ 2017-12-15T10:50:52+08:00 ] 127.0.0.1 POST /cp/common/getAreaInfo
+[ info ] dlq.ddzh.com/cp/common/getAreaInfo [运行时间：0.050854s][吞吐率：19.66req/s] [内存消耗：753.69kb] [文件加载：69]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.common_cp',
+    2 => 'getAreaInfo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '6',
+  'accept' => '*/*',
+  'origin' => 'http://dlq.ddzh.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://dlq.ddzh.com/cp/station/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'ajax' => '2',
+  'mod' => 'cp',
+  'act' => 'common',
+  'opt' => 'getAreaInfo',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\CommonCp->getAreaInfo[ /var/www/html/ddzh/application/controller/cp/CommonCp.php ]
+[ error ] [8]未定义数组索引: common[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [2]array_key_exists() expects parameter 2 to be array, null given[/var/www/html/ddzh/application/lib/Auth.php:200]
+---------------------------------------------------------------
+[ 2017-12-15T10:50:54+08:00 ] 127.0.0.1 GET /cp/station/lists?do=slotAction&station_id=1006
+[ info ] dlq.ddzh.com/cp/station/lists?do=slotAction&station_id=1006 [运行时间：0.173901s][吞吐率：5.75req/s] [内存消耗：826.29kb] [文件加载：74]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.station_cp',
+    2 => 'lists',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/station/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'do' => 'slotAction',
+  'station_id' => '1006',
+  'mod' => 'cp',
+  'act' => 'station',
+  'opt' => 'lists',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\StationCp->lists[ /var/www/html/ddzh/application/controller/cp/StationCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/station_cp/slotAction.html [ array (
+  0 => 'do',
+  1 => 'station_id',
+  2 => 'mod',
+  3 => 'act',
+  4 => 'opt',
+  5 => 'slotscount',
+  6 => 'slot_status',
+  7 => 'last_sync_time',
+) ]
+---------------------------------------------------------------
+[ 2017-12-15T14:02:44+08:00 ] 127.0.0.1 GET /cp/login/index
+[ info ] dlq.ddzh.com/cp/login/index [运行时间：0.456087s][吞吐率：2.19req/s] [内存消耗：660.35kb] [文件加载：71]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.login_cp',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'login',
+  'opt' => 'index',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\LoginCp->index[ /var/www/html/ddzh/application/controller/cp/LoginCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/login_cp/index.html [ array (
+  0 => 'mod',
+  1 => 'act',
+  2 => 'opt',
+) ]
+[ error ] [8]未定义数组索引: login[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [2]array_key_exists() expects parameter 2 to be array, null given[/var/www/html/ddzh/application/lib/Auth.php:200]
+---------------------------------------------------------------
+[ 2017-12-15T14:16:46+08:00 ] 127.0.0.1 POST /cp/login/save
+[ info ] dlq.ddzh.com/cp/login/save [运行时间：0.787784s][吞吐率：1.27req/s] [内存消耗：668.19kb] [文件加载：72]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.login_cp',
+    2 => 'save',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '40',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://dlq.ddzh.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/login/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'adminname' => 'admin',
+  'password' => '123456',
+  'captcha' => '',
+  'mod' => 'cp',
+  'act' => 'login',
+  'opt' => 'save',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\LoginCp->save[ /var/www/html/ddzh/application/controller/cp/LoginCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'adminname',
+  1 => 'password',
+  2 => 'captcha',
+  3 => 'mod',
+  4 => 'act',
+  5 => 'opt',
+  6 => 'code',
+  7 => 'msg',
+  8 => 'data',
+  9 => 'url',
+  10 => 'wait',
+) ]
+[ error ] [8]未定义数组索引: login[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [2]array_key_exists() expects parameter 2 to be array, null given[/var/www/html/ddzh/application/lib/Auth.php:200]
+---------------------------------------------------------------
+[ 2017-12-15T14:16:49+08:00 ] 127.0.0.1 GET /cp/login/index
+[ info ] dlq.ddzh.com/cp/login/index [运行时间：0.194388s][吞吐率：5.14req/s] [内存消耗：661.31kb] [文件加载：71]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.login_cp',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'login',
+  'opt' => 'index',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\LoginCp->index[ /var/www/html/ddzh/application/controller/cp/LoginCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/login_cp/index.html [ array (
+  0 => 'mod',
+  1 => 'act',
+  2 => 'opt',
+) ]
+[ error ] [8]未定义数组索引: login[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [2]array_key_exists() expects parameter 2 to be array, null given[/var/www/html/ddzh/application/lib/Auth.php:200]
+---------------------------------------------------------------
+[ 2017-12-15T14:16:59+08:00 ] 127.0.0.1 POST /cp/login/save
+[ info ] dlq.ddzh.com/cp/login/save [运行时间：0.419528s][吞吐率：2.38req/s] [内存消耗：676.43kb] [文件加载：74]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.login_cp',
+    2 => 'save',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '45',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://dlq.ddzh.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/login/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'adminname' => 'admin',
+  'password' => '123456',
+  'captcha' => 'c5wla',
+  'mod' => 'cp',
+  'act' => 'login',
+  'opt' => 'save',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\LoginCp->save[ /var/www/html/ddzh/application/controller/cp/LoginCp.php ]
+[ error ] [8]未定义数组索引: login[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [2]array_key_exists() expects parameter 2 to be array, null given[/var/www/html/ddzh/application/lib/Auth.php:200]
+---------------------------------------------------------------
+[ 2017-12-15T14:16:59+08:00 ] 127.0.0.1 GET /cp/admin/index
+[ info ] dlq.ddzh.com/cp/admin/index [运行时间：0.286543s][吞吐率：3.49req/s] [内存消耗：711.72kb] [文件加载：67]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.admin_cp',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/login/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'admin',
+  'opt' => 'index',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\AdminCp->index[ /var/www/html/ddzh/application/controller/cp/AdminCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/admin_cp/index.html [ array (
+  0 => 'mod',
+  1 => 'act',
+  2 => 'opt',
+) ]
+---------------------------------------------------------------
+[ 2017-12-15T14:17:03+08:00 ] 127.0.0.1 GET /cp/order/lists
+[ info ] dlq.ddzh.com/cp/order/lists [运行时间：0.601729s][吞吐率：1.66req/s] [内存消耗：937.30kb] [文件加载：73]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.order_cp',
+    2 => 'lists',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'order',
+  'opt' => 'lists',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\OrderCp->lists[ /var/www/html/ddzh/application/controller/cp/OrderCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/order_cp/lists.html [ array (
+  0 => 'mod',
+  1 => 'act',
+  2 => 'opt',
+  3 => 'orders',
+  4 => 'borrow_shop_station_info',
+  5 => 'return_shop_station_info',
+  6 => 'status',
+  7 => 'user_id',
+  8 => 'order_id',
+  9 => 'platform',
+  10 => 'err_status',
+  11 => 'user_openid',
+  12 => 'umbrella_id',
+  13 => 'borrow_end_time',
+  14 => 'return_end_time',
+  15 => 'usefee_situation',
+  16 => 'borrow_start_time',
+  17 => 'return_start_time',
+  18 => 'borrow_station_id',
+  19 => 'return_station_id',
+  20 => 'borrow_shop_station_title',
+  21 => 'return_shop_station_title',
+) ]
+---------------------------------------------------------------
+[ 2017-12-15T14:17:03+08:00 ] 127.0.0.1 GET /cp/order/static/third-party/laydate/laydate.js
+[ info ] dlq.ddzh.com/cp/order/static/third-party/laydate/laydate.js [运行时间：0.217688s][吞吐率：4.59req/s] [内存消耗：741.23kb] [文件加载：70]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.order_cp',
+    2 => 'static',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://dlq.ddzh.com/cp/order/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'order',
+  'opt' => 'static',
+  'party' => 'laydate',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-12-15T14:17:03+08:00 ] 127.0.0.1 POST /cp/common/getAreaInfo
+[ info ] dlq.ddzh.com/cp/common/getAreaInfo [运行时间：0.134265s][吞吐率：7.45req/s] [内存消耗：753.69kb] [文件加载：69]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.common_cp',
+    2 => 'getAreaInfo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '6',
+  'accept' => '*/*',
+  'origin' => 'http://dlq.ddzh.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://dlq.ddzh.com/cp/order/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'ajax' => '2',
+  'mod' => 'cp',
+  'act' => 'common',
+  'opt' => 'getAreaInfo',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\CommonCp->getAreaInfo[ /var/www/html/ddzh/application/controller/cp/CommonCp.php ]
+[ error ] [8]未定义数组索引: common[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [2]array_key_exists() expects parameter 2 to be array, null given[/var/www/html/ddzh/application/lib/Auth.php:200]
+---------------------------------------------------------------
+[ 2017-12-15T14:17:17+08:00 ] 127.0.0.1 GET /cp/order/returnDeposit?order_id=JJSAN-20170419-101609-20210
+[ info ] dlq.ddzh.com/cp/order/returnDeposit?order_id=JJSAN-20170419-101609-20210 [运行时间：0.287633s][吞吐率：3.48req/s] [内存消耗：1,706.82kb] [文件加载：70]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.order_cp',
+    2 => 'returnDeposit',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/order/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'order_id' => 'JJSAN-20170419-101609-20210',
+  'mod' => 'cp',
+  'act' => 'order',
+  'opt' => 'returnDeposit',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\OrderCp->returnDeposit[ /var/www/html/ddzh/application/controller/cp/OrderCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/order_cp/returnDeposit.html [ array (
+  0 => 'order_id',
+  1 => 'mod',
+  2 => 'act',
+  3 => 'opt',
+  4 => 'order',
+  5 => 'stations',
+  6 => 'borrow_station',
+) ]
+---------------------------------------------------------------
+[ 2017-12-15T14:17:32+08:00 ] 127.0.0.1 GET /cp/order/returnDeposit?order_id=JJSAN-20171016-044453-06909
+[ info ] dlq.ddzh.com/cp/order/returnDeposit?order_id=JJSAN-20171016-044453-06909 [运行时间：0.135703s][吞吐率：7.37req/s] [内存消耗：1,546.16kb] [文件加载：68]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.order_cp',
+    2 => 'returnDeposit',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/order/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'order_id' => 'JJSAN-20171016-044453-06909',
+  'mod' => 'cp',
+  'act' => 'order',
+  'opt' => 'returnDeposit',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\OrderCp->returnDeposit[ /var/www/html/ddzh/application/controller/cp/OrderCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/order_cp/returnDeposit.html [ array (
+  0 => 'order_id',
+  1 => 'mod',
+  2 => 'act',
+  3 => 'opt',
+  4 => 'order',
+  5 => 'stations',
+  6 => 'borrow_station',
+) ]
+---------------------------------------------------------------
+[ 2017-12-15T14:18:02+08:00 ] 127.0.0.1 GET /cp/order/returnDeposit?order_id=JJSAN-20171016-052107-98011
+[ info ] dlq.ddzh.com/cp/order/returnDeposit?order_id=JJSAN-20171016-052107-98011 [运行时间：0.174197s][吞吐率：5.74req/s] [内存消耗：1,710.02kb] [文件加载：73]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.order_cp',
+    2 => 'returnDeposit',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/order/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'order_id' => 'JJSAN-20171016-052107-98011',
+  'mod' => 'cp',
+  'act' => 'order',
+  'opt' => 'returnDeposit',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\OrderCp->returnDeposit[ /var/www/html/ddzh/application/controller/cp/OrderCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/order_cp/returnDeposit.html [ array (
+  0 => 'order_id',
+  1 => 'mod',
+  2 => 'act',
+  3 => 'opt',
+  4 => 'order',
+  5 => 'stations',
+  6 => 'borrow_station',
+) ]
+[ error ] [8]未定义数组索引: refund_fee[/var/www/html/ddzh/runtime/temp/f78a8c3e5be6784747ae53e8eb2eca7e.php:36]
+---------------------------------------------------------------
+[ 2017-12-15T14:18:07+08:00 ] 127.0.0.1 GET /cp/order/returnDeposit?order_id=JJSAN-20171016-052526-02689
+[ info ] dlq.ddzh.com/cp/order/returnDeposit?order_id=JJSAN-20171016-052526-02689 [运行时间：0.080144s][吞吐率：12.48req/s] [内存消耗：1,549.91kb] [文件加载：71]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.order_cp',
+    2 => 'returnDeposit',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/order/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'order_id' => 'JJSAN-20171016-052526-02689',
+  'mod' => 'cp',
+  'act' => 'order',
+  'opt' => 'returnDeposit',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\OrderCp->returnDeposit[ /var/www/html/ddzh/application/controller/cp/OrderCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/order_cp/returnDeposit.html [ array (
+  0 => 'order_id',
+  1 => 'mod',
+  2 => 'act',
+  3 => 'opt',
+  4 => 'order',
+  5 => 'stations',
+  6 => 'borrow_station',
+) ]
+[ error ] [8]未定义数组索引: refund_fee[/var/www/html/ddzh/runtime/temp/f78a8c3e5be6784747ae53e8eb2eca7e.php:36]
+---------------------------------------------------------------
+[ 2017-12-15T14:18:11+08:00 ] 127.0.0.1 GET /cp/order/returnDeposit?order_id=JJSAN-20171016-052107-98011
+[ info ] dlq.ddzh.com/cp/order/returnDeposit?order_id=JJSAN-20171016-052107-98011 [运行时间：0.214477s][吞吐率：4.66req/s] [内存消耗：1,548.80kb] [文件加载：71]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.order_cp',
+    2 => 'returnDeposit',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/order/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'order_id' => 'JJSAN-20171016-052107-98011',
+  'mod' => 'cp',
+  'act' => 'order',
+  'opt' => 'returnDeposit',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\OrderCp->returnDeposit[ /var/www/html/ddzh/application/controller/cp/OrderCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/order_cp/returnDeposit.html [ array (
+  0 => 'order_id',
+  1 => 'mod',
+  2 => 'act',
+  3 => 'opt',
+  4 => 'order',
+  5 => 'stations',
+  6 => 'borrow_station',
+) ]
+[ error ] [8]未定义数组索引: refund_fee[/var/www/html/ddzh/runtime/temp/f78a8c3e5be6784747ae53e8eb2eca7e.php:36]
+---------------------------------------------------------------
+[ 2017-12-15T14:18:14+08:00 ] 127.0.0.1 GET /cp/order/returnDeposit?order_id=JJSAN-20171016-044453-06909
+[ info ] dlq.ddzh.com/cp/order/returnDeposit?order_id=JJSAN-20171016-044453-06909 [运行时间：0.161908s][吞吐率：6.18req/s] [内存消耗：1,545.06kb] [文件加载：68]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.order_cp',
+    2 => 'returnDeposit',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/order/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'order_id' => 'JJSAN-20171016-044453-06909',
+  'mod' => 'cp',
+  'act' => 'order',
+  'opt' => 'returnDeposit',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\OrderCp->returnDeposit[ /var/www/html/ddzh/application/controller/cp/OrderCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/order_cp/returnDeposit.html [ array (
+  0 => 'order_id',
+  1 => 'mod',
+  2 => 'act',
+  3 => 'opt',
+  4 => 'order',
+  5 => 'stations',
+  6 => 'borrow_station',
+) ]
+---------------------------------------------------------------
+[ 2017-12-15T14:19:09+08:00 ] 127.0.0.1 GET /cp/order/returnDeposit?order_id=JJSAN-20171016-052107-98011
+[ info ] dlq.ddzh.com/cp/order/returnDeposit?order_id=JJSAN-20171016-052107-98011 [运行时间：0.085799s][吞吐率：11.66req/s] [内存消耗：1,706.67kb] [文件加载：70]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.order_cp',
+    2 => 'returnDeposit',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/order/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'order_id' => 'JJSAN-20171016-052107-98011',
+  'mod' => 'cp',
+  'act' => 'order',
+  'opt' => 'returnDeposit',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\OrderCp->returnDeposit[ /var/www/html/ddzh/application/controller/cp/OrderCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/order_cp/returnDeposit.html [ array (
+  0 => 'order_id',
+  1 => 'mod',
+  2 => 'act',
+  3 => 'opt',
+  4 => 'order',
+  5 => 'stations',
+  6 => 'borrow_station',
+) ]
+---------------------------------------------------------------
+[ 2017-12-15T14:19:15+08:00 ] 127.0.0.1 GET /cp/order/lists
+[ info ] dlq.ddzh.com/cp/order/lists [运行时间：0.054333s][吞吐率：18.40req/s] [内存消耗：856.33kb] [文件加载：71]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.order_cp',
+    2 => 'lists',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'order',
+  'opt' => 'lists',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\OrderCp->lists[ /var/www/html/ddzh/application/controller/cp/OrderCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/order_cp/lists.html [ array (
+  0 => 'mod',
+  1 => 'act',
+  2 => 'opt',
+  3 => 'orders',
+  4 => 'borrow_shop_station_info',
+  5 => 'return_shop_station_info',
+  6 => 'status',
+  7 => 'user_id',
+  8 => 'order_id',
+  9 => 'platform',
+  10 => 'err_status',
+  11 => 'user_openid',
+  12 => 'umbrella_id',
+  13 => 'borrow_end_time',
+  14 => 'return_end_time',
+  15 => 'usefee_situation',
+  16 => 'borrow_start_time',
+  17 => 'return_start_time',
+  18 => 'borrow_station_id',
+  19 => 'return_station_id',
+  20 => 'borrow_shop_station_title',
+  21 => 'return_shop_station_title',
+) ]
+---------------------------------------------------------------
+[ 2017-12-15T14:19:15+08:00 ] 127.0.0.1 GET /cp/order/static/third-party/laydate/laydate.js
+[ info ] dlq.ddzh.com/cp/order/static/third-party/laydate/laydate.js [运行时间：0.037113s][吞吐率：26.94req/s] [内存消耗：740.05kb] [文件加载：70]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.order_cp',
+    2 => 'static',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://dlq.ddzh.com/cp/order/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'order',
+  'opt' => 'static',
+  'party' => 'laydate',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-12-15T14:19:15+08:00 ] 127.0.0.1 GET /cp/order/static/third-party/laydate/laydate.js
+[ info ] dlq.ddzh.com/cp/order/static/third-party/laydate/laydate.js [运行时间：0.084877s][吞吐率：11.78req/s] [内存消耗：740.05kb] [文件加载：70]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.order_cp',
+    2 => 'static',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://dlq.ddzh.com/cp/order/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'order',
+  'opt' => 'static',
+  'party' => 'laydate',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-12-15T14:19:15+08:00 ] 127.0.0.1 POST /cp/common/getAreaInfo
+[ info ] dlq.ddzh.com/cp/common/getAreaInfo [运行时间：0.029721s][吞吐率：33.65req/s] [内存消耗：753.69kb] [文件加载：69]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.common_cp',
+    2 => 'getAreaInfo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '6',
+  'accept' => '*/*',
+  'origin' => 'http://dlq.ddzh.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://dlq.ddzh.com/cp/order/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'ajax' => '2',
+  'mod' => 'cp',
+  'act' => 'common',
+  'opt' => 'getAreaInfo',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\CommonCp->getAreaInfo[ /var/www/html/ddzh/application/controller/cp/CommonCp.php ]
+[ error ] [8]未定义数组索引: common[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [2]array_key_exists() expects parameter 2 to be array, null given[/var/www/html/ddzh/application/lib/Auth.php:200]
+---------------------------------------------------------------
+[ 2017-12-15T14:19:18+08:00 ] 127.0.0.1 GET /cp/order/returnDeposit?order_id=JJSAN-20171016-052107-98011
+[ info ] dlq.ddzh.com/cp/order/returnDeposit?order_id=JJSAN-20171016-052107-98011 [运行时间：0.102493s][吞吐率：9.76req/s] [内存消耗：1,546.54kb] [文件加载：68]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.order_cp',
+    2 => 'returnDeposit',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/order/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'order_id' => 'JJSAN-20171016-052107-98011',
+  'mod' => 'cp',
+  'act' => 'order',
+  'opt' => 'returnDeposit',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\OrderCp->returnDeposit[ /var/www/html/ddzh/application/controller/cp/OrderCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/order_cp/returnDeposit.html [ array (
+  0 => 'order_id',
+  1 => 'mod',
+  2 => 'act',
+  3 => 'opt',
+  4 => 'order',
+  5 => 'stations',
+  6 => 'borrow_station',
+) ]
+---------------------------------------------------------------
+[ 2017-12-15T14:21:17+08:00 ] 127.0.0.1 GET /cp/order/lists
+[ info ] dlq.ddzh.com/cp/order/lists [运行时间：0.142081s][吞吐率：7.04req/s] [内存消耗：855.23kb] [文件加载：71]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.order_cp',
+    2 => 'lists',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'order',
+  'opt' => 'lists',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\OrderCp->lists[ /var/www/html/ddzh/application/controller/cp/OrderCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/order_cp/lists.html [ array (
+  0 => 'mod',
+  1 => 'act',
+  2 => 'opt',
+  3 => 'orders',
+  4 => 'borrow_shop_station_info',
+  5 => 'return_shop_station_info',
+  6 => 'status',
+  7 => 'user_id',
+  8 => 'order_id',
+  9 => 'platform',
+  10 => 'err_status',
+  11 => 'user_openid',
+  12 => 'umbrella_id',
+  13 => 'borrow_end_time',
+  14 => 'return_end_time',
+  15 => 'usefee_situation',
+  16 => 'borrow_start_time',
+  17 => 'return_start_time',
+  18 => 'borrow_station_id',
+  19 => 'return_station_id',
+  20 => 'borrow_shop_station_title',
+  21 => 'return_shop_station_title',
+) ]
+---------------------------------------------------------------
+[ 2017-12-15T14:21:17+08:00 ] 127.0.0.1 GET /cp/order/static/third-party/laydate/laydate.js
+[ info ] dlq.ddzh.com/cp/order/static/third-party/laydate/laydate.js [运行时间：0.032943s][吞吐率：30.36req/s] [内存消耗：740.05kb] [文件加载：70]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.order_cp',
+    2 => 'static',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://dlq.ddzh.com/cp/order/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'order',
+  'opt' => 'static',
+  'party' => 'laydate',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-12-15T14:21:17+08:00 ] 127.0.0.1 GET /cp/order/static/third-party/laydate/laydate.js
+[ info ] dlq.ddzh.com/cp/order/static/third-party/laydate/laydate.js [运行时间：0.038482s][吞吐率：25.99req/s] [内存消耗：740.05kb] [文件加载：70]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.order_cp',
+    2 => 'static',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://dlq.ddzh.com/cp/order/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'order',
+  'opt' => 'static',
+  'party' => 'laydate',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-12-15T14:21:17+08:00 ] 127.0.0.1 POST /cp/common/getAreaInfo
+[ info ] dlq.ddzh.com/cp/common/getAreaInfo [运行时间：0.049968s][吞吐率：20.01req/s] [内存消耗：753.69kb] [文件加载：69]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.common_cp',
+    2 => 'getAreaInfo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '6',
+  'accept' => '*/*',
+  'origin' => 'http://dlq.ddzh.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://dlq.ddzh.com/cp/order/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'ajax' => '2',
+  'mod' => 'cp',
+  'act' => 'common',
+  'opt' => 'getAreaInfo',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\CommonCp->getAreaInfo[ /var/www/html/ddzh/application/controller/cp/CommonCp.php ]
+[ error ] [8]未定义数组索引: common[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [2]array_key_exists() expects parameter 2 to be array, null given[/var/www/html/ddzh/application/lib/Auth.php:200]
+---------------------------------------------------------------
+[ 2017-12-15T14:21:28+08:00 ] 127.0.0.1 GET /cp/order/returnDeposit?order_id=JJSAN-20171016-052526-02689
+[ info ] dlq.ddzh.com/cp/order/returnDeposit?order_id=JJSAN-20171016-052526-02689 [运行时间：0.083571s][吞吐率：11.97req/s] [内存消耗：1,706.82kb] [文件加载：70]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.order_cp',
+    2 => 'returnDeposit',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/order/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'order_id' => 'JJSAN-20171016-052526-02689',
+  'mod' => 'cp',
+  'act' => 'order',
+  'opt' => 'returnDeposit',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\OrderCp->returnDeposit[ /var/www/html/ddzh/application/controller/cp/OrderCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/order_cp/returnDeposit.html [ array (
+  0 => 'order_id',
+  1 => 'mod',
+  2 => 'act',
+  3 => 'opt',
+  4 => 'order',
+  5 => 'stations',
+  6 => 'borrow_station',
+) ]
+---------------------------------------------------------------
+[ 2017-12-15T14:35:41+08:00 ] 127.0.0.1 GET /cp/station/lists
+[ info ] dlq.ddzh.com/cp/station/lists [运行时间：0.751455s][吞吐率：1.33req/s] [内存消耗：1,048.17kb] [文件加载：80]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.station_cp',
+    2 => 'lists',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/order/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'station',
+  'opt' => 'lists',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\StationCp->lists[ /var/www/html/ddzh/application/controller/cp/StationCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/station_cp/lists.html [ array (
+  0 => 'mod',
+  1 => 'act',
+  2 => 'opt',
+  3 => 'stations',
+  4 => 'provinces',
+) ]
+---------------------------------------------------------------
+[ 2017-12-15T14:35:41+08:00 ] 127.0.0.1 POST /cp/common/getAreaInfo
+[ info ] dlq.ddzh.com/cp/common/getAreaInfo [运行时间：0.042849s][吞吐率：23.34req/s] [内存消耗：753.69kb] [文件加载：69]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.common_cp',
+    2 => 'getAreaInfo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '6',
+  'accept' => '*/*',
+  'origin' => 'http://dlq.ddzh.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://dlq.ddzh.com/cp/station/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'ajax' => '2',
+  'mod' => 'cp',
+  'act' => 'common',
+  'opt' => 'getAreaInfo',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\CommonCp->getAreaInfo[ /var/www/html/ddzh/application/controller/cp/CommonCp.php ]
+[ error ] [8]未定义数组索引: common[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [2]array_key_exists() expects parameter 2 to be array, null given[/var/www/html/ddzh/application/lib/Auth.php:200]
+---------------------------------------------------------------
+[ 2017-12-15T14:35:43+08:00 ] 127.0.0.1 GET /cp/station/lists?do=slotAction&station_id=1001
+[ info ] dlq.ddzh.com/cp/station/lists?do=slotAction&station_id=1001 [运行时间：0.198867s][吞吐率：5.03req/s] [内存消耗：826.29kb] [文件加载：74]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.station_cp',
+    2 => 'lists',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/station/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'do' => 'slotAction',
+  'station_id' => '1001',
+  'mod' => 'cp',
+  'act' => 'station',
+  'opt' => 'lists',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\StationCp->lists[ /var/www/html/ddzh/application/controller/cp/StationCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/station_cp/slotAction.html [ array (
+  0 => 'do',
+  1 => 'station_id',
+  2 => 'mod',
+  3 => 'act',
+  4 => 'opt',
+  5 => 'slotscount',
+  6 => 'slot_status',
+  7 => 'last_sync_time',
+) ]
+---------------------------------------------------------------
+[ 2017-12-15T14:36:39+08:00 ] 127.0.0.1 GET /cp/station/lists
+[ info ] dlq.ddzh.com/cp/station/lists [运行时间：0.224745s][吞吐率：4.45req/s] [内存消耗：983.09kb] [文件加载：80]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.station_cp',
+    2 => 'lists',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/order/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'station',
+  'opt' => 'lists',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\StationCp->lists[ /var/www/html/ddzh/application/controller/cp/StationCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/station_cp/lists.html [ array (
+  0 => 'mod',
+  1 => 'act',
+  2 => 'opt',
+  3 => 'stations',
+  4 => 'provinces',
+) ]
+---------------------------------------------------------------
+[ 2017-12-15T14:36:39+08:00 ] 127.0.0.1 POST /cp/common/getAreaInfo
+[ info ] dlq.ddzh.com/cp/common/getAreaInfo [运行时间：0.032660s][吞吐率：30.62req/s] [内存消耗：753.69kb] [文件加载：69]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.common_cp',
+    2 => 'getAreaInfo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '6',
+  'origin' => 'http://dlq.ddzh.com',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'referer' => 'http://dlq.ddzh.com/cp/station/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'ajax' => '2',
+  'mod' => 'cp',
+  'act' => 'common',
+  'opt' => 'getAreaInfo',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\CommonCp->getAreaInfo[ /var/www/html/ddzh/application/controller/cp/CommonCp.php ]
+[ error ] [8]未定义数组索引: common[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [2]array_key_exists() expects parameter 2 to be array, null given[/var/www/html/ddzh/application/lib/Auth.php:200]
+---------------------------------------------------------------
+[ 2017-12-15T14:36:41+08:00 ] 127.0.0.1 GET /cp/station/lists?do=slotAction&station_id=1001
+[ info ] dlq.ddzh.com/cp/station/lists?do=slotAction&station_id=1001 [运行时间：0.124261s][吞吐率：8.05req/s] [内存消耗：826.29kb] [文件加载：74]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.station_cp',
+    2 => 'lists',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/station/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'do' => 'slotAction',
+  'station_id' => '1001',
+  'mod' => 'cp',
+  'act' => 'station',
+  'opt' => 'lists',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\StationCp->lists[ /var/www/html/ddzh/application/controller/cp/StationCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/station_cp/slotAction.html [ array (
+  0 => 'do',
+  1 => 'station_id',
+  2 => 'mod',
+  3 => 'act',
+  4 => 'opt',
+  5 => 'slotscount',
+  6 => 'slot_status',
+  7 => 'last_sync_time',
+) ]
+---------------------------------------------------------------
+[ 2017-12-15T15:10:33+08:00 ] 127.0.0.1 GET /cp/login/index
+[ info ] dlq.ddzh.com/cp/login/index [运行时间：0.086759s][吞吐率：11.53req/s] [内存消耗：660.35kb] [文件加载：71]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.login_cp',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/order/lists',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'login',
+  'opt' => 'index',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\LoginCp->index[ /var/www/html/ddzh/application/controller/cp/LoginCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/login_cp/index.html [ array (
+  0 => 'mod',
+  1 => 'act',
+  2 => 'opt',
+) ]
+[ error ] [8]未定义数组索引: login[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [2]array_key_exists() expects parameter 2 to be array, null given[/var/www/html/ddzh/application/lib/Auth.php:200]
+---------------------------------------------------------------
+[ 2017-12-15T15:10:48+08:00 ] 127.0.0.1 POST /cp/login/save
+[ info ] dlq.ddzh.com/cp/login/save [运行时间：0.260314s][吞吐率：3.84req/s] [内存消耗：676.43kb] [文件加载：74]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.login_cp',
+    2 => 'save',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '45',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://dlq.ddzh.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/login/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'adminname' => 'admin',
+  'password' => '123456',
+  'captcha' => 'JNG5N',
+  'mod' => 'cp',
+  'act' => 'login',
+  'opt' => 'save',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\LoginCp->save[ /var/www/html/ddzh/application/controller/cp/LoginCp.php ]
+[ error ] [8]未定义数组索引: login[/var/www/html/ddzh/application/lib/Auth.php:200]
+[ error ] [2]array_key_exists() expects parameter 2 to be array, null given[/var/www/html/ddzh/application/lib/Auth.php:200]
+---------------------------------------------------------------
+[ 2017-12-15T15:10:48+08:00 ] 127.0.0.1 GET /cp/admin/index
+[ info ] dlq.ddzh.com/cp/admin/index [运行时间：0.065704s][吞吐率：15.22req/s] [内存消耗：710.63kb] [文件加载：67]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.admin_cp',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/login/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'admin',
+  'opt' => 'index',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\AdminCp->index[ /var/www/html/ddzh/application/controller/cp/AdminCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/admin_cp/index.html [ array (
+  0 => 'mod',
+  1 => 'act',
+  2 => 'opt',
+) ]
+---------------------------------------------------------------
+[ 2017-12-15T15:10:51+08:00 ] 127.0.0.1 GET /cp/data/order_analysis
+[ info ] dlq.ddzh.com/cp/data/order_analysis [运行时间：0.104490s][吞吐率：9.57req/s] [内存消耗：1,241.19kb] [文件加载：74]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.data_cp',
+    2 => 'order_analysis',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'data',
+  'opt' => 'order_analysis',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\DataCp->order_analysis[ /var/www/html/ddzh/application/controller/cp/DataCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/data_cp/order_analysis.html [ array (
+  0 => 'mod',
+  1 => 'act',
+  2 => 'opt',
+  3 => 'all_shop_stations',
+) ]
+[ error ] [8]未定义变量: check_all[/var/www/html/ddzh/runtime/temp/9ab0d9f8ec1d5ea57f8b34942d1f2b88.php:145]
+[ error ] [8]未定义变量: check_all[/var/www/html/ddzh/runtime/temp/9ab0d9f8ec1d5ea57f8b34942d1f2b88.php:155]
+[ error ] [8]未定义变量: start[/var/www/html/ddzh/runtime/temp/9ab0d9f8ec1d5ea57f8b34942d1f2b88.php:174]
+[ error ] [8]未定义变量: data[/var/www/html/ddzh/runtime/temp/9ab0d9f8ec1d5ea57f8b34942d1f2b88.php:203]
+[ error ] [8]未定义变量: data[/var/www/html/ddzh/runtime/temp/9ab0d9f8ec1d5ea57f8b34942d1f2b88.php:203]
+[ error ] [8]未定义变量: data[/var/www/html/ddzh/runtime/temp/9ab0d9f8ec1d5ea57f8b34942d1f2b88.php:203]
+---------------------------------------------------------------
+[ 2017-12-15T15:10:55+08:00 ] 127.0.0.1 GET /cp/data/user_data_count
+[ info ] dlq.ddzh.com/cp/data/user_data_count [运行时间：0.045539s][吞吐率：21.96req/s] [内存消耗：726.95kb] [文件加载：69]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.data_cp',
+    2 => 'user_data_count',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/data/order_analysis',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'data',
+  'opt' => 'user_data_count',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-12-15T15:10:58+08:00 ] 127.0.0.1 GET /cp/data/order_analysis
+[ info ] dlq.ddzh.com/cp/data/order_analysis [运行时间：0.039427s][吞吐率：25.36req/s] [内存消耗：1,116.80kb] [文件加载：72]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.data_cp',
+    2 => 'order_analysis',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'data',
+  'opt' => 'order_analysis',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\DataCp->order_analysis[ /var/www/html/ddzh/application/controller/cp/DataCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/data_cp/order_analysis.html [ array (
+  0 => 'mod',
+  1 => 'act',
+  2 => 'opt',
+  3 => 'all_shop_stations',
+) ]
+[ error ] [8]未定义变量: check_all[/var/www/html/ddzh/runtime/temp/9ab0d9f8ec1d5ea57f8b34942d1f2b88.php:145]
+[ error ] [8]未定义变量: check_all[/var/www/html/ddzh/runtime/temp/9ab0d9f8ec1d5ea57f8b34942d1f2b88.php:155]
+[ error ] [8]未定义变量: start[/var/www/html/ddzh/runtime/temp/9ab0d9f8ec1d5ea57f8b34942d1f2b88.php:174]
+[ error ] [8]未定义变量: data[/var/www/html/ddzh/runtime/temp/9ab0d9f8ec1d5ea57f8b34942d1f2b88.php:203]
+[ error ] [8]未定义变量: data[/var/www/html/ddzh/runtime/temp/9ab0d9f8ec1d5ea57f8b34942d1f2b88.php:203]
+[ error ] [8]未定义变量: data[/var/www/html/ddzh/runtime/temp/9ab0d9f8ec1d5ea57f8b34942d1f2b88.php:203]
+---------------------------------------------------------------
+[ 2017-12-15T15:10:59+08:00 ] 127.0.0.1 GET /cp/data/new_user_list
+[ info ] dlq.ddzh.com/cp/data/new_user_list [运行时间：0.042314s][吞吐率：23.63req/s] [内存消耗：726.95kb] [文件加载：69]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.data_cp',
+    2 => 'new_user_list',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/data/order_analysis',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'data',
+  'opt' => 'new_user_list',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-12-15T15:11:01+08:00 ] 127.0.0.1 GET /cp/data/order_analysis
+[ info ] dlq.ddzh.com/cp/data/order_analysis [运行时间：0.072491s][吞吐率：13.79req/s] [内存消耗：1,115.70kb] [文件加载：72]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.data_cp',
+    2 => 'order_analysis',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'data',
+  'opt' => 'order_analysis',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\DataCp->order_analysis[ /var/www/html/ddzh/application/controller/cp/DataCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/data_cp/order_analysis.html [ array (
+  0 => 'mod',
+  1 => 'act',
+  2 => 'opt',
+  3 => 'all_shop_stations',
+) ]
+[ error ] [8]未定义变量: check_all[/var/www/html/ddzh/runtime/temp/9ab0d9f8ec1d5ea57f8b34942d1f2b88.php:145]
+[ error ] [8]未定义变量: check_all[/var/www/html/ddzh/runtime/temp/9ab0d9f8ec1d5ea57f8b34942d1f2b88.php:155]
+[ error ] [8]未定义变量: start[/var/www/html/ddzh/runtime/temp/9ab0d9f8ec1d5ea57f8b34942d1f2b88.php:174]
+[ error ] [8]未定义变量: data[/var/www/html/ddzh/runtime/temp/9ab0d9f8ec1d5ea57f8b34942d1f2b88.php:203]
+[ error ] [8]未定义变量: data[/var/www/html/ddzh/runtime/temp/9ab0d9f8ec1d5ea57f8b34942d1f2b88.php:203]
+[ error ] [8]未定义变量: data[/var/www/html/ddzh/runtime/temp/9ab0d9f8ec1d5ea57f8b34942d1f2b88.php:203]
+---------------------------------------------------------------
+[ 2017-12-15T15:11:02+08:00 ] 127.0.0.1 GET /cp/data/old_user_list
+[ info ] dlq.ddzh.com/cp/data/old_user_list [运行时间：0.073007s][吞吐率：13.70req/s] [内存消耗：726.95kb] [文件加载：69]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.data_cp',
+    2 => 'old_user_list',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/data/order_analysis',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'data',
+  'opt' => 'old_user_list',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-12-15T15:11:05+08:00 ] 127.0.0.1 GET /cp/data/order_analysis
+[ info ] dlq.ddzh.com/cp/data/order_analysis [运行时间：0.064997s][吞吐率：15.39req/s] [内存消耗：1,115.70kb] [文件加载：72]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.data_cp',
+    2 => 'order_analysis',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'data',
+  'opt' => 'order_analysis',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\DataCp->order_analysis[ /var/www/html/ddzh/application/controller/cp/DataCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/data_cp/order_analysis.html [ array (
+  0 => 'mod',
+  1 => 'act',
+  2 => 'opt',
+  3 => 'all_shop_stations',
+) ]
+[ error ] [8]未定义变量: check_all[/var/www/html/ddzh/runtime/temp/9ab0d9f8ec1d5ea57f8b34942d1f2b88.php:145]
+[ error ] [8]未定义变量: check_all[/var/www/html/ddzh/runtime/temp/9ab0d9f8ec1d5ea57f8b34942d1f2b88.php:155]
+[ error ] [8]未定义变量: start[/var/www/html/ddzh/runtime/temp/9ab0d9f8ec1d5ea57f8b34942d1f2b88.php:174]
+[ error ] [8]未定义变量: data[/var/www/html/ddzh/runtime/temp/9ab0d9f8ec1d5ea57f8b34942d1f2b88.php:203]
+[ error ] [8]未定义变量: data[/var/www/html/ddzh/runtime/temp/9ab0d9f8ec1d5ea57f8b34942d1f2b88.php:203]
+[ error ] [8]未定义变量: data[/var/www/html/ddzh/runtime/temp/9ab0d9f8ec1d5ea57f8b34942d1f2b88.php:203]

@@ -1,0 +1,73 @@
+{layout name='example' /}
+
+{if $Think.session.cdo['add']}
+<fieldset class="fieldsetclass">
+   	<legend>操作</legend>
+        <button class="item-update layui-btn add-user">添加人员</button>
+</fieldset>
+{/if}
+<table class="layui-table">
+    <thead>
+    	<tr>
+    		<th>openid</th>
+    		<th>用户昵称</th>
+			{if $Think.session.cdo['delete']}
+    		<th>操作</th>
+			{/if}
+    	</tr>
+    </thead>
+	<!--{foreach $zeroFeeUserList as $c}-->
+	<tr>
+		<td>{$c['openid']}</td>
+		<td>{$c['nickname']}</td>
+		{if $Think.session.cdo['delete']}
+		<td>
+            <button class="layui-btn layui-btn-danger layui-btn-mini delete-user" data-openid="{$c['openid']}" data-name="{$c['nickname']}">删除</button>
+		</td>
+		{/if}
+	</tr>
+	<!--{/foreach}-->
+</table>
+
+<script>
+	layui.use('layer', function(){
+  		var layer = layui.layer;
+        //　添加按钮
+        $(".add-user").click(function(){
+			layer.open({
+                type: 2,
+				title: '添加人员',
+				maxmin: true,
+				area : ['500px' , '300px'],
+				content: '/cp/user/zeroFeeUserList?do=add'
+			});
+		});
+
+        //　编辑按钮
+        $(".delete-user").click(function(){
+            var openid = $(this).data('openid');
+            var name = $(this).data('name');
+            layer.confirm('现在是要删除零费用用户: '+name+' ?', {}, function(){
+				$.ajax({
+					url: '{$Request.url}',
+                    type: 'POST',
+                    data: {
+						'openid': openid,
+						'do': 'delete'
+					},
+                    success: function(e) {
+						// console.log(e)
+                        if(e.code == 0) {
+                            layer.msg(e.msg, {icon: 1}, function(){
+                                parent.location.reload(); // 父页面刷新
+                            });
+                        } else {
+                            layer.msg(e.msg, {icon: 2});
+                        }
+                    },
+					// error: function(data){console.log(data.responseText)}
+				})
+        	})
+        });
+	});
+</script>

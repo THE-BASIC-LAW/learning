@@ -1,0 +1,180 @@
+---------------------------------------------------------------
+[ 2017-12-19T17:01:02+08:00 ] 127.0.0.1 GET /cp/login/index
+[ info ] dlq.ddzh.com/cp/login/index [运行时间：0.095380s][吞吐率：10.48req/s] [内存消耗：658.05kb] [文件加载：68]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.login_cp',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/admin/role',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'login',
+  'opt' => 'index',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\LoginCp->index[ /var/www/html/ddzh/application/controller/cp/LoginCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/login_cp/index.html [ array (
+  0 => 'mod',
+  1 => 'act',
+  2 => 'opt',
+) ]
+---------------------------------------------------------------
+[ 2017-12-19T17:01:12+08:00 ] 127.0.0.1 POST /cp/login/save
+[ info ] dlq.ddzh.com/cp/login/save [运行时间：0.200898s][吞吐率：4.98req/s] [内存消耗：673.84kb] [文件加载：71]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.login_cp',
+    2 => 'save',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '45',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://dlq.ddzh.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/login/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'adminname' => 'admin',
+  'password' => '123456',
+  'captcha' => 'vnfv6',
+  'mod' => 'cp',
+  'act' => 'login',
+  'opt' => 'save',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\LoginCp->save[ /var/www/html/ddzh/application/controller/cp/LoginCp.php ]
+---------------------------------------------------------------
+[ 2017-12-19T17:01:12+08:00 ] 127.0.0.1 GET /cp/admin/index
+[ info ] dlq.ddzh.com/cp/admin/index [运行时间：0.109234s][吞吐率：9.15req/s] [内存消耗：724.75kb] [文件加载：67]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.admin_cp',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/login/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'admin',
+  'opt' => 'index',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\AdminCp->index[ /var/www/html/ddzh/application/controller/cp/AdminCp.php ]
+[ info ] [ VIEW ] /var/www/html/ddzh/public/../application/view/cp/admin_cp/index.html [ array (
+  0 => 'mod',
+  1 => 'act',
+  2 => 'opt',
+  3 => 'admin',
+) ]
+---------------------------------------------------------------
+[ 2017-12-19T17:01:15+08:00 ] 127.0.0.1 GET /cp/shop_station/lists
+[ info ] dlq.ddzh.com/cp/shop_station/lists [运行时间：0.162444s][吞吐率：6.16req/s] [内存消耗：789.48kb] [文件加载：69]
+[ info ] [ LANG ] /var/www/html/ddzh/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'cp.shop_station_cp',
+    2 => 'lists',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dlq.ddzh.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dlq.ddzh.com/cp/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=haqm9ed306hmspb7mpgjtj1on2; _ga=GA1.2.660914358.1512700127',
+)
+[ info ] [ PARAM ] array (
+  'mod' => 'cp',
+  'act' => 'shop_station',
+  'opt' => 'lists',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\controller\cp\ShopStationCp->lists[ /var/www/html/ddzh/application/controller/cp/ShopStationCp.php ]

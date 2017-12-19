@@ -1,0 +1,96 @@
+<link  href="/lib/cropper/cropper.css" rel="stylesheet">
+<script src="/lib/cropper/cropper.js"></script>
+<section style="margin: 30px auto; width: 550px">
+	<section>
+		<div style="padding-left: 80px">
+			<input type="hidden" name="__token__" value="{$Request.token}" id="token">
+			<input type="file" name="file" id="file" style="border: 0px solid black;" accept=".jpg,.jpeg,.png,.gif,.bmp,.tiff">
+			<input class="layui-btn submitbutton" type="submit" value="上传">
+			<div style="width: 400px; height: 400px">
+				<img id="image" alt="" style="max-width: 100%">
+			</div>
+		</div>
+	</section>
+</section>
+
+<script>
+
+    layui.use(['layer'], function(){
+        $('.submitbutton').click(function(){
+            var form_data = new FormData();
+            form_data.append('__token__', $('#token').val());
+            if($('#file')[0].files[0] == undefined){
+                layer.msg('请选择文件', {icon: 2});
+                return;
+            }
+            var options = new Object();
+            options['width']  = '100';
+            options['height'] = '100';
+            options['imageSmoothingQuality'] = 'high';
+            var res = cropper.getCroppedCanvas(options);
+            var data_url = res.toDataURL("image/png");
+            form_data.append('data_url', data_url);
+
+            $.ajax({
+                url: "{$action}",
+                type: 'post',
+                data: form_data,
+                contentType: false,
+                processData: false,
+                success: function(e) {
+                    if(e.code == 0) {
+                        layer.msg(e.msg, {icon: 1}, function(){
+                            parent.layer.close(parent.layer.getFrameIndex(window.name)); // 关闭本iframe层
+                            parent.location.reload(); // 父页面刷新
+                        });
+                    } else {
+                        layer.msg(e.msg, {icon: 2});
+                    }
+                },
+                error: function () {
+                    layer.msg('内部错误', {icon: 2}, function(){
+                    });
+                }
+            })
+        })
+
+        var cropper;
+        var image = document.getElementById('image')
+        $('#file').change(function () {
+            var file=$('#file')[0].files[0];
+            var reader=new FileReader();
+            reader.onload= function (e) {
+                if(cropper != undefined){
+                    image.src = e.target.result;
+                    cropper.replace(e.target.result);
+                    return;
+                } else {
+                    image.src = e.target.result;
+				}
+				cropper = new Cropper(image, {
+					guides: false,
+					center: false,
+					restore: false,
+                    minCanvasHeight:100,
+                    minCanvasWidth:100,
+					dragMode: 'move',
+					highlight: false,
+					aspectRatio: 1 / 1,
+					cropBoxMovable: false,
+					cropBoxResizable: false,
+					toggleDragModeOnDblclick: false,
+					ready:function(){
+						var cropper = this.cropper;
+						var params = new Object();
+						params['top']    = 150;
+						params['left']   = 150;
+						params['width']  = 100;
+						params['height'] = 100;
+						cropper.setCropBoxData(params);
+					}
+				});
+            };
+            reader.readAsDataURL(file);
+        });
+    })
+</script>

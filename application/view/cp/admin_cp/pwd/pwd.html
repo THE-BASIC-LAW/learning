@@ -1,0 +1,44 @@
+{layout name='example' /}
+<section class="modify-password ">
+			<form action="" method="post" id="modify-password" >
+				<ul>
+					<li>
+						<span>请输入旧密码</span>
+						<input type="password"name="oldpassword" id="oldpassword"/>
+					</li>
+					<li>
+						<span>请输入新密码</span>
+						<input type="password"name="newpassword" id="newpassword"/>
+					</li>
+					<li>
+						<span>请确认新密码</span>
+						<input type="password" name="repassword" id="repassword"/>
+					</li>
+					<li>
+						<button type="submit" class="layui-btn submit-modify">确定</button>
+					</li>
+				</ul>
+			</form>
+		</section>
+
+<script>
+	$("#modify-password").validate({
+		rules: {
+			oldpassword:{
+				required: true,
+			},
+			newpassword: {
+				required: true,
+			},
+			repassword:{
+				required: true,
+				equalTo: "#newpassword",
+			},
+		}
+	});
+
+	$.extend($.validator.messages, {
+		required: "内容不能为空",
+		equalTo: "两次输入的密码不一致",
+	});
+</script>

@@ -1,0 +1,146 @@
+<fieldset class="fieldsetclass" style="text-align: center">
+    <p class="style-input">
+        <div class="layui-input-inline">
+            <label class="layui-form-label">槽位号 :</label>
+            <div class="layui-input-block">
+                <select id="slot_num" class="layui-select">
+                    {foreach $slot_status as $id => $status}
+                    <option value="{$id+1}">{$id+1}</option>
+                    {/foreach}
+                </select>
+            </div>
+        </div>
+    </p>
+    {if $Think.session.cdo.slotLock}
+    <input type="button" id="slotLock" value="锁住">
+    {/if}
+    {if $Think.session.cdo.slotUnlock}
+    <input type="button" id="slotUnlock" value="解锁">
+    {/if}
+    {if $Think.session.cdo.query}
+    <input type="button" id="query" value="查询">
+    {/if}
+    {if $Think.session.cdo.lend}
+    <input type="button" id="lend" value="人工借出">
+    {/if}
+    <input type="checkbox" id="all"><label for="all">槽位全选</label>
+</fieldset>
+<table class="list" width="600px" cellpadding="0" cellspacing="0" style="text-align:center; margin: 10px auto">
+    {foreach $slot_status as $id => $status}
+        {if $id % 6 == 0}
+        <tr>
+        {/if}
+            <td width="16.6%">
+                    {if $status == 0}
+                    <div class="layui-btn layui-btn-mini layui-btn-primary">正常</div>
+                    {elseif $status == 1}
+                    <div class="layui-btn layui-btn-mini layui-btn-normal">对射或电磁铁坏</div>
+                    {elseif $status == 2}
+                    <div class="layui-btn layui-btn-mini layui-btn-danger">卡号消失</div>
+                    {elseif $status == 3}
+                    <div class="layui-btn layui-btn-mini layui-btn-danger">没读到卡号</div>
+                    {elseif $status == 4}
+                    <div class="layui-btn layui-btn-mini layui-btn-danger">通信中断</div>
+                    {elseif $status == 5}
+                    <div class="layui-btn layui-btn-mini layui-btn-normal">槽位被锁</div>
+                    {elseif $status == 6}
+                    <div class="layui-btn layui-btn-mini layui-btn-danger">电磁铁信号异常</div>
+                    {else}
+                    <div class="layui-btn layui-btn-mini layui-btn-normal">其他异常</div>
+                    {/if}
+                <div>{$id+1}</div>
+                <div>{$last_sync_time[$id+1]}</div>
+            </td>
+        {if ($id+1) % 6 == 0}
+        </tr>
+        {/if}
+    {/foreach}
+</table>
+<script>
+    layui.use(['layer', 'form'], function() {
+        var layer = layui.layer;
+        $('#slotLock').click(function () {
+            if (confirm('确定锁住该槽位？')) {
+                if ($('#all').is(':checked')) {
+                    var url = '/{$mod}/{$act}/{$opt}?do=slotLock&all=1&slot_num=' + {$slotscount} + '&station_id=' + {$station_id};
+                } else {
+                    var url = '/{$mod}/{$act}/{$opt}?do=slotLock&slot_num=' + $("#slot_num").val() + '&station_id=' + {$station_id};
+                }
+                $.ajax({
+                    type: "get",
+                    url : url,
+                    success: function (data) {
+                        if (data.code == 0) {
+                            layer.msg('请求已发送', {icon: 1});
+                        } else {
+                            layer.msg(data.msg, {icon: 2})
+                        }
+                    }
+                });
+            }
+        })
+
+        $('#slotUnlock').click(function () {
+            if (confirm('确定解锁该槽位？')) {
+                if ($('#all').is(':checked')) {
+                    var url = '/{$mod}/{$act}/{$opt}?do=slotUnlock&all=1&slot_num=' + {$slotscount} + '&station_id=' + {$station_id};
+                } else {
+                    var url = '/{$mod}/{$act}/{$opt}?do=slotUnlock&slot_num=' + $("#slot_num").val() + '&station_id=' + {$station_id};
+                }
+                $.ajax({
+                    type: "get",
+                    url : url,
+                    success: function (data) {
+                        if (data.code == 0) {
+                            layer.msg('请求已发送', {icon: 1});
+                        } else {
+                            layer.msg(data.msg, {icon: 2})
+                        }
+                    }
+                });
+            }
+        })
+
+        $('#query').click(function () {
+            if (confirm('确定查询该槽位？')) {
+                if ($('#all').is(':checked')) {
+                    var url = '/{$mod}/{$act}/{$opt}?do=query&all=1&slot_num=' + {$slotscount} + '&station_id=' + {$station_id};
+                } else {
+                    var url = '/{$mod}/{$act}/{$opt}?do=query&slot_num=' + $("#slot_num").val() + '&station_id=' + {$station_id};
+                }
+                $.ajax({
+                    type: "get",
+                    url : url,
+                    success: function (data) {
+                        if (data.code == 0) {
+                            layer.msg('请求已发送', {icon: 1});
+                        } else {
+                            layer.msg(data.msg, {icon: 2})
+                        }
+                    }
+                });
+            }
+        })
+
+        $('#lend').click(function () {
+            if (confirm('确定借出该槽位雨伞？')) {
+                if ($('#all').is(':checked')) {
+                    var url = '/{$mod}/{$act}/{$opt}?do=lend&all=1&slot_num=' + {$slotscount} + '&station_id=' + {$station_id};
+                } else {
+                    var url = '/{$mod}/{$act}/{$opt}?do=lend&slot_num=' + $("#slot_num").val() + '&station_id=' + {$station_id};
+                }
+                $.ajax({
+                    type: "get",
+                    url : url,
+                    success: function (data) {
+                        if (data.code == 0) {
+                            layer.msg('请求已发送', {icon: 1});
+                        } else {
+                            layer.msg(data.msg, {icon: 2})
+                        }
+                    }
+                });
+            }
+        })
+    })
+</script>

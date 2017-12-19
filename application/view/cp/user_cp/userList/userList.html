@@ -1,0 +1,132 @@
+{layout name='example' /}
+
+<form method="get" action="{$Request.url}">
+	<fieldset class="fieldsetclass">
+		<legend>操作</legend>
+		<ul class="user-list-operate style-input">
+			<li>
+				<span>用户类型:</span>
+				<select name="platform">
+					{foreach $platformArr as $k => $p}
+					{if $k == $platform}
+					<option value="{$k}" selected>{$p}</option>
+					{else}
+					<option value="{$k}"
+					{if is_null($platform) && $k == 2}
+						selected
+					{/if}
+					>{$p}</option>
+					{/if}
+					{/foreach}
+				</select>
+			</li>
+			<li>
+				<span>借还状态:</span>
+				<select name="status">
+					{foreach $statusArr as $k => $v}
+					{if $k == $status}
+					<option value="{$k}" selected>{$v}</option>
+					{else}
+					<option value="{$k}">{$v}</option>
+					{/if}
+					{/foreach}
+				</select>
+			</li>
+			<li>
+				<span>用户id:</span>
+				<input type="text" name="id" value="{$id}" lay-verify="number">
+			</li>
+			<li>
+				<span>用户openid:</span>
+				<input type="text" name="openid" value="{$openid}">
+			</li>
+			<li>
+				<span>用户昵称:</span>
+				<input type="text" name="nickname" value="{$nickname}">
+			</li>
+			<li>
+				<span>日  期:</span>
+				<input name="searchTime" value="{$searchTime}" id="searchTime"/>
+			</li>
+		</ul>
+		<div>
+			<input type="submit" value="搜索" class="layui-btn" >
+		</div>
+	</fieldset>
+</form>
+{if count($users)}
+<table class="layui-table">
+	<thead>
+	<tr>
+		<th>ID</th>
+		<th>用户类型</th>
+		<th>头像</th>
+		<th>名称</th>
+		<th>openID</th>
+		<th>账户余额</th>
+		<th>押金</th>
+		<th>订单数量</th>
+		<th>消费金额</th>
+		<th>未还订单</th>
+		<th>待退款</th>
+		<th>注册时间</th>
+	</tr>
+	</thead>
+	<tbody>
+	{foreach $users as $user}
+	<tr>
+		<td>{$user['id']}</td>
+		<td>
+			{if $user['platform'] == 0}
+			<span style="color: green">微信</span>
+			{else}
+			<span style="color: blue">支付宝</span>
+			{/if}
+		</td>
+		<td>
+			<img
+			{if isset($user['headimgurl'])}
+			src="{$user['headimgurl']}"
+			{else}
+			src="/images/default.jpg"
+			{/if}
+			width="30px" />
+		</td>
+		<td>{$user['nickname']}</td>
+		<td>{$user['openid']}</td>
+		<td>{$user['usablemoney']}</td>
+		<td>{$user['deposit']}</td>
+		<td>
+			{if $user['order_count'] == 0}
+			<span>0</span>
+			{else}
+			<div class="layui-btn layui-btn-mini buyer-order" data-id="{$user['id']}" data-count="{$user['order_count']}">{$user['order_count']}</div>
+			{/if}
+		</td>
+		<td>{$user['usefee_count']}</td>
+		<td>{$user['outstanding_order_count']}</td>
+		<td>{$user['refund']}</td>
+		<td>{$user['create_time']}</td>
+	</tr>
+	{/foreach}
+	</tbody>
+</table>
+{$users->render()}
+{else}
+<tr>
+	<p style="color:red;">您搜索的用户不存在!</p>
+</tr>
+{/if}
+<script>
+layui.use('laydate', function(){
+  var laydate = layui.laydate;
+
+  //执行一个laydate实例
+  laydate.render({
+    elem: '#searchTime', //指定元素
+	type:'datetime',
+	range: true,
+
+  });
+});
+</script>

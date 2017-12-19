@@ -1,0 +1,171 @@
+{layout name='example' /}
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/jquery.devbridge-autocomplete/1.2.27/jquery.autocomplete.js"></script>
+<fieldset class="fieldsetclass">
+	<legend> 搜索条件 </legend>
+	<form>
+		{include file="common/province_city_area"}
+		<div class="layui-form-item">
+			<div class="layui-input-inline">
+				<label class="layui-form-label">查询日期:</label>
+				<div class="layui-input-block">
+					<input name="start_time" value="{$start_time|default=''}" class="layui-laydate" id="start"/>
+				</div>
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<div class="layui-input-inline">
+				<label class="layui-form-label">站点ID:</label>
+				<div class="layui-input-block">
+					<input type="text" name="station_id" value="{$station_id|default=''}" class="layui-input"/>
+				</div>
+			</div>
+		</div>
+		<div class="inline" style="margin-left: 2%;">
+			<input class="layui-btn" type="submit" id="search" value="查询">
+			<input class="layui-btn layui-btn-danger" type="submit" name="export" value="导出" />
+		</div>
+	</form>
+</fieldset>
+
+<section style="margin-top:20px;">
+	<div class="data-statistics">
+		<h3 style="float: right">
+			统计时间: <em>{$start_time|default=''}</em>
+		</h3>
+	</div>
+	<table class="layui-table">
+		<thead>
+			<tr>
+				<th>设备id</th>
+				<th>商铺站点名称</th>
+				<th>归属角色</th>
+				<th>负责人</th>
+				<th>雨伞保有量<br>(2/7/12/17/22)</th>
+				<th>雨伞槽位投放量<br>(2/7/12/17/22)</th>
+				<th>信号分布<br>(2/7/12/17/22)</th>
+				<th>最大雨伞数</th>
+				<th>最小雨伞数</th>
+				<th>开机时长<br>(分钟)</th>
+				<th>机器登录次数</th>
+			</tr>
+		</thead>
+			<tr class="padding10">
+				<th>--</th>
+				<th>--</th>
+				<th>--</th>
+				<th>--</th>
+				<th>{$total_umbrella_from_station|default='--'}</th>
+				<th>{$total_slot_from_station|default='--'}</th>
+				<th>--</th>
+				<th>--</th>
+				<th>--</th>
+				<th>--</th>
+				<th>--</th>
+			</tr>
+		{if isset($current_station_log) && count($current_station_log)}
+		{foreach $current_station_log as $station_log}
+			<tr>
+				<th>{$station_log['new_station_id']}</th>
+				<th>{$station_log['shop_station_name']}</th>
+				<th>{$station_log['maintain_role']}</th>
+				<th>{$station_log['maintain_name']}</th>
+				<th>{$station_log['umbrella_from_station_desc']}</th>
+				<th>{$station_log['slot_from_station_desc']}</th>
+				<th>{$station_log['rssi_info_desc']}</th>
+				<th>{$station_log['max_umbrella_count']}</th>
+				<th>{$station_log['min_umbrella_count']}</th>
+				<th>{$station_log['online_time']}</th>
+				<th>{$station_log['login_count']}</th>
+			</tr>
+		{/foreach}
+	</table>
+	{$pagehtm}
+	{else /}
+	<p style="text-align: center; font-size: 16px; margin-top: 50px;">无记录</p>
+	{/if}
+</section>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //选择开始和结束日期
+        var start = laydate.render({
+            elem: '#start',
+            format: 'yyyy/MM/dd HH:mm:ss',
+            //min: laydate.now(), //设定最小日期为当前日期
+            max: '2099-06-16 23:59:59', //最大日期
+            istime: true,
+            istoday: false,
+        });
+    })
+</script>
+<script>
+	$.getJSON('/cp/shop_station/get_shop_station_list', function(data) {
+		stations_array = data.suggestions;
+		autocomplete_title(stations_array);
+	});
+
+	$('#get-province').on('change', function () {
+		$.ajax({
+			url: '/cp/shop_station/get_shop_station_list',
+			dataType: "json",
+			data: {province: $('#get-province').val()}
+		})
+		.done(function(data) {
+			stations_array = data.suggestions;
+			autocomplete_title(stations_array);
+		});
+	});
+
+	$('#get-city').on('change', function () {
+		$.ajax({
+			url: '/cp/shop_station/get_shop_station_list',
+			dataType: "json",
+			data: {
+				province: $('#get-province').val(),
+				city: $('#get-city').val()
+			}
+		})
+		.done(function(data) {
+			stations_array = data.suggestions;
+			autocomplete_title(stations_array);
+		});
+	});
+
+	$('#get-area').on('change', function () {
+		$.ajax({
+			url: '/cp/shop_station/get_shop_station_list',
+			dataType: "json",
+			data: {
+				province: $('#get-province').val(),
+				city: $('#get-city').val(),
+				area: $('#get-area').val()
+			}
+		})
+		.done(function(data) {
+			stations_array = data.suggestions;
+			autocomplete_title(stations_array);
+		});
+	});
+
+	function autocomplete_title(stations_array) {
+		$('#autocomplete').autocomplete({
+			lookup : stations_array,
+			minChars : 0,
+			onSelect: function (suggestion) {
+				$('#shop_station_id').val(suggestion.data);
+				console.log('shop_station_id:' + suggestion.data + ', title:' + suggestion.value);
+			},
+		});
+
+		$('#autocomplete').on('focus', function (){
+			$(this).autocomplete().onValueChange();
+		});
+	}
+
+	$("form").on('submit', function() {
+		$("#search").attr("disabled", "disabled");
+		$("#search").addClass('layui-btn-disabled');
+	});
+</script>
+

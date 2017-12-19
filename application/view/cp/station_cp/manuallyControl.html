@@ -1,0 +1,205 @@
+<table class="list" width="600px" cellpadding="0" cellspacing="0" style="text-align:center; margin: 20px auto">
+    {if $Think.session.cdo.syncUmbrella}
+    <tr>
+        <td>
+            <button class="layui-btn layui-btn-mini layui-btn-normal sync-umbrella">同步雨伞信息</button>
+        </td>
+    </tr>
+    {/if}
+    {if $Think.session.cdo.reboot}
+    <tr>
+        <td>
+            <button class="layui-btn layui-btn-mini layui-btn-green reboot">人工重启</button>
+        </td>
+    </tr>
+    {/if}
+    {if $Think.session.cdo.initSet}
+    <tr>
+        <td>
+            <button class="layui-btn layui-btn-mini layui-btn-green init-set">初始化设备</button>
+        </td>
+    </tr>
+    {/if}
+    {if $Think.session.cdo.elementModuleOpen}
+    <tr>
+        <td>
+            <button class="layui-btn layui-btn-mini layui-btn-green element-module-open">模组开启</button>
+        </td>
+    </tr>
+    {/if}
+    {if $Think.session.cdo.elementModuleClose}
+    <tr>
+        <td>
+            <button class="layui-btn layui-btn-mini layui-btn-green element-module-close">模组休眠</button>
+        </td>
+    </tr>
+    {/if}
+    {if $Think.session.cdo.voiceModuleOpen}
+    <tr>
+        <td>
+            <button class="layui-btn layui-btn-mini layui-btn-green voice-module-open">语音开启</button>
+        </td>
+    </tr>
+    {/if}
+    {if $Think.session.cdo.voiceModuleClose}
+    <tr>
+        <td>
+            <button class="layui-btn layui-btn-mini layui-btn-green voice-module-close">语音休眠</button>
+        </td>
+    </tr>
+    {/if}
+    {if $Think.session.cdo.moduleNum}
+    <tr>
+        <td>
+            模组个数
+            <div class="layui-input-inline">
+                <select id="module-num" class="layui-select">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option selected>7</option>
+                </select>
+            </div>
+            <br>
+            <br>
+            <button class="layui-btn layui-btn-mini layui-btn-normal module-num">发送</button>
+        </td>
+    </tr>
+    {/if}
+</table>
+
+<script>
+    layui.use(['layer', 'form'], function() {
+        var layer = layui.layer;
+        $('.sync-umbrella').click(function () {
+            if (confirm('确定同步雨伞信息？')) {
+                $.ajax({
+                    type: "get",
+                    url: '/{$mod}/{$act}/{$opt}?do=syncUmbrella&station_id=' + {$station_id},
+                    success: function (data) {
+                        if (data.code == 0) {
+                            layer.msg('请求已发送', {icon: 1});
+                        } else {
+                            layer.msg(data.msg, {icon: 2})
+                        }
+                    }
+                });
+            }
+        })
+
+        $('.reboot').click(function () {
+            if (confirm('确定重启该设备？')) {
+                $.ajax({
+                    type: "get",
+                    url: '/{$mod}/{$act}/{$opt}?do=reboot&station_id=' + {$station_id},
+                    success: function (data) {
+                        if (data.code == 0) {
+                            layer.msg('请求已发送', {icon: 1});
+                        } else {
+                            layer.msg(data.msg, {icon: 2})
+                        }
+                    }
+                });
+            }
+        })
+
+        $('.module-num').click(function () {
+            if (confirm('确定发送模组个数信息？')) {
+                $.ajax({
+                    type: "get",
+                    url: '/{$mod}/{$act}/{$opt}?do=moduleNum&station_id=' + {$station_id} + '&module_num=' + $('#module-num').val(),
+                    success: function (data) {
+                        if (data.code == 0) {
+                            layer.msg('请求已发送', {icon: 1});
+                        } else {
+                            layer.msg(data.msg, {icon: 2})
+                        }
+                    }
+                });
+            }
+        })
+
+        $('.init-set').click(function () {
+            if (confirm('初始化设备会导致机器转到测试环境，确定要初始化该设备？')) {
+                $.ajax({
+                    type: "get",
+                    url: '/{$mod}/{$act}/{$opt}?do=initSet&station_id=' + {$station_id},
+                    success: function (data) {
+                        if (data.code == 0) {
+                            layer.msg('请求已发送', {icon: 1});
+                        } else {
+                            layer.msg(data.msg, {icon: 2})
+                        }
+                    }
+                });
+            }
+        })
+
+        $('.element-module-open').click(function () {
+            if (confirm('确定打开机器的模组功能吗？')) {
+                $.ajax({
+                    type: "get",
+                    url: '/{$mod}/{$act}/{$opt}?do=elementModuleOpen&station_id=' + {$station_id},
+                    success: function (data) {
+                        if (data.code == 0) {
+                            layer.msg('请求已发送', {icon: 1});
+                        } else {
+                            layer.msg(data.msg, {icon: 2})
+                        }
+                    }
+                });
+            }
+        })
+
+        $('.element-module-close').click(function () {
+            if (confirm('确定关闭机器的模组功能吗？')) {
+                $.ajax({
+                    type: "get",
+                    url: '/{$mod}/{$act}/{$opt}?do=elementModuleClose&station_id=' + {$station_id},
+                    success: function (data) {
+                        if (data.code == 0) {
+                            layer.msg('请求已发送', {icon: 1});
+                        } else {
+                            layer.msg(data.msg, {icon: 2})
+                        }
+                    }
+                });
+            }
+        })
+
+        $('.voice-module-open').click(function () {
+            if (confirm('确定打开机器的语音功能吗？')) {
+                $.ajax({
+                    type: "get",
+                    url: '/{$mod}/{$act}/{$opt}?do=voiceModuleOpen&station_id=' + {$station_id},
+                    success: function (data) {
+                        if (data.code == 0) {
+                            layer.msg('请求已发送', {icon: 1});
+                        } else {
+                            layer.msg(data.msg, {icon: 2})
+                        }
+                    }
+                });
+            }
+        })
+
+        $('.voice-module-close').click(function () {
+            if (confirm('确定关闭机器的语音功能吗？')) {
+                $.ajax({
+                    type: "get",
+                    url: '/{$mod}/{$act}/{$opt}?do=voiceModuleClose&station_id=' + {$station_id},
+                    success: function (data) {
+                        if (data.code == 0) {
+                            layer.msg('请求已发送', {icon: 1});
+                        } else {
+                            layer.msg(data.msg, {icon: 2})
+                        }
+                    }
+                });
+            }
+        })
+    })
+</script>

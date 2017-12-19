@@ -1,0 +1,248 @@
+{include file="common/header" /}
+{include file="common/menu" /}
+<div class="page-content">
+	<div class="index-subject">
+	<fieldset class="fieldsetclass">
+		<legend> 搜索条件 </legend>
+		<form method="get" class="layui-form">
+			<!-- {template jjsan:cp/common/province_city_area} -->
+			<div class="layui-form-item">
+				<div class="layui-inline">
+					<label class="layui-form-label">开始时间:</label>
+					<div class="layui-input-block">
+						<input name="start_time" value="{$Think.get.start_time}" class="layui-input" id="start"/>
+					</div>
+				</div>
+
+				<div class="layui-inline">
+					<label class="layui-form-label">结束时间:</label>
+					<div class="layui-input-block">
+						<input name="end_time" value="{$Think.get.end_time}" class="layui-input" id="end"/>
+					</div>
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<div class="layui-inline">
+					<label class="layui-form-label">商铺站点名称:</label>
+					<div class="layui-input-block">
+						<select name="shop_station_id" lay-verify="" lay-search >
+							<option value="">全部</option>
+							{volist name="all_shop_stations" id="vo" key='k'}
+							<option value="{$k}" {eq name="Think.get.shop_station_id" value="$k" }selected{/eq}>{$vo}</option>
+							{/volist}
+						</select>
+					</div>
+				</div>
+
+				<div class="layui-inline">
+					<label class="layui-form-label">排&nbsp;&nbsp;&nbsp;&nbsp;序:</label>
+					<div class="layui-input-block">
+						<select name="orderby" id="orderby" class="layui-input" >
+							<option value="">全部</option>
+							<option value="{$Think.const.BORROW_SUCCESS_ORDER}" {eq name="Think.get.orderby" value="$Think.const.BORROW_SUCCESS_ORDER" }selected{/eq}>租借成功订单数降序</option>
+							<option value="{$Think.const.RETURN_SUCCESS_ORDER}" {eq name="Think.get.orderby" value="$Think.const.RETURN_SUCCESS_ORDER" }selected{/eq}>归还成功订单数降序</option>
+							<option value="{$Think.const.BORROW_SUCCESS_ORDER_RATE}" {eq name="Think.get.orderby" value="$Think.const.BORROW_SUCCESS_ORDER_RATE" }selected{/eq}>租借成功订单比降序</option>
+							<option value="{$Think.const.RETURN_SUCCESS_ORDER_RATE}" {eq name="Think.get.orderby" value="$Think.const.RETURN_SUCCESS_ORDER_RATE" }selected{/eq}>归还成功订单比降序</option>
+						</select>
+					</div>
+				</div>
+				
+				<!-- <div class="layui-inline">
+					<select name="show_zero" id="show_zero">
+						<option value="">全部</option>
+						<option value="1" {eq name="Think.get.show_zero" value="1" }selected{/eq}>显示订单为0的站点</option>
+						<option value="0" {eq name="Think.get.show_zero" value="0" }selected{/eq}>不显示订单为0的站点</option>
+					</select>
+				</div> -->
+
+			</div>
+
+			<div class="inline" style="margin-left: 2%;">
+				<button class="layui-btn" type="submit" id="search">查询</button>
+				<button class="layui-btn layui-btn-danger" type="submit" name="export" value="1" id="export">导出</button>
+				<span style="color: #CDC5BF">当前数据更新至&nbsp;<span id="update_Date"></span>（每天7点前更新前一天的订单数据）</span>
+			</div>
+		</form>
+	</fieldset>
+	<section style="margin-top:20px;">
+		<table class="layui-table">
+			<thead>
+				<tr>
+					<th>商铺站点id</th>
+					<th>商铺站点名称</th>
+					<th>站点id</th>
+					<th>业态</th>
+					<th>城市</th>
+					<th>租借成功订单数</th>
+					<th>归还成功订单数</th>
+					{eq name="check_all" value="1"}
+					<th>尝试租借用户数</th>
+					<th>借成功用户数</th>
+					<th>还成功用户数</th>
+					<th>盈利总额（元）</th>
+					{/eq}
+					<th>盈利总额（元）<br>
+						<span class="sub-text">（扣除雨伞成本20元）</span>
+					</th>
+					<th>盈利订单数</th>
+					{eq name="check_all" value="1"}
+					<th>平均每人收益（元）</th>
+					<th>平均每人次收益（元）</th>
+					<th>平均租借时间（秒）</th>
+					<th>租金转化率</th>
+					<th>客单价（元）</th>
+					<th>归还率</th>
+					<th>总租借订单数</th>
+					<th>租借成功订单比<br>
+						<span class="sub-text">（租借成功订单数/总订单数）</span>
+					</th>
+					<th>
+						归还成功订单比<br>
+						<span class="sub-text">（归还成功订单数/总订单数）</span>
+					</th>
+					{/eq}
+				</tr>
+			</thead>
+			<tbody>
+				{if condition="($start == 0) AND !empty($all_data)"}
+				<tr class="padding10">
+					<th> <b>全部	</b> </th>
+					<th> <b>--</b> </th>
+					<th> <b>--</b> </th>
+					<th> <b>--</b></th>
+					<th> <b>城市</b></th>
+					<th> <b>{$all_data['borrow_success_order']}</b> </th>
+					<th> <b>{$all_data['return_success_order']}</b> </th>
+					{eq name="check_all" value="1"}
+                    <th> <b>{$all_data['borrow_try_user']}</b> </th>
+                    <th> <b>{$all_data['borrow_success_user']}</b> </th>
+                    <th> <b>{$all_data['return_success_user']}</b> </th>
+                    <th> <b>{$all_data['total_usefee']}</b> </th>
+					{/eq}
+					<th> <b>{$all_data['seller_usefee']}</b> </th>
+					<th> <b>{$all_data['charge_order']}</b> </th>
+					{eq name="check_all" value="1"}
+                    <th> <b>{$all_data['usefee_per_user']}</b> </th>
+                    <th> <b>{$all_data['usefee_per_order']}</b> </th>
+                    <th> <b>{$all_data['renting_time']}</b> </th>
+                    <th> <b>{$all_data['charge_order_rate']}</b> </th>
+                    <th> <b>{$all_data['usefee_pre_return']}</b> </th>
+                    <th> <b>{$all_data['return_rate']}</b> </th>
+                    <th> <b>{$all_data['borrow_try_order']}</b> </th>
+                    <th> <b>{$all_data['borrow_success_order_rate']}</b> </th>
+                    <th> <b>{$all_data['return_success_order_rate']}</b> </th>
+					{/eq}
+				</tr>
+				{/if}
+				{volist name="data" id="list"}
+				<tr class="padding10">
+					<th> <b>{$list['shop_station_id']}</b> </th>
+					<th> <b>{$list['station_title']}</b> </th>
+					<th> <b>{$list['station_id']} </b> </th>
+					<th> <b>{$list['shop_type']}</b></th>
+					<th> <b>{$list['city']}</b></th>
+					<th> <b>{$list['borrow_success_order']}</b> </th>
+					<th> <b>{$list['return_success_order']}</b> </th>
+					{eq name="check_all" value="1"}
+                    <th> <b>{$list['borrow_try_user']}</b> </th>
+                    <th> <b>{$list['borrow_success_user']}</b> </th>
+                    <th> <b>{$list['return_success_user']}</b> </th>
+                    <th> <b>{$list['total_usefee']}</b> </th>
+					{/eq}
+					<th> <b>{$list['seller_usefee']}</b> </th>
+					<th> <b>{$list['charge_order']}</b> </th>
+					{eq name="check_all" value="1"}
+                    <th> <b>{$list['usefee_per_user']}</b> </th>
+                    <th> <b>{$list['usefee_per_order']}</b> </th>
+                    <th> <b>{$list['renting_time']}</b> </th>
+                    <th> <b>{$list['charge_order_rate']}</b> </th>
+                    <th> <b>{$list['usefee_pre_return']}</b> </th>
+                    <th> <b>{$list['return_rate']}</b> </th>
+                    <th> <b>{$list['borrow_try_order']}</b> </th>
+                    <th> <b>{$list['borrow_success_order_rate']}</b> </th>
+                    <th> <b>{$list['return_success_order_rate']}</b> </th>
+					{/eq}
+				</tr>
+				{/volist}
+			</tbody>
+		</table>
+		{notempty name='page_html'}
+			{$page_html->render()}
+		{/notempty}
+	</section>
+	</div>
+</div>
+<script>
+layui.use('form', function(){
+	var form = layui.form;
+});
+var maxDate 	= '';
+var UTC 		= new Date();
+var utcYear		= UTC.getUTCFullYear();
+var utcMonth 	= UTC.getUTCMonth();
+var utcDate 	= UTC.getUTCDate();
+var utcHour 	= UTC.getUTCHours();
+var utcMin 		= UTC.getUTCMinutes();
+var utcSec 		= UTC.getUTCSeconds();
+
+var utcMilSec	= Date.parse(new Date(utcYear,utcMonth,utcDate,utcHour,utcMin,utcSec));
+
+nowDate = new Date(utcMilSec+8*3600000-86400000);
+
+if(nowDate.getHours() < 7){
+	maxDate = nowDate.getFullYear().toString()+'/'+(nowDate.getMonth()+1).toString()+'/'+(nowDate.getDate()-1).toString();
+}else{
+	maxDate = nowDate.getFullYear().toString()+'/'+(nowDate.getMonth()+1).toString()+'/'+(nowDate.getDate()).toString();
+}
+$("#update_Date").html(maxDate);
+
+toDate = Date.parse(nowDate);
+layui.use('laydate', function(){
+ 	var laydate = layui.laydate;
+    //选择开始和结束日期
+    var start = laydate.render({
+        elem: '#start',
+        format: 'yyyy/MM/dd',
+        max: toDate, //最大日期
+        istime: true,
+        istoday: false,
+        // theme: '#393D49',
+        done: function(value, date, endDate){
+        	date.month = date.month -1 
+        	end.config.min = date; //开始日选好后，重置结束日的最小日期
+			end.config.start = date //将结束日的初始值设定为开始日
+        }
+    });
+    var end = laydate.render({
+        elem: '#end',
+        format: 'yyyy/MM/dd',
+        max: toDate, //最大日期
+        istime: true,
+        istoday: false,
+        done: function(value, date, endDate){
+        	date.month = date.month -1 
+        	start.config.max = date; //结束日选好后，重置开始日的最大日期
+        }
+    });
+})
+
+$("form").on('submit', function() {
+    $("#search").attr("disabled", "disabled");
+    $("#search").addClass('layui-btn-disabled');
+    $("#export").addClass('layui-btn-disabled');
+    setTimeout(function() {
+        $("#export").attr("disabled", "disabled");
+    }, 1000);
+});
+
+$('#export,#search').on('click', function(event) {
+    setTimeout(function() {
+        $('#search').removeClass('layui-btn-disabled');
+        $('#export').removeClass('layui-btn-disabled');
+        $("#export").removeAttr('disabled');
+        $("#search").removeAttr('disabled');
+    }, 2000);
+});
+</script>
+
+{include file="common/footer" /}

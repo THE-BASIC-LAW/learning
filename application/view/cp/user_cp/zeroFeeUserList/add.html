@@ -1,0 +1,42 @@
+{layout name='popUp' /}
+
+<div class="layui-form">
+    <div class="layui-form-item">
+        <label class="layui-form-label">用户openid</label>
+        <div class="layui-input-inline">
+            <input type="text" name="openid" class="layui-input user-openid" required>
+        </div>
+    </div>
+    <div class="ui-btn-center">
+        <div class="layui-btn add-user-openid" >立即提交</div>
+    </div>
+</div>
+
+<script>
+    layui.use(['layer', 'form'], function(){
+        var layer = layui.layer;
+        $('.add-user-openid').click(function(){
+            var openid = $('.user-openid').val();
+            $.ajax({
+                url: '{$Request.url}',
+                type: 'POST',
+                data: {
+                    'openid': openid,
+					'do':'add'
+                },
+				dataType: 'json',
+                success: function(e) {
+                    if(e.code == 0) {
+                        layer.msg(e.msg, {icon: 1}, function(){
+                            parent.layer.close(parent.layer.getFrameIndex(window.name)); // 关闭本iframe层
+                            parent.location.reload(); // 父页面刷新
+                        });
+                    } else {
+                        layer.msg(e.msg, {icon: 2});
+                    }
+                },
+				// error: function(data) {console.log(data.responseText)}
+            })
+        });
+    });
+</script>

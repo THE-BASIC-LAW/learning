@@ -1,0 +1,121 @@
+<style type="text/css">
+    table{margin: auto}
+    td{display: inline-block; padding: 20px 40px; text-align: left;}
+    td:first-child{width: 150px}
+    tr{border-bottom: 1px dotted}
+</style>
+<table>
+    <tr>
+        <td><strong>订单号</strong></td>
+        <td>{$order['orderid']}</td>
+    </tr>
+    {if !empty($zhima_order)}
+        {if !empty($zhima_order['alipay_fund_order_no'])}
+        <tr>
+            <td><strong>支付宝交易号</strong></td>
+            <td>{$zhima_order['alipay_fund_order_no']}</td>
+        </tr>
+        {/if}
+        <tr>
+            <td><strong>芝麻支付类型</strong></td>
+            <td>{$zhima_order['pay_amount_type']}</td>
+        </tr>
+        <tr>
+            <td><strong>芝麻订单状态</strong></td>
+            {if $zhima_order['status'] == $Think.const.ZHIMA_ORDER_CREATE}
+            <td>借出</td>
+            {elseif $zhima_order['status'] == $Think.const.ZHIMA_ORDER_COMPLETE_WAIT /}
+            <td>归还待结算</td>
+            {elseif $zhima_order['status'] == $Think.const.ZHIMA_ORDER_QUERY_WAIT /}
+            <td>待查询确认</td>
+            {elseif $zhima_order['status'] == $Think.const.ZHIMA_ORDER_COMPLETE_SUCCESS /}
+            <td>订单完成,结算成功</td>
+            {elseif $zhima_order['status'] == $Think.const.ZHIMA_ORDER_CANCEL_WAIT /}
+            <td>待撤销</td>
+            {elseif $zhima_order['status'] == $Think.const.ZHIMA_ORDER_CANCEL_SUCCESS /}
+            <td>撤销成功</td>
+            {elseif $zhima_order['status'] == $Think.const.ZHIMA_ORDER_PAY_FAIL_QUERY_RETRY /}
+            <td>扣款失败,待重试</td>
+            {/if}
+        </tr>
+    {/if}
+    <tr>
+        <td><strong>订单价格</strong></td>
+        <td>{$order['price']}</td>
+    </tr>
+    <tr>
+        <td><strong>订单状态</strong></td>
+        {if $order['status'] == $Think.const.ORDER_STATUS_RENT_CONFIRM}
+        <td>借出</td>
+        {elseif $order['status'] == $Think.const.ORDER_STATUS_RETURN /}
+        <td>归还</td>
+        {elseif $order['status'] == $Think.const.ORDER_STATUS_WAIT_PAY /}
+        <td>未支付</td>
+        {elseif $order['status'] == $Think.const.ORDER_STATUS_TIMEOUT_REFUND /}
+        <td>网络超时</td>
+        {elseif $order['status'] == $Think.const.ORDER_STATUS_RENT_NOT_FETCH /}
+        <td>借出未拿走</td>
+        {elseif $order['status'] == $Think.const.ORDER_STATUS_TIMEOUT_CANT_RETURN /}
+        <td>租金已扣完(归还)</td>
+        {elseif $order['status'] == $Think.const.ORDER_STATUS_TIMEOUT_NOT_RETURN /}
+        <td>租金已扣完(未归还)</td>
+        {elseif $order['status'] == $Think.const.ORDER_STATUS_PAID /}
+        <td>已支付但未借出</td>
+        {elseif $order['status'] == $Think.const.ORDER_STATUS_RENT_CONFIRM_FIRST /}
+        <td>准备借出</td>
+        {elseif $order['status'] == $Think.const.ORDER_STATUS_RETURN_MANUALLY /}
+        <td>管理员已手动撤销</td>
+        {elseif $order['status'] == $Think.const.ORDER_STATUS_RETURN_EXCEPTION_MANUALLY_REFUND /}
+        <td>管理员已手动退款</td>
+        {elseif $order['status'] == $Think.const.ORDER_STATUS_RETURN_EXCEPTION_SYS_REFUND /}
+        <td>归还异常(系统已退款)</td>
+        {else /}
+        <td>其他</td>
+        {/if}
+    </tr>
+    <tr>
+        <td><strong>购买者ID</strong></td>
+        <td>{$order['openid']}</td>
+    </tr>
+    {if $order['borrow_time']}
+    <tr>
+        <td><strong>借出地点/时间</strong></td>
+        <td>{$order['borrow_station_name']}/{$order['borrow_time'] | date = 'Y-m-d H:i:s', ###}</td>
+    </tr>
+    {/if}
+    {if $order['return_time']}
+    <tr>
+        <td><strong>归还地点/时间</strong></td>:
+        <td>{$order['return_station_name']}/{$order['return_time'] | date = 'Y-m-d H:i:s', ###}</td>
+    </tr>
+    {/if}
+    <tr>
+        <td><strong>雨伞ID</strong></td>
+        {if $order['umbrella_id']}
+        <td>{$order['umbrella_id']}</td>
+        {else /}
+        <td>无雨伞ID</td>
+        {/if}
+    </tr>
+    {if $message['slot']}
+    <tr>
+        <td><strong>雨伞信息</strong></td>
+        <td>
+            借出槽位:{$message['slot']}
+            {if $message['return_slot']}
+            归还槽位:{$message['return_slot']}
+            {/if}
+        </td>
+    </tr>
+    {/if}
+    {if $order['status'] == $Think.const.ORDER_STATUS_RETURN_MANUALLY && $message['operator']}
+    <tr>
+        <td><strong>手动退押金时间</strong></td>
+        <td>{$message['manually_return_time']}</td>
+    </tr>
+    <tr>
+        <td><strong>退押金操作人员ID</strong></td>
+        <td>{$message['operator']}</td>
+    </tr>
+    {/if}
+</table>

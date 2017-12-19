@@ -1,0 +1,29 @@
+<style type="text/css">
+.matlist .imgbody {
+	width: 55px;
+}
+</style>
+
+<section class="win setting-list">
+	<header>
+		<span>
+            <a href="javascript:void(0);" class="flbc" onclick="hideWindow('stationdetail')">关闭</a>
+		</span>
+	</header>
+
+	<fieldset>
+		<legend>站点详情</legend>
+		<form method="post" action="index.php?mod=cp&act=station&opt=update_station_detail&sid=$sid">
+			<ul>
+				<li><strong>站点名称</strong>:<input type="text" name="title" value="{$station['title']}"></li>
+				<li><strong>站点地址</strong>: <input type="text" name="address" size="50" value="{$station['address']}"></li>
+				<li><strong>站点描述</strong>: <input type="text" name="desc" value="{$shop_station['desc']}"></li>
+				<li><strong>最近一次同步时间</strong>: {$sync_time}</li>
+				<li><strong>mac地址</strong>: {$station['mac']}</li>
+				<!-- <li><strong>lbsid</strong>: {$station['lbsid']}</li> -->
+			</ul>
+			<input class="submitbutton" type="submit" value="{lang jjsan:submit}修改">
+		</form>
+	</fieldset>
+
+</section>

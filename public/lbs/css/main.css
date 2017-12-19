@@ -1,0 +1,612 @@
+body {
+	font-family: "微软雅黑";
+	font-size: 12px;
+}
+a,a:focus,a:hover {
+	text-decoration: none;
+}
+ul,li,select{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+img {
+	max-width: none;
+}
+h1 {
+	float: left;
+	font-size: 24px;
+	font-family: '微软雅黑';
+	color: red;
+}
+h2 {
+	float: left;
+	margin-left: 20px;
+	font-size: 16px;
+	font-weight: normal;
+}
+input,a{
+	-webkit-tap-highlight-color:rgba(255,0,0,0);
+	-webkit-appearance: none !important;
+}
+.table th, .table td{
+	border-top: 1px #bbb solid;
+}
+.listWrap-search:after,#listBobyUp:after{
+	display: block;
+	clear: both;
+	content: "";
+}
+#main_new {
+	position: relative;
+	text-align: center;
+	width: 100%;
+	height: 60%;
+}
+#mapbox_new {
+	text-align: center;
+	width: 100%;
+	height: 40%;
+}
+.container {
+	width: 100%;
+	height: 100%;
+}
+.borrow-circle {
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	background-color: transparent;
+	border: 3px #61a9dc solid;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+	font-size: 20px;
+	margin-bottom: 8px;
+}
+.return-circle {
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	background-color: transparent;
+	border: 3px #7ea568 solid;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+	font-size: 20px;
+	margin-bottom: 8px;
+}
+#pageHeader {
+	background: rgb(249, 249, 249);
+	border-bottom: 1px solid #EDEDED;
+}
+#pageMiddle {
+	background: rgb(253, 253, 253);
+	border-bottom: 1px solid #EDEDED;
+	padding: 8px 0;
+}
+#filterBox {
+	clear: both;
+}
+#filterBox li a.activate {
+	color: red;
+	text-decoration: none;
+	cursor: default;
+}
+#mapBox {
+	width: 100%;
+	height: 500px;
+	position: relative;
+}
+#map {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 400px;
+}
+#mapPanel {
+	position: absolute;
+	width: 400px;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	height: 100%;
+}
+#mapListWrap {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 41px;
+	overflow: auto;
+}
+.dl-horizontal dt {
+	width: 50px;
+}
+.dl-horizontal dd {
+	margin-left: 50px;
+}
+.dl-horizontal {
+	margin: 0px;
+}
+#chgMode {
+	margin-right: 10px;
+}
+#toggleBtn {
+	margin-right: 10px;
+}
+.BMapLib_nav_tab_content input {
+	padding: 0px;
+	margin: 0;
+}
+#selectedValue {
+	width: 300px;
+	padding-left: 5px;
+}
+#selectedValue .span1 {
+	white-space: nowrap;
+	padding: 0 5px;
+	width: auto;
+	text-align: center;
+	background: #e1e1e1;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 3px;
+}
+#selectedValue .icon-remove {
+	margin-left: 5px;
+	cursor: pointer;
+}
+#listBox {
+	padding-bottom: 20px;
+}
+#listWrap {
+	width: 100%;
+	border: 1px #ddd solid;
+	margin-bottom: 20px;
+}
+#listWrap table {
+	margin-bottom: 0;
+}
+#mapPager {
+	position: absolute;
+	margin: 0px;
+	bottom: 0px;
+	left: 50px;
+}
+.centerdiv {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -100px 0 0 -100px;
+	width: 200px;
+	height: 200px;
+	font-size: 20px;
+}
+/*==== 城市列表样式 ====*/
+.cityList {
+	height: 320px;
+	width: 100%;
+	overflow-y: auto;
+}
+.sel_container {
+	z-index: 9999;
+	position: absolute;
+	width: 140px;
+	padding: 5px;
+	font-size: 15px;
+}
+.map_popup {
+	position: absolute;
+	z-index: 200000;
+	width: 100%;
+	height: 344px;
+	right: 0px;
+	top: 40px;
+}
+.map_popup .popup_main {
+	background: #fff;
+	border: 1px solid #8BA4D8;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+	z-index: 2;
+}
+.map_popup .title {
+	background: url("http://map.baidu.com/img/popup_title.gif") repeat  scroll 0 0 transparent;
+	color: #6688CC;
+	font-weight: bold;
+	height: 24px;
+	line-height: 25px;
+	padding-left: 7px;
+}
+.map_popup button {
+	background: url("http://map.baidu.com/img/popup_close.gif") no-repeat  scroll 0 0 transparent;
+	cursor: pointer;
+	height: 16px;
+	position: absolute;
+	right: 4px;
+	top: 4px;
+	width: 12px;
+}
+/*注册充电站页面*/
+.mask-bg ,.mask-bg-small,.mask-addStation-bg{
+	display: none;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	background: rgba(0,0,0,0.1);
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.bomb ,.bomb-small{
+	width: 80%;
+	margin: 0 auto;
+	position: relative;
+	top: 2%;
+	background: #fff;
+	padding: 14px 4%;
+	z-index: 9;
+	text-align: left;
+	border-radius: 6px;
+}
+.bomb-small{
+	top:30%;
+	text-align: center;
+}
+.bomb-small input{
+	width: 70%;
+}
+.bomb-small-btn{
+	margin-top: 20px;
+}
+.bomb-small-btn button{
+	border: 1px #0c3 solid;
+	background: #fff;
+	color: #0c3;
+	border-radius: 4px;
+	padding: 4px 14px;
+	margin: 0 12px;
+}
+#addStationForm {
+	display: none;
+	margin-bottom: 0 !important;
+}
+#addStationForm ul li {
+	margin-bottom: 6px;
+}
+#addStationForm ul li:after,#addStationForm ul li select{
+	display: block;
+	clear: both;
+	content: "";
+}
+#addStationForm ul li input {
+	font-size: 12px;
+	height: 22px;
+	line-height: 22px;
+	margin-bottom: 2px !important;
+	color: #999;
+	width: calc(100% - 84px);
+	width: -webkit-calc(100% - 84px);
+	width: -moz-calc(100% - 84px);
+	-webkit-tap-highlight-color:rgba(255,0,0,0)}
+#addStationForm ul li span{
+	width: 64px;
+	display: inline-block;
+}
+#addStationForm ul li em {
+	display: block;
+	font-style: normal;
+	color: #ccc;
+	text-align: right;
+}
+#addStationForm ul li select{
+	float: right;
+	margin-bottom: 4px;
+	display: block;
+	width: calc(100% - 84px);
+	width: -webkit-calc(100% - 84px);
+	width: -moz-calc(100% - 84px);
+}
+#addStationForm ul li input[type="time"]{
+	width: 70px;
+}
+.addStation{
+	text-align: center;
+}
+.addStation a {
+	display: inline-block;
+	width: 60px;
+	height: 30px;
+	line-height: 30px;
+	color: #0C3;
+	background: #fff;
+	border-radius: 4px;
+	font-size: 15px;
+	text-align: center;
+	border: 1px #0C3 solid;
+	margin: 10px 10px 0 10px;
+}
+#addLbsStationBtn,#enterSlotMgrPageBtn {
+	color: #0c3;
+	font-size: 16px;
+	border: 1px #0c3 solid;
+	display: inline-block;
+	margin: 18px 18px 0 18px;
+	padding: 4px;
+	border-radius: 4px;
+	text-decoration: none;
+	text-align: center;
+	line-height: 24px;
+	height: 22px;
+}
+.listWrap-search{
+	width: 90%;
+	margin: 20px auto 10px auto;
+}
+.listWrap-search input{
+	float: left;
+	width: 75%;
+	border-right: 0;
+	border-radius: 4px 0 0 4px;
+	height: 26px;
+	-webkit-tap-highlight-color:rgba(255,0,0,0);
+}
+.listWrap-search button{
+	border: 0;
+	background-color: #fff;
+	float: left;
+	border: 1px #ccc solid;
+	border-radius: 0 4px 4px 0;
+	height: 36px;
+	width: 18%;
+	-webkit-tap-highlight-color:rgba(255,0,0,0);
+}
+
+/*充电站定位系统*/
+.bindAddress,.bindShop{
+	display: inline-block;
+	padding: 6px 4px;
+	width: 60px;
+	font-size: 13px;
+	border: 1px #08c solid;
+	border-radius: 4px;
+	float: inherit !important;
+	text-align: center;
+}
+.bindAbtn{
+	position:relative;
+}
+.bindAbtn span,.bindShopBtn span{
+	display: inline-block;
+	position:absolute;
+	top:50%;
+	margin-top: -17px !important;
+}
+.bindShopBtn{
+	position: relative;
+}
+.bindShopBtn span{
+	font-size:12px;
+	font-size:14px;
+	display:block;
+	text-align:center;
+}
+.listBodyUp{
+	background-color: #fff !important;
+}
+.listBodyDown{
+	background-color: #f1f1f1 !important;
+}
+.listBodyDown td:first-child,.listBodyUp td:first-child{
+	width: 72%;
+}
+.listBodyDown td:last-child,.listBodyUp td:last-child{
+	width: 28%;
+}
+.libs-desc{
+	color: #888;
+}
+#listWrap .table th, .table td{
+	padding: 10px 12px 6px 8px;
+}
+#address-search{
+	position: fixed;
+	top: 14px;
+	left: 0;
+	z-index: 999;
+	text-align: center;
+	width: 100%;
+}
+#address-search input{
+	margin-bottom: 0;
+	border-radius: 4px;
+}
+.autocomplete-suggestions {
+	border: 1px solid #999;
+	background: #FFF;
+	overflow: auto;
+}
+.autocomplete-suggestion {
+	padding: 2px 5px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.autocomplete-selected {
+	background: #F0F0F0;
+}
+.autocomplete-suggestions strong {
+	font-weight: normal;
+	color: #3399FF;
+}
+.autocomplete-group {
+	padding: 2px 5px;
+}
+.autocomplete-group strong {
+	display: block;
+	border-bottom: 1px solid #000;
+}
+.addStation-loading{
+	position: relative;
+	top: 45%;
+	text-align: center;
+}
+
+@media only screen and (max-width: 319px) {
+}
+
+@media only screen and (min-width: 320px) and (max-width: 359px) {
+}
+
+@media only screen and (min-width: 360px) and (max-width: 399px) {
+	#bindAddress{
+		font-size: 14px;
+	}
+	.libs-desc{
+		font-size: 14px;
+	}
+	#addStationForm ul li span{
+		font-size: 14px;
+		width: 70px;
+	}
+	#addStationForm ul li input {
+		font-size: 13px;
+		width: calc(100% - 88px);
+		width: -webkit-calc(100% - 88px);
+		width: -moz-calc(100% - 88px);
+	}
+	#addStationForm ul li input[type="time"]{
+		width: 82px;
+	}
+	.addStation a{
+		width: 88px;
+		height: 36px;
+		line-height: 36px;
+		font-size: 16px;
+		margin-top: 30px;
+	}
+	#addLbsStationBtn, #enterSlotMgrPageBtn{
+		height: 28px;
+		line-height: 28px;
+	}
+	.listWrap-search input{
+		height: 32px;
+	}
+	.listWrap-search button{
+		height: 42px;
+		line-height: 42px;
+		font-size: 15px;
+		width: 19%;
+	}
+	.bindAddress,.bindShop{
+		font-size: 14px;
+	}
+	.bomb{
+		top: 7%;
+		padding: 20px 4%;
+	}
+	.bomb-small span{
+		font-size: 14px;
+	}
+	.bomb-small input{
+		height: 26px;
+		line-height: 26px;
+		font-size: 15px;
+	}
+	.bomb-small-btn button{
+		font-size: 17px;
+		padding: 6px 18px;
+	}
+	.listBodyDown td:first-child, .listBodyUp td:first-child{
+		width: 74%;
+	}
+}
+@media only screen and (min-width: 400px) and (max-width: 479px) {
+	#bindAddress{
+		font-size: 16px;
+	}
+	.libs-desc{
+		font-size: 14px;
+	}
+	#addStationForm ul li span{
+		font-size: 15px;
+		width: 76px;
+	}
+	#addStationForm ul li input {
+		font-size: 15px;
+		width: calc(100% - 94px);
+		width: -webkit-calc(100% - 96px);
+		width: -moz-calc(100% - 96px);
+	}
+	#addStationForm ul li input[type="time"]{
+		width: 96px;
+	}
+	.addStation a{
+		width: 100px;
+		height: 36px;
+		line-height: 36px;
+		font-size: 18px;
+		margin-top: 30px;
+	}
+	#addLbsStationBtn, #enterSlotMgrPageBtn{
+		height: 30px;
+		line-height: 30px;
+		margin: 24px 20px 0 20px;
+		padding: 6px;
+	}
+	.listWrap-search{
+		margin: 30px auto 14px auto;
+	}
+	.listWrap-search input{
+		height: 36px;
+		font-size: 15px;
+	}
+	.listWrap-search button{
+		height: 46px;
+		line-height: 46px;
+		font-size: 15px;
+		width: 19%;
+	}
+	#addStationForm ul li select{
+		height: 34px;
+		margin-bottom: 6px;
+	}
+	.bindAddress,.bindShop{
+		font-size: 15px;
+		padding: 7px 4px;
+	}
+	.bomb{
+		top: 8%;
+		padding: 30px 4% 20px 4%;
+	}
+	#addStationForm ul li{
+		margin-bottom: 10px;
+	}
+	.bomb-small-btn{
+		margin-top: 30px;
+	}
+	.bomb-small span{
+		font-size: 15px;
+	}
+	.bomb-small input{
+		height: 30px;
+		line-height: 30px;
+		font-size: 16px;
+	}
+	.bomb-small-btn button{
+		font-size: 18px;
+		padding: 6px 20px;
+		margin: 0 18px;
+	}
+	.listBodyDown td:first-child, .listBodyUp td:first-child{
+		width: 76%;
+	}
+}
+

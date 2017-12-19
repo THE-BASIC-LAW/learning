@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0,user-scalable=0"/>
+    <meta name="format-detection" content="telephone=no" />
+    <title>{$Think.DEFAULT_TITLE}</title>
+    <link rel="stylesheet" href="/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="/css/maintain.css?v={:time()}" type="text/css">
+    <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="manage-3b manage-main">
+    <h2>站点维护管理系统</h2>
+    <ul>
+        <li><a href="{$slotMgrUrl}"><span>站点管理</span></a></li>
+        <!--{if $hidden_button}-->
+        <li><a href="{$initUrl}"><span>定位系统</span></a></li>
+        <!--{else}-->
+        <li><a href="{$replaceUrl}"><span>换机</span></a></li>
+        <li><a href="javascript:;" class="retreat-machine"><span>撤机</span></a></li>
+        <!--{/if}-->
+    </ul>
+</div>
+<div class="manage-mask-bg">
+    <div class="manage-bomb">
+        <h4>是否撤机？</h4>
+        <div class="manage-bomb-btn">
+            <a href="javascript:;" id="manage-cancel">取消</a>
+            <a href="javascript:;" id="manage-sure">确定</a>
+        </div>
+    </div>
+</div>
+<script>
+    $(function(){
+        $(".manage-3b ul li a").click(function(){
+            $(".manage-3b ul li a").removeClass("manage-checked");
+            $(this).addClass("manage-checked");
+        });
+        $(".retreat-machine").click(function(){
+            $(".manage-mask-bg").css("display","block");
+        });
+        $("#manage-cancel").click(function(){
+            $(".manage-mask-bg").css("display","none");
+        });
+
+        $("#manage-sure").click(function(){
+            $.ajax({
+                url: '{$rmShopStationUrl}',
+                type: "POST",
+                success:function(data){
+                    if(data.code == 0) {
+                        alert("撤机成功！");
+                    }else {
+                        alert(data.msg);
+                    }
+                },
+                error:function() {
+                    alert("服务器异常, 请稍后再试");
+                },
+                complete:function(){
+                    $(".manage-mask-bg").css("display","none");
+                }
+            });
+        })
+
+    });
+</script>
+</body></html>

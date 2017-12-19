@@ -1,0 +1,195 @@
+{layout name='example' /}
+<section class="station-list">
+	{include file='cp/station_cp/search'}
+	<table class="layui-table" lay-skin="line">
+		<thead>
+		<tr>
+			<th>站点ID</th>
+			{if $Think.session.cdo['showMac']}
+			<th>mac</th>
+			{/if}
+			<th>商铺站点名称</th>
+			<th>所属商铺名称</th>
+			<th>网络</th>
+			<th>总量/可借/可还</th>
+			{if $Think.session.cdo['slotAction']}
+			<th>槽位</th>
+			{/if}
+			<th>雨伞</th>
+			<th>设备电压</th>
+			<th>电池状态</th>
+			<th>信号大小</th>
+			<th>软/硬版本</th>
+			<th>模组状态</th>
+			<th>最后同步时间</th>
+			{if $Think.session.cdo['manuallyControl']}
+			<th>人工控制</th>
+			{/if}
+			{if $Think.session.cdo['settingStrategy']}
+			<th>同步策略</th>
+			{/if}
+		</tr>
+		</thead>
+		<tbody>
+		{foreach $stations as $station}
+		<tr>
+			<td>
+				{if $Think.session.cdo['showQrcode']}
+				<div class="layui-btn-mini layui-btn layui-btn-normal show-qrcode" data-id="{$station['id']}">{$station['id']}</div>
+				{else /}
+				{$station['id']}
+				{/if}
+			</td>
+			{if $Think.session.cdo['showMac']}
+			<td>{$station['mac']}</td>
+			{/if}
+			<td>
+				{if $station['title']}
+					<a href="/cp/shop_station/lists?station_id={$station['id']}">{$station['title']}</a>
+				{else /}
+					无
+				{/if}
+			</td>
+			<td>
+				{if $station['title']}
+				<a href="/cp/shop/lists?keyword={$station['shopname']}">{$station['shopname']}</a>
+				{else /}
+				无
+				{/if}
+			</td>
+			<td>
+				{if $station['network_status']}
+				<span style="color: green">在线</span>
+				{else /}
+				<span style="color: #F7B824">断线</span>
+				{/if}
+			</td>
+			<td>{$station['total']}/{$station['usable']}/{$station['empty']}</td>
+			{if $Think.session.cdo['slotAction']}
+			<td>
+				{if hexdec($station['slotstatus']) == 0 }
+				<button class="layui-btn layui-btn-mini layui-btn-green slot-action" data-id="{$station['id']}">正常</button>
+				{else /}
+				<button class="layui-btn layui-btn-mini layui-btn-danger slot-action" data-id="{$station['id']}">异常</button>
+				{/if}
+			</td>
+			{/if}
+			<td>
+				{if $station['has_outside_sync_umbrella']}
+				<button class="layui-btn layui-btn-mini layui-btn-danger umbrella" data-id="{$station['id']}">查看</button>
+				{else /}
+				<button class="layui-btn layui-btn-mini layui-btn-normal umbrella" data-id="{$station['id']}">查看</button>
+				{/if}
+			</td>
+			<td>
+				{$station['voltage']}
+			</td>
+			<td>
+				{if $station['isdamage'] == 0}
+				<span style="color: green">电量满</span>
+				{elseif $station['isdamage'] == 1/}
+				<span style="color: #1E9FFF">充电中</span>
+				{elseif $station['isdamage'] == 2/}
+				<span style="color: #FF870F">读取不到电量</span>
+				{elseif $station['isdamage'] == 3/}
+				<span style="color: #FF0000">未连接电源</span>
+				{else /}
+				<span>未知</span>
+				{/if}
+			</td>
+			<td>
+				{$station['rssi']}
+			</td>
+			<td>
+				{$station['soft_ver']}/{$station['device_ver']}
+			</td>
+			<td>
+				{if $station['drivemsg'] == 0}
+					正常
+				{elseif $station['drivemsg'] == 1/}
+					<span style="color: green">语音休眠</span>
+				{elseif $station['drivemsg'] == 2/}
+					<span style="color: green">模组休眠</span>
+				{else /}
+					未知
+				{/if}
+			</td>
+			<td>
+				{$station['sync_time']|date="Y-m-d H:i:s", ###}
+			</td>
+			{if $Think.session.cdo['manuallyControl']}
+			<td>
+				<button class="layui-btn layui-btn-mini layui-btn-normal manually-control" data-id="{$station['id']}">详情</button>
+			</td>
+			{/if}
+			{if $Think.session.cdo['settingStrategy']}
+			<td>
+				{$station['station_settings_name']}
+				<br>
+				<button class="layui-btn layui-btn-normal layui-btn-mini setting-strategy" data-id="{$station['id']}">设置策略</button>
+			</td>
+			{/if}
+		</tr>
+		{/foreach}
+		</tbody>
+	</table>
+	{$pagehtm}
+</section>
+<script>
+	layui.use(['layer', 'form'], function() {
+            var layer = layui.layer;
+            //　设置策略
+            $(".setting-strategy").click(function() {
+                layer.open({
+                    type: 2,
+                    title: '设置策略',
+                    maxmin: true,
+                    area : ['440px' , '500px'],
+                    content: "/{$mod}/{$act}/settingStrategy?station_id=" + $(this).data('id')
+                });
+            });
+
+
+            $(".umbrella").click(function() {
+                layer.open({
+                    type: 2,
+                    title: '雨伞详情',
+                    maxmin: true,
+                    area: ['960px', '520px'],
+                    content: '/{$mod}/{$act}/umbrellaDetail?station_id='+$(this).data('id'),
+                });
+            });
+
+            $(".slot-action").click(function() {
+                layer.open({
+                    type: 2,
+                    title: '槽位操作',
+                    maxmin: true,
+                    area: ['760px', '610px'],
+                    content: '/{$mod}/{$act}/{$opt}?do=slotAction&station_id='+$(this).data('id'),
+                });
+            });
+
+            $(".manually-control").click(function() {
+                layer.open({
+                    type: 2,
+                    title: '人工控制',
+                    maxmin: true,
+                    area: ['760px', '420px'],
+                    content: '/{$mod}/{$act}/{$opt}?do=manuallyControl&station_id='+$(this).data('id'),
+                });
+            });
+
+            $(".show-qrcode").click(function() {
+                layer.open({
+                    type: 2,
+                    title: '临时机器二维码',
+                    maxmin: true,
+                    area: ['760px', '420px'],
+                    content: '/{$mod}/{$act}/{$opt}?do=showQrcode&station_id='+$(this).data('id'),
+                });
+            });
+
+
+        });
+</script>
